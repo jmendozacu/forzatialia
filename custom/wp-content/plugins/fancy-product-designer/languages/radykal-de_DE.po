@@ -1,0 +1,2947 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fancy Product Designer - WooCommerce plugin\n"
+"POT-Creation-Date: 2015-01-11 17:34+0100\n"
+"PO-Revision-Date: 2015-01-11 17:36+0100\n"
+"Last-Translator: Rafael Dery <webmaster@radykal.de>\n"
+"Language-Team: radykal\n"
+"Language: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;__;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../fancy-product-designer.php:76 ../fancy-product-designer.php:86
+#: ../admin/views/html-admin-meta-box.php:67
+msgid "Fancy Design Categories"
+msgstr "Kategorien"
+
+#: ../fancy-product-designer.php:77
+msgid "Fancy Design Category"
+msgstr "Fancy Motivkategorie"
+
+#: ../fancy-product-designer.php:78
+msgid "Search Design Categories"
+msgstr "Suche Motivkategorien"
+
+#: ../fancy-product-designer.php:79
+msgid "All Design Categories"
+msgstr "Alle Motivkategorien"
+
+#: ../fancy-product-designer.php:80
+msgid "Parent Design Category"
+msgstr "Übergeordnete Motivkategorie"
+
+#: ../fancy-product-designer.php:81
+msgid "Parent Design Category:"
+msgstr "Übergeordnete Motivkategorie:"
+
+#: ../fancy-product-designer.php:82
+msgid "Edit Design Category"
+msgstr "Motivkategorie bearbeiten"
+
+#: ../fancy-product-designer.php:83
+msgid "Update Design Category"
+msgstr "Motivkategorie aktualisieren"
+
+#: ../fancy-product-designer.php:84
+msgid "Add New Design Category"
+msgstr "Neue Motivkategorie hinzufügen"
+
+#: ../fancy-product-designer.php:85
+msgid "New Design Category Name"
+msgstr "Neuer Motivkategoriename"
+
+#: ../admin/class-admin-ajax.php:245
+msgid "Template successfully created."
+msgstr "Template erfolgreich erstellt."
+
+#: ../admin/class-admin-ajax.php:248
+msgid "Template could not be stored. Please try again!"
+msgstr ""
+"Template konnte nicht gespeichert werden. Bitte versuche es noch einmal!"
+
+#: ../admin/class-admin-designs.php:28 ../admin/class-admin-menus.php:31
+msgid "Manage Fancy Designs"
+msgstr "Fancy Motive verwalten"
+
+#: ../admin/class-admin-designs.php:29
+msgid "Create Category"
+msgstr "Kategorie erstellen"
+
+#: ../admin/class-admin-designs.php:41
+msgid "No categories found. You need to create a category first!"
+msgstr "Keine Kategorien gefunden. Du musst eine Kategorie zuerst erstellen!"
+
+#: ../admin/class-admin-designs.php:101
+msgid "Designs saved."
+msgstr "Motive gespeichert."
+
+#: ../admin/class-admin-designs.php:113
+msgid "Categories"
+msgstr "Kategorien"
+
+#: ../admin/class-admin-designs.php:132
+msgid "Designs in \""
+msgstr "Motive in \""
+
+#: ../admin/class-admin-designs.php:139
+msgid "Add Designs"
+msgstr "Motive hinzufügen"
+
+#: ../admin/class-admin-designs.php:140
+msgid "Change Parameters"
+msgstr "Parameter ändern"
+
+#: ../admin/class-admin-designs.php:171
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: ../admin/class-admin-designs.php:215
+msgid "Choose Designs"
+msgstr "Wähle Motive"
+
+#: ../admin/class-admin-designs.php:217
+msgid "Set Designs"
+msgstr "Setze Motive"
+
+#: ../admin/class-admin-menus.php:21
+msgid "Fancy Products | Product Builder"
+msgstr "Fancy Products | Product Builder"
+
+#: ../admin/class-admin-menus.php:22
+msgid "Fancy Products"
+msgstr "Fancy Produkte"
+
+#: ../admin/class-admin-menus.php:32
+msgid "Fancy Designs"
+msgstr "Fancy Motive"
+
+#: ../admin/class-admin-menus.php:43
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: ../admin/class-admin-menus.php:44
+msgid "Documentation"
+msgstr "Dokumenation"
+
+#: ../admin/class-admin-order.php:20
+msgid "Fancy Product - Order Viewer"
+msgstr "Fancy Product - Bestellungbetrachter"
+
+#: ../admin/class-admin-order.php:27 ../admin/class-admin-product.php:27
+#: ../admin/class-admin-product.php:39
+msgid "Fancy Product"
+msgstr "Fancy Produkt"
+
+#: ../admin/class-admin-order.php:45
+msgid "Open"
+msgstr "Öffnen"
+
+#: ../admin/class-admin-product-builder.php:16
+msgid "Fancy Product Builder"
+msgstr "Fancy Product Builder"
+
+#: ../admin/class-admin-product-builder.php:29
+msgid "There are no fancy products!"
+msgstr "Es sind keine Fancy Produkte verfügbar!"
+
+#: ../admin/class-admin-product-builder.php:74
+msgid "Elements saved."
+msgstr "Elemente gespeichert."
+
+#: ../admin/class-admin-product-builder.php:80
+msgid "Select a view of a fancy product:"
+msgstr "Wähle eine eine Ansicht eines Fancy Produktes aus:"
+
+#: ../admin/class-admin-product-builder.php:129
+msgid "Edit Product"
+msgstr "Produkt bearbeiten"
+
+#: ../admin/class-admin-product-builder.php:130
+msgid "View Product"
+msgstr "Produkt ansehen"
+
+#: ../admin/class-admin-product-builder.php:136
+msgid "Manage elements"
+msgstr "Elemente verwalten"
+
+#: ../admin/class-admin-product-builder.php:138
+#: ../admin/class-admin-settings.php:1424
+msgid "Add Image"
+msgstr "Bild hinzufügen"
+
+#: ../admin/class-admin-product-builder.php:139
+#: ../admin/class-admin-settings.php:1432
+msgid "Add Text"
+msgstr "Text hinzufügen"
+
+#: ../admin/class-admin-product-builder.php:140
+msgid "Add Curved Text"
+msgstr "Gebogenen Text hinzufügen"
+
+#: ../admin/class-admin-product-builder.php:141
+msgid "Add Upload Zone"
+msgstr "Upload Zone hinzufügen"
+
+#: ../admin/class-admin-product-builder.php:169
+msgid ""
+"You can drag the list items to change the z-position of the associated "
+"element."
+msgstr ""
+"Du kannst die Listobjekte bewegen um die z-Position des dazugehörigen "
+"Elementes zu ändern."
+
+#: ../admin/class-admin-product-builder.php:171
+msgid "Save Elements"
+msgstr "Elemente speichern"
+
+#: ../admin/class-admin-product-builder.php:179
+msgid "Edit parameters for "
+msgstr "Parameter bearbeiten für"
+
+#: ../admin/class-admin-product-builder.php:185
+msgid "Product Stage"
+msgstr "Produktbühne"
+
+#: ../admin/class-admin-product-builder.php:187
+msgid ""
+"If you can not touch a new added element, save the elements and try again!"
+msgstr ""
+"Wenn du ein neu hinzugefügtes Element nicht auswählen kannst, dann speichere "
+"die Elemente ab und versuche es noch einmal!"
+
+#: ../admin/class-admin-product-builder.php:187
+msgid "Problems?"
+msgstr "Probleme?"
+
+#: ../admin/class-admin-product-builder.php:190
+msgid "Center Element Horizontal"
+msgstr "Element horizontal zentrieren"
+
+#: ../admin/class-admin-product-builder.php:191
+msgid "Center Element Vertical"
+msgstr "Element vertikal zentrieren"
+
+#: ../admin/class-admin-product-builder.php:204
+msgid "Change Image Source"
+msgstr "Bildquelle ändern"
+
+#: ../admin/class-admin-product.php:28
+msgid "A product for the Fancy Product Designer?"
+msgstr "Ein Produkt für den Fancy Product Designer?"
+
+#: ../admin/class-admin-scripts-styles.php:93
+msgid "Enter a title for the element"
+msgstr "Gebe einen Titel für das Element ein"
+
+#: ../admin/class-admin-scripts-styles.php:94
+msgid "Choose an element image"
+msgstr "Wähle ein Bildelement"
+
+#: ../admin/class-admin-scripts-styles.php:95
+#: ../admin/views/html-admin-meta-box.php:263
+#: ../admin/views/html-fancy-designs-parameters-modal.php:141
+msgid "Set"
+msgstr "Festlegen"
+
+#: ../admin/class-admin-scripts-styles.php:96
+msgid "Enter your text."
+msgstr "Text eingeben."
+
+#: ../admin/class-admin-scripts-styles.php:97
+msgid "Remove element?"
+msgstr "Element entfernen?"
+
+#: ../admin/class-admin-scripts-styles.php:98
+msgid "You have not save your changes!"
+msgstr "Du hast deine Änderungen nicht gespeichert!"
+
+#: ../admin/class-admin-settings-page.php:13
+msgid "Fancy Product Designer"
+msgstr "Fancy Product Designer"
+
+#: ../admin/class-admin-settings-page.php:23
+msgid ""
+"Google Webfonts could not be loaded with the PHP functions cURL and "
+"file_get_contents(). Please contact your provider and ask him what you need "
+"to do to load content with one of these functions from external URLs!"
+msgstr ""
+"Google Webfonts konnte nicht mit den PHP Funktionen cURL and "
+"file_get_contents() geladen werden. Bitte kontaktiere deinen Provider und "
+"frag ihn wie du Inhalte von externen URLs mit diesen Funktionen laden kannst!"
+
+#: ../admin/class-admin-settings-page.php:32
+#: ../admin/views/html-admin-meta-box.php:18
+msgid "General"
+msgstr "Allgemein"
+
+#: ../admin/class-admin-settings-page.php:33
+msgid "Element Parameters"
+msgstr "Element Parameter"
+
+#: ../admin/class-admin-settings-page.php:34
+msgid "Labels"
+msgstr "Bezeichnungen"
+
+#: ../admin/class-admin-settings-page.php:35
+msgid "Fonts"
+msgstr "Schriften"
+
+#: ../admin/class-admin-settings-page.php:87
+msgid "Flat Scheme"
+msgstr "Flat Scheme"
+
+#: ../admin/class-admin-settings-page.php:91
+msgid "Primary"
+msgstr "Primäre"
+
+#: ../admin/class-admin-settings-page.php:91
+msgid "Sidebar Navigation, Product Stage Header"
+msgstr "Seitenleiste Navigation,  Produktbühne Kopfzeile"
+
+#: ../admin/class-admin-settings-page.php:92
+msgid "Secondary"
+msgstr "Sekundäre"
+
+#: ../admin/class-admin-settings-page.php:92
+msgid "Sidebar Content Background, Tooltip Background"
+msgstr "Seitenleistehintergrundfarbe, Tooltip Hintergrund"
+
+#: ../admin/class-admin-settings-page.php:93
+msgid "Border"
+msgstr "Rand"
+
+#: ../admin/class-admin-settings-page.php:93
+msgid "Border Color"
+msgstr "Randfarbe"
+
+#: ../admin/class-admin-settings-page.php:94
+msgid "Button"
+msgstr "Button"
+
+#: ../admin/class-admin-settings-page.php:94
+msgid "Button Background"
+msgstr "Button Hintergrund"
+
+#: ../admin/class-admin-settings-page.php:95
+msgid "Submit"
+msgstr "Bestätigung"
+
+#: ../admin/class-admin-settings-page.php:95
+msgid "Submit Button Background"
+msgstr "Bestätigungsbutton Hintergrund"
+
+#: ../admin/class-admin-settings-page.php:96
+msgid "Danger"
+msgstr "Gefahr"
+
+#: ../admin/class-admin-settings-page.php:96
+msgid "Danger Button Background."
+msgstr "Gefahr Button Hintergrund"
+
+#: ../admin/class-admin-settings-page.php:102
+msgid "Boundaries"
+msgstr "Begrenzungen"
+
+#: ../admin/class-admin-settings-page.php:106
+msgid "Selected"
+msgstr "Ausgewählt"
+
+#: ../admin/class-admin-settings-page.php:106
+msgid "The border color of the selected element."
+msgstr "Die Rahmenfarbe des ausgewählten Elements."
+
+#: ../admin/class-admin-settings-page.php:107
+#: ../admin/views/html-admin-meta-box.php:151
+#: ../admin/views/html-admin-meta-box.php:216
+#: ../admin/views/html-fancy-designs-parameters-modal.php:101
+#: ../admin/views/html-product-builder-parameters-form.php:86
+msgid "Bounding Box"
+msgstr "Begrenzungsbox"
+
+#: ../admin/class-admin-settings-page.php:107
+msgid "The border color of the bounding box."
+msgstr "Die Rahmenfarbe der Begrenzungsbox."
+
+#: ../admin/class-admin-settings-page.php:108
+msgid "Out Of Boundary"
+msgstr "Aus der Begrenzung"
+
+#: ../admin/class-admin-settings-page.php:108
+msgid ""
+"The border color of the bounding box if an element his out of his boundary."
+msgstr ""
+"Die Rahmenfarbe der Begrenzungsbox wenn ein Element abseits ihrer Begrenzung "
+"ist."
+
+#: ../admin/class-admin-settings.php:45
+msgid "Layout & Skin"
+msgstr "Layout & Aussehen"
+
+#: ../admin/class-admin-settings.php:48
+#: ../admin/views/html-admin-meta-box.php:27
+msgid "Theme"
+msgstr "Theme"
+
+#: ../admin/class-admin-settings.php:58
+msgid "Sidebar Navigation Width/Height"
+msgstr "Seitenleiste Navigationsbreite/höhe"
+
+#: ../admin/class-admin-settings.php:59
+msgid ""
+"The size for the navigation in the sidebar for the flat layout. Vertical "
+"layout = Width, Horizontal Layout = Height"
+msgstr ""
+"Die Grösse für die Navigation in der Seitenleiste für das Flat Layout. "
+"Vertikales Layout = Breite, Horizontales Layout = Höhe."
+
+#: ../admin/class-admin-settings.php:72
+msgid "Sidebar Content Width"
+msgstr "Seitenleiste Inhaltsbreite"
+
+#: ../admin/class-admin-settings.php:73
+msgid ""
+"The width for the content box in the sidebar. Only necessary for the flat-"
+"vertical layout."
+msgstr ""
+"Die Breite für die Inhaltsbox in der Seitenleiste. Nur notwendig für das "
+"vertikale Layout."
+
+#: ../admin/class-admin-settings.php:86
+msgid "Sidebar Height/Width"
+msgstr "Seitenleiste Inhaltshöhe/breite"
+
+#: ../admin/class-admin-settings.php:87
+msgid ""
+"The size for the sidebar. Vertical layout = Height, Horizontal Layout = Width"
+msgstr ""
+"Die Grösse für die Seitenleiste. Vertikales Layout = Höhe, Horizontales "
+"Layout = Breite."
+
+#: ../admin/class-admin-settings.php:100
+#: ../admin/views/html-admin-meta-box.php:59
+msgid "Product Stage Width"
+msgstr "Produktbühnebreite"
+
+#: ../admin/class-admin-settings.php:101
+msgid "The width for the product stage."
+msgstr "Die Breite für die Produktbühne."
+
+#: ../admin/class-admin-settings.php:114
+#: ../admin/views/html-admin-meta-box.php:63
+msgid "Product Stage Height"
+msgstr "Produktbühne Höhe"
+
+#: ../admin/class-admin-settings.php:115
+msgid "The height for the product stage"
+msgstr "Die Höhe für die Produktbühne."
+
+#: ../admin/class-admin-settings.php:128
+#: ../admin/views/html-admin-meta-box.php:41
+msgid "View Selection Position"
+msgstr "Ansicht-Auswahl Position"
+
+#: ../admin/class-admin-settings.php:129
+msgid "The position of the view selection."
+msgstr "Die Position der Ansicht-Auswahl."
+
+#: ../admin/class-admin-settings.php:140
+#: ../admin/views/html-admin-meta-box.php:55
+msgid "View Selection Items Floating"
+msgstr "Ansicht-Auswahl Objekt Floating"
+
+#: ../admin/class-admin-settings.php:141
+msgid ""
+"Enable floating for the items in the view selection, so these are aligned in "
+"one line."
+msgstr ""
+"Aktiviere Floating für die Objekte in der Ansicht-Auswahl, damit diese in "
+"einer Linie ausgerichtet werden."
+
+#: ../admin/class-admin-settings.php:148
+msgid "Hide On Smartphones"
+msgstr "Für Smartphones verbergen"
+
+#: ../admin/class-admin-settings.php:149
+#, php-format
+msgid ""
+"Hide product designer on smartphones and display an <a href=\"%s"
+"\">information</a> instead."
+msgstr ""
+"Verberge Product Designer auf allen Smartphones und zeige stattdessen eine "
+"<a href=\"%s\">Information</a>."
+
+#: ../admin/class-admin-settings.php:156
+msgid "Hide On Tablets"
+msgstr "Für Tablets verbergen"
+
+#: ../admin/class-admin-settings.php:157
+#, php-format
+msgid ""
+"Hide product designer on tablets and display an <a href=\"%s\">information</"
+"a> instead."
+msgstr ""
+"Verberge Product Designer auf allen Tablets und zeige stattdessen eine <a "
+"href=\"%s\">Information</a>."
+
+#: ../admin/class-admin-settings.php:165 ../admin/class-admin-settings.php:543
+#: ../admin/class-admin-settings.php:852
+#: ../admin/views/html-admin-meta-box.php:254
+#: ../admin/views/html-product-builder-parameters-form.php:44
+msgid "Colors"
+msgstr "Farben"
+
+#: ../admin/class-admin-settings.php:171
+msgid "Menu Bar"
+msgstr "Menu-Bar"
+
+#: ../admin/class-admin-settings.php:174
+#: ../admin/views/html-product-builder-parameters-form.php:13
+msgid "Position"
+msgstr "Position"
+
+#: ../admin/class-admin-settings.php:175
+msgid "The position of the menu bar."
+msgstr "Die Position der Menu-Bar."
+
+#: ../admin/class-admin-settings.php:183
+msgid "Inside the Product Stage"
+msgstr "Innerhalb der Produktbühne"
+
+#: ../admin/class-admin-settings.php:184
+msgid "Above the Product Stage"
+msgstr "Oberhalb der Produktbühne"
+
+#: ../admin/class-admin-settings.php:189
+msgid "Custom Image Upload"
+msgstr "Eigenen Bild Upload"
+
+#: ../admin/class-admin-settings.php:190
+msgid "Can customers upload own images to the product?"
+msgstr "Können Kunden eigene Motive zu dem Produkt hinzufügen?"
+
+#: ../admin/class-admin-settings.php:197
+msgid "Custom Text"
+msgstr "Eigenen Text"
+
+#: ../admin/class-admin-settings.php:198
+msgid "Can customers add own text elements to the product?"
+msgstr "Können Kunden eigene Texte zu dem Produkt hinzufügen?"
+
+#: ../admin/class-admin-settings.php:205
+msgid "Zoom Factor"
+msgstr "Zoom Faktor"
+
+#: ../admin/class-admin-settings.php:206
+msgid ""
+"The factor for zooming in and out. A value lower or equal 1, will disable "
+"the zoom buttons."
+msgstr ""
+"Der Faktor um hinein und heraus zu zoomen. Ein Wert geringer oder gleich 1, "
+"wird die Zoom Buttons deaktivieren."
+
+#: ../admin/class-admin-settings.php:218
+#: ../admin/class-admin-settings.php:1465
+#: ../inc/class-frontend-product.php:457
+msgid "Download Product Image"
+msgstr "Download Produktbild"
+
+#: ../admin/class-admin-settings.php:219
+msgid "Can customers download a product image?"
+msgstr "Können Kunden das Produktbild herunterladen?"
+
+#: ../admin/class-admin-settings.php:226
+msgid "Save as PDF"
+msgstr "Als PDF speichern"
+
+#: ../admin/class-admin-settings.php:227
+msgid "Can customers save the product as PDF?"
+msgstr "Können Kunden das Produkt als PDF speichern?"
+
+#: ../admin/class-admin-settings.php:234
+#: ../admin/class-admin-settings.php:1473
+#: ../inc/class-frontend-product.php:458
+msgid "Print"
+msgstr "Drucken"
+
+#: ../admin/class-admin-settings.php:235
+msgid "Can customers print the product?"
+msgstr "Können Kunden das Produkt ausdrucken?"
+
+#: ../admin/class-admin-settings.php:242
+msgid "Allow Product Saving"
+msgstr "Erlaube Produktspeicherung"
+
+#: ../admin/class-admin-settings.php:243
+msgid "Can customers save their customized products?"
+msgstr "Können Kunden ihre angepassten Produkte speichern?"
+
+#: ../admin/class-admin-settings.php:250
+msgid "Resettable"
+msgstr "Zurücksetzbar"
+
+#: ../admin/class-admin-settings.php:251
+msgid "Can customers reset the product?"
+msgstr "Können Kunden das Produkt zurücksetzen?"
+
+#: ../admin/class-admin-settings.php:259
+msgid "Product Page"
+msgstr "Produktseite"
+
+#: ../admin/class-admin-settings.php:262
+msgid "Product Designer Positioning"
+msgstr "Product Designer Position"
+
+#: ../admin/class-admin-settings.php:263
+msgid ""
+"By default the product designer will replace the product image. You can only "
+"use a custom hook to place it anywhere in the product page. Check out the "
+"documentation how to use the custom hook!"
+msgstr ""
+"Standardmässig der Produkt-Designer wird das Produktbild ersetzen. Du kannst "
+"nur über einen eigenen Hook den Produkt-Designer irgendwo in deiner "
+"Produktseite platzieren. Lese dies in der Dokumentation nach wie man den "
+"eigenen Hook verwendet!"
+
+#: ../admin/class-admin-settings.php:271
+msgid "Replace Product Image"
+msgstr "Produktbild ersetzen"
+
+#: ../admin/class-admin-settings.php:272
+msgid "Use Custom Hook"
+msgstr "Benutze eigenen Hook"
+
+#: ../admin/class-admin-settings.php:277
+msgid "Show Product Image"
+msgstr "Zeige Produktbild"
+
+#: ../admin/class-admin-settings.php:278
+msgid ""
+"Show the product image as well, this could cause that the product designer "
+"is not aligned correctly."
+msgstr ""
+"Zeige das Produktbild ebenfalls, das könnte dazu führen, dass der Produkt "
+"Designer nicht korrekt dargestellt wird."
+
+#: ../admin/class-admin-settings.php:285
+msgid "No Sidebar"
+msgstr "Keine Seitenleiste"
+
+#: ../admin/class-admin-settings.php:286
+msgid ""
+"A template without sidebar and the product title will be placed over the "
+"product designer."
+msgstr ""
+"Eine Vorlage ohne Seitenleiste und der Produkttitel wird über dem Product "
+"Designer angezeigt."
+
+#: ../admin/class-admin-settings.php:293
+msgid "Custom CSS"
+msgstr "Eigene CSS"
+
+#: ../admin/class-admin-settings.php:294
+msgid "CSS styles for fancy product pages."
+msgstr "CSS Stile für Fancy Product Seiten."
+
+#: ../admin/class-admin-settings.php:302
+msgid "Button CSS class"
+msgstr "Button CSS Klasse"
+
+#: ../admin/class-admin-settings.php:303
+msgid ""
+"The CSS class that will be added to the \"Start Customizing\" and lightbox "
+"buttons."
+msgstr ""
+"Die CSS Klasse die auf den \"Start Customizing\" und Lightbox Button "
+"angewendet wird."
+
+#: ../admin/class-admin-settings.php:313
+#: ../admin/class-admin-settings.php:1514
+msgid "Miscellaneous"
+msgstr "Verschiedenes"
+
+#: ../admin/class-admin-settings.php:316
+msgid "Show Fonts Dropdown"
+msgstr "Zeige Schrift-Dropdown"
+
+#: ../admin/class-admin-settings.php:317
+msgid "Let the customers select a font for text elements"
+msgstr "Lass die Kunden eine Schrift für Textelemente auswählen"
+
+#: ../admin/class-admin-settings.php:324
+msgid "Tooltips"
+msgstr "Tooltips"
+
+#: ../admin/class-admin-settings.php:325
+msgid "Use tooltips in the product designer."
+msgstr "Verwende Tooltips im Produkt-Designer."
+
+#: ../admin/class-admin-settings.php:332
+msgid "Use Label Settings"
+msgstr "Benutze Bezeichner Einstellungen"
+
+#: ../admin/class-admin-settings.php:333
+msgid ""
+"Use the labels from the \"Labels\" settings page. If you want to translate "
+"the labels with a multilingual plugin like WPML, deactivate this option."
+msgstr ""
+"Benutze die Bezeichnet aus den \"Bezeichner\" Einstellungsseite. Wenn du die "
+"Bezeichner mit einem mehrsprachigen Plugin wie WPML übersetzen willst, dann "
+"deaktiviere diese Option."
+
+#: ../admin/class-admin-settings.php:340
+msgid "Image Uploader"
+msgstr "Bild Uploader"
+
+#: ../admin/class-admin-settings.php:344
+msgid ""
+"When customers can upload own images, you can choose between 2 different "
+"uploaders."
+msgstr ""
+"Wenn Kunden eigene Bilder hochladen können, kannst du zwischen 2 Uploadern "
+"wählen."
+
+#: ../admin/class-admin-settings.php:346
+msgid "Filereader Uploader"
+msgstr "Filereader Uploader"
+
+#: ../admin/class-admin-settings.php:347
+msgid "PHP Uploader"
+msgstr "PHP Uploader"
+
+#: ../admin/class-admin-settings.php:352
+msgid "Maximum Image Size (MB)"
+msgstr "Maximale Bildgrösse (MB)"
+
+#: ../admin/class-admin-settings.php:353
+msgid "The maximum image size in Megabytes, when using the PHP uploader."
+msgstr ""
+"Die maximale Bildgrösse in Megabytes, wenn PHP Uploader verwendet wird."
+
+#: ../admin/class-admin-settings.php:366
+msgid "Only logged-in users can upload images?"
+msgstr "Nur angemeldete Nutzer können Bilder hochladen?"
+
+#: ../admin/class-admin-settings.php:367
+msgid ""
+"Because the PHP uploader uploads the image to your web server, you can allow "
+"the image upload for logged-in users only."
+msgstr ""
+"Weil der PHP Uploader die Bilder auf deinen Webserver hochlädt, kannst du "
+"den Bilderupload nur für angemeldete Nutzer erlauben."
+
+#: ../admin/class-admin-settings.php:374
+msgid "Facebook App-ID"
+msgstr "Facebook App-ID"
+
+#: ../admin/class-admin-settings.php:375
+msgid ""
+"To allow users to add photos from facebook, you have to enter a Facebook App-"
+"Id."
+msgstr ""
+"Um Nutzer es zu erlauben Facebook Fotos hinzuzufügen, musst du eine Facebook "
+"App-ID eingeben."
+
+#: ../admin/class-admin-settings.php:384
+msgid "Instagram Client ID"
+msgstr "Instagram Client ID"
+
+#: ../admin/class-admin-settings.php:385
+msgid ""
+"To allow users to add photos from instagram, you have to enter a Instagram "
+"Client ID."
+msgstr ""
+"Um Nutzer es zu erlauben Instagram Fotos hinzuzufügen, musst du eine "
+"Instagram Client ID eingeben."
+
+#: ../admin/class-admin-settings.php:394
+msgid "Instagram Redirect URI"
+msgstr "Instagram Redirect URI"
+
+#: ../admin/class-admin-settings.php:395
+msgid ""
+"This is the URI you need to paste in as OAuth Redirect URI when creating a "
+"Instagram Client ID. Do not change it!"
+msgstr ""
+"Das ist die URI die du als OAuth Redirect URI einfügen musst wenn du eine "
+"Instagram Client ID erstellst. Ändere diese nicht!"
+
+#: ../admin/class-admin-settings.php:404
+msgid "Minimum Zoom"
+msgstr "Minimaler Zoom"
+
+#: ../admin/class-admin-settings.php:405
+msgid "The minimum zoom factor for zooming out."
+msgstr "Der minimale Zoomfaktor um heraus zu zoomen. "
+
+#: ../admin/class-admin-settings.php:418
+msgid "Maximum Zoom"
+msgstr "Maximaler Zoom"
+
+#: ../admin/class-admin-settings.php:419
+msgid "The maximum zoom factor for zooming in."
+msgstr "Der maximale Zoomfaktor um heraus zu zoomen. "
+
+#: ../admin/class-admin-settings.php:432
+msgid "Padding Controls"
+msgstr "Kontrolabstände"
+
+#: ../admin/class-admin-settings.php:433
+msgid ""
+"The padding of the controls when an element is selected in the product stage."
+msgstr ""
+"Der Abstand der Regelknöpfe wenn ein Element in der Produktbühne ausgewählt "
+"ist."
+
+#: ../admin/class-admin-settings.php:446
+msgid "Hexadecimal Color Names"
+msgstr "Hexadezimal Farbnamen"
+
+#: ../admin/class-admin-settings.php:447
+msgid ""
+"You can set custom names for your hexadecimal colors, that will be used in "
+"the tooltips, when using a predefined color list. Example: 000000:black,"
+"ffffff:white"
+msgstr ""
+"Du kannst eigene Name für deine hexadezimal Farben setzen, welche in den "
+"Tooltips verwendet werden, wenn eine festdefinierte Farbliste verwendet "
+"wird. Beispiel: 000000:black,ffffff:white"
+
+#: ../admin/class-admin-settings.php:456
+#: ../admin/views/html-admin-meta-box.php:83
+msgid "\"Start Customizing\" Button"
+msgstr "\"Starte Anpassen\" Button"
+
+#: ../admin/class-admin-settings.php:457
+msgid ""
+"Enable a \"Start Customizing\" Button, that will show the standard product "
+"first. The product designer will come up first, if the customer clicks on "
+"this button. Just enter a text for the button to enable this feature."
+msgstr ""
+"Aktiviere einen \"Starte Anpassen\" Button,  das wird das Standardprodukt "
+"zuerst anzeigen. Der Produkt-Designer wird erst erscheinen, wenn der Kunde "
+"auf diesen Button klickt. Einfach einen Text für diesen Button eingeben um "
+"diese Funktion zu aktivieren."
+
+#: ../admin/class-admin-settings.php:466
+#: ../admin/views/html-admin-meta-box.php:87
+msgid "Open in lightbox"
+msgstr "In Lightbox öffnen"
+
+#: ../admin/class-admin-settings.php:467
+msgid ""
+"When using the \"Start Customizing\" button, open product designer in a "
+"lightbox."
+msgstr ""
+"Wenn der \"Anpassen starten\" Button verwendet wird, den Produkt Designer in "
+"einer Lightbox öffnen."
+
+#: ../admin/class-admin-settings.php:474
+msgid "Lightbox: Add to cart"
+msgstr "Lightbox: Zum Warenkorb hinzufügen"
+
+#: ../admin/class-admin-settings.php:475
+msgid ""
+"When clicking the submit button in the lightbox, add designed product "
+"directly into cart."
+msgstr ""
+"Wenn der Bestätigungs-Button in der Lightbox geklickt wird, bewege das "
+"erstellte Produkt direkt in den Warenkorb."
+
+#: ../admin/class-admin-settings.php:482
+msgid "Debug Mode"
+msgstr "Debug Modus"
+
+#: ../admin/class-admin-settings.php:483
+msgid "Theme Check and loading of unminified Javascript files."
+msgstr "Theme Check und Laden von nicht verkleinerten Javascript Dateien."
+
+#: ../admin/class-admin-settings.php:484
+msgid ""
+"Enabling this option will help you to find any issue in the product page. A "
+"modal window will come up and gives you information about missing hooks in "
+"your theme."
+msgstr ""
+"Aktivierst du diese Option, wird es dir helfen eventuelle Fehler in der "
+"Produktseite zu finden. Ein modales Fenster wird erscheinen und dir "
+"Information über fehlende Hooks in deinem Theme geben."
+
+#: ../admin/class-admin-settings.php:499
+#: ../admin/views/html-admin-meta-box.php:19
+msgid "Image Parameters"
+msgstr "Bildparameter"
+
+#: ../admin/class-admin-settings.php:501
+msgid ""
+"The parameters for all image elements in the Fancy Design Categories and "
+"uploaded by the customer."
+msgstr ""
+"Die Parameter für alle Bildelemente in den Fancy Design Kategorien und "
+"hochgeladen der Kunden."
+
+#: ../admin/class-admin-settings.php:505 ../admin/class-admin-settings.php:810
+#: ../admin/views/html-fancy-designs-parameters-modal.php:29
+msgid "X-Position"
+msgstr "X-Position"
+
+#: ../admin/class-admin-settings.php:517 ../admin/class-admin-settings.php:824
+#: ../admin/views/html-fancy-designs-parameters-modal.php:33
+msgid "Y-Position"
+msgstr "Y-Position"
+
+#: ../admin/class-admin-settings.php:529 ../admin/class-admin-settings.php:838
+#: ../admin/views/html-fancy-designs-parameters-modal.php:37
+msgid "Z-Position"
+msgstr "Z-Position"
+
+#: ../admin/class-admin-settings.php:530 ../admin/class-admin-settings.php:839
+msgid ""
+"-1 means that the element will be added at the top. An value higher than "
+"that, will add the element to that z-position."
+msgstr ""
+"-1 heisst dass das Element ganz oben platziert wird. Ein Wert höher als "
+"dieser, dann wird das Element auf diese Z-Position gesetzt."
+
+#: ../admin/class-admin-settings.php:544 ../admin/class-admin-settings.php:853
+msgid "Enter hex color(s) separated by comma."
+msgstr "Setze HEX Farb(en) separiert duch ein Komma."
+
+#: ../admin/class-admin-settings.php:553 ../admin/class-admin-settings.php:862
+#: ../admin/views/html-admin-meta-box.php:143
+#: ../admin/views/html-admin-meta-box.php:250
+#: ../admin/views/html-fancy-designs-parameters-modal.php:49
+#: ../admin/views/html-product-builder-parameters-form.php:32
+msgid "Price"
+msgstr "Preis"
+
+#: ../admin/class-admin-settings.php:554
+msgid ""
+"Enter the additional price for a design element. Use always a dot as decimal "
+"separator!"
+msgstr ""
+"Setze den zusätzlich Preis für ein Motivelement. Verwende immer einen Punkt "
+"als Dezimal Trennzeichen!"
+
+#: ../admin/class-admin-settings.php:567 ../admin/class-admin-settings.php:876
+#: ../admin/views/html-fancy-designs-parameters-modal.php:53
+msgid "Auto-Center"
+msgstr "Auto-Zentrierung"
+
+#: ../admin/class-admin-settings.php:574 ../admin/class-admin-settings.php:883
+#: ../admin/views/html-fancy-designs-parameters-modal.php:60
+#: ../admin/views/html-product-builder-parameters-form.php:73
+msgid "Draggable"
+msgstr "Bewegbar"
+
+#: ../admin/class-admin-settings.php:581 ../admin/class-admin-settings.php:890
+#: ../admin/views/html-fancy-designs-parameters-modal.php:67
+#: ../admin/views/html-product-builder-parameters-form.php:74
+msgid "Rotatable"
+msgstr "Rotierbar"
+
+#: ../admin/class-admin-settings.php:588 ../admin/class-admin-settings.php:897
+#: ../admin/views/html-fancy-designs-parameters-modal.php:74
+#: ../admin/views/html-product-builder-parameters-form.php:75
+msgid "Resizable"
+msgstr "Skalierbar"
+
+#: ../admin/class-admin-settings.php:595 ../admin/class-admin-settings.php:904
+msgid "Z-Changeable"
+msgstr "Z-Änderbar"
+
+#: ../admin/class-admin-settings.php:602 ../admin/class-admin-settings.php:911
+#: ../admin/views/html-admin-meta-box.php:147
+#: ../admin/views/html-fancy-designs-parameters-modal.php:81
+#: ../admin/views/html-product-builder-parameters-form.php:38
+msgid "Replace"
+msgstr "Ersetzen"
+
+#: ../admin/class-admin-settings.php:603 ../admin/class-admin-settings.php:912
+#: ../admin/views/html-product-builder-parameters-form.php:38
+msgid "Elements with the same replace name will replace each other."
+msgstr ""
+"Elemente mit dem selben Überschreibungsnamen werden sich gegenseitig "
+"ersetzen."
+
+#: ../admin/class-admin-settings.php:612 ../admin/class-admin-settings.php:921
+#: ../admin/views/html-fancy-designs-parameters-modal.php:87
+#: ../admin/views/html-product-builder-parameters-form.php:78
+msgid "Auto-Select"
+msgstr "Auto-Auswahl"
+
+#: ../admin/class-admin-settings.php:619 ../admin/class-admin-settings.php:928
+#: ../admin/views/html-fancy-designs-parameters-modal.php:94
+#: ../admin/views/html-product-builder-parameters-form.php:77
+msgid "Stay On Top"
+msgstr "Bleib oben"
+
+#: ../admin/class-admin-settings.php:626 ../admin/class-admin-settings.php:980
+msgid "Use another element as bounding box?"
+msgstr "Verwende ein anderes Element als Begrenzungsbox?"
+
+#: ../admin/class-admin-settings.php:634 ../admin/class-admin-settings.php:988
+#: ../admin/views/html-admin-meta-box.php:177
+#: ../admin/views/html-admin-meta-box.php:242
+#: ../admin/views/html-fancy-designs-parameters-modal.php:126
+msgid "Bounding Box Target"
+msgstr "Begrenzungsboxziel"
+
+#: ../admin/class-admin-settings.php:635 ../admin/class-admin-settings.php:989
+msgid ""
+"Enter the title of another element that should be used as bounding box for "
+"design elements."
+msgstr ""
+"Gebe den Titel eines anderen Elements ein das als Begrenzungsbox für dieses "
+"Motivelement verwenden soll."
+
+#: ../admin/class-admin-settings.php:645 ../admin/class-admin-settings.php:999
+#: ../admin/views/html-admin-meta-box.php:161
+#: ../admin/views/html-admin-meta-box.php:226
+#: ../admin/views/html-fancy-designs-parameters-modal.php:110
+msgid "Bounding Box X-Position"
+msgstr "Begrenzungsbox X-Position"
+
+#: ../admin/class-admin-settings.php:658
+#: ../admin/class-admin-settings.php:1012
+#: ../admin/views/html-admin-meta-box.php:165
+#: ../admin/views/html-admin-meta-box.php:230
+#: ../admin/views/html-fancy-designs-parameters-modal.php:114
+msgid "Bounding Box Y-Position"
+msgstr "Begrenzungsbox Y-Position"
+
+#: ../admin/class-admin-settings.php:671
+#: ../admin/class-admin-settings.php:1025
+#: ../admin/views/html-admin-meta-box.php:169
+#: ../admin/views/html-admin-meta-box.php:234
+#: ../admin/views/html-fancy-designs-parameters-modal.php:118
+msgid "Bounding Box Width"
+msgstr "Begrenzungsbox Breite"
+
+#: ../admin/class-admin-settings.php:684
+#: ../admin/class-admin-settings.php:1038
+#: ../admin/views/html-admin-meta-box.php:173
+#: ../admin/views/html-admin-meta-box.php:238
+#: ../admin/views/html-fancy-designs-parameters-modal.php:122
+msgid "Bounding Box Height"
+msgstr "Begrenzungsbox Höhe"
+
+#: ../admin/class-admin-settings.php:697
+#: ../admin/class-admin-settings.php:1051
+#: ../admin/views/html-fancy-designs-parameters-modal.php:130
+msgid "Bounding Box Clipping"
+msgstr "Begrenzungsbox Zuschneidung"
+
+#: ../admin/class-admin-settings.php:706
+msgid "Uploaded Image Parameters"
+msgstr "Hochgeladene Bild Parameter"
+
+#: ../admin/class-admin-settings.php:708
+msgid "Additional parameters for uploaded images by the customer."
+msgstr "Zusätzliche Parameter für hochgeladene Bilder des Kunden."
+
+#: ../admin/class-admin-settings.php:712
+#: ../admin/views/html-admin-meta-box.php:186
+msgid "Minimum Width"
+msgstr "Minimale Breite"
+
+#: ../admin/class-admin-settings.php:713
+msgid "The minimum image width for uploaded designs from the customers."
+msgstr "Die minimale Bildbreite für hochgeladene Kundenmotive."
+
+#: ../admin/class-admin-settings.php:726
+#: ../admin/views/html-admin-meta-box.php:190
+msgid "Minimum Height"
+msgstr "Minimale Höhe"
+
+#: ../admin/class-admin-settings.php:727
+msgid "The minimum image height for uploaded designs from the customers."
+msgstr "Die minimale Bildhöhe für hochgeladene Kundenmotive."
+
+#: ../admin/class-admin-settings.php:740
+#: ../admin/views/html-admin-meta-box.php:194
+msgid "Maximum Width"
+msgstr "Maximale Breite"
+
+#: ../admin/class-admin-settings.php:741
+msgid "The maximum image width for uploaded designs from the customers."
+msgstr "Die maximale Bildbreite für hochgeladene Kundenmotive."
+
+#: ../admin/class-admin-settings.php:754
+#: ../admin/views/html-admin-meta-box.php:198
+msgid "Maximum Height"
+msgstr "Maximale Höhe"
+
+#: ../admin/class-admin-settings.php:755
+msgid "The maximum image height for uploaded designs from the customers."
+msgstr "Die maximale Bildhöhe für hochgeladene Kundenmotive."
+
+#: ../admin/class-admin-settings.php:768
+#: ../admin/views/html-admin-meta-box.php:202
+msgid "Resize To Width"
+msgstr "Grösse an die Breite anpassen"
+
+#: ../admin/class-admin-settings.php:769
+msgid ""
+"Resize the uploaded image to this width, when width is larger than height."
+msgstr ""
+"Grösse des hochgeladendes Bild an diese Breite anpassen, wenn die Breite "
+"grösser als die Höhe ist."
+
+#: ../admin/class-admin-settings.php:782
+#: ../admin/views/html-admin-meta-box.php:206
+msgid "Resize To Height"
+msgstr "Grösse an die Höhe anpassen"
+
+#: ../admin/class-admin-settings.php:783
+msgid ""
+"Resize the uploaded image to this height, when height is larger than width."
+msgstr ""
+"Grösse des hochgeladendes Bild an diese Höhe anpassen, wenn die Höhe grösser "
+"als die Breite ist."
+
+#: ../admin/class-admin-settings.php:797
+#: ../admin/views/html-admin-meta-box.php:20
+msgid "Custom Text Parameters"
+msgstr "Eigener Text Parameter"
+
+#: ../admin/class-admin-settings.php:797
+msgid ""
+"Set here the default parameters, that will be used when a customer adds a "
+"custom text."
+msgstr ""
+"Setze hier die voreingestellten Parameter, die für eigene Kundentexte "
+"verwendet werden sollen."
+
+#: ../admin/class-admin-settings.php:800
+#: ../admin/views/html-admin-meta-box.php:246
+msgid "Default Text"
+msgstr "Standardmässigen Text"
+
+#: ../admin/class-admin-settings.php:801
+msgid "The default text when the customers add an own text element."
+msgstr ""
+"Der standardmässigen Text wenn die Kunden ein eigenes Textelement hinzufügen."
+
+#: ../admin/class-admin-settings.php:811
+msgid "The x-position of the custom text element."
+msgstr "Die x-Position für eigene Textelemente."
+
+#: ../admin/class-admin-settings.php:825
+msgid "The y-position of the custom text element."
+msgstr "Die y-Position für eigene Textelemente."
+
+#: ../admin/class-admin-settings.php:863
+msgid ""
+"Enter the additional price for a text element. Use always a dot as decimal "
+"separator!"
+msgstr ""
+"Setze den zusätzlichen Preis für das Textelement. Verwende immer einen Punkt "
+"als Dezimal Trennzeichen!"
+
+#: ../admin/class-admin-settings.php:935
+#: ../admin/views/html-product-builder-parameters-form.php:154
+msgid "Patternable"
+msgstr "Muster möglich"
+
+#: ../admin/class-admin-settings.php:936
+msgid "Can the customer choose a pattern?"
+msgstr "Kann der Kunde ein Patten auswählen?"
+
+#: ../admin/class-admin-settings.php:943
+#: ../admin/views/html-product-builder-parameters-form.php:155
+msgid "Curvable"
+msgstr "Biegsam"
+
+#: ../admin/class-admin-settings.php:944
+msgid "Can the customer make the text curved?"
+msgstr "Kann der Kunde den Text gebogen machen?"
+
+#: ../admin/class-admin-settings.php:951
+msgid "Curve Spacing"
+msgstr "Gebogener Text: Abstand"
+
+#: ../admin/class-admin-settings.php:962
+msgid "Curve Radius"
+msgstr "Gebogener Text: Radius"
+
+#: ../admin/class-admin-settings.php:973
+msgid "Curve Reverse"
+msgstr "Gebogener Text: Umgekehrt"
+
+#: ../admin/class-admin-settings.php:1058
+msgid "Default Text Size"
+msgstr "Voreingestelle Textgrösse"
+
+#: ../admin/class-admin-settings.php:1059
+msgid "The default text size for all text elements."
+msgstr "Die voreingestelle Textgrösse für alle Textelemente."
+
+#: ../admin/class-admin-settings.php:1072
+msgid "Default Font"
+msgstr "Voreingestellte Schrift"
+
+#: ../admin/class-admin-settings.php:1073
+msgid ""
+"Enter the default font. If you leave it empty, the first font from the fonts "
+"dropdown will be used."
+msgstr ""
+"Setze die voreingestelle Schrift. Wenn du es leer lässt, dann wird die erste "
+"Schrift aus dem Schrift-Dropdown verwendet."
+
+#: ../admin/class-admin-settings.php:1082
+#: ../admin/views/html-product-builder-parameters-form.php:147
+msgid "Maximum Characters"
+msgstr "Maximale Charakter"
+
+#: ../admin/class-admin-settings.php:1083
+msgid "You can limit the number of characters. 0 means unlimited characters."
+msgstr ""
+"Du kannst die Anzahl der Charakter begrenzen. 0 heisst unbegrenzte Charakter."
+
+#: ../admin/class-admin-settings.php:1092
+msgid "Alignment"
+msgstr "Ausrichtung"
+
+#: ../admin/class-admin-settings.php:1099
+#: ../admin/class-admin-settings.php:1121
+msgid "Left"
+msgstr "Links"
+
+#: ../admin/class-admin-settings.php:1100
+#: ../admin/class-admin-settings.php:1120
+#: ../admin/class-admin-settings.php:1133
+msgid "Center"
+msgstr "Zentriere"
+
+#: ../admin/class-admin-settings.php:1101
+msgid "Right"
+msgstr "Recht"
+
+#: ../admin/class-admin-settings.php:1107
+msgid "Common Parameters"
+msgstr "Gemeinsame Parameter"
+
+#: ../admin/class-admin-settings.php:1109
+msgid "Common parameters for image and text elements."
+msgstr "Gemeinsame Parameter für Bild- und Textelemente."
+
+#: ../admin/class-admin-settings.php:1113
+msgid "Origin-X Point"
+msgstr "Ursprung-X Punkt"
+
+#: ../admin/class-admin-settings.php:1126
+msgid "Origin-Y Point"
+msgstr "Ursprung-Y Punkt"
+
+#: ../admin/class-admin-settings.php:1134
+msgid "Top"
+msgstr "Oben"
+
+#: ../admin/class-admin-settings.php:1149
+msgid "Sidebar Labels"
+msgstr "Seitenleiste Bezeichner"
+
+#: ../admin/class-admin-settings.php:1151
+msgid "Edit the text and tooltips for the elements in the sidebar."
+msgstr "Bearbeite die Text und Tooltips für die Elemente in der Seitenleiste."
+
+#: ../admin/class-admin-settings.php:1164
+msgid "Designs Menu"
+msgstr "Motive Menu"
+
+#: ../admin/class-admin-settings.php:1172
+msgid "Edit-Elements Menu"
+msgstr "Bearbeite-Elemente Menu"
+
+#: ../admin/class-admin-settings.php:1180
+msgid "Facebook Menu"
+msgstr "Facebook Menu"
+
+#: ../admin/class-admin-settings.php:1188
+msgid "Instagram Menu"
+msgstr "Instagram Menu"
+
+#: ../admin/class-admin-settings.php:1196
+msgid "Edit Elements: Headline"
+msgstr "Elemente bearbeiten: Überschrift"
+
+#: ../admin/class-admin-settings.php:1204
+msgid "Edit Elements: None in Elements Dropdown"
+msgstr "Elemente bearbeiten: Keins in Elemente Dropdown"
+
+#: ../admin/class-admin-settings.php:1212
+msgid "Edit Elements: Filling"
+msgstr "Elemente bearbeiten: Füllung"
+
+#: ../admin/class-admin-settings.php:1220
+msgid "Edit Elements: Font & Styles"
+msgstr "Elemente bearbeiten: Schrift & Stile"
+
+#: ../admin/class-admin-settings.php:1228
+msgid "Edit Elements: Curved Text"
+msgstr "Elemente bearbeiten: Gebogener text"
+
+#: ../admin/class-admin-settings.php:1236
+msgid "Edit Elements: Helpers"
+msgstr "Elemente bearbeiten: Helfer"
+
+#: ../admin/class-admin-settings.php:1244
+msgid "Edit Elements: Align Left"
+msgstr "Elemente bearbeiten: Links ausrichten"
+
+#: ../admin/class-admin-settings.php:1252
+msgid "Edit Elements: Align Center"
+msgstr "Elemente bearbeiten: Zentriert ausrichten"
+
+#: ../admin/class-admin-settings.php:1260
+msgid "Edit Elements: Align Right"
+msgstr "Elemente bearbeiten: Rechts ausrichten"
+
+#: ../admin/class-admin-settings.php:1268
+msgid "Edit Elements: Bold"
+msgstr "Elemente bearbeiten: Fett"
+
+#: ../admin/class-admin-settings.php:1276
+msgid "Edit Elements: Italic"
+msgstr "Elemente bearbeiten: Kursiv"
+
+#: ../admin/class-admin-settings.php:1284
+msgid "Edit Elements: Center Horizontal"
+msgstr "Elemente bearbeiten: Zentriere Horizontal"
+
+#: ../admin/class-admin-settings.php:1292
+msgid "Edit Elements: Center Vertical"
+msgstr "Elemente bearbeiten: Zentriere Vertikal"
+
+#: ../admin/class-admin-settings.php:1300
+msgid "Edit Elements: Bring-It-Down"
+msgstr "Elemente bearbeiten: Eins-nach-unten"
+
+#: ../admin/class-admin-settings.php:1308
+msgid "Edit Elements: Bring-It-Up"
+msgstr "Elemente bearbeiten: Eins-nach-oben"
+
+#: ../admin/class-admin-settings.php:1316
+msgid "Edit Elements: Reset"
+msgstr "Elemente bearbeiten: Zurücksetzen"
+
+#: ../admin/class-admin-settings.php:1324
+msgid "Edit Elements: Trash"
+msgstr "Elemente bearbeiten: Wegwerfen"
+
+#: ../admin/class-admin-settings.php:1332
+msgid "Curved Text: Info"
+msgstr "Gebogener Text: Info"
+
+#: ../admin/class-admin-settings.php:1340
+msgid "Curved Text: Switcher"
+msgstr "Gebogener Text: Schalter"
+
+#: ../admin/class-admin-settings.php:1348
+msgid "Curved Text: Reverse"
+msgstr "Gebogener Text: Umgekehrt"
+
+#: ../admin/class-admin-settings.php:1356
+msgid "Curved Text: Spacing"
+msgstr "Gebogener Text: Abstand"
+
+#: ../admin/class-admin-settings.php:1364
+msgid "Curved Text: Radius"
+msgstr "Gebogener Text: Radius"
+
+#: ../admin/class-admin-settings.php:1372
+msgid "Facebook: Headline"
+msgstr "Facebook: Überschrift"
+
+#: ../admin/class-admin-settings.php:1380
+msgid "Facebook: Select album"
+msgstr "Facebook: Album auswählen"
+
+#: ../admin/class-admin-settings.php:1388
+msgid "Instagram: Headline"
+msgstr "Instagram: Überschrift"
+
+#: ../admin/class-admin-settings.php:1396
+msgid "Instagram: My Feed"
+msgstr "Instagram: Mein Feed"
+
+#: ../admin/class-admin-settings.php:1404
+msgid "Instagram: My Recent Images"
+msgstr "Instagram: Meine Letzten Bilder"
+
+#: ../admin/class-admin-settings.php:1412
+msgid "Instagram: Load next stack"
+msgstr "Instagram: Lade nächsten Stapel"
+
+#: ../admin/class-admin-settings.php:1421
+msgid "Product Stage Labels"
+msgstr "Produktbühne Bezeichner"
+
+#: ../admin/class-admin-settings.php:1421
+msgid "Edit the texts and tooltips for the elements in the product stage."
+msgstr "Bearbeite die Texte and Tooltips für die Elemente in der Produktbühne."
+
+#: ../admin/class-admin-settings.php:1440
+#: ../inc/class-frontend-product.php:454
+msgid "Zoom In"
+msgstr "Einzoomen"
+
+#: ../admin/class-admin-settings.php:1448
+#: ../inc/class-frontend-product.php:455
+msgid "Zoom Out"
+msgstr "Herauszoomen"
+
+#: ../admin/class-admin-settings.php:1456
+#: ../inc/class-frontend-product.php:456
+msgid "Zoom Reset"
+msgstr "Zoom zurücksetzen"
+
+#: ../admin/class-admin-settings.php:1481
+#: ../inc/class-frontend-product.php:459
+msgid "Save As PDF"
+msgstr "Als PDF speichern"
+
+#: ../admin/class-admin-settings.php:1489
+msgid "Save Product"
+msgstr "Produkt speichern"
+
+#: ../admin/class-admin-settings.php:1497
+#: ../inc/class-frontend-product.php:461
+msgid "Your saved products"
+msgstr "Deine gespeicherten Produkte"
+
+#: ../admin/class-admin-settings.php:1505
+#: ../inc/class-frontend-product.php:462
+msgid "Reset Product"
+msgstr "Produkt wiederherstellen"
+
+#: ../admin/class-admin-settings.php:1517
+msgid "Out Of Containment Alert"
+msgstr "\"Ausserhalb der Begrenzung\" Warnung"
+
+#: ../admin/class-admin-settings.php:1525
+msgid "Uploaded Design Size Alert"
+msgstr "Hochgeladene Motivgrösse warnung"
+
+#: ../admin/class-admin-settings.php:1534
+msgid "Confirm Product Deletion"
+msgstr "Bestätige Produktlöschung"
+
+#: ../admin/class-admin-settings.php:1542
+msgid "Colorpicker Cancel"
+msgstr "Colorpicker abbrechen"
+
+#: ../admin/class-admin-settings.php:1550
+msgid "Colorpicker Choose"
+msgstr "Colorpicker Auswählen"
+
+#: ../admin/class-admin-settings.php:1558
+msgid "Catalog: Add To Cart Button"
+msgstr "Katalog: Zum Warenkorb hinzufügen"
+
+#: ../admin/class-admin-settings.php:1566
+msgid "Initializing Text"
+msgstr "Initiiere Text"
+
+#: ../admin/class-admin-settings.php:1575
+msgid "Uploaded Images Category Name"
+msgstr "Hochgeladene Bilder Kategoriename"
+
+#: ../admin/class-admin-settings.php:1584
+msgid "Not Supported Device Information"
+msgstr "Nichtunterstütztes Gerät Information"
+
+#: ../admin/class-admin-settings.php:1585
+msgid ""
+"The text that will be displayed instead the product designer, if you disable "
+"the product designer for smartphones or tablets."
+msgstr ""
+"Der Text der anstelle des Product Designers angezeigt wird, wenn du den "
+"Product Designer für Smartphones oder Tablets deaktivierst."
+
+#: ../admin/class-admin-settings.php:1594
+msgid "Lightbox Submit Button"
+msgstr "Lightbox Bestätigungs-Button"
+
+#: ../admin/class-admin-settings.php:1613
+msgid "Set the fonts for the fonts dropdown"
+msgstr "Setze die Schriften für den Schriften-Dropdown."
+
+#: ../admin/class-admin-settings.php:1618
+msgid "Common Fonts"
+msgstr "Allgemeine Schriften"
+
+#: ../admin/class-admin-settings.php:1628
+msgid "Google Webfonts"
+msgstr "Google Webfonts"
+
+#: ../admin/class-admin-settings.php:1629
+msgid ""
+"Choose fonts from Google Webfonts. Note that too many fonts will slow down "
+"the loading of your website."
+msgstr ""
+"Wähle Schrfiten von Google Webfonts. Beachte dass zuviele Schriften das "
+"Laden deiner Website verlangsamt."
+
+#: ../admin/class-admin-settings.php:1641
+msgid "Fonts Directory"
+msgstr "Schrfitenverzeichnis"
+
+#: ../admin/class-admin-settings.php:1642
+msgid ""
+"You can add your own fonts to the fonts directory of the plugin, these font "
+"files need to be .woff files."
+msgstr ""
+"Du kannst deine eigenen Schrifen in das Schriftenverzeichnis des Plugins "
+"hinzufügen, diese Schrfiten müssen .woff Schriften sein."
+
+#: ../admin/class-admin-settings.php:1676
+msgid "Flat - Left Sidebar"
+msgstr "Flat - Linke Seitenleiste"
+
+#: ../admin/class-admin-settings.php:1677
+msgid "Flat - Top Sidebar"
+msgstr "Flat - Obere Seitenleiste"
+
+#: ../admin/class-admin-settings.php:1678
+msgid "Flat - Right Sidebar"
+msgstr "Flat - Rechte Seitenleiste"
+
+#: ../admin/class-admin-settings.php:1679
+msgid "Flat - Bottom Sidebar"
+msgstr "Flat - Untere Seitenleiste"
+
+#: ../admin/class-admin-settings.php:1680
+msgid "Semantic"
+msgstr "Semantic"
+
+#: ../admin/class-admin-settings.php:1692
+msgid "Top-Right in Product Stage"
+msgstr "Oben-rechts in der Produktbühne"
+
+#: ../admin/class-admin-settings.php:1693
+msgid "Top-Left in Product Stage"
+msgstr "Oben-links in der Produktbühne"
+
+#: ../admin/class-admin-settings.php:1694
+msgid "Bottom-Right in Product Stage"
+msgstr "Unten-rechts in der Produktbühne"
+
+#: ../admin/class-admin-settings.php:1695
+msgid "Bottom-Left in Product Stage"
+msgstr "Unten-links in der Produktbühne"
+
+#: ../admin/class-admin-settings.php:1696
+msgid "Under the Product Stage"
+msgstr "Unter die Produktbühne"
+
+#: ../admin/class-admin.php:49
+msgid ""
+"Please install the <a href=\"http://wordpress.org/plugins/woocommerce/\" "
+"target=\"_blank\">WooCommerce plugin</a>, otherwise you can not use Fancy "
+"Product Designer for woocommerce!"
+msgstr ""
+"Bitte installiere das <a href=\"http://wordpress.org/plugins/woocommerce/\" "
+"target=\"_blank\">WooCommerce Plugin</a>, sonst kannst du Fancy Product "
+"Designer für woocommerce nicht nutzen!"
+
+#: ../admin/class-admin.php:55
+msgid ""
+"Please update woocommerce to the latest version! Fancy Product Designer is "
+"only working with V2.1 or newer."
+msgstr ""
+"Bitte aktualisiere woocommerce auf die aktuelle Version! Fancy Product "
+"Designer funktioniert nur mit V2.1 oder neuer."
+
+#: ../admin/fpd-admin-functions.php:8
+#: ../admin/views/html-fancy-designs-parameters-modal.php:13
+msgid "Remove"
+msgstr "Entfernen"
+
+#: ../admin/fpd-admin-functions.php:8
+msgid "Duplicate"
+msgstr "Duplizieren"
+
+#: ../admin/fpd-admin-functions.php:8 ../inc/class-cart.php:116
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../admin/fpd-admin-functions.php:8 ../inc/class-frontend-product.php:419
+#: ../inc/class-frontend-product.php:422
+msgid "Edit Elements"
+msgstr "Elemente bearbeiten"
+
+#: ../admin/fpd-admin-functions.php:36
+msgid ""
+"You are not using the <a href=\"http://fancyproductdesigner.com/woocommerce-"
+"plugin/documentation/changelog/\" target=\"_blank\">latest version</a> of "
+"Fancy Product Designer. Please go to your <a href=\"http://codecanyon.net/"
+"downloads\" target=\"_blank\">downloads tab on codecanyon</a> and download "
+"it again. Read also the <a href=\"http://fancyproductdesigner.com/"
+"woocommerce-plugin/documentation/upgrading/\" target=\"_blank\">upgrading "
+"documentation</a> how to install a new version."
+msgstr ""
+"Du benutzt nicht die <a href=\"http://fancyproductdesigner.com/woocommerce-"
+"plugin/documentation/changelog/\" target=\"_blank\">aktuelle Version</a> vom "
+"Fancy Product Designer. Bitte gehe zu deinem <a href=\"http://codecanyon.net/"
+"downloads\" target=\"_blank\">Downloads Tab auf codecanyon</a> und lade es "
+"erneut herunter. Lese ebenfalls die <a href=\"http://fancyproductdesigner."
+"com/woocommerce-plugin/documentation/upgrading/\" target=\"_blank"
+"\">Upgrading Dokumentation</a> wie man eine neue Version installiert."
+
+#: ../admin/fpd-admin-functions.php:41
+msgid "You are using the latest version of Fancy Product Designer: "
+msgstr "Du benutzt die aktuelle Version vom Fancy Product Designer: "
+
+#: ../admin/views/html-admin-meta-box.php:6
+msgid "Change Settings"
+msgstr "Einstellungen ändern"
+
+#: ../admin/views/html-admin-meta-box.php:7
+msgid "Add Template"
+msgstr "Template hinzufügen"
+
+#: ../admin/views/html-admin-meta-box.php:8
+msgid "Import"
+msgstr "Importieren"
+
+#: ../admin/views/html-admin-meta-box.php:9
+#: ../admin/views/html-order-viewer.php:13
+msgid "Export"
+msgstr "Exportieren"
+
+#: ../admin/views/html-admin-meta-box.php:14
+msgid "Individual Settings"
+msgstr "Individuelle Einstellungen"
+
+#: ../admin/views/html-admin-meta-box.php:15
+msgid ""
+"Here you can set some individual product designer settings for this product."
+msgstr ""
+"Hier kannst du einige individuelle Produkt-Designer Einstellungen für dieses "
+"Produkt vornehmen."
+
+#: ../admin/views/html-admin-meta-box.php:30
+#: ../admin/views/html-admin-meta-box.php:44
+#: ../admin/views/html-admin-meta-box.php:90
+#: ../admin/views/html-admin-meta-box.php:154
+#: ../admin/views/html-admin-meta-box.php:219
+msgid "Use Option From Main Settings"
+msgstr "Benutze Option von den Haupteinstellungen"
+
+#: ../admin/views/html-admin-meta-box.php:69
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+#: ../admin/views/html-admin-meta-box.php:91
+msgid "No"
+msgstr "Nein"
+
+#: ../admin/views/html-admin-meta-box.php:92
+msgid "Yes"
+msgstr "Ja"
+
+#: ../admin/views/html-admin-meta-box.php:97
+msgid "Background Type"
+msgstr "Hintergrund Typ"
+
+#: ../admin/views/html-admin-meta-box.php:99
+msgid "Image"
+msgstr "Bild"
+
+#: ../admin/views/html-admin-meta-box.php:100
+msgid "Color"
+msgstr "Farbe"
+
+#: ../admin/views/html-admin-meta-box.php:104
+msgid "Background Image"
+msgstr "Hintergrundild"
+
+#: ../admin/views/html-admin-meta-box.php:106
+msgid "Set Image"
+msgstr "Bild setzen"
+
+#: ../admin/views/html-admin-meta-box.php:112
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: ../admin/views/html-admin-meta-box.php:116
+msgid "Hide Designs Tab"
+msgstr "Verberge Motive Tab"
+
+#: ../admin/views/html-admin-meta-box.php:120
+msgid "Hide Facebook Tab"
+msgstr "Verberge Facebook Tab"
+
+#: ../admin/views/html-admin-meta-box.php:124
+msgid "Hide Instagram Tab"
+msgstr "Verberge Instagram Reiter"
+
+#: ../admin/views/html-admin-meta-box.php:128
+msgid "Hide Custom Image Upload"
+msgstr "Verberge Eigenen Bildupload"
+
+#: ../admin/views/html-admin-meta-box.php:132
+msgid "Hide Custom Text"
+msgstr "Verberge Eigenen Text"
+
+#: ../admin/views/html-admin-meta-box.php:139
+msgid "Common Image"
+msgstr "Allgemeines Bild"
+
+#: ../admin/views/html-admin-meta-box.php:155
+#: ../admin/views/html-admin-meta-box.php:220
+#: ../admin/views/html-fancy-designs-parameters-modal.php:104
+msgid "Custom Bounding Box"
+msgstr "Eigene Begrenzungsbox"
+
+#: ../admin/views/html-admin-meta-box.php:156
+#: ../admin/views/html-admin-meta-box.php:221
+#: ../admin/views/html-fancy-designs-parameters-modal.php:105
+#: ../admin/views/html-product-builder-parameters-form.php:91
+msgid "Use another element as bounding box"
+msgstr "Verwende ein anderes Element als Begrenzungsbox"
+
+#: ../admin/views/html-admin-meta-box.php:182
+msgid "Custom Image"
+msgstr "Eigeneres Bild"
+
+#: ../admin/views/html-admin-meta-box.php:264
+#: ../admin/views/html-admin-meta-box.php:294
+#: ../admin/views/html-fancy-designs-parameters-modal.php:142
+#: ../inc/class-frontend-product.php:410
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../admin/views/html-admin-meta-box.php:271
+msgid "Select a template:"
+msgstr "Template auswählen:"
+
+#: ../admin/views/html-admin-meta-box.php:275
+msgid "No templates created. Templates can be created in the Order Viewer."
+msgstr ""
+"Keine Templates erstellt. Template können im Bestellbetrachter erstellt "
+"werden."
+
+#: ../admin/views/html-admin-meta-box.php:319
+msgid "Save Views"
+msgstr "Ansichten speichern"
+
+#: ../admin/views/html-admin-meta-box.php:320
+msgid "Add View"
+msgstr "Ansicht hinzufügen"
+
+#: ../admin/views/html-admin-meta-box.php:335
+msgid "Something went wrong. Please try again!"
+msgstr "Da ist was schief gelaufen. Bitte versuche es noch einmal!"
+
+#: ../admin/views/html-admin-meta-box.php:392
+msgid "Remove this template?"
+msgstr "Entferne dieses Template?"
+
+#: ../admin/views/html-admin-meta-box.php:405
+msgid "Could not delete template. Please try again!"
+msgstr "Template konnte nicht gelöscht werden. Bitte versuche es noch einmal!"
+
+#: ../admin/views/html-admin-meta-box.php:486
+msgid ""
+"Nothing to export. You have not created views for this product. Please "
+"create one or more views!"
+msgstr ""
+"Nichts zum exportieren. Du hast keine Ansichten für dieses Produkt "
+"herstellt. Bitte erstelle eine oder mehrere Ansichten!"
+
+#: ../admin/views/html-admin-meta-box.php:509
+msgid "Add imported image source to media library?"
+msgstr "Importierte Bildquelle zur Medienbibliothek hinzufügen?"
+
+#: ../admin/views/html-admin-meta-box.php:525
+msgid ""
+"Sorry, but the selected file is not a valid JSON object. Are you sure you "
+"have selected the correct file to import?"
+msgstr ""
+"Sorry, aber die ausgewählte Datei ist kein gültiges JSON Objekt. Bist du dir "
+"sicher, dass du die korrekte Datei zum Importieren ausgewählt hast?"
+
+#: ../admin/views/html-admin-meta-box.php:575
+msgid "Choose a background image"
+msgstr "Wähle ein Hintergrundbild"
+
+#: ../admin/views/html-admin-meta-box.php:577
+msgid "Set background image"
+msgstr "Setze Hintergrundbild"
+
+#: ../admin/views/html-admin-meta-box.php:639
+msgid "Could not save views. Please try again!"
+msgstr "Ansichten konnte nicht geändert werden. Bitte versuche es noch einmal!"
+
+#: ../admin/views/html-admin-meta-box.php:655
+#: ../admin/views/html-admin-meta-box.php:748
+msgid "Enter a title for the view:"
+msgstr "Gib einen Titel für die Ansicht ein:"
+
+#: ../admin/views/html-admin-meta-box.php:660
+#: ../admin/views/html-admin-meta-box.php:753
+msgid "Please enter a title!"
+msgstr "Bitte gebe einen Titel ein!"
+
+#: ../admin/views/html-admin-meta-box.php:674
+#: ../admin/views/html-admin-meta-box.php:676
+msgid "Choose a view thumbnail"
+msgstr "Wähle ein Ansichtsvorschaubild"
+
+#: ../admin/views/html-admin-meta-box.php:702
+msgid "Could not change view. Please try again"
+msgstr "Ansicht konnte nicht geändert werden. Bitte versuche es noch einmal"
+
+#: ../admin/views/html-admin-meta-box.php:721
+msgid "Could not create view. Please try again"
+msgstr "Ansicht konnte nicht erstellt werden. Bitte versuche es noch einmal"
+
+#: ../admin/views/html-admin-meta-box.php:767
+msgid "Could not duplicate view. Please try again"
+msgstr "Ansicht konnte nicht dupliziert werden. Bitte versuche es noch einmal."
+
+#: ../admin/views/html-admin-meta-box.php:786
+msgid "Remove this view?"
+msgstr "Entferne dieser Ansicht?"
+
+#: ../admin/views/html-admin-meta-box.php:799
+msgid "Could not delete view. Please try again"
+msgstr "Ansicht konnte nicht gelöscht werden. Bitte versuche es noch einmal"
+
+#: ../admin/views/html-admin-meta-box.php:840
+msgid "Could not create view. Please try again!"
+msgstr "Ansicht konnte nicht erstellt werden. Bitte versuche es noch einmal!"
+
+#: ../admin/views/html-fancy-designs-parameters-modal.php:6
+msgid "Design Thumbnail"
+msgstr "Motiv Vorschaubild"
+
+#: ../admin/views/html-fancy-designs-parameters-modal.php:10
+msgid "Set Design Thumbnail"
+msgstr "Setze Motiv Vorschaubild"
+
+#: ../admin/views/html-fancy-designs-parameters-modal.php:22
+msgid "Edit Parameters"
+msgstr "Parameter bearbeiten"
+
+#: ../admin/views/html-fancy-designs-parameters-modal.php:24
+msgid "Enable parameters"
+msgstr "Aktiviere Parameter"
+
+#: ../admin/views/html-fancy-designs-parameters-modal.php:41
+#: ../admin/views/html-product-builder-parameters-form.php:20
+msgid "Scale"
+msgstr "Skalierung"
+
+#: ../admin/views/html-fancy-designs-parameters-modal.php:45
+msgid "Color(s)"
+msgstr "Farbe(n)"
+
+#: ../admin/views/html-order-viewer.php:4
+msgid ""
+"To load an ordered product, you need to click the \"Open\" button next to "
+"the ordered item in the \"Order Items\" panel!"
+msgstr ""
+"Um ein bestelltes Produkt zu laden, musst du auf den \"Öffnen\" Button neben "
+"dem bestellten Artikel im \"Artikelbestellungen\" Feld klicken!"
+
+#: ../admin/views/html-order-viewer.php:16
+msgid "Output File"
+msgstr "Ausgabedatei"
+
+#: ../admin/views/html-order-viewer.php:19
+msgid "PDF"
+msgstr "PDF"
+
+#: ../admin/views/html-order-viewer.php:20
+msgid "IMAGE"
+msgstr "BILD"
+
+#: ../admin/views/html-order-viewer.php:25
+#: ../admin/views/html-order-viewer.php:65
+msgid "Image Format"
+msgstr "Bildformat"
+
+#: ../admin/views/html-order-viewer.php:30
+msgid ""
+"Exporting as SVG format allows to create a multi-layer PDF. Bounding box "
+"clippings are ignored!"
+msgstr ""
+"SVG Export erlaubt es eine mehrschichtige PDF zu erzeugen. Begrenzungsbox-"
+"Masken werden nicht erkannt!"
+
+#: ../admin/views/html-order-viewer.php:35
+msgid "Size:"
+msgstr "Grösse:"
+
+#: ../admin/views/html-order-viewer.php:36
+msgid "DPI - Pixel Converter"
+msgstr "DPI - Pixel Umwandler"
+
+#: ../admin/views/html-order-viewer.php:39
+msgid "PDF width in mm"
+msgstr "PDF Breite in mm"
+
+#: ../admin/views/html-order-viewer.php:42
+msgid "PDF height in mm"
+msgstr "PDF Höhe in mm"
+
+#: ../admin/views/html-order-viewer.php:45
+msgid "Scale Factor"
+msgstr "Skalierungsfaktor"
+
+#: ../admin/views/html-order-viewer.php:50
+msgid "View(s)"
+msgstr "Ansicht(en)"
+
+#: ../admin/views/html-order-viewer.php:53
+msgid "ALL"
+msgstr "ALLE"
+
+#: ../admin/views/html-order-viewer.php:54
+msgid "CURRENT SHOWING"
+msgstr "AKTUELL AUFGEFÜHRT"
+
+#: ../admin/views/html-order-viewer.php:57
+#: ../admin/views/html-order-viewer.php:105
+msgid "Create"
+msgstr "Erstellen"
+
+#: ../admin/views/html-order-viewer.php:58
+msgid "The created pdfs will be stored in: "
+msgstr "The erstellten PDFs werden gespeichert in:"
+
+#: ../admin/views/html-order-viewer.php:62
+msgid "Single element images"
+msgstr "Einzelne Bildelemente"
+
+#: ../admin/views/html-order-viewer.php:62
+msgid ""
+"You can save each element in the designed product as image on your web "
+"server. They will be stored in: "
+msgstr ""
+"Du kannst jedes Element in dem erstellen Produkt als Bild auf deinem "
+"Webserver speichern. Sie werden gespeichert in:"
+
+#: ../admin/views/html-order-viewer.php:70
+msgid ""
+"When creating a SVG image from a text element, be sure that the font is "
+"installed on your computer, otherwise you will not see the correct font."
+msgstr ""
+"Wenn du ein SVG Bild von einem Textelement erstellst, sei dir sicher dass "
+"die Schrift auf deinem Computer installiert ist, andernfalls du wirst nicht "
+"die korrekte Schrift sehen."
+
+#: ../admin/views/html-order-viewer.php:77
+msgid ""
+"Use origin size, that will set the scaling to 1, when exporting the image."
+msgstr ""
+"Verwende Ursprungsgrösse, das wird die Skalierung auf 1 setzen, wenn das "
+"Bild exportiert wird."
+
+#: ../admin/views/html-order-viewer.php:85
+msgid "Save exported image on server."
+msgstr "Speichere exportiertes Bild auf dem Server."
+
+#: ../admin/views/html-order-viewer.php:93
+msgid "Export without bounding box clipping if element has one."
+msgstr "Exportiere ohne Begrenzungsausschnitt wenn das Element eine hat."
+
+#: ../admin/views/html-order-viewer.php:101
+msgid "Padding around exported element."
+msgstr "Abstand um das exportierte Element."
+
+#: ../admin/views/html-order-viewer.php:114
+msgid "Save as Template"
+msgstr "Als Template speichern"
+
+#: ../admin/views/html-order-viewer.php:115
+msgid "Templates can be retrieved in the Data panel when editing a product."
+msgstr ""
+"Templates können im Datenpanel aufgerufen werden, wenn man ein Produkt "
+"bearbeitet."
+
+#: ../admin/views/html-order-viewer.php:189
+msgid "Could not load order item image. Please try again!"
+msgstr ""
+"Bestellartikel Bild konnte nicht geladen werden. Bitte versuche es noch "
+"einmal!"
+
+#: ../admin/views/html-order-viewer.php:209
+#: ../admin/views/html-order-viewer.php:215
+msgid "Please enter a title for the template"
+msgstr "Gebe einen Titel für das Template ein"
+
+#: ../admin/views/html-order-viewer.php:308
+msgid ""
+"You are trying to create a SVG from a bitmap. You can only create SVG files "
+"from text elements or from image elements with SVG as source."
+msgstr ""
+"Du versuchst ein SVG Bild aus einem Bitmal zu erstellen. Du kannst nur SVG "
+"Dateien aus Textelementen oder Bildelementen mit SVG als Quelle erstellen."
+
+#: ../admin/views/html-order-viewer.php:406
+msgid "Could not create image. Please try again!"
+msgstr "Bild konnte nicht erstellt werden. Bitte versuche es noch einmal!"
+
+#: ../admin/views/html-order-viewer.php:464
+msgid "No element selected!"
+msgstr "Kein Element ausgewählt!"
+
+#: ../admin/views/html-order-viewer.php:521
+#: ../admin/views/html-order-viewer.php:525
+msgid "No width is set. Please set one!"
+msgstr "Keine Breite ist gesetzt. Bitte eine setzen!"
+
+#: ../admin/views/html-order-viewer.php:573
+msgid ""
+"PDF could not be created. The transmitted data is too great, you need to "
+"increase the memory limit in your php.ini, export only a single view or use "
+"jpeg as image format!"
+msgstr ""
+"PDF konnte nicht erstellt werden. The gesendeten Daten sind zu gross, du "
+"musst den Memory Limit in deiner php.ini erhöhen, exportiere nur eine "
+"einzelne Ansicht oder versuche jpeg als Bildformat!"
+
+#: ../admin/views/html-order-viewer.php:583
+msgid ""
+"JSON could not be parsed. Go to wp-content/fancy_products_orders/pdfs and "
+"check if a PDF has been generated."
+msgstr ""
+"JSON konnte nicht geparst werden. Gehe zu wp-content/fancy_products_orders/"
+"pdfs und schaue ob die PDF erstellt wurde."
+
+#: ../admin/views/html-order-viewer.php:600
+msgid "No Fancy Product is selected. Please open one from the Order Items!"
+msgstr ""
+"Kein Fancy Product ist ausgewählt. Bitte öffne eins von den "
+"Artikelbestellungen!"
+
+#: ../admin/views/html-order-viewer.php:621
+msgid ""
+"Your Pop-Up Blocker is enabled. The image will be opened in a new window. "
+"Please allow this website for your Pop-Up Blocker!"
+msgstr ""
+"Dein Pop-Up Blocker ist aktiviert. Das Bild wird in einem neuen Fenster "
+"geöffnet. Bitte erlaube diese Website für deinen Pop-Up Blocker!"
+
+#: ../admin/views/html-product-builder-parameters-form.php:15
+#: ../admin/views/html-product-builder-parameters-form.php:99
+msgid "x"
+msgstr "x"
+
+#: ../admin/views/html-product-builder-parameters-form.php:16
+#: ../admin/views/html-product-builder-parameters-form.php:100
+msgid "y"
+msgstr "y"
+
+#: ../admin/views/html-product-builder-parameters-form.php:26
+msgid "Angle"
+msgstr "Winkel"
+
+#: ../admin/views/html-product-builder-parameters-form.php:32
+msgid "Use always a dot as decimal separator!"
+msgstr "Benutze immer einen Punkt als Dezimal Trennzeichen!"
+
+#: ../admin/views/html-product-builder-parameters-form.php:47
+msgid "Enable Color Control"
+msgstr "Aktiviere Farbkontrolle"
+
+#: ../admin/views/html-product-builder-parameters-form.php:47
+msgid ""
+"To change the color of this element as soon as the color of an element in "
+"first view changes, you can enter a title of an element in the first view. "
+"This operation works only with PNG images that are NOT in the first view."
+msgstr ""
+"Um die Farbe eines Elementes zu ändern sobald die Farbe eines Elementes in "
+"der ersten Ansicht sich ändert, du kannst den Titel eines Elementes aus der "
+"Ansicht eingeben. Diese Operation funktioniert nur mit PNG Bildern die nicht "
+"in der ersten Ansicht sind."
+
+#: ../admin/views/html-product-builder-parameters-form.php:49
+#: ../admin/views/html-product-builder-parameters-form.php:66
+msgid "e.g. #000000"
+msgstr "z.B. #000000"
+
+#: ../admin/views/html-product-builder-parameters-form.php:50
+msgid ""
+"One color value: Colorpicker, Multiple color values: Fixed color palette"
+msgstr "Ein Farbwert: Colorpicker, Mehrere Farbwerte: Festgelegte Farbpalette"
+
+#: ../admin/views/html-product-builder-parameters-form.php:58
+msgid "Opacity"
+msgstr "Transparenz"
+
+#: ../admin/views/html-product-builder-parameters-form.php:58
+msgid "A value between 0-1"
+msgstr "Ein Wert zwischen 0-1"
+
+#: ../admin/views/html-product-builder-parameters-form.php:64
+msgid "Current Color"
+msgstr "Aktuelle Farbe"
+
+#: ../admin/views/html-product-builder-parameters-form.php:64
+msgid ""
+"Enter one hexadecimal color to change the initial color of this element."
+msgstr ""
+"Gebe eine hexadezimale Farbe eine um die Anfangsfarbe von diesem Element zu "
+"ändern."
+
+#: ../admin/views/html-product-builder-parameters-form.php:70
+#: ../admin/views/html-product-builder-parameters-form.php:151
+msgid "Modifications"
+msgstr "Modifiaktionen"
+
+#: ../admin/views/html-product-builder-parameters-form.php:72
+msgid "Removable"
+msgstr "Entfernbar"
+
+#: ../admin/views/html-product-builder-parameters-form.php:76
+msgid "Z-Position Changeable"
+msgstr "Z-Positon änderbar"
+
+#: ../admin/views/html-product-builder-parameters-form.php:94
+msgid "Clip element into bounding box"
+msgstr "Beschneide das Element in die Begrenzungsbox"
+
+#: ../admin/views/html-product-builder-parameters-form.php:102
+msgid "width"
+msgstr "Breite"
+
+#: ../admin/views/html-product-builder-parameters-form.php:103
+msgid "height"
+msgstr "Höhe"
+
+#: ../admin/views/html-product-builder-parameters-form.php:105
+msgid "Title of an image element in the same view."
+msgstr "Titel eines Bildelementes aus der selben Ansicht"
+
+#: ../admin/views/html-product-builder-parameters-form.php:113
+msgid "Text"
+msgstr "Text"
+
+#: ../admin/views/html-product-builder-parameters-form.php:118
+msgid "Font"
+msgstr "Schrift"
+
+#: ../admin/views/html-product-builder-parameters-form.php:120
+msgid "Select a font"
+msgstr "Schriftart auswählen"
+
+#: ../admin/views/html-product-builder-parameters-form.php:130
+msgid "Styling & Alignment"
+msgstr "Styling & Ausrichtung"
+
+#: ../admin/views/html-product-builder-parameters-form.php:153
+msgid "Editable"
+msgstr "Editierbar"
+
+#: ../admin/views/html-product-builder-parameters-form.php:159
+#: ../inc/class-frontend-product.php:426
+msgid "Curved Text"
+msgstr "Gebogener Text"
+
+#: ../admin/views/html-product-builder-parameters-form.php:162
+#: ../inc/class-frontend-product.php:434
+msgid "Spacing"
+msgstr "Abstand"
+
+#: ../admin/views/html-product-builder-parameters-form.php:164
+#: ../inc/class-frontend-product.php:435
+msgid "Radius"
+msgstr "Radius"
+
+#: ../admin/views/html-product-builder-parameters-form.php:166
+#: ../inc/class-frontend-product.php:436
+msgid "Reverse"
+msgstr "Umgekehrt"
+
+#: ../inc/class-cart.php:115
+msgid "Customized Product"
+msgstr "Angepasstes Produkt"
+
+#: ../inc/class-debug.php:61
+msgid "Theme Check"
+msgstr "Theme Check"
+
+#: ../inc/class-debug.php:67
+msgid " hook was found."
+msgstr " Hook wurde nicht gefunden."
+
+#: ../inc/class-debug.php:68
+msgid ""
+" hook is missing in the woocommerce templates of your theme. <a href="
+"\"http://fancyproductdesigner.com/woocommerce-plugin/documentation/"
+"troubleshooting/\" target=\"_blank\">Help me fixing it</a>."
+msgstr ""
+"Hook fehlt in den woocommerce Templates deines Themes. <a href=\"http://"
+"fancyproductdesigner.com/woocommerce-plugin/documentation/troubleshooting/\" "
+"target=\"_blank\">Hilf mir es zu beheben</a>."
+
+#: ../inc/class-debug.php:88
+msgid " filter was found."
+msgstr "Filter wurde nicht gefunden."
+
+#: ../inc/class-debug.php:89
+msgid ""
+" filter is missing in the woocommerce templates of your theme. <a href="
+"\"http://fancyproductdesigner.com/woocommerce-plugin/documentation/"
+"troubleshooting/\" target=\"_blank\">Help me fixing it</a>."
+msgstr ""
+"Filter fehlt in den woocommerce Templates deines Themes. <a href=\"http://"
+"fancyproductdesigner.com/woocommerce-plugin/documentation/troubleshooting/\" "
+"target=\"_blank\">Hilf mir es zu beheben</a>."
+
+#: ../inc/class-debug.php:111
+msgid ""
+"If a hook or filter is missing in your theme, you can <a href=\"http://"
+"fancyproductdesigner.com/woocommerce-plugin/documentation/troubleshooting/"
+"\">try fo fix it by yourself</a>. This is a theme issue, because authors of "
+"themes should follow the woocommerce codex and should not remove the default "
+"woocommerce hooks in the templates files. If you can not fix it by yourself "
+"after reading the \"Troubleshooting\" page, please contact the theme author."
+"<br /><strong>I (developer of Fancy Product Designer) will not fix these "
+"issues for you.</strong>"
+msgstr ""
+"Sollte ein Hook oder Filter in deinem Theme fehlen, <a href=\"http://"
+"fancyproductdesigner.com/woocommerce-plugin/documentation/troubleshooting/"
+"\">kannst du versuchen es selber zu beheben</a>. Dies ist ein Theme-Fehler, "
+"weil die Autoren von Themes sich nicht an den woocommerce Codex halten und "
+"nicht die Standard woocommerce Hooks aus den Template-Dateien entfernen "
+"sollten. Wenn du es nicht selber beheben kannst nach Lesen der "
+"\"Troubleshooting\" Seite, bitte kontaktiere den Theme Autor.<br /"
+"><strong>Ich (Entwickler vom Fancy Product Designer) werde diese Fehler "
+"nicht für dich beheben.</strong>"
+
+#: ../inc/class-frontend-product.php:154
+msgid "Sorry, but the cart item could not be found!"
+msgstr ""
+"Entschuldigung, Aber der Warenkorbartikel konnte nicht gefunden werden!"
+
+#: ../inc/class-frontend-product.php:302
+msgid "Done"
+msgstr "Fertig"
+
+#: ../inc/class-frontend-product.php:407
+msgid "Move it in his containment!"
+msgstr "Beweg es in seine Begrenzung!"
+
+#: ../inc/class-frontend-product.php:408
+msgid "Delete saved product?"
+msgstr "Gespeichertes Produkt löschen?"
+
+#: ../inc/class-frontend-product.php:411
+msgid "Change Color"
+msgstr "Farbe ändern"
+
+#: ../inc/class-frontend-product.php:413 ../inc/class-frontend-product.php:820
+msgid ""
+"Sorry! But the uploaded image size does not conform our indication of size."
+msgstr ""
+"Sorry! Aber die hochgeladene Bildergrösse stimmt nicht mit unseren "
+"Grössenangabe überein."
+
+#: ../inc/class-frontend-product.php:414
+msgid "Initializing product designer"
+msgstr "initiiere Fancy Product Designer"
+
+#: ../inc/class-frontend-product.php:415
+msgid "Your uploaded images"
+msgstr "Deine hochgeladene Bilder"
+
+#: ../inc/class-frontend-product.php:418
+msgid "Designs"
+msgstr "Motive"
+
+#: ../inc/class-frontend-product.php:420
+msgid "Add Photos From Facebook"
+msgstr "Fotos von Facebook hinzufügen"
+
+#: ../inc/class-frontend-product.php:421
+msgid "Add Photos From Instagram"
+msgstr "Fotos von Instagram hinzufügen"
+
+#: ../inc/class-frontend-product.php:423
+msgid "None"
+msgstr "Keine"
+
+#: ../inc/class-frontend-product.php:424
+msgid "Filling"
+msgstr "Füllung"
+
+#: ../inc/class-frontend-product.php:425
+msgid "Font & Style"
+msgstr "Schrift & Stil"
+
+#: ../inc/class-frontend-product.php:427
+msgid "Helpers"
+msgstr "Helfer"
+
+#: ../inc/class-frontend-product.php:428
+msgid "Align Left"
+msgstr "Links ausrichten"
+
+#: ../inc/class-frontend-product.php:429
+msgid "Align Center"
+msgstr "Zentriert ausrichten"
+
+#: ../inc/class-frontend-product.php:430
+msgid "Align Right"
+msgstr "Rechts ausrichten"
+
+#: ../inc/class-frontend-product.php:431
+msgid "Bold"
+msgstr "Fett"
+
+#: ../inc/class-frontend-product.php:432
+msgid "Italic"
+msgstr "Kursiv"
+
+#: ../inc/class-frontend-product.php:433
+msgid "You can only change the text when you switch to normal text."
+msgstr "Du kannst den Text nur ändern wenn du zu normalen Text wechselst."
+
+#: ../inc/class-frontend-product.php:437
+msgid "Switch between curved and normal Text"
+msgstr "Wechsel zwischen gebogenen und normalen Text"
+
+#: ../inc/class-frontend-product.php:438
+msgid "Center Horizontal"
+msgstr "Zentriere Horizontal"
+
+#: ../inc/class-frontend-product.php:439
+msgid "Center Vertical"
+msgstr "Zentriere vertikal"
+
+#: ../inc/class-frontend-product.php:440
+msgid "Bring It Down"
+msgstr "Eins nach unten"
+
+#: ../inc/class-frontend-product.php:441
+msgid "Bring It Up"
+msgstr "Eins nach oben"
+
+#: ../inc/class-frontend-product.php:442
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: ../inc/class-frontend-product.php:443
+msgid "Trash"
+msgstr "Wegwerfen"
+
+#: ../inc/class-frontend-product.php:444
+msgid "Facebook Photos"
+msgstr "Facebook Fotos"
+
+#: ../inc/class-frontend-product.php:445
+msgid "Select an album"
+msgstr "Wähle ein Album"
+
+#: ../inc/class-frontend-product.php:446
+msgid "Instagram Photos"
+msgstr "Instagram Fotos"
+
+#: ../inc/class-frontend-product.php:447
+msgid "My Feed"
+msgstr "Mein Feed"
+
+#: ../inc/class-frontend-product.php:448
+msgid "My Recent Images"
+msgstr "Meine Letzten Bilder"
+
+#: ../inc/class-frontend-product.php:449
+msgid "Load next Stack"
+msgstr "Lade nächsten Stapel"
+
+#: ../inc/class-frontend-product.php:452
+msgid "Add your own Image"
+msgstr "Füge dein Bild hinzu"
+
+#: ../inc/class-frontend-product.php:453
+msgid "Add your own Text"
+msgstr "Füge dein Text hinzu"
+
+#: ../inc/class-frontend-product.php:460
+msgid "Save product"
+msgstr "Produkt speichern"
+
+#: ../inc/class-frontend-product.php:501
+msgid "Uploading"
+msgstr "Hochladen"
+
+#: ../inc/class-frontend-product.php:522
+msgid "You need to be logged in to upload images!"
+msgstr "Du musst angemeldet sein um Bilder hochzuladen!"
+
+#: ../inc/class-frontend-product.php:531
+msgid "Server error: Image could not be uploaded, please try again!"
+msgstr ""
+"Serverfehler: Bild konnte nicht hochgeladen werden, bitte versuche es noch "
+"einmal!"
+
+#: ../inc/class-frontend-product.php:794
+msgid "File is not an image!"
+msgstr "Datei ist kein Bild!"
+
+#: ../inc/class-frontend-product.php:806
+#, php-format
+msgid "Uploaded image is too big! Maximum image size is %d MB!"
+msgstr "Hochgeladendes Bild ist zu gross! Maximale Bildgrösse ist %d MB!"
+
+#: ../inc/class-frontend-product.php:874
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr ""
+"Die hochgeladende Datei überschreitet die upload_max_filesize  Direktive in "
+"php.ini"
+
+#: ../inc/class-frontend-product.php:876
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr ""
+"Die hochgeladende Datei überschreitet die MAX_FILE_SIZE Direktive die im "
+"HTML Formular festgelegt wurde"
+
+#: ../inc/class-frontend-product.php:878
+msgid "The uploaded file was only partially uploaded"
+msgstr "Die hochgeladene Datei wurde nur teilweise hochgeladen"
+
+#: ../inc/class-frontend-product.php:880
+msgid "No file was uploaded"
+msgstr "Keine Datei wurde hochgeladen"
+
+#: ../inc/class-frontend-product.php:882
+msgid "Missing a temporary folder"
+msgstr "Ein temporärer Ordner fehlt"
+
+#: ../inc/class-frontend-product.php:884
+msgid "Failed to write file to disk"
+msgstr "Schreibfehler"
+
+#: ../inc/class-frontend-product.php:886
+msgid "File upload stopped by extension"
+msgstr "Dateiupload wurde gestoppt"
+
+#: ../inc/class-frontend-product.php:888
+msgid "Unknown upload error"
+msgstr "Unbekannter Uploadfehler"
+
+#~ msgid "Choose Thumbnail"
+#~ msgstr "Wähle ein Vorschaubild"
+
+#~ msgid "Set Thumbnail"
+#~ msgstr "Vorschaubild setzen"
+
+#~ msgid "Add Image Element"
+#~ msgstr "Bildelement hinzufügen"
+
+#~ msgid "Add Text Element"
+#~ msgstr "Textelement hinzufügen"
+
+#~ msgid "The JSON file does not include any view."
+#~ msgstr "Die JSON Datei enthält keine Ansicht."
+
+#~ msgid ""
+#~ "Enter hex colors by , separating values or the title of an element in the "
+#~ "first view to use color control."
+#~ msgstr ""
+#~ "Setze HEX Farben die mit einem , separiert sind oder den Titel eines "
+#~ "Elements aus der ersten Ansicht um Farbkontrolle zu verwenden."
+
+#~ msgid "Styling"
+#~ msgstr "Styling"
+
+#~ msgid "Text-Alignment is only applied to multiline text."
+#~ msgstr "Text-Ausrichtung wird nur auf mehrzeilige Texte angewendet."
+
+#~ msgid "Make Curved"
+#~ msgstr "Mach es gebogen"
+
+#~ msgid "Hide product designer on tablets and display an <a href=\""
+#~ msgstr ""
+#~ "Deaktiviere Product Designer auf allen Tablets und zeige stattdessen eine "
+#~ "<a href=\""
+
+#~ msgid "Select a friend"
+#~ msgstr "Wähle einen Freund"
+
+#~ msgid ""
+#~ "The function file_get_contents is not installed on your web server. "
+#~ "Current version number can not be loaded. Please contact your provider "
+#~ "what you need to do to use file_get_contents()."
+#~ msgstr ""
+#~ "Die Funktion file_get_contents ist nicht auf deinem Web-Server "
+#~ "installiert. The aktuelle Versionsnummer kann deswegen nicht geladen "
+#~ "werden. Bitte kontaktiere deinen Provider was du tun musst damit "
+#~ "file_get_contents() nutzen kannst."
+
+#~ msgid "Custom Image Parameters"
+#~ msgstr "Eigene Bild Parameter"
+
+#~ msgid "Enter hex colors by , separating values."
+#~ msgstr "Setze HEX Farben die mit einem , separiert sind."
+
+#~ msgid ""
+#~ "Error while loading Google Webfonts for Fancy Product Designer: <strong>"
+#~ "%s</strong>. Please contact your provider and ask him what to do!"
+#~ msgstr ""
+#~ "Fehler beim Laden von Google Webfonts für Fancy Product Designer. <strong>"
+#~ "%s</strong>. Bitte kontaktiere deinen Provider und frag ihn was zu tun "
+#~ "ist!"
+
+#~ msgid "Facebook: Select Friend"
+#~ msgstr "Facebook: Freund auswählen"
+
+#~ msgid "Custom Fancy Product Settings"
+#~ msgstr "Eigene Fancy Product Einstellungen"
+
+#~ msgid ""
+#~ "The debug mode will load the unminified javascript files. Only necessary "
+#~ "if you inspect an issue and the developer is asking to enable this option."
+#~ msgstr ""
+#~ "Der Debug Modus lädt die nicht verkleinerten Javascript Dateien. Nur "
+#~ "notwendig wenn ein Problem auftritt und der Entwickler danach fragt diese "
+#~ "Option zu aktivieren."
+
+#~ msgid ""
+#~ "To stream <strong>Google Webfonts</strong>, you need to set "
+#~ "<code>allow_url_fopen</code> to ON in the php.ini of your server "
+#~ "settings. If you do not know how to do that, please ask your provider to "
+#~ "do that for you! "
+#~ msgstr ""
+#~ "Um <strong>Google Webfonts</strong> zu laden, musst du "
+#~ "<code>allow_url_fopen</code> auf On in der php.ini der "
+#~ "Servereinstellungen setzen. Wenn du nicht weisst wie man das macht, bitte "
+#~ "frag deinen Provider!"
+
+#~ msgid ""
+#~ "Your product page does not include the .summary class, which is required "
+#~ "to find the cart form. Please check out the Troubleshooting Documentation "
+#~ "what to do!"
+#~ msgstr ""
+#~ "Deine Produktseite hat keine .summary Klasse, die erforderlich ist um das "
+#~ "Einkaufsformular zu finden. Bitte schau dir die Troubleshooting "
+#~ "Dokumentation an!"
+
+#, fuzzy
+#~ msgid "Edit Elements: Bring-It-Up Tooltip"
+#~ msgstr "Navigation Elemente-Bearbeiten Tooltip"
+
+#~ msgid "Default Parameters"
+#~ msgstr "Voreingestellte Parameter"
+
+#~ msgid "Styles"
+#~ msgstr "Styles"
+
+#~ msgid "Highlight"
+#~ msgstr "Highlight"
+
+#~ msgid "Highlight for Textareas, Inputs, Dropdowns, View Selection"
+#~ msgstr "Highlight für Textfelder, Eingabe, Dropdowns, Ansichtauswahl"
+
+#~ msgid "Elements"
+#~ msgstr "Elemente"
+
+#~ msgid "Primary Button Background, Text Color"
+#~ msgstr "Primärer Buttonhintergrund, Textfarbe"
+
+#~ msgid "Text Btn"
+#~ msgstr "Text Btn"
+
+#~ msgid "Text Button Color"
+#~ msgstr "Textbutton Farbe"
+
+#~ msgid "Portrait"
+#~ msgstr "Portrait"
+
+#~ msgid "Landscape"
+#~ msgstr "Landscape"
+
+#~ msgid "Create PDF Of Current View"
+#~ msgstr "PDF der aktuellen Ansicht erstellen"
+
+#~ msgid "Create Image Of Current View"
+#~ msgstr "Bild von der aktuellen Ansicht erstellen"
+
+#~ msgid ""
+#~ "To save the image on your computer, just right-click on it in the new "
+#~ "opened tab and select <i>Save Image As</i> from the context-menu."
+#~ msgstr ""
+#~ "Um ein Bild auf deinem Computer zu speichern, einfach einen Rechtsklick "
+#~ "auf diesem in dem neu geöffneten Tab und wähle <i>Speichern unter</i> aus "
+#~ "dem Kontextmenu."
+
+#~ msgid "Element Images will be stored in: "
+#~ msgstr "Elementbilder sind gespeichert in:"
+
+#~ msgid "Create Image From Element"
+#~ msgstr "Bild von einem Element erstellen"
+
+#~ msgid "Set Element"
+#~ msgstr "Element setzen"
+
+#~ msgid ""
+#~ "Enter the default text for the text element. For multiline text, use "
+#~ "backslash+n."
+#~ msgstr ""
+#~ "Gebe den Standardtext für das Textelement ein. Für mehrzeiligen text, "
+#~ "verwende Backslash+n."
+
+#~ msgid "Please enter the default text!"
+#~ msgstr "Bitte setze einen Standardtext!"
+
+#~ msgid ""
+#~ "If enabling the parameters for a single design, these will be used "
+#~ "instead the default parameters for designs, that are set in the settings."
+#~ msgstr ""
+#~ "Wenn die Parameter für ein einzelnes Motiv aktiviert sind, werden diese "
+#~ "verwendet anstelle der voreingestellten Parameter für Motive, welche in "
+#~ "den Einstellungen gesetzt sind."
+
+#~ msgid "Patternable - only for text elements"
+#~ msgstr "Muster möglich - nur für Textelemenet"
+
+#~ msgid "Font - only for text elements"
+#~ msgstr "Schriftart - nur für Textelemenet"
+
+#~ msgid "Set here the layout and dimensions for the product designer."
+#~ msgstr "Setze hier das Layout und die Dimensionen für den Produktdesigner."
+
+#~ msgid "Layout"
+#~ msgstr "Layout"
+
+#~ msgid "Vertical Sidebar"
+#~ msgstr "Vertikale Seitenleiste"
+
+#~ msgid "Horizontal Sidebar"
+#~ msgstr "Horizontale Seitenleiste"
+
+#~ msgid "Set here the plugin options for the Product Designer."
+#~ msgstr "Setze hier die Optionen für den Product Designer."
+
+#~ msgid "Show the PDF button in the menu bar of the product stage"
+#~ msgstr "Zeige den PDF Button in der Menubar der Produktbühne"
+
+#~ msgid "Center elements, that have a bounding box, automatically in it"
+#~ msgstr ""
+#~ "Zentriere Elemente, die eine Begrenzungsbox haben, in dieser automatisch"
+
+#~ msgid "Product Title In Menu Bar"
+#~ msgstr "Produkttitel in die Menubar"
+
+#~ msgid ""
+#~ "Display product title in the menu bar instead the text you set in the "
+#~ "labels settings."
+#~ msgstr ""
+#~ "Zeige Produkttitel in der Menubar anstelle dem Text, den du in den "
+#~ "Bezeichner Einstellungen setzen kannst."
+
+#~ msgid ""
+#~ "Will center a new added design automtically in stage or in bounding box."
+#~ msgstr ""
+#~ "Zentriert ein neu hinzugefütes Motiv in der Bühne oder Begrenzungsbox "
+#~ "automatisch."
+
+#~ msgid ""
+#~ "Will center a new added text automtically in stage or in bounding box."
+#~ msgstr ""
+#~ "Zentriert einen neu hinzugefühten Text in der Bühne oder in der "
+#~ "Begrenzungsbox automatisch."
+
+#~ msgid "Navigation Products Tooltip"
+#~ msgstr "Navigation Produkte Tooltip"
+
+#~ msgid "Tooltip for the \"Products\" navigation tab."
+#~ msgstr "Tooltip für den \"Produkte\" Navigation Tab."
+
+#~ msgid "Navigation Designs Tooltip"
+#~ msgstr "Navigation Motive Tooltip"
+
+#~ msgid "Tooltip for the \"Designs\" navigation tab."
+#~ msgstr "Tooltip für den \"Motive\" Navigation Tab."
+
+#~ msgid "Navigation Add-Text Tooltip"
+#~ msgstr "Navigation Text-Hinzufügen Tooltip"
+
+#~ msgid "Tooltip for the \"Add-Text\" navigation tab."
+#~ msgstr "Tooltip für den \"Text-Hinzufügen\" Navigation Tab."
+
+#~ msgid "Tooltip for the \"Edit-Elements\" navigation tab."
+#~ msgstr "Tooltip für den \"Elemente-Bearbeiten\" Navigation Tab."
+
+#~ msgid "Navigation Upload Designs Tooltip"
+#~ msgstr "Navigation Motivupload Tooltip"
+
+#~ msgid "Tooltip for the \"Upload Designs\" navigation tab."
+#~ msgstr "Tooltip für den \"Motive-hochladen\" Navigation Tab."
+
+#~ msgid "Navigation Facebook Tooltip"
+#~ msgstr "Navigation Facebook Tooltip"
+
+#~ msgid "Tooltip for the \"Facebook\" navigation tab."
+#~ msgstr "Tooltip für den \"Facebook\" Navigation Tab."
+
+#~ msgid "Navigation Saved-Products Tooltip"
+#~ msgstr "Navigation Gespeicherte-Produkte Tooltip"
+
+#~ msgid "Tooltip for the \"Saved-Products\" navigation tab."
+#~ msgstr "Tooltip für den \"Gespeichrte-Produkte\" Navigation Tab."
+
+#~ msgid "Headline to add custom text elements."
+#~ msgstr "Überschrift um eigene Textelemente hinzuzufügen."
+
+#~ msgid "Custom Text Placeholder"
+#~ msgstr "Eiegner Text Platzhalter"
+
+#~ msgid "Placeholder for the textarea."
+#~ msgstr "Platzhalter für das Textfeld."
+
+#~ msgid "Custom Text Button"
+#~ msgstr "Eigener-Text Button"
+
+#~ msgid "The text for the button to add custom text elements."
+#~ msgstr "Der Text für den Button um eigene Textelemente hinzuzufügen-"
+
+#~ msgid "Headline to customize elements."
+#~ msgstr "Überschrift um Elemente anzupassen"
+
+#~ msgid "Text for the none option of the elements dropdown."
+#~ msgstr "Text für die Keins-Option innerhalb des Element-Dropdowns."
+
+#~ msgid ""
+#~ "Tooltip for the \"Align-Left\" button when customizing a text element."
+#~ msgstr ""
+#~ "Tooltip für den \"Linke-Ausrichtung\" Button wenn man ein Textelement "
+#~ "anpasst."
+
+#~ msgid ""
+#~ "Tooltip for the \"Center-Left\" button when customizing a text element."
+#~ msgstr ""
+#~ "Tooltip für den \"Zentrierte-Ausrichtung\" Button wenn man ein "
+#~ "Textelement anpasst."
+
+#~ msgid ""
+#~ "Tooltip for the \"Right-Left\" button when customizing a text element."
+#~ msgstr ""
+#~ "Tooltip für den \"Rechte-Ausrichtung\" Button wenn man ein Textelement "
+#~ "anpasst."
+
+#~ msgid "Tooltip for the \"Bold\" button when customizing a text element."
+#~ msgstr "Tooltip für den \"Fett\" Button wenn man ein Textelement anpasst."
+
+#~ msgid "Tooltip for the \"Italic\" button when customizing a text element."
+#~ msgstr "Tooltip für den \"Kursiv\" Button wenn man ein Textelement anpasst."
+
+#~ msgid "Tooltip for the \"Center-Horizontal\" button."
+#~ msgstr "Tooltip für den \"Horizontale-Zentrierung\" Button."
+
+#~ msgid "Tooltip for the \"Center-Vertical\" button."
+#~ msgstr "Tooltip für den \"Vertikale-Zentrierung\" Button."
+
+#~ msgid "Move-It-Down Tooltip"
+#~ msgstr "Eins-nach-unten Tooltip"
+
+#~ msgid "Tooltip for the \"Move it down\" button."
+#~ msgstr "Tooltip für den \"Eins-nach-unten\" Button."
+
+#~ msgid "Move-It-Up Tooltip"
+#~ msgstr "Eins-nach-oben"
+
+#~ msgid "Tooltip for the \"Move it up\" button."
+#~ msgstr "Tooltip für den \"Eins-nach-oben\" Button."
+
+#~ msgid "Reset Tooltip"
+#~ msgstr "Zurücksetzen Tooltip"
+
+#~ msgid "Tooltip for the \"Reset to his origin\" button."
+#~ msgstr "Tooltip für den \"Zum Ursprung zurücksetzen\" Button."
+
+#~ msgid "Trash Tooltip"
+#~ msgstr "Entfernen Tooltip"
+
+#~ msgid "Tooltip for the \"Trash\" button."
+#~ msgstr "Tooltip für den \"Entfernen\" Button."
+
+#~ msgid "Upload Designs Tooltip"
+#~ msgstr "Motiveupload Tooltip"
+
+#~ msgid "Headline for the Upload Designs box."
+#~ msgstr "Überschrift für Motiveupload Box."
+
+#~ msgid "Upload Designs Info"
+#~ msgstr "Motiveupload Info"
+
+#~ msgid "Some information for the Upload Designs box."
+#~ msgstr "Ein paar Informationen für die Motiveupload Box."
+
+#~ msgid "Upload Designs Button"
+#~ msgstr "Motiveupload Button"
+
+#~ msgid "Upload button in the Upload Designs box."
+#~ msgstr "Upload Button in der Motiveupload box."
+
+#~ msgid "Default text for the select-dropdown to select a facebook friend."
+#~ msgstr ""
+#~ "Der voreingestellt Text für das Select-Dropdown um ein Facebook Freund "
+#~ "auszuwählen."
+
+#~ msgid "Default text for the select-dropdown to select an album."
+#~ msgstr ""
+#~ "Der voreingestellt Text für das Select-Dropdown um ein Album auszuwählen."
+
+#~ msgid "Saved Products Headline"
+#~ msgstr "Gespeicherte Produkte Überschrift"
+
+#~ msgid "Headline for the \"Saved Products\" tab."
+#~ msgstr "Überschrift für den \"Gespeicherte Produkte\" Tab."
+
+#~ msgid "Product Stage Headline"
+#~ msgstr "Produktbühne Überschrift"
+
+#~ msgid "The headline for the product stage."
+#~ msgstr "Die Überschrift für die Produktbühne."
+
+#~ msgid "Tooltip for the \"Save Product\" button in the menu bar."
+#~ msgstr "Tooltip für den \"Produkt speichern\" Button in der Menubar."
+
+#~ msgid "Tooltip for the \"Download Product Image\" button in the menu bar."
+#~ msgstr "Tooltip für den \"Download Produktbild\" Button in der Menubar."
+
+#~ msgid "Print Tooltip"
+#~ msgstr "Drucken Tooltip"
+
+#~ msgid "Tooltip for the \"Print\" button in the menu bar."
+#~ msgstr "Tooltip für den \"Drucken\" Button in der Menubar."
+
+#~ msgid "Tooltip for the \"Save As PDF\" button in the menu bar."
+#~ msgstr "Tooltip für den \"Speichern als PDF\" Button in der Menubar."
+
+#~ msgid "Modification Tooltips"
+#~ msgstr "Modifikation Tooltips"
+
+#~ msgid "Edit the texts for the modification tooltips."
+#~ msgstr "Bearbeite die Texte für die Modifikation-Tooltips."
+
+#~ msgid "X"
+#~ msgstr "X"
+
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "Width"
+#~ msgstr "Breite"
+
+#~ msgid "Height"
+#~ msgstr "Höhe"
+
+#~ msgid "Additional Labels"
+#~ msgstr "Zusätzliche Bezeichner"
+
+#~ msgid "Edit the texts for the other labels like alerts, confirm boxes etc.."
+#~ msgstr ""
+#~ "Bearbeite die Text für weitere Bezeichner wie Warnungen, "
+#~ "Bestätigungsboxen etc.."
+
+#~ msgid ""
+#~ "The text that appears in the tooltip when an element is out of his "
+#~ "containment. The element title will be added before the text."
+#~ msgstr ""
+#~ "Der Text, der erscheint im Tooltip wenn ein Element sich ausserhalb der "
+#~ "Begrenzung befindet. Der Elementtitel wird vor diesen Text gestellt."
+
+#~ msgid ""
+#~ "The text for the alert when the image resolution is not in the range that "
+#~ "you set for the minimum/maximum sizes for an uploaded design."
+#~ msgstr ""
+#~ "Der Text für die Warnung wenn sich die Bildauflösung nicht im Bereich für "
+#~ "die minimale/maximale Grössen für hochgeladene Motive befindet."
+
+#~ msgid ""
+#~ "The text that appears in the confirm box when deleting a saved product."
+#~ msgstr ""
+#~ "Der Text, der erscheint in der Bestätigungsbox wenn man ein gespeichertes "
+#~ "Produkt löschen möchte."
+
+#~ msgid "The text for the cancel link in the colorpicker."
+#~ msgstr "Der Text für den Link wenn man den Colorpicker schliessen möchte."
+
+#~ msgid "The text for the choose button in the colorpicker."
+#~ msgstr "Der Text für den Auswahlbutton im Colorpicker."
+
+#~ msgid "The text for the add to cart button in the product listings."
+#~ msgstr ""
+#~ "Der Text für den Zum-Warenkorb-hinzufügen Button in den Produktlisten."
+
+#~ msgid "The y-position of a design element."
+#~ msgstr "Die y-Position eines Motivelements."
+
+#~ msgid "Order Item Images"
+#~ msgstr "Bestellartikel Bilder"
+
+#~ msgid "The height for the whole product designer"
+#~ msgstr "Die Höhe für den gesamten Produktdesigner"
+
+#~ msgid "The width for the navigation in the sidebar"
+#~ msgstr "Die Breite für die Navigation in der Seitenleiste"
+
+#~ msgid "The width for the content box in the sidebar"
+#~ msgstr "Die Breite für die Inhaltsbox in der Seitenleiste"
+
+#~ msgid "Minimum Image Width"
+#~ msgstr "Minimale Bildbreite"
+
+#~ msgid "The min. width for all image elements."
+#~ msgstr "Die min. Breite für alle Bildelemente."
+
+#~ msgid "Maximum Image Width"
+#~ msgstr "Maximale Bildbreite"
+
+#~ msgid "The max. width for all image elements."
+#~ msgstr "Die max. Breite für alle Bildelemente."
+
+#~ msgid "Minimum Image Height"
+#~ msgstr "Minimale Bildhöhe"
+
+#~ msgid "The min. height for all image elements."
+#~ msgstr "Die min. Höhe für alle Bildelemente."
+
+#~ msgid "Maximum Image Height"
+#~ msgstr "Maximale Bildhöhe"
+
+#~ msgid "The max. height for all image elements."
+#~ msgstr "Die max. Höhe für alle Bildelemente."
+
+#~ msgid "Fancy Product Designer Options"
+#~ msgstr "Fancy Product Designer Optionen"
+
+#~ msgid "Key Not Valid Alert"
+#~ msgstr "Schlüssel nicht zulässig Warnung"
+
+#~ msgid ""
+#~ "The text for the alert when the key for saving a product is not valid."
+#~ msgstr ""
+#~ "Der Text für die Warnung wenn der Schlüssel zum Speichern eines Produktes "
+#~ "nicht zulässig ist."
+
+#~ msgid "Key To Save Product Prompt"
+#~ msgstr "Eingabebox: Schlüssel um ein Produkt zu speichern"
+
+#~ msgid "Key In Use Alert"
+#~ msgstr "Schlüssen in Verwendung Warnung"
+
+#~ msgid ""
+#~ "The text for the alert when the key for saving a product is already used."
+#~ msgstr ""
+#~ "Der Text für die Warnung wenn der Schlüssel zum Speichern eines Produktes "
+#~ "bereits gesetzt ist."
+
+#, fuzzy
+#~ msgid "Tooltip for the \"Italic\" button."
+#~ msgstr "Tooltip für den \"Kursiv\" Button wenn man ein Textelement anpasst."

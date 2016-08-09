@@ -1,0 +1,163 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+ 
+$config = Mage::getStoreConfig('celebritysettings/celebritysettings_appearance');
+?>
+
+<script type="text/javascript" src="<?php echo $this->getJsUrl(); ?>tabs/highslide/highslide-with-html.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>css/highslide.css" />
+<script type="text/javascript">
+    // override Highslide settings here
+    // instead of editing the highslide.js file
+    hs.graphicsDir = '<?php echo $this->getJsUrl(); ?>tabs/highslide/graphics/';
+	hs.outlineType = 'rounded-white';
+hs.wrapperClassName = 'draggable-header';
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<?php $mystring = Mage::helper('core/url')->getCurrentUrl();
+$findme2   = 'success';
+$pos2 = strpos($mystring, $findme2); 
+$findme1   = 'logoutSuccess';
+$pos1 = strpos($mystring, $findme1); 
+$findme3   = 'forgotpassword';
+$pos3 = strpos($mystring, $findme3); 
+$findme4   = 'inchoo-simplecontact';
+$pos4 = strpos($mystring, $findme4); 
+$findme5   = 'contacts';
+$pos5 = strpos($mystring, $findme5); 
+?> 
+
+
+<title><?php if($pos2) { echo "Forza Italia"; } else if($pos1) { echo "Forza Italia"; } else if($pos3) { echo "Forza Italia"; } else if($pos4) { echo "Return &amp; Exchange"; } else if($pos5) { echo "Contact Us"; } else if(Mage::helper('core/url')->getCurrentUrl()=="http://www.forzaitalia.com.au/catalog/seo_sitemap/category/") { echo "Complete Category Sitemap | Forza Italia"; } else if(Mage::helper('core/url')->getCurrentUrl()=="http://www.forzaitalia.com.au/catalog/seo_sitemap/product/") { echo "Complete Product Sitemap | Forza Italia"; } else { echo $this->getTitle(); } ?></title>
+<meta name="description" content="<?php if(Mage::helper('core/url')->getCurrentUrl()=="http://www.forzaitalia.com.au/catalog/seo_sitemap/category/") { echo "Overall outline of the most important pages on the Forza Italia website and provide a quick way to navigation around."; } else if(Mage::helper('core/url')->getCurrentUrl()=="http://www.forzaitalia.com.au/catalog/seo_sitemap/product/") { echo "Overall outline of the most important pages on the Forza Italia website and provide a quick way to navigation around."; } else { echo htmlspecialchars($this->getDescription()); } ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<meta name="google-site-verification" content="gMiOvAeAMfyN389-9Q0Ii9oZQFYbM1YBfKI9cypdZUI" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $config['font']); ?>:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'><div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<style>
+/********** update google Font */
+.std h2, .std h4,
+.page-title h1, .page-title h2, .page-head-alt h3,
+.block .block-title strong,
+.slideshow ul li a, .slideshow ul li strong, .slider-container h2,
+.cart .crosssell h2, .opc .step-title,
+.banners a span, .banner a span,
+.products-list .product-name,
+#shopping-cart-totals-table strong,
+.cart .cart-collaterals .col2-set h2,
+button.button span,
+footer .footer-subscribe .title,
+.product-view h1, .product-view h2,
+.product-tabs a, .product-tabs-content h3, .product-tabs-content h4,
+#product-customer-reviews .review-title, .add-review h3.title, 
+#customer-reviews .form-add h2, #customer-reviews .form-add h3, #customer-reviews .form-add h4, #customer-reviews dt a,
+.product-view .box-tags .form-add label,
+#nav>li>a, #nav li.menu-category-description strong, #nav li.menu-category-description a { font-family: '<?php echo $config['font']; ?>', sans-serif; font-weight: 400; }
+
+/********** update theme color */
+#slide-timeline,
+#prev,
+.slider-container .jcarousel-list .btn-cart:hover,
+.products-grid .btn-cart:hover,
+.products-list .btn-cart:hover,
+.slideshow ul li a:hover,
+.banners a:hover span,
+.banner a:hover span,
+#addTagForm button.button span,
+.add-review  button.button span,
+.jcarousel-next-horizontal:hover, .jcarousel-prev-horizontal:hover,
+button.btn-checkout span,
+button.button:hover span,
+button.btn-proceed-checkout span span,
+.product-view button.btn-cart span,
+.product-view button.btn-cart span span,
+.cart .cart-collaterals .col2-set button.button span,
+.block .block-content button.button span,
+.opc .active .step-title:hover,
+.product-image em,
+#zoom-prev:hover,
+#zoom-next:hover,
+header .cart-top,
+header .cart-top .summary,
+footer .footer-subscribe button.button span,
+.search-autocomplete ul li:hover,
+.light .search-autocomplete ul li:hover,
+#search_mini_form .form-search button:hover,
+.light #search_mini_form .form-search button:hover,
+.pager .pages li a.next:hover, .pager .pages li a.previous:hover,
+#nav>li>a:hover,
+#nav>li.over>a,
+#nav>li.active>a,
+#nav li.menu-category-description a,
+#nav li.menu-category-description button.button span,
+#nav li.menu-category-description a:hover { background-color:<?php echo $config['color']; ?>; }
+
+.top-border,
+#nav ul,
+#nav div.sub-wrapper { border-top-color: <?php echo $config['color']; ?>; }
+#nav ul div, #nav ul ul,
+.light #nav ul div, .light #nav ul ul, #nav div.sub-wrapper ul div.sub-wrapper{ border-left-color: <?php echo $config['color']; ?>;}
+#nav ul ul:before { border-right-color: <?php echo $config['color']; ?>; }
+.opc .active .step-title:hover { border-color: <?php echo $config['color']; ?>; }
+.products-list .price,
+#shopping-cart-table a{ color: <?php echo $config['color']; ?>; }
+
+<?php if ( !empty($config['header_bg_color']) ) : ?>
+.header-container, .light .header-container {background-color:<?php echo $config['header_bg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['header_fg_color']) ) : ?>
+.header-container, .header-container a, header .header-switch a, header .links li a, header .links li.separator,
+.light .header-container, .light .header-container a, .light header .header-switch a, .light header .header-switch span,
+.light header .links li a, .light header .links li.separator{color:<?php echo $config['header_fg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_bg_color']) ) : ?>
+.footer-container, .light .footer-container {background-color:<?php echo $config['footer_bg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_fg_color']) ) : ?>
+.footer-container, .footer-container a, .light footer a, .informative footer .footer-subscribe .description, .light .informative footer .footer-subscribe .description, footer ul.links li.separator {color:<?php echo $config['footer_fg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['content_bg_color']) ) : ?>
+.main-container, .fixed {background-color:<?php echo $config['content_bg_color']; ?>}
+<?php endif; ?>
+
+</style>

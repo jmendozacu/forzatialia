@@ -1,0 +1,9 @@
+<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">jQuery.noConflict()</script>
+<?php if ($this->isActive()):?>
+<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('backgrounder/styles.phtml')->toHtml()?>
+
+<div class="backgrounder-images">
+	<?php echo $this->getImageHtml()?>
+</div>
+<?php endif;?>

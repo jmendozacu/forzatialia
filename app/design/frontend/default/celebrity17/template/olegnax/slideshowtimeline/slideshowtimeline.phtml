@@ -1,0 +1,229 @@
+<?php
+$config = Mage::getStoreConfig('slideshowtimeline/slideshowtimeline_config');
+
+?>
+<?php if($config['enabled']) { ?>
+<!-- SLIDESHOW BOF -->
+<div class="slideshow">
+	<ul id="slideshow">
+    <?php
+    $slides = $this->getSlides();
+    foreach($slides as $s)
+    {
+	if ( empty($s['image']) ) continue;
+	$imgSize = getimagesize(Mage::getBaseDir('media') .'/'. $s['image']);
+	if (!$imgSize) continue;
+    ?>
+        <li>
+	        <?php if( $s['link'] && !$s['details'] ) { ?>
+	        <a href="<?php echo $s['link']?>" title="">
+	        <?php } ?>
+            <img <?php echo ( $s['image_retina'] ? 'data-srcX2="'.Mage::getBaseUrl('media') . $s['image_retina'].'"' : '' ); ?> src="<?php echo Mage::getBaseUrl('media') . $s['image'];?>" <?php echo $imgSize[3];?> alt="" />
+	        <?php if( $s['link'] && !$s['details'] ) { ?>
+            </a>
+            <?php } ?>
+
+            <?php if( $s['link'] && $s['details'] ) { ?>
+            <a class="details" href="<?php echo $s['link']?>" title=""><?php echo $this->__($config['details']); ?></a>
+            <?php } ?>
+            <?php if( $s['title'] ) { ?>
+            <strong><span><?php echo $s['title']?></span></strong>
+            <?php } ?>
+        </li>
+    <?php
+    } // end foreach
+    ?>
+    </ul>
+    <div id="slide-timeline"></div>
+    <div class="slide-nav">
+        <a id="prev" href="#"></a>
+        <a id="next" href="#"></a>
+    </div>
+</div>
+<script>
+
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+debounce = function(func, wait, immediate) {
+	var timeout, args, context, timestamp, result;
+	return function() {
+		context = this;
+		args = arguments;
+		timestamp = new Date();
+		var later = function() {
+			var last = (new Date()) - timestamp;
+			if (last < wait) {
+				timeout = setTimeout(later, wait - last);
+			} else {
+				timeout = null;
+				if (!immediate) result = func.apply(context, args);
+			}
+		};
+		var callNow = immediate && !timeout;
+		if (!timeout) {
+			timeout = setTimeout(later, wait);
+		}
+		if (callNow) result = func.apply(context, args);
+		return result;
+	};
+};
+
+jQuery(window).load(function(){
+    var $ = jQuery;
+	var slideshowPause = false;
+	var $slideshow = $('#slideshow');
+	var config = {
+		width: $slideshow.width(),
+		height: $slideshow.height(),
+        show_timeline: <?php echo $config["show_timeline"];?>,
+		interval: <?php echo $config["interval"];?>,
+		speed: <?php echo $config["speed"];?>,
+		fadeSpeed: <?php echo $config["fade_speed"];?>,
+		effect: '<?php echo $config["effect"];?>'
+	};
+
+	$('#slide-timeline').hide();
+	$slideshow.find('a.details').css({opacity: 0}).show();
+	$slideshow.find('strong').css({opacity: 0}).show();
+	$('div.slideshow div.slide-nav').css({opacity: 0}).show();
+
+	$(window).resize(function(){
+		var curr = $slideshow.data("cycle.opts").elements[ $slideshow.data("cycle.opts").currSlide ];
+		var next = null;
+		slideshowBefore(curr, next);
+	});
+	$(window).resize(debounce(function(){
+
+		slideshowPause = true;
+		$('#slide-timeline').stop(true);
+
+		$slideshow.attr('style', '');
+
+		els = $slideshow.data("cycle.opts").elements;
+		var maxw = 0, maxh = 0;
+		for(var j=0; j < els.length; j++) {
+			var $e = $(els[j]);
+			$e.width( 'auto' )
+				.height( 'auto' );
+			var e = $e[0], w = $e.outerWidth(), h = $e.outerHeight();
+			if (!w) w = e.offsetWidth || e.width || $e.attr('width');
+			if (!h) h = e.offsetHeight || e.height || $e.attr('height');
+
+			$slideshow.data("cycle.opts").elements[j].cycleH = h;
+			$slideshow.data("cycle.opts").elements[j].cycleW = w;
+
+			maxw = w > maxw ? w : maxw;
+			maxh = h > maxh ? h : maxh;
+		}
+		if (maxw > 0 && maxh > 0) {
+			$slideshow.css({width:maxw+'px',height:maxh+'px'});
+			config.width = maxw;
+			config.height = maxh;
+		}
+
+		var curr = $slideshow.data("cycle.opts").elements[ $slideshow.data("cycle.opts").currSlide ];
+		slideshowAfter(null, curr);
+
+		slideshowPause = false;
+		var interval = (config.width - $('#slide-timeline').width() ) / ( config.width / config.interval );
+		runTimeline(interval);
+
+	}, 128));
+
+
+	var runTimeline = function( interval ) {
+		if ( slideshowPause || interval == 0 ) return;
+        if (config.show_timeline) $('#slide-timeline').show();
+		$('#slide-timeline')
+	        .animate(
+		        {width: config.width + 'px'},
+				interval,
+		        'linear',
+		        function(){
+			        $(this).hide().width(0);
+			        $slideshow.cycle('next');
+		        }
+	        );
+	}
+
+	$("div.slideshow").hover(
+		function(){
+			slideshowPause = true;
+			$('#slide-timeline').stop(true);
+		},
+		function(){
+			slideshowPause = false;
+			var interval = (config.width - $('#slide-timeline').width() ) / ( config.width / config.interval );
+			runTimeline(interval);
+		}
+	);
+
+	var animateSpeed = config.fadeSpeed;
+
+	var slideshowBefore = function(currSlideElement, nextSlideElement){
+		$('a.details',currSlideElement).stop(true, true).animate({opacity: 0}, animateSpeed);
+		$('strong',currSlideElement).stop(true, true).animate({opacity: 0}, animateSpeed);
+		$('div.slideshow div.slide-nav').stop(true, true).animate({opacity: 0}, animateSpeed);
+	}
+
+	var slideshowAfter = function(currSlideElement, nextSlideElement){
+
+		if ( nextSlideElement.cycleH != $slideshow.height() ) {
+			$slideshow.animate({height: nextSlideElement.cycleH}, 300);
+		}
+
+		var link = $('a.details',nextSlideElement);
+		var title = $('strong',nextSlideElement);
+		var nav = $('div.slideshow div.slide-nav');
+
+		if ( link.length ) {
+			link.css({ bottom:'85px', opacity:0 })
+				.css('display', 'block')
+				.stop(true, true)
+				.animate({opacity: 1}, animateSpeed)
+		}
+		if ( title.length ) {
+			var left = link.width();
+			if ( !link.length ) left = 0;
+			title.css({ left:left, opacity:0 })
+				.css('display', 'block')
+				.stop(true, true)
+				.animate({opacity: 1}, animateSpeed)
+		}
+		var nav_left = 0;
+		if ( link.length && title.length ) {
+			nav_left = link.width();
+		}
+		nav.removeClass('no-title');
+		$('#slide-timeline').removeClass('no-title');
+		if ( !link.length && !title.length ) {
+			nav.addClass('no-title');
+			$('#slide-timeline').addClass('no-title');
+		}
+		nav.css({left:nav_left, opacity:0 })
+			.css('display', 'block')
+			.stop(true, true)
+			.animate({opacity:1}, animateSpeed);
+	}
+
+	$slideshow.cycle({
+	    prev: '#prev',
+        next: '#next',
+        timeout : 0,
+        speed: config.speed,
+        fx: config.effect,
+		onPrevNextEvent: function(){
+            $('#slide-timeline').hide().width(0);
+        },
+	    before: slideshowBefore,
+	    after: function(currSlideElement, nextSlideElement){
+		    slideshowAfter(currSlideElement, nextSlideElement);
+		    setTimeout( function(){ runTimeline(config.interval); }, animateSpeed );
+	    }
+    });
+});
+</script>
+<!-- SLIDESHOW EOF -->
+<?php } ?>

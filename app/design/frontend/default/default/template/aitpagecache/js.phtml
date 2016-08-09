@@ -1,0 +1,27 @@
+<?php
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+if (Mage::helper('aitpagecache')->isJSLoaderAllowed())
+{
+	?>
+<script type="text/javascript">
+//<![CDATA[
+var loaders = new aitpagecache_Loader({
+	url: document.location.href,
+    disableDynamicBlocks: <?php echo (int)Mage::getStoreConfig('aitpagecache/aitpagecache_config_aitloadmon/disable_dynamic_blocks');?>,
+    showPlaceholder: <?php echo (int)Mage::getStoreConfig('aitpagecache/aitpagecache_config_aitloadmon/show_placeholder');?>,
+    placeholderText: '<?php echo Mage::getStoreConfig('aitpagecache/aitpagecache_config_aitloadmon/placeholder_text');?>',
+	disabledCacheBlocks: <?php echo $this->getDisabledCacheBlocks();?>	
+});
+//]]>
+</script>
+<?php
+}
+ ?>

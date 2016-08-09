@@ -1,0 +1,162 @@
+<?php /* @var $this POS_System_Block_Adminhtml_Diagnostic */
+
+$model = Mage::getModel('retailexpress/diagnostic');
+
+$sections = $model->_getDiagnosticSections();
+
+$ajaxVar = $model->_getDiagnosticAjaxData();
+$data = $model->_getDiagnosticData();
+?>
+<style>
+    .grid-severity-unknown,
+    .grid-severity-unknown span { display:block; height:16px; background-image:url(<?php echo $this->getSkinUrl('images/bg_notifications_ext.gif')?>); background-repeat:no-repeat; font:bold 10px/16px Arial, Helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:0 0 0 7px; margin:1px 0; white-space:nowrap; color:#fff; }
+    .grid-severity-unknown { background-position:0 0; }
+    .grid-severity-unknown span { background-position:100% 0; padding:0 7px 0 0; }
+    .grid-severity-processing,
+    .grid-severity-processing span { display:block; height:16px; background-image:url(<?php echo $this->getSkinUrl('images/bg_notifications_ext.gif')?>); background-repeat:no-repeat; font:bold 10px/16px Arial, Helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:0 0 0 7px; margin:1px 0; white-space:nowrap; color:#fff; }
+    /*.grid-severity-processing span { display:block; height:16px; background-color:#025DFF; font:bold 10px/16px Arial, Helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:0 0 0 7px; margin:1px 0; white-space:nowrap; color:#fff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; }*/
+    .grid-severity-processing { background-position:0 -16px; }
+    .grid-severity-processing span { background-position:100% -16px; padding:0 7px 0 0; }
+</style>
+<script>
+    var initData;
+    var sectionDiagData = <?php echo Mage::helper('core')->jsonEncode($ajaxVar) ?>;
+
+    function initDiag()
+    {
+        var runButton = $('runDiagButton');
+        runButton.toggleClassName('disabled');
+        Form.Element.disable(runButton);
+        initData = sectionDiagData.clone();
+        var tid = initData.shift();
+        var el = $('test-'+tid);
+        setStatus(el, 'processing', 'PROCESSING ..');
+        setTimeout(function(){
+            runDiag(tid);
+        },200);
+    }
+
+    function setStatus(element, className, textStatus)
+    {
+        element.down().removeClassName('grid-severity-major').
+            removeClassName('grid-severity-notice').
+            removeClassName('grid-severity-minor').
+            removeClassName('grid-severity-warning').
+            removeClassName('grid-severity-unknown').
+            removeClassName('grid-severity-processing').
+            addClassName('grid-severity-'+className);
+        element.down().down().update(textStatus);
+    }
+
+    function runDiag(testId, async)
+    {
+        if(typeof async == 'undefined') async = false;
+
+        var _testId = testId;
+        var runButton = $('runDiagButton');
+
+        var diagurl = '<?php echo $this->getUrl('adminhtml/retaildiagnostic/ajax')?>';
+        new Ajax.Request(diagurl, {
+            method: 'post',
+            asynchronous: async,
+            parameters: {
+                id: _testId
+            },
+            requestHeaders: {Accept: 'application/json'},
+            onTimeout: function (transport) {
+                console.log('timeout');
+                console.log(transport);
+            },
+            onComplete: function (transport) {
+                var resp = transport.responseJSON;
+                if(transport.status != 200) {
+                    setTimeout(function(){
+                        var el = $('test-'+_testId);
+                        setStatus(el,'critical', 'ERROR');
+                    },0);
+                } else {
+                    var cl = null;
+                    switch(resp.result.status) {default:case 'fail': cl='major'; break;case 'success': cl='notice'; break;case 'warning': cl='minor'; break;}
+                    if(resp.error === false) {
+                        setTimeout(function(){
+                            var el = $('test-'+resp.result.id);
+                            setStatus(el, cl, resp.result.status.toUpperCase());
+                        },0);
+                    } else {
+                        setTimeout(function(){
+                            var el = $('test-'+resp.result.id);
+                            setStatus(el, 'critical', 'ERROR');
+                        },0);
+                    }
+                }
+
+                if(typeof initData != 'undefined') {
+                    if(initData.length > 0 && resp.error !== true) {
+                        runDiag(initData.shift(), true);
+                    } else {
+                        runButton.toggleClassName('disabled').enable();
+                    }
+                }
+
+            },
+            onLoading: function(){
+                var el = $('test-'+_testId);
+                setStatus(el, 'processing', 'PROCESSING ..');
+            },
+            onError: function (transport) {
+                setStatus(el, 'critical', 'ERROR');
+//                console.log(transport);
+            }
+        });
+    }
+</script>
+
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="<?php echo $this->getHeaderWidth() ?>"><?php echo $this->getHeaderHtml() ?></td>
+            <td class="form-buttons"><?php echo $this->getButtonsHtml() ?></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="grid">
+
+    <?php /* LOOP ALL SECTIONS */ ?>
+    <?php foreach ($sections as $section) : ?>
+
+    <h4><?php echo $section->section_name; ?></h4>
+    <table cellspacing="0">
+        <thead>
+            <tr class="headings">
+                <th width="85%">Check</th>
+                <th width="15%" align="center"><div align="center">Last Status</div></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php foreach($data[$section->section] as $values) : ?>
+
+            <tr>
+                <td><?php echo $values['name']; ?></td>
+                <td align="center">
+                    <div style="width: 50%" class="status" id="test-<?php echo $values['id'] ?>">
+                        <span class="grid-severity-<?php echo $this->getClassNameByStatus($values['last_status'])?>">
+                            <span><?php echo strtoupper($values['last_status']); ?></span>
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <input rel="retest" onclick="runDiag(<?php echo $values['id'] ?>, true);" type="image" src="<?php echo $this->getSkinUrl('images/fam_refresh.gif')?>" />
+                </td>
+
+            </tr>
+
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <?php endforeach; ?>
+
+</div>

@@ -1,0 +1,3 @@
+[22-Jan-2013 18:07:43] PHP Fatal error:  Using $this when not in object context in /home/forzaita/public_html/contact-us/index.php on line 9
+[22-Jan-2013 18:08:23] PHP Fatal error:  Using $this when not in object context in /home/forzaita/public_html/contact-us/index.php on line 9
+[22-Jan-2013 18:08:54] PHP Fatal error:  Using $this when not in object context in /home/forzaita/public_html/contact-us/index.php on line 9

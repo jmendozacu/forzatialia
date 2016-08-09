@@ -1,0 +1,52 @@
+
+
+<div class="box simple_contact">
+<form id="simple_contact_form" name="simple_contact_form" action="<?php echo $this->getUrl('inchoo-simplecontact/') ?>index/sendemail" method="post">
+   <div class="fieldset">
+<h2 class="legend">Return &amp; Exchange Information</h2>
+<ul class="form-list">
+<li class="fields">
+<div class="field">
+        <label for="order" class="required"><em>*</em>Order ID</label>
+                   <div class="input-box">
+                    <input name="id" id="id" title="id" value="" class="required-entry input-text" type="text" />
+                </div>
+</div>
+<div class="field">
+        <label for="Name" class="required"><em>*</em>Name</label>
+                   <div class="input-box">
+                    <input name="name" id="name" title="Name" value="" class="required-entry input-text" type="text" />
+                </div>
+</div>
+<div class="field">
+        <label for="Phon">Phone</label>
+                   <div class="input-box">
+                    <input name="phone" id="phone" title="phone" value="" class="input-text" type="text" />
+                </div>
+</div>
+<div class="field">
+<label for="Email" class="required"><em>*</em>Email</label>
+ <div class="input-box">
+    <input name="email" id="email" title="Email" value="" class="required-entry input-text validate-email" type="text" />
+                              </div>
+</div>
+ <div class="field">              
+             <label for="comment" class="required"><em>*</em>Reason for Return</label>
+			  <div class="input-box">
+                    <textarea name="comment" id="comment" title="Comment" class="required-entry input-text" style="height:100px;" cols="50" rows="3"></textarea>
+                </div></div>
+                </li>
+                </ul>
+    </div>
+    <div class="button-set">
+<p class="required"> Required Fields</p>
+        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+       <div class="buttons-set"><button class="button" title="Submit"><span><span>Submit</span></span></button></div>
+    </div>
+</form>
+<script type="text/javascript">
+//< ![CDATA[
+  var simple_contact_form= new VarienForm('simple_contact_form', true);
+//]]>
+</script>
+</div>

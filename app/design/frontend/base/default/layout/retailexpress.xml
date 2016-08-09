@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="retailexpress"><name>retailexpress</name><path>retailexpress/order/</path><label>In Store Orders</label></action>
+        </reference>
+    </customer_account>
+
+    <retailexpress_order_index translate="label">
+        <label>Customer My Account Order History</label>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="retailexpress/orders" name="retailexpress.order.history" template="retailexpress/orders.phtml">
+                <block type="core/text_list" name="retailexpress.order.history.info" as="info" translate="label">
+                    <label>In Store Orders</label>
+                </block>
+            </block>
+            <block type="customer/account_dashboard" name="customer.account.link.back" template="customer/account/link/back.phtml"/>
+        </reference>
+    </retailexpress_order_index>
+
+    <retailexpress_order_view translate="label">
+        <label>Customer My Account Order History</label>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="retailexpress/order" name="retailexpress.order" template="retailexpress/order.phtml">
+                <block type="core/text_list" name="retailexpress.order.info" as="info" translate="label">
+                    <label>In Store Orders</label>
+                </block>
+            </block>
+        </reference>
+    </retailexpress_order_view>
+	
+	<checkout_onepage_review translate="label">
+        <reference name="checkout.onepage.agreements">
+            <action method="setTemplate"><template>retailexpress/checkout/onepage/agreements.phtml</template></action>
+        </reference>
+    </checkout_onepage_review>
+
+    <retailexpress_ajax_index>
+        <reference name="root">
+            <action method="setTemplate"><template></template></action>
+        </reference>
+    </retailexpress_ajax_index>
+</layout>

@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^forzaferrari\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.forzaferrari\.com\.au$
+RewriteRule ^/?$ "http\:\/\/www\.forzaitalia\.com\.au\/sport\/motorsport\/ferrari\/" [R=301,L]
+

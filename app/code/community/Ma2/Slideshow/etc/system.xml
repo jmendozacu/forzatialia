@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <slideshow_options translate="label" module="slideshow">
+      <label>Ma2 Slideshow free</label>
+      <class>separator-top</class>
+      <tab>ma2</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>10001</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+        <general translate="label" module="slideshow">
+          <label>General</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>50</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <slide_height translate="label" module="slideshow">
+              <label>Slider height (px)</label>
+              <frontend_type>text</frontend_type>
+              <validate>validate-digits validate-greater-than-zero</validate>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Type a number for the height (in pixel) of slider.</comment>
+            </slide_height>
+  
+            <display_title translate="label" module="slideshow">
+              <label>Display title of slide?</label>
+              <frontend_type>radios</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </display_title>
+  
+            <display_content translate="label" module="slideshow">
+              <label>Display description text of slide?</label>
+              <frontend_type>radios</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </display_content>
+
+            <auto_play translate="label" module="slideshow">
+              <label>Auto play?</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <comment>Decides whether to start the show automatically</comment>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </auto_play>
+
+            <interval translate="label" module="slideshow">
+              <label>Interval</label>
+              <frontend_type>text</frontend_type>
+              <validate>validate-digits validate-greater-than-zero</validate>
+              <comment>Time interval between each slide transition. Example: 2000, 3000</comment>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </interval>
+
+            <transitionType translate="label" module="slideshow">
+              <label>Transition type</label>
+              <frontend_type>select</frontend_type>
+              <source_model>slideshow/transitiontype</source_model>
+              <comment>Type of transition. Either a fading slideshow or a slider.</comment>
+              <sort_order>8</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </transitionType>
+
+            <transitionTime translate="label" module="slideshow">
+              <label>Transition time</label>
+              <frontend_type>text</frontend_type>
+              <comment>Time taken to animate transition from one slide to the next.</comment>
+              <sort_order>9</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </transitionTime>
+
+            <manTransitionTime translate="label" module="slideshow">
+              <label>Manual Transition time</label>
+              <frontend_type>text</frontend_type>
+              <comment>Time taken to animate transition from one slide to the next when the user has initiated the transition manually.</comment>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </manTransitionTime>
+
+            <navigation translate="label" module="slideshow">
+              <label>Navigation?</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <comment>Whether to generate/use navigation elements (eg: 1,2,3,4...etc) for each slide for quick navigation.</comment>
+              <sort_order>11</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </navigation>
+
+            <controls translate="label" module="slideshow">
+              <label>Controls buttons?</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <comment>Whether to generate/use control elements for forward,backward and stop/start.</comment>
+              <sort_order>12</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </controls>
+
+            <pauseOnHover translate="label" module="slideshow">
+              <label>Pause on hover?</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <comment>Pause the show when mouse is hovered over the show element.</comment>
+              <sort_order>13</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </pauseOnHover>
+          </fields>
+        </general>
+      </groups>
+    </slideshow_options>
+  </sections>
+</config>

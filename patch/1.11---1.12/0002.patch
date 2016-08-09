@@ -1,0 +1,25 @@
+From 15924f74a8507aad9c7098fc04427e2886309005 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 11:39:36 +0200
+Subject: [PATCH 2/8] fix google font https bug
+
+---
+ app/design/frontend/default/celebrity/template/page/html/head.phtml |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/design/frontend/default/celebrity/template/page/html/head.phtml b/app/design/frontend/default/celebrity/template/page/html/head.phtml
+index cc058b4..87e0a12 100644
+--- a/app/design/frontend/default/celebrity/template/page/html/head.phtml
++++ b/app/design/frontend/default/celebrity/template/page/html/head.phtml
+@@ -33,7 +33,7 @@ $config = Mage::getStoreConfig('celebritysettings/celebritysettings_appearance')
+ <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+ <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+ <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+-<link href='http://fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $config['font']); ?>:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
++<link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $config['font']); ?>:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+ <!--[if lt IE 7]>
+ <script type="text/javascript">
+ //<![CDATA[
+-- 
+1.7.10.msysgit.1
+

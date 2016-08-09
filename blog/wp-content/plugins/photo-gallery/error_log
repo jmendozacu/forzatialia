@@ -1,0 +1,2 @@
+[26-Mar-2016 08:52:53 Australia/Sydney] PHP Fatal error:  Call to undefined function plugin_basename() in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/photo-gallery.php on line 13
+[26-Mar-2016 08:57:58 Australia/Sydney] PHP Fatal error:  Call to undefined function plugin_basename() in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/photo-gallery.php on line 13

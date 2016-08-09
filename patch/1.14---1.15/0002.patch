@@ -1,0 +1,26 @@
+From 4bca5512b3751e83e808467bf2ee3ba20f3d8eb4 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 30 Jul 2012 18:20:14 +0300
+Subject: [PATCH 02/10] fix downloadable product page
+
+---
+ skin/frontend/default/celebrity/css/local.css |    3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/skin/frontend/default/celebrity/css/local.css b/skin/frontend/default/celebrity/css/local.css
+index b68439c..2418fc6 100644
+--- a/skin/frontend/default/celebrity/css/local.css
++++ b/skin/frontend/default/celebrity/css/local.css
+@@ -713,6 +713,9 @@ nav {float:left;}
+ .item-options {margin-top:10px;}
+ .item-options dt{float:left; clear:left;}
+ .item-options dd { float:left; margin:0 0 5px 3px; padding:0; font-weight: 400; font-style: normal; }
++.product-view .item-options {margin-top:10px;}
++.product-view .item-options dt{float:none; }
++.product-view .item-options dd { float:none; margin:5px 0 0 20px; padding:0; font-weight: 400; font-style: normal; }
+ 
+ .crosssell-container{position: relative; width:950px; margin:28px 0 -30px -30px; padding:30px; background: #f5f5f5;
+ 	-moz-box-shadow:inset 0px 0px 4px #e9e9e9;
+-- 
+1.7.10.msysgit.1
+

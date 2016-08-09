@@ -1,0 +1,12 @@
+<?php
+?>
+
+<?php
+$_product    = $this->getProduct();
+$_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+?>
+<?php if ($_product->isSaleable() && count($_attributes)):?>
+    <script type="text/javascript">
+        var pos_eta = new Pos_Eta_Configurable('<?php echo $this->getEtaUrl(); ?>', <?php echo $this->getJsonPosEtaData() ?>);
+    </script>
+<?php endif;?>

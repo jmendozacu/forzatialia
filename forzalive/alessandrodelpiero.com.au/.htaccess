@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^alessandrodelpiero\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.alessandrodelpiero\.com\.au$
+RewriteRule ^/?$ "http\:\/\/www\.forzaitalia\.com\.au\/browse\/browse\.asp\?DeptID\=132\&CatID\=1124" [R=301,L]
+

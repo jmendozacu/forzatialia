@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @copyright  Copyright (c) 2010 AITOC, Inc. 
+*/
+-->
+<config>
+<sections>
+<aitpagecache translate="label" module="aitpagecache">
+    <label>Magento Booster</label>
+    <tab>advanced</tab>
+    <frontend_type>textarea</frontend_type>
+    <sort_order>1000</sort_order>
+    <show_in_default>1</show_in_default>
+    <show_in_website>1</show_in_website>
+    <show_in_store>1</show_in_store>
+    <groups>
+         <config translate="label">
+            <label>General Settings</label>
+            <frontend_type>textarea</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <fields>
+                <disabled_blocks_cache translate="label">
+                    <label>Please indicate names of all blocks, that you would like to keep dynamic</label>
+                    <comment>Separate by commas or indicate each block in a new line. Ex. enter "Mage_Tag_Block_Popular" if you whant to to keep dynamic block with tags</comment>
+                    <frontend_type>textarea</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                </disabled_blocks_cache>
+                <disabled_admin_session translate="label">
+                    <label>Please indicate all custom admin panel url names</label>
+                    <comment>Separate by commas or indicate each admin panel url in a new line. Ex. enter "admin" if your admin url is magento.it/admin</comment>
+                    <frontend_type>textarea</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                </disabled_admin_session>
+                <enable_for_quote translate="label comment">
+                    <label>Enable Booster for customers after they put something to their cart?</label> 
+                    <frontend_type>select</frontend_type> 
+                    <source_model>adminhtml/system_config_source_yesno</source_model> 
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                    <sort_order>40</sort_order> 
+                    <show_in_default>1</show_in_default> 
+                    <show_in_website>0</show_in_website> 
+                    <show_in_store>0</show_in_store> 
+                    <comment><![CDATA[By default Magento Booster is turned on only for the customers with empty shopping carts. Enable this option if you want to cache pages for users who have items in their shopping carts. Please note that turning it on requires a bit more space for the cached pages.]]></comment>
+                </enable_for_quote>
+                <enable_for_logined translate="label comment">
+                    <label>Enable Booster for logged-in users?</label> 
+                    <frontend_type>select</frontend_type> 
+                    <source_model>adminhtml/system_config_source_yesno</source_model> 
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                    <sort_order>50</sort_order> 
+                    <show_in_default>1</show_in_default> 
+                    <show_in_website>0</show_in_website> 
+                    <show_in_store>0</show_in_store> 
+                    <comment><![CDATA[By default Magento Booster only caches the pages that can be visited by guests. Enabling this option allows your store to also cache pages that can be visited by logged-in customers. Please note that turning it on requires a bit more space for the cached pages.]]></comment>
+                </enable_for_logined>
+                <enable_for_admin translate="label comment">
+                    <label>Enable Booster for admin within the same browser session?</label> 
+                    <frontend_type>select</frontend_type> 
+                    <source_model>adminhtml/system_config_source_yesno</source_model> 
+                    <backend_model>aitpagecache/config_admin</backend_model>
+                    <sort_order>60</sort_order> 
+                    <show_in_default>1</show_in_default> 
+                    <show_in_website>0</show_in_website> 
+                    <show_in_store>0</show_in_store> 
+                    <comment><![CDATA[For the sake of compatibility with the 3rd party extensions Booster is disabled for all the front-end pages in case when admin browses both back panel and front-end pages within the same browser. Enabling this option turns Magento Booster on for the administrative users for the front-end pages. Please note that in case of enabling it some back panel pages (mostly of the 3rd party extensions) may be also cached. Enable it on your own risk.]]></comment>
+                </enable_for_admin>
+            </fields>
+        </config>
+        <aitpagecache_config_cron translate="label">
+            <label>Cron config</label>
+            <frontend_type>textarea</frontend_type>
+            <sort_order>2</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <fields>
+                <aitpagecache_config_cron_frequency translate="label comment">
+                            <label>Cron frequency</label>
+                            <comment><![CDATA[in unix format: (minute-hour-dayOfMonth-month-dayOfWeek)<br />Eg. "*/5 * * * *" for every 5 minutes]]> </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>aitpagecache/config_cron</backend_model>
+                </aitpagecache_config_cron_frequency>
+            </fields>
+        </aitpagecache_config_cron>
+        <aitpagecache_config_aitloadmon translate="label">
+            <label>Integration settings with AITOC Server Load Monitor</label>
+            <frontend_type>textarea</frontend_type>
+            <sort_order>3</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <fields>
+                <aitloadmon_config_label translate="label">
+                    <label><![CDATA[These settings work only when AITOC Server Load Monitor (either <a href="http://www.aitoc.com/en/server_load_monitor_free.html">Free</a> or <a href="http://www.aitoc.com/en/server_load_monitor_paid.html">Paid</a>) extension is installed]]></label>
+                    <frontend_model>aitpagecache/system_config_form_field_heading</frontend_model>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </aitloadmon_config_label>
+
+                <disallow_clear_cache_level translate="label comment">
+                    <label>Do not clear the cache starting from server load zone:</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment><![CDATA[]]></comment>
+                </disallow_clear_cache_level>
+                <disallow_bots_level translate="label comment">
+                    <label>Give retry after to robots starting from server load zone:</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment><![CDATA[Temporarily blocks search engine bots providing  HTTP/1.1 503 Service Temporarily Unavailable with header('Retry-After: 3600', true, 503) by default.]]></comment>
+                </disallow_bots_level>
+
+                <disable_dynamic_blocks translate="label">
+                    <label>Disable dynamic blocks starting from server load zone: </label>
+                    <comment><![CDATA[Disable blocks that you decide to keep dynamic specified in the list above in the case the server load zone is critical]]></comment>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </disable_dynamic_blocks>
+                <show_placeholder translate="label comment">
+                    <label>Show custom placeholder instead of dynamic blocks?</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <backend_model>aitpagecache/config_admin</backend_model>
+                    <sort_order>51</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment>If set to No the dynamic blocks are simply hidden</comment>
+                </show_placeholder>
+                <placeholder_text translate="label comment">
+                    <label>Custom placeholder text</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>52</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment>Please add a text here to be displayed instead of dynamic blocks</comment>
+                </placeholder_text>
+
+                <pause_config_label translate="label">
+                    <label>Sleep / Pause settings</label>
+                    <frontend_model>aitpagecache/system_config_form_field_heading</frontend_model>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </pause_config_label>
+                <pause_level translate="label comment">
+                    <label>Apply the "pause" starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment><![CDATA[Redistribute server resources among types of pages (Catalog, CMS, Search, Cart and Checkout, Other) depending on their importance during critical load peaks (by usleep())]]></comment>
+                </pause_level>
+                <pause_pages translate="label comment">
+                    <label>Pages types</label>
+                    <comment><![CDATA[Please select the group of pages the pause config should be applied to.<br>cms ( home page and other cms pages)<br>checkout (shopping cart and checkout pages)<br>catalogsearch (search pages)<br>catalog (product and categories pages)<br>other (pages that do not match any of the above page groups, i.e. wishlists, polls, customer pages, etc.)]]></comment>
+                    <frontend_type>multiselect</frontend_type>
+                    <source_model>aitpagecache/config_monitor_pages</source_model>
+                    <sort_order>112</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </pause_pages>
+                <pause_time translate="label">
+                    <label>Pause time (by usleep())</label>
+                    <frontend_type>text</frontend_type>
+                    <validate>validate-number validate-number-range number-range-0.0001-120</validate>
+                    <sort_order>114</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment><![CDATA[Decimal value in seconds. Default value is 10]]></comment>
+                </pause_time>
+
+                <block_config_label translate="label">
+                    <label>Block settings</label>
+                    <frontend_model>aitpagecache/system_config_form_field_heading</frontend_model>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_config_label>
+                <block_customer_guest>
+                    <label>Block guest customers starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>310</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_customer_guest>
+                <block_customer_login>
+                    <label>Block logged in customers starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>315</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_customer_login>
+                <block_customer_cart>
+                    <label>Block customers with product(s) in a cart starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>317</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_customer_cart>
+                <block_customer_cart_bigtotal>
+                    <label>Block customers with product(s) in a cart with a high total starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>320</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_customer_cart_bigtotal>
+                <block_bigtotal>
+                    <label>High total customer cart starts from, $</label>
+                    <frontend_type>text</frontend_type>
+                    <comment>Shopping cart total cost, $</comment>
+                    <validate>validate-number</validate>
+                    <sort_order>325</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_bigtotal>
+                <block_customer_returning>
+                    <label>Block returning customers again starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>330</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+					<comment><![CDATA[Returning customers who has already been blocked and emailed with a link.]]></comment>
+                </block_customer_returning>
+                <block_customer_admin>
+                    <label>Block front for admin starting from server load zone: </label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_level</source_model>
+                    <sort_order>335</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_customer_admin>
+
+                <block_block translate="label">
+                    <label>Static Block to show to blocked users</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_blocks</source_model>
+                    <sort_order>350</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+					<comment><![CDATA[Choose the content to be displayed for the blocked customer. Choose Tetris game to enable it for the customer. You can add your own content / game from CMS->Static Blocks.]]></comment>
+                </block_block>
+                <block_text translate="label">
+                    <label>Static text to show to blocked users</label>
+                    <frontend_type>textarea</frontend_type>
+                    <sort_order>355</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+					<comment><![CDATA[Static text is displayed just before the field for customer email.]]></comment>
+                </block_text>				
+
+
+                <block_identity translate="label">
+                    <label>Email Sender</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_email_identity</source_model>
+                    <sort_order>370</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_identity>
+                <block_email_template translate="label">
+                    <label>Standard email template</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_email_template</source_model>
+                    <sort_order>380</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_email_template>
+                <block_allow_discount translate="label">
+                    <label>Enable discount coupon for blocked user groups</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <sort_order>383</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_allow_discount>
+                <block_email_template_discount translate="label">
+                    <label>Discount Email template</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_email_template</source_model>
+                    <sort_order>387</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_email_template_discount>
+                <block_discount_type>
+                    <label>Discount type</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>aitpagecache/config_monitor_discount</source_model>
+                    <sort_order>390</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_discount_type>
+                <block_discount_amount>
+                    <label>Discount amount</label>
+                    <frontend_type>text</frontend_type>
+                    <validate>validate-number</validate>
+                    <sort_order>400</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_discount_amount>
+                <block_discount_days>
+                    <label>Discount active period, Days</label>
+                    <frontend_type>text</frontend_type>
+                    <validate>validate-number</validate>
+                    <sort_order>410</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </block_discount_days>
+                <block_exclude>
+                    <label>Exclude URLs</label>
+                    <frontend_type>textarea</frontend_type>
+                    <backend_model>aitpagecache/config_rewrite</backend_model>
+                    <sort_order>420</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment><![CDATA[Enter the URLs to of the pages where the blocking would be disabled. Please enter each URL from a new line. Please make sure you include postback URLs of your payment methods here.]]></comment>
+                </block_exclude>
+
+            </fields>
+        </aitpagecache_config_aitloadmon>
+    </groups>
+</aitpagecache>
+</sections>
+
+</config> 
+<!--
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+-->

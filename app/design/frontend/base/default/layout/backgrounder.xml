@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+
+    <default translate="label" module="page">
+			<reference name="head">
+				<action method="addCss"><stylesheet>css/backgrounder.css</stylesheet></action>
+			</reference>
+            <reference  name="after_body_start" >
+                <block type="backgrounder/backgrounds"  name="backgrounder.backgrounds">
+					<action method="setTemplate" ifconfig="backgrounder/settings/enabled">
+						<template>backgrounder/afterbody.phtml</template>
+					</action>
+				</block>	  
+            </reference>
+
+    </default>
+</layout>

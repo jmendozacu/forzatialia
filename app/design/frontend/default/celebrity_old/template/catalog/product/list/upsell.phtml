@@ -1,0 +1,138 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php if(count($this->getItemCollection()->getItems())): ?>
+<div class="box-collateral box-up-sell">
+    <h2><?php echo $this->__('You may also be interested in the following product(s)') ?></h2>
+    <a href="#" class="jcarousel-prev-horizontal" id="celebrity_upsell_prev"></a>
+    <a href="#" class="jcarousel-next-horizontal" id="celebrity_upsell_next"></a>
+	<p class="block-subtitle"><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllUpsell(this); return false;"><?php echo $this->__('select all') ?></a></p>
+    <div class="clearer"></div>
+    <ul id="upsell-products-list" class="jcarousel-skin-tango small-list">
+    <?php $this->resetItemsIterator(); while ($_item=$this->getIterableItem()) : ?>
+        <li class="item">
+            <a class="product-image" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>">
+	            <?php echo $this->helper('celebritysettings')->getLabel($_item);  ?>
+	            <img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(145, 175); ?>" width="145" height="175" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /><em><?php echo $this->__('Details'); ?></em><span></span>
+            </a>
+            <?php if(!$_item->isComposite() && $_item->isSaleable()): ?>
+                <?php if (!$_item->getRequiredOptions()): ?>
+                    <input type="checkbox" class="checkbox upsell-checkbox" id="upsell-checkbox<?php echo $_item->getId() ?>" name="upsell_products[]" value="<?php echo $_item->getId() ?>" />
+                <?php endif; ?>
+            <?php endif; ?>
+            <div class="product-details">
+                <a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
+                <?php echo $this->getPriceHtml($_item, true, '-upsell') ?>
+            </div>
+            <div class="clearer"></div>
+        </li>
+    <?php endwhile; ?>
+    </ul>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$$('.upsell-checkbox').each(function(elem){
+    Event.observe(elem, 'click', addUpsellToProduct)
+});
+
+var inArray = function (arr, val) {
+    var i = arr.length
+    while (i--) {
+        if (arr[i] === val) return true
+    }
+    return false
+}
+
+var upsellProductsCheckFlag = false;
+function selectAllUpsell(txt){
+    if (upsellProductsCheckFlag == false) {
+        $$('.upsell-checkbox').each(function(elem){
+            elem.checked = true;
+        });
+	    upsellProductsCheckFlag = true;
+        txt.innerHTML="<?php echo $this->__('unselect all') ?>";
+    } else {
+        $$('.upsell-checkbox').each(function(elem){
+            elem.checked = false;
+        });
+	    upsellProductsCheckFlag = false;
+        txt.innerHTML="<?php echo $this->__('select all') ?>";
+    }
+    addUpsellToProduct();
+}
+
+function addUpsellToProduct(){
+    var checkboxes = $$('.upsell-checkbox');
+    var allValues = [];
+    var values = [];
+    for(var i=0;i<checkboxes.length;i++){
+        allValues.push(checkboxes[i].value);
+        if(checkboxes[i].checked) values.push(checkboxes[i].value);
+    }
+    if($('related-products-field')){
+	    var current = $('related-products-field').value.split(',');
+        for (var i = 0; i < current.length; i++) {
+            if ( !inArray(values, current[i]) && !inArray(allValues, current[i]) ) values.push(current[i]);
+        }
+        $('related-products-field').value = values.join(',');
+    }
+}
+
+<?php if(count($this->getItemCollection()->getItems()) > 1 ): ?>
+	jQuery(document).ready(function($) {
+
+		function upsell_initCallback(carousel) {
+		    jQuery('#celebrity_upsell_next').bind('click', function() {
+		        carousel.next();
+		        return false;
+		    });
+		    jQuery('#celebrity_upsell_prev').bind('click', function() {
+		        carousel.prev();
+		        return false;
+		    });
+		};
+
+	    $('#upsell-products-list').jcarousel({
+		    scroll: 1,
+		    initCallback: upsell_initCallback,
+		    buttonNextHTML: null,
+		    buttonPrevHTML: null
+	    });
+	});
+	<?php else: ?>
+	jQuery('#celebrity_upsell_next').bind('click', function() {
+	    return false;
+	});
+	jQuery('#celebrity_upsell_prev').bind('click', function() {
+	    return false;
+	});
+	<?php endif ?>
+//]]>
+</script>
+
+<?php endif ?>

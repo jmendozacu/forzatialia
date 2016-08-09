@@ -1,0 +1,25 @@
+From 31b9313e7b42b1265734334d66a103476edaa384 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 12:58:35 +0200
+Subject: [PATCH 8/8] fix home page content
+
+---
+ app/code/local/Olegnax/Celebritysettings/etc/celebrity.xml |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/code/local/Olegnax/Celebritysettings/etc/celebrity.xml b/app/code/local/Olegnax/Celebritysettings/etc/celebrity.xml
+index 6664c8a..011553a 100644
+--- a/app/code/local/Olegnax/Celebritysettings/etc/celebrity.xml
++++ b/app/code/local/Olegnax/Celebritysettings/etc/celebrity.xml
+@@ -5,7 +5,7 @@
+             <item>
+                 <title>Celebrity Home page</title>
+                 <identifier>celebrity_home</identifier>
+-                <content><![CDATA[<div class="white-container clearfix">{{block type="slideshowtimeline/slideshowtimeline" name="slideshowtimeline" template="olegnax/slideshowtimeline/slideshowtimeline.phtml" }}<div class="banners"><a href="#"><img src="{{media url="olegnax/celebrity/banner1.jpg"}}" alt="" /> </a> <a class="text-right" href="#"><img src="{{media url="olegnax/celebrity/banner2.jpg"}}" alt="" /><span>SEASONAL<br />DISCOUNTS</span></a> <a href="#"><img src="{{media url="olegnax/celebrity/banner3.jpg"}}" alt="" /></a></div><div class="clear">&nbsp;</div></div>{{block type="celebrityslider/slider" template="olegnax/celebrityslider/slider.phtml"}}",]]></content>
++                <content><![CDATA[<div class="white-container clearfix">{{block type="slideshowtimeline/slideshowtimeline" name="slideshowtimeline" template="olegnax/slideshowtimeline/slideshowtimeline.phtml" }}<div class="banners"><a href="#"><img src="{{media url="olegnax/celebrity/banner1.jpg"}}" alt="" /> </a> <a class="text-right" href="#"><img src="{{media url="olegnax/celebrity/banner2.jpg"}}" alt="" /><span>SEASONAL<br />DISCOUNTS</span></a> <a href="#"><img src="{{media url="olegnax/celebrity/banner3.jpg"}}" alt="" /></a></div><div class="clear">&nbsp;</div></div>{{block type="celebrityslider/slider" template="olegnax/celebrityslider/slider.phtml"}}]]></content>
+                 <is_active>1</is_active>
+                 <sort_order>0</sort_order>
+                 <stores>
+-- 
+1.7.10.msysgit.1
+

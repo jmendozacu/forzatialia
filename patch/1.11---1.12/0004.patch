@@ -1,0 +1,44 @@
+From 62c53db06468e0bff2ce5044c5ce31b0a17652da Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 12:09:00 +0200
+Subject: [PATCH 4/8] move crosssel container div to proper file
+
+---
+ app/design/frontend/default/celebrity/template/checkout/cart.phtml |    4 +---
+ .../default/celebrity/template/checkout/cart/crosssell.phtml       |    2 ++
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/app/design/frontend/default/celebrity/template/checkout/cart.phtml b/app/design/frontend/default/celebrity/template/checkout/cart.phtml
+index c8d4ac4..0a25a87 100644
+--- a/app/design/frontend/default/celebrity/template/checkout/cart.phtml
++++ b/app/design/frontend/default/celebrity/template/checkout/cart.phtml
+@@ -134,7 +134,5 @@
+             <?php endif; ?>
+         </div>
+     </div>
+-    <div class="crosssell-container">
+-        <?php echo $this->getChildHtml('crosssell') ?>
+-    </div>
++    <?php echo $this->getChildHtml('crosssell') ?>
+ </div>
+diff --git a/app/design/frontend/default/celebrity/template/checkout/cart/crosssell.phtml b/app/design/frontend/default/celebrity/template/checkout/cart/crosssell.phtml
+index abaeb93..5758c59 100644
+--- a/app/design/frontend/default/celebrity/template/checkout/cart/crosssell.phtml
++++ b/app/design/frontend/default/celebrity/template/checkout/cart/crosssell.phtml
+@@ -32,6 +32,7 @@
+  */
+ ?>
+ <?php if($this->getItemCount()): ?>
++<div class="crosssell-container">
+ <div class="crosssell">
+     <h2><?php echo $this->__('Based on your selection, you may be interested in the following items:') ?></h2>
+     <ul id="crosssell-products-list" class="small-list">
+@@ -50,4 +51,5 @@
+     </ul>
+     <div class="clear"></div>
+ </div>
++</div>
+ <?php endif; ?>
+-- 
+1.7.10.msysgit.1
+

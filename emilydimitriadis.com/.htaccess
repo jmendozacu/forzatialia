@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^emilydimitriadis\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.emilydimitriadis\.com$
+RewriteRule ^/?$ "http\:\/\/www\.emilyd\.com\.au\/" [R=301,L]
+

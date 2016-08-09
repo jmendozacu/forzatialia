@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<widgets>
+    <slideshow_widget type="slideshow/slideshow" translate="name description" module="slideshow">
+        <name>Ma2 Slideshow free</name>
+        <description>Slideshow module from MagenMarket.com. Widgets supported.</description>
+        <parameters>
+            <slideshow_ids>
+                <label>Select slide items</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>multiselect</type>
+                <source_model>slideshow/slideshowselect</source_model>
+            </slideshow_ids>
+            <template translate="label">
+                <label>Frontend template</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <default translate="label">
+                        <value>ma2_slideshow/slideshow.phtml</value>
+                        <label>Default template</label>
+                    </default>
+                </values>
+            </template>
+        </parameters>
+    </slideshow_widget>
+</widgets> 

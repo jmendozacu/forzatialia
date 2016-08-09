@@ -1,0 +1,6 @@
+[07-Feb-2014 09:47:24 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 433927 bytes) in /home/teachdig/public_html/demo/forzaitalia/wp-includes/wp-db.php on line 880
+[07-Feb-2014 09:50:12 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1966080 bytes) in /home/teachdig/public_html/demo/forzaitalia/wp-includes/SimplePie/Item.php on line 2736
+[07-Feb-2014 10:39:16 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1966080 bytes) in /home/teachdig/public_html/demo/forzaitalia/wp-includes/SimplePie/Item.php on line 2736
+[07-Feb-2014 10:56:01 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1966080 bytes) in /home/teachdig/public_html/demo/forzaitalia/wp-includes/SimplePie/Item.php on line 2736
+[07-Feb-2014 13:25:08 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1966080 bytes) in /home/teachdig/public_html/demo/forzaitalia/wp-includes/SimplePie/Item.php on line 2736
+[08-Feb-2014 09:04:51 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1966080 bytes) in /home/teachdig/public_html/demo/forzaitalia/wp-includes/SimplePie/Item.php on line 2736

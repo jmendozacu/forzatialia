@@ -1,0 +1,62 @@
+From 2a4fad05658fb62076da9c84a4152f946154b77b Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 31 Jul 2012 16:28:16 +0300
+Subject: [PATCH 09/10] fix permissions for settings controllers
+
+---
+ .../controllers/Adminhtml/ActivateController.php                 |    6 ++++++
+ .../controllers/Adminhtml/RestoreController.php                  |    6 ++++++
+ app/code/local/Olegnax/Celebritysettings/etc/config.xml          |    3 +++
+ 3 files changed, 15 insertions(+)
+
+diff --git a/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php b/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php
+index 0fe144c..2777fb0 100644
+--- a/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php
++++ b/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php
+@@ -8,6 +8,12 @@
+ class Olegnax_Celebritysettings_Adminhtml_ActivateController extends Mage_Adminhtml_Controller_Action
+ {
+ 
++    protected function _isAllowed()
++    {
++        return Mage::getSingleton('admin/session')
++            ->isAllowed('olegnax/celebrity/activate');
++    }
++
+     protected function _initAction()
+     {
+         $this->loadLayout()
+diff --git a/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/RestoreController.php b/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/RestoreController.php
+index 0c9eb3a..3631ff0 100644
+--- a/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/RestoreController.php
++++ b/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/RestoreController.php
+@@ -11,6 +11,12 @@ class Olegnax_Celebritysettings_Adminhtml_RestoreController extends Mage_Adminht
+     protected $_stores;
+     protected $_clear;
+ 
++    protected function _isAllowed()
++    {
++        return Mage::getSingleton('admin/session')
++            ->isAllowed('olegnax/celebrity/restore');
++    }
++
+     protected function _initAction()
+     {
+         $this->loadLayout()
+diff --git a/app/code/local/Olegnax/Celebritysettings/etc/config.xml b/app/code/local/Olegnax/Celebritysettings/etc/config.xml
+index 328887e..2349205 100644
+--- a/app/code/local/Olegnax/Celebritysettings/etc/config.xml
++++ b/app/code/local/Olegnax/Celebritysettings/etc/config.xml
+@@ -64,6 +64,9 @@
+ 		 </translate>
+ 		<acl>
+ 			<resources>
++                <all>
++                    <title>Allow Everything</title>
++                </all>
+ 				<admin>
+ 					<children>
+ 						<system>
+-- 
+1.7.10.msysgit.1
+

@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<olegnax translate="label" module="celebritysettings">
+			<label>Olegnax</label>
+			<sort_order>205</sort_order>
+		</olegnax>
+	</tabs>
+	<sections>
+		<celebritysettings translate="label" module="celebritysettings">
+			<label>Celebrity Theme Settings v2.0</label>
+			<tab>olegnax</tab>
+			<sort_order>100</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<celebritysettings_appearance translate="label">
+					<label>Appearance</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<width translate="label comment">
+							<label>Width: </label>
+							<frontend_type>radios</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_width</frontend_model>
+							<source_model>celebritysettings/config_width</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</width>
+						<style translate="label comment">
+							<label>Style: </label>
+							<frontend_type>radios</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_style</frontend_model>
+							<source_model>celebritysettings/config_style</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</style>
+						<slider translate="label comment">
+							<label>Slider: </label>
+							<frontend_type>radios</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_slider</frontend_model>
+							<source_model>celebritysettings/config_slider</source_model>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</slider>
+						<footer translate="label comment">
+							<label>Footer: </label>
+							<frontend_type>radios</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_footer</frontend_model>
+							<source_model>celebritysettings/config_footer</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer>
+						<font translate="label comment">
+							<label>Font: </label>
+							<frontend_type>select</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_font</frontend_model>
+							<source_model>celebritysettings/config_font</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</font>
+						<color translate="label comment">
+							<label>Theme Color: </label>
+							<comment>This color will be used for buttons and backgrounds</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</color>
+                        <header_bg_color translate="label comment">
+							<label>Header BG Color: </label>
+							<comment>This color will be used for header background</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</header_bg_color>
+                        <header_fg_color translate="label comment">
+							<label>Header Text Color: </label>
+							<comment>This color will be used header text/links</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</header_fg_color>
+                        <footer_bg_color translate="label comment">
+							<label>Footer BG Color: </label>
+							<comment>This color will be used for footer background</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_bg_color>
+                        <footer_fg_color translate="label comment">
+							<label>Footer Text Color: </label>
+							<comment>This color will be used footer text/links</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_fg_color>
+						<footer_title_color translate="label comment">
+							<label>Footer Title Color: </label>
+							<comment>This color will be used footer titles</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>91</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_title_color>
+						<footer_link_color translate="label comment">
+							<label>Footer Link Color: </label>
+							<comment>This color will be used footer links</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>92</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_link_color>
+						<footer_link_hover_color translate="label comment">
+							<label>Footer Link hover Color: </label>
+							<comment>This color will be used footer links</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>93</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_link_hover_color>
+
+                        <content_bg_color translate="label comment">
+							<label>Content bg Color: </label>
+							<comment>This color will be used for content bg</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_color</frontend_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</content_bg_color>
+					</fields>
+				</celebritysettings_appearance>
+				<celebritysettings_header translate="label">
+                    <label>Header</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <navigation_home translate="label">
+                            <label>Home Link in Navigation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </navigation_home>
+						<top_signup translate="label">
+                            <label>Show Sign Up Link</label>
+							<comment>Link in the Top Links (top right corner).</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </top_signup>
+						<top_custom_link translate="label">
+                            <label>Custom Link in Top links</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </top_custom_link>
+						<top_custom_link_path translate="label">
+                            <label>Custom Link Path</label>
+							<comment>No leading or trailing slashes.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </top_custom_link_path>
+						<top_custom_link_anchor translate="label">
+                            <label>Custom Link Anchor Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </top_custom_link_anchor>
+						<top_custom_link_title translate="label">
+                            <label>Custom Link Title Text</label>
+							<comment>Additional text displayed on hover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </top_custom_link_title>
+                    </fields>
+                </celebritysettings_header>
+				<celebritysettings_navigation translate="label">
+					<label>Navigation</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<show_description translate="label comment">
+							<label>Show Top Category description in dropdown: </label>
+							<frontend_type>select</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_showdescription</frontend_model>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</show_description>
+						<!--<columns_num translate="label comment">
+							<label>Columns Number: </label>
+							<comment>Will be used if top category has no description or show description option turned off</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</columns_num>-->
+						<show_learn_more translate="label comment">
+							<label><![CDATA[Show <b>"Learn more"</b> button under description:]]></label>
+							<frontend_type>select</frontend_type>
+							<frontend_model>celebritysettings/adminhtml_system_config_form_field_showlearnmore</frontend_model>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</show_learn_more>
+					</fields>
+				</celebritysettings_navigation>
+				<celebritysettings_labels translate="label">
+                    <label>Product Labels</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <new_label translate="label">
+                            <label>Show "New" label</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </new_label>
+	                    <new_label_position translate="label">
+                            <label>"New" label position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>celebritysettings/config_position</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </new_label_position>
+	                    <sale_label translate="label">
+                            <label>Show "Sale" label</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sale_label>
+	                    <sale_label_position translate="label">
+                            <label>"Sale" label position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>celebritysettings/config_position</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sale_label_position>
+                        <show_sku translate="label">
+                            <label>Show Item SKU</label>
+                            <comment>Show SKU on product details page</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_sku>
+                    </fields>
+                </celebritysettings_labels>
+			</groups>
+		</celebritysettings>
+	</sections>
+</config>
+
+

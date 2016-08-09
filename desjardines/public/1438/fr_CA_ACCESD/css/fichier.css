@@ -1,0 +1,756 @@
+/*
+  Régions de page
+     +---------------------------------+
+     |            Bandeau              |
+     +---------------------------------+
+     |   Barre de navigation (Onglet)  |
+     +---------------------------------+
+     |   M   |      Zone message       |
+     |   e   +-------------------------+
+     |   n   |      Titre de page      |
+     |   u   +-------------------------+
+     |       |                         |
+     |   d   |                         |
+     |   e   |                         |
+     |       |                         |
+     |   g   |         Contenu         |
+     |   a   |                         |
+     |   u   |                         |
+     |   c   |                         |
+     |   h   |                         |
+     |   e   |                         |
+     +---------------------------------+
+     |          Pied de page           |
+     +---------------------------------+
+
+********************************************************************
+ATTENTION:
+1) Avertir André Comeau de tout changement à ce fichier.
+2) Les noms des CSS ne doivent pas contenir de souligner (_)
+   EX: b_o_l => pas correcte
+       bol   => correcte
+********************************************************************
+Nom long : BandeauFond
+Applicable dans les régions : Bandeau
+*/
+
+body {
+    background-color: #ffffff;
+}
+
+.bf {
+    BACKGROUND-COLOR: #009966;
+}
+/*
+Nom long : BandeauOutilLien
+Applicable dans les régions : Bandeau
+*/
+.bol {
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : BandeauOutilLienImportant
+Applicable dans les régions : Bandeau
+*/
+.boli {
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : BandeauOutilTexte
+Applicable dans les régions : Bandeau
+*/
+.bot {
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : BandeauOutilTexteImportant
+Applicable dans les régions : Bandeau
+*/
+.boti {
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : OngletEncadre
+Applicable dans les régions : Barre de navigation (Onglet)
+*/
+.oe {
+    background-color : #000000;
+}
+/*
+Nom long : OngletFond
+Applicable dans les régions : Barre de navigation (Onglet)
+*/
+.of {
+    background-color : #003399;
+}
+/*
+Nom long : OngletFondSelect
+Applicable dans les régions : Barre de navigation (Onglet)
+*/
+.ofs {
+    background-color : #ffffff;
+}
+/*
+Nom long : OngletNonSelect
+Applicable dans les régions : Barre de navigation (Onglet)
+*/
+.ons {
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+    line-height : 11px;
+}
+/*
+Nom long : OngletSelect
+Applicable dans les régions : Barre de navigation (Onglet)
+*/
+.os {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+    line-height : 11px;
+}
+/*
+Nom long : MenuFondTitre
+Applicable dans les régions : Menu de gauche
+*/
+.mft{
+    background : #003399;
+}
+/*
+Nom long : MenuTitre
+Applicable dans les régions : Menu de gauche
+*/
+.mt {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    color : #ffffff;
+}
+/*
+Nom long : MenuFondElement
+Applicable dans les régions : Menu de gauche
+*/
+.mfe{
+    background : #D5DDEB;
+}
+/*
+Nom long : MenuFondElementSelect
+Applicable dans les régions : Menu de gauche
+*/
+.mfes{
+    background : #ffffff;
+}
+/*
+Nom long : MenuFondElementSousElementSelect
+Applicable dans les régions : Menu de gauche
+*/
+.mfeses{
+    background : #EEF1F6;
+}
+/*
+Nom long : MenuFondSousElement
+Applicable dans les régions : Menu de gauche
+*/
+.mfs{
+    background : #EEF1F6;
+    vertical-align : top;
+}
+/*
+Nom long : MenuFondSousElementSelect
+Applicable dans les régions : Menu de gauche
+*/
+.mfses{
+    background : #ffffff;
+    vertical-align : top;
+}
+/*
+Nom long : MenuElement
+Applicable dans les régions : Menu de gauche
+*/
+.me {
+    COLOR: #0000FF;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : MenuElementSelect
+Applicable dans les régions : Menu de gauche
+*/
+.mes {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : MenuElementSousElementSelect
+Applicable dans les régions : Menu de gauche
+*/
+.meses {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : MenuSousElementSelect
+Applicable dans les régions : Menu de gauche
+*/
+.mses {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : MenuSousElement
+Applicable dans les régions : Menu de gauche
+*/
+.mse {
+    COLOR: #0000FF;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : MenuTiret
+Applicable dans les régions : Menu de gauche
+*/
+.mtt {
+    COLOR: #0000FF;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bolder;
+    LINE-HEIGHT: 90%;
+}
+/*
+Nom long : MenuTiretSelect
+Applicable dans les régions : Menu de gauche
+*/
+.mts {
+    COLOR: #000000;
+     FONT-FAMILY: Arial, Helvetica, sans-serif;
+      FONT-SIZE: 75%;
+      FONT-WEIGHT: bolder;
+      LINE-HEIGHT: 90%;
+}
+/*
+Nom long : MenuLigneInterne
+Applicable dans les régions : Menu de gauche
+*/
+.mli {
+    font-family: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #B3C5D6;
+    font-size : 1pt;
+    line-height : 1pt;
+}
+/*
+Nom long : MenuLigneInterneSelectionne
+Applicable dans les régions : Menu de gauche
+*/
+.mlis {
+    font-family: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #ffffff;
+    font-size : 1pt;
+    line-height : 1pt;
+}
+/*
+
+Nom long : MenuFondTitreSecurite
+Applicable dans les régions : Menu de gauche
+*/
+.mfts {
+	BACKGROUND-COLOR: #FFCC7F;
+	COLOR: #000000;
+}
+/*
+Nom long : MenuSecurite
+Applicable dans les régions : Menu de gauche
+*/
+.ms {
+	BACKGROUND-COLOR: #FFCC7F;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 75%;
+	color : #0000FF;
+	TEXT-DECORATION: none;
+}
+/*
+Nom long : LigneSeparateur
+Applicable dans les régions : Menu de gauche, Titre de page, Contenu, Pied de page
+*/
+.ls {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color : #000000;
+    font-size : 1pt;
+    line-height : 1pt;
+}
+/*
+Nom long : TexteDroite
+Applicable dans les régions : Titre de page, Contenu
+*/
+.td {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    vertical-align: text-top;
+    TEXT-ALIGN: right;
+}
+/*
+Nom long : MessageConfirmation
+Applicable dans les régions : Zone message
+*/
+.msgc {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+}
+/*
+Nom long : MessageErreur
+Applicable dans les régions : Zone message
+*/
+.msge {
+    COLOR: #CC0000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: bold;
+    font-size : 75%;
+}
+/*
+Nom long : MessagePromo
+Applicable dans les régions : Zone message
+*/
+.msgp {
+    COLOR: #006600;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+}
+/*
+Nom long : PageTitre
+Applicable dans les régions : Titre de page
+*/
+.pt {
+    COLOR: #009966;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+        FONT-SIZE: 100%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+    vertical-align: text-top;
+}
+/*
+Nom long : PageSousTitre
+Applicable dans les régions : Titre de page
+*/
+.pst {
+    COLOR: #003399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 80%;
+    FONT-WEIGHT: bold;
+    vertical-align: text-top;
+}
+/*
+Nom long : PageIntertitre
+Applicable dans les régions : Contenu
+*/
+.pi {
+    COLOR: #003399;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+}
+/*
+Nom long : PageSousTitreLogon
+Applicable dans les régions : Contenu
+*/
+.pstl {
+    COLOR: #003399;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 100%;
+    FONT-WEIGHT: bold;
+}
+/*
+Nom long : Instruction
+Applicable dans les régions : Contenu
+*/
+.i {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    vertical-align: text-top;
+}
+/*
+Nom long : EnteteFond
+Applicable dans les régions : Contenu (Table)
+*/
+.et {
+    BACKGROUND-COLOR: #C1DBC0;
+    COLOR: #000000;
+}
+/*
+Nom long : Entete
+Applicable dans les régions : Contenu (Table)
+*/
+.e {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    PADDING-LEFT: 2px;
+    TEXT-ALIGN: left;
+    vertical-align: text-top;
+}
+/*
+Nom long : EnteteAffiMntNmbPct
+Applicable dans les régions : Contenu (Table)
+*/
+.eamnp {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    PADDING-RIGHT: 2px;
+    TEXT-ALIGN: right;
+    vertical-align: text-top
+}
+/*
+Nom long : EnteteSaisie
+Applicable dans les régions : Contenu (Table)
+*/
+.es {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    TEXT-ALIGN: center;
+    vertical-align: text-top
+}
+/*
+Nom long : TableauFond
+Applicable dans les régions : Contenu (Table)
+*/
+.tf {
+    background-color : #ffffff;
+}
+/*
+Nom long : LigneImpaireFond
+Applicable dans les régions : Contenu (Table)
+*/
+.lif {
+    BACKGROUND-COLOR: #E9F5E9;
+    COLOR: #000000;
+}
+/*
+Nom long : LignePaireFond
+Applicable dans les régions : Contenu (Table)
+*/
+.lpf {
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+}
+/*
+Nom long : Cellule
+Applicable dans les régions : Contenu (Table)
+*/
+.c {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    PADDING-LEFT: 2px;
+    TEXT-ALIGN: left;
+    vertical-align: text-top;
+}
+/*
+Nom long : CelluleAffiMntNmbPct
+Applicable dans les régions : Contenu (Table)
+*/
+.camnp {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    PADDING-RIGHT: 2px;
+    TEXT-ALIGN: right;
+    vertical-align: text-top
+}
+/*
+Nom long : CelluleSaisie
+Applicable dans les régions : Contenu (Table)
+*/
+.cs {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    TEXT-ALIGN: center;
+    vertical-align: text-top
+}
+/*
+Nom long : CelluleErreur
+Applicable dans les régions : Contenu (Table)
+*/
+.ce {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    PADDING-LEFT: 2px;
+    TEXT-ALIGN: left;
+    vertical-align: text-top;
+    color : #ffffff;
+}
+/*
+Nom long : CelluleAffiMntNmbPctErreur
+Applicable dans les régions : Contenu (Table)
+*/
+.camnpe {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    PADDING-RIGHT: 2px;
+    TEXT-ALIGN: right;
+    vertical-align: text-top;
+    color : #ffffff;
+}
+/*
+Nom long : CelluleSaisieErreur
+Applicable dans les régions : Contenu (Table)
+*/
+.cse {
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    TEXT-ALIGN: center;
+    vertical-align: text-top;
+    color : #ffffff;
+}
+/*
+Nom long : CelluleImportante
+Applicable dans les régions : Contenu (Table)
+*/
+.ci {
+    FONT-WEIGHT: bold;
+}
+/*
+Nom long : LigneErreurFond
+Applicable dans les régions : Contenu
+*/
+.lef {
+    BACKGROUND-COLOR: #ff3333;
+}
+/*
+Nom long : EncadreFond
+Applicable dans les régions : Contenu
+*/
+.ec {
+    BACKGROUND-COLOR: #e5ebf5;
+}
+/*
+Nom long : EncadreBordure
+Applicable dans les régions : Contenu
+*/
+.eb {
+    BACKGROUND-COLOR: #000000;
+    color : #000000;
+}
+/*
+Nom long : Texte
+Applicable dans les régions : Contenu, Pied de page
+*/
+.t {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : Texte guidage
+Applicable dans les régions : Contenu
+*/
+.tg {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 70%;
+    FONT-WEIGHT: normal;
+        TEXT-DECORATION: none;
+}
+/*
+Nom long : TexteHyper
+Applicable dans les régions : Contenu, Pied de page
+*/
+.th {
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: center;
+}
+/*
+Nom long : TexteImportant
+Applicable dans les régions : Contenu
+*/
+.ti{
+    font-weight : bold;
+}
+/*
+Nom long : TexteVert
+Applicable dans les régions : Contenu
+*/
+.tv {
+    COLOR: #009966;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+}
+/*
+Nom long : LigneInv
+Applicable dans les régions : Contenu
+*/
+.li {
+    FONT-SIZE: 1pt;
+}
+/*
+Nom long : LigneInvPub
+Applicable dans les régions : Contenu
+*/
+.lip {
+    FONT-SIZE: 5pt;
+}
+/*
+Nom long : ZoneEspacement
+Applicable dans les régions : Titre de page, Contenu, Pied de page
+*/
+.ze {
+     FONT-SIZE: 12pt;
+}
+/*
+Nom long : ZoneEspacementMinimal
+Applicable dans les régions : Zone message, Titre de page, Contenu, Pied de page
+*/
+.zem {
+     FONT-SIZE: 6pt;
+}
+/*
+Nom long : EspacePageContenu
+Applicable dans les régions : Contenu
+*/
+.epc{
+    font-size : 8pt;
+}
+/*
+Nom long : TexteExemple
+Applicable dans les régions : Contenu
+*/
+.te {
+    COLOR: #666666;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 90%;
+    TEXT-DECORATION: none;
+    text-align : left;
+    vertical-align : middle;
+}
+/*
+Nom long : Liste
+Applicable dans les régions : Contenu (Liste)
+*/
+.l {
+    margin-bottom : 0;
+    margin-top : 0;
+}
+/*
+Nom long : Formulaire
+Applicable dans les régions : Contenu (Form)
+*/
+.f {
+    margin-bottom : 0px;
+    margin-top : 0px;
+   }
+/*
+Nom long : Icone Fiche Fond
+Applicable dans les régions : Contenu (Form)
+*/
+.iff {
+    BACKGROUND-COLOR: #003399;
+}
+/*
+Nom long : Icone Fiche Titre
+Applicable dans les régions : Contenu (Form)
+*/
+.ift {
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+}
+/*
+Nom long : Lu
+Applicable dans les régions : Contenu
+*/
+.lu {
+    COLOR: #800080;
+}
+/*
+Nom long : NonLu
+Applicable dans les régions : Contenu
+*/
+.nlu {
+    COLOR: #0000FF;
+}
+/*
+Applicable pour "Dernieres Operations Visa"
+*/
+.MenuElementNonDisponible {
+    COLOR: #666666;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 75%;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none;
+}
+
+.CelluleEntete {
+    background-color: #C1DBC0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%; color: #000000;
+    font-weight: bold
+}
+/*
+Nom long : TexteAttention
+Applicable dans les régions : Zone message
+*/
+.ta {
+    COLOR: #FF3333;
+    FONT-WEIGHT: bold;
+}

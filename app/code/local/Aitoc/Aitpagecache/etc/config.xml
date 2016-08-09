@@ -1,0 +1,565 @@
+<?xml version="1.0" ?>
+<!--
+/**
+* @copyright  Copyright (c) 2010 AITOC, Inc. 
+*/
+-->
+<config>
+    <modules>
+        <Aitoc_Aitpagecache>
+            <version>4.0.5</version>
+            <depends>
+                <Mage_Page />
+                <Mage_Adminhtml />
+            </depends>         
+        </Aitoc_Aitpagecache>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <aitpagecache>
+                    <file>aitpagecache.xml</file>
+                </aitpagecache>
+            </updates>
+        </layout>
+        <translate>
+           <modules>
+               <Aitoc_Aitpagecache>
+                   <files>
+                       <default>Aitoc_Aitpagecache.csv</default>
+                   </files>
+               </Aitoc_Aitpagecache>
+           </modules>
+        </translate>
+
+        <routers>
+            <aitpagecache>
+                <use>standard</use>
+                <args>
+                    <module>Aitoc_Aitpagecache</module>
+                    <frontName>aitpagecache</frontName>
+                </args>
+            </aitpagecache>
+        </routers>
+
+		<events>
+            <controller_action_postdispatch>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>saveProductPageData</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_postdispatch>
+        </events>
+    </frontend>
+    
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <aitpagecache before="Mage_Adminhtml">Aitoc_Aitpagecache_Adminhtml</aitpagecache>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <global>
+        <models>
+            <aitpagecache>
+                <class>Aitoc_Aitpagecache_Model</class>
+                <resourceModel>aitpagecache_mysql4</resourceModel>
+            </aitpagecache>
+            
+            <aitpagecache_mysql4>
+                <class>Aitoc_Aitpagecache_Model_Mysql4</class>
+                <entities>
+                    <target_page>
+                        <table>aitpagecache_target_page</table>
+                    </target_page>
+                    <target_page_product>
+                        <table>aitpagecache_target_page_product</table>
+                    </target_page_product>
+                    <emails>
+                        <table>aitpagecache_emails</table>
+                    </emails>
+                </entities>
+            </aitpagecache_mysql4>
+                        
+            <core>
+                <rewrite>
+                    <design_package>Aitoc_Aitpagecache_Model_Rewrite_FrontCoreDesignPackage</design_package>
+                </rewrite>
+            </core>
+        </models>
+
+         <blocks>
+            <aitpagecache>
+                <class>Aitoc_Aitpagecache_Block</class>
+            </aitpagecache>
+            <tag>
+                <rewrite>
+                    <product_list>Aitoc_Aitpagecache_Block_Rewrite_TagProductList</product_list>
+                </rewrite>
+            </tag>
+        </blocks>
+
+        <helpers>
+            <aitpagecache>
+                <class>Aitoc_Aitpagecache_Helper</class>
+            </aitpagecache>
+        </helpers>
+
+        <events>
+            <customer_login>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>customer_login</method>
+                    </aitpagecache>
+                </observers>
+            </customer_login>
+            
+            <customer_logout>
+                <observers>
+                      <aitpagecache>
+                            <type>singleton</type>
+                            <class>aitpagecache/observer</class>
+                            <method>customer_logout</method>
+                      </aitpagecache>
+                </observers>
+            </customer_logout>    
+
+            <controller_action_predispatch>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_predispatch</method>
+                    </aitpagecache>
+                    <aitpagecache_monitor>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer_monitor</class>
+                        <method>controller_action_predispatch</method>
+                    </aitpagecache_monitor>
+                </observers>
+            </controller_action_predispatch>
+            
+            <checkout_cart_product_add_after>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>checkout_cart_product_add_after</method>
+                    </aitpagecache>
+                </observers>
+            </checkout_cart_product_add_after>
+            <sales_quote_remove_item>
+                <observers>
+                    <aitpagecache>
+                        <type>model</type>
+                        <class>aitpagecache/observer</class>
+                        <method>recalculateQuoteItems</method>
+                    </aitpagecache>
+                </observers>
+            </sales_quote_remove_item>
+            
+            <admin_session_user_login_success>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>admin_session_user_login_success</method>
+                    </aitpagecache>
+                </observers>
+            </admin_session_user_login_success>
+            <aitpagecache_admin_config_disabled>
+            <!-- Booster is disabled for admin - adding admin cookie -->
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>admin_session_user_login_success</method>
+                    </aitpagecache>
+                </observers>
+            </aitpagecache_admin_config_disabled>
+            <controller_action_postdispatch_adminhtml_index_logout>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_postdispatch_adminhtml_index_logout</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_postdispatch_adminhtml_index_logout>
+            <aitpagecache_admin_config_enabled>
+            <!-- Booster is enabled for admin - removing admin cookie -->
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_postdispatch_adminhtml_index_logout</method>
+                    </aitpagecache>
+                </observers>
+            </aitpagecache_admin_config_enabled>
+
+            <wishlist_add_product>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>set_cache_cookie</method>
+                    </aitpagecache>
+                </observers>
+            </wishlist_add_product>
+            
+            <catalog_product_compare_add_product>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>set_cache_cookie</method>
+                    </aitpagecache>
+                </observers>
+            </catalog_product_compare_add_product>
+
+            <controller_action_predispatch_adminhtml_cache_massEnable>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_predispatch_adminhtml_cache_massEnable</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_predispatch_adminhtml_cache_massEnable>
+
+            <controller_action_predispatch_adminhtml_cache_massDisable>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_predispatch_adminhtml_cache_massDisable</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_predispatch_adminhtml_cache_massDisable>
+
+            <controller_action_predispatch_adminhtml_cache_massRefresh>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_predispatch_adminhtml_cache_massRefresh</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_predispatch_adminhtml_cache_massRefresh>
+			
+			<controller_action_postdispatch_adminhtml_cache_flushSystem>
+				<observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>controller_action_postdispatch_adminhtml_cache_flushSystem</method>
+                    </aitpagecache>
+                </observers>
+			</controller_action_postdispatch_adminhtml_cache_flushSystem>
+
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>customer_logout</method>
+                    </aitpagecache>
+                </observers>
+            </checkout_onepage_controller_success_action>
+            <sales_convert_quote_to_order>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>addNoBoosterCookie</method>
+                    </aitpagecache>
+                </observers>
+            </sales_convert_quote_to_order>
+            <controller_action_postdispatch>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>checkNoBoosterCookie</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_postdispatch>
+
+            <adminhtml_cmspage_on_delete>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>clearAdminCurrentCache</method>
+                    </aitpagecache>
+                </observers>
+            </adminhtml_cmspage_on_delete>
+ 		    <aitsys_block_abstract_to_html_after>
+            	<observers>
+                      <aitpagecache>
+                            <type>singleton</type>
+                            <class>aitpagecache/observer</class>
+                            <method>blockRendered</method>
+                      </aitpagecache>
+                </observers>
+            </aitsys_block_abstract_to_html_after>
+            
+            <admin_system_config_changed_section_web>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>webConfigSectionChanged</method>
+                    </aitpagecache>
+                </observers>
+            </admin_system_config_changed_section_web>
+            
+            <aitpagecache_config_changed>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>aitpagecacheConfigChanged</method>
+                    </aitpagecache>
+                </observers>
+            </aitpagecache_config_changed>
+            <adminhtml_system_config_backend_cookie_save_after>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer</class>
+                        <method>magentoConfigChanged</method>
+                    </aitpagecache>
+                </observers>
+            </adminhtml_system_config_backend_cookie_save_after>
+            
+            <controller_action_predispatch>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/observer_monitor</class>
+                        <method>checkPauseSettings</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_predispatch>
+
+            <catalog_controller_product_view>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>saveLoadedProductPage</method>
+                    </aitpagecache>
+                </observers>
+            </catalog_controller_product_view>
+            <review_controller_product_init>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>saveLoadedProductPage</method>
+                    </aitpagecache>
+                </observers>
+            </review_controller_product_init>
+            <catalog_product_collection_load_after>
+                <observers>
+                      <aitpagecache>
+                            <type>singleton</type>
+                            <class>aitpagecache/target_observer</class>
+                            <method>saveLoadedProductCollectionPages</method>
+                      </aitpagecache>
+                </observers>
+            </catalog_product_collection_load_after>
+            <catalog_product_prepare_save>
+                <observers>
+                      <aitpagecache>
+                            <type>singleton</type>
+                            <class>aitpagecache/target_observer</class>
+                            <method>clearProductPagesCacheOnEdit</method>
+                      </aitpagecache>
+                </observers>
+            </catalog_product_prepare_save>
+            <catalog_controller_product_delete>
+                <observers>
+                      <aitpagecache>
+                            <type>singleton</type>
+                            <class>aitpagecache/target_observer</class>
+                            <method>clearProductPagesCache</method>
+                      </aitpagecache>
+                </observers>
+            </catalog_controller_product_delete>
+            <catalog_product_delete_after>
+                <observers>
+                      <aitpagecache>
+                            <type>singleton</type>
+                            <class>aitpagecache/target_observer</class>
+                            <method>clearProductPagesCache</method>
+                      </aitpagecache>
+                </observers>
+            </catalog_product_delete_after>
+                        
+            <cms_page_prepare_save>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>clearCmsPageCache</method>
+                    </aitpagecache>
+                </observers>
+            </cms_page_prepare_save>
+            <model_delete_before>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>clearCmsPageCache</method>
+                    </aitpagecache>
+                </observers>
+            </model_delete_before>
+            
+            <controller_action_postdispatch_adminhtml_catalog_product_massStatus>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>clearProductPagesCacheOnMassStatusChange</method>
+                    </aitpagecache>
+                </observers>
+            </controller_action_postdispatch_adminhtml_catalog_product_massStatus>
+            
+            <cataloginventory_stock_item_save_commit_after>
+                <observers>
+                    <aitpagecache>
+                        <type>singleton</type>
+                        <class>aitpagecache/target_observer</class>
+                        <method>clearProductPagesCacheOnOrderSave</method>
+                    </aitpagecache>
+                </observers>
+            </cataloginventory_stock_item_save_commit_after>            
+        </events>
+
+        <cache>
+            <types>
+                <aitpagecache translate="label,description" module="aitpagecache">
+                    <label>Magento Booster</label>
+                    <description>Magento Pages cache</description>
+                    <tags>AITPAGECACHE</tags>
+                </aitpagecache>
+            </types>
+        </cache>
+        
+        <resources>
+            <aitpagecache_setup>
+                <setup>
+                    <module>Aitoc_Aitpagecache</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </aitpagecache_setup>
+        </resources>
+        <template>
+            <email>
+                <aitpagecache_aitpagecache_config_aitloadmon_block_email_template translate="label" module="aitpagecache">
+                    <label>Magento Booster Email</label>
+                    <file>aitpagecache_nodiscount.html</file>
+                    <type>html</type>
+                </aitpagecache_aitpagecache_config_aitloadmon_block_email_template>
+                <aitpagecache_aitpagecache_config_aitloadmon_block_email_template_discount translate="label" module="aitpagecache">
+                    <label>Magento Booster Discount Email</label>
+                    <file>aitpagecache_discount.html</file>
+                    <type>html</type>
+                </aitpagecache_aitpagecache_config_aitloadmon_block_email_template_discount>
+            </email>
+        </template>
+    </global>
+    
+    <adminhtml>
+		<acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                            <config>
+                                <children>
+                                    <aitpagecache>
+                                        <title>some title</title>
+                                    </aitpagecache>
+                                </children>
+                            </config>
+                            </children>
+                        </system>
+                        </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+           <modules>
+               <Aitoc_Aitpagecache>
+                   <files>
+                       <default>Aitoc_Aitpagecache.csv</default>
+                   </files>
+               </Aitoc_Aitpagecache>
+           </modules>
+        </translate>
+	</adminhtml>
+
+    <crontab>
+        <jobs>
+            <aitpagecache_clear_cache>
+                <run><model>aitpagecache/observer::clearCache</model></run>
+            </aitpagecache_clear_cache>
+            <aitpagecache_prepare_emails>
+				<schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>aitpagecache/observer_emails::prepare</model></run>
+            </aitpagecache_prepare_emails>            
+			<aitpagecache_send_emails>
+				<schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>aitpagecache/observer_emails::send</model></run>
+            </aitpagecache_send_emails>
+        </jobs>
+    </crontab>
+
+    <default>
+        <aitpagecache>
+            <config>
+                <!--<flush_media_cache>0</flush_media_cache> -->
+                <enable_for_quote>0</enable_for_quote>
+                <enable_for_logined>0</enable_for_logined>
+                <enable_for_admin>0</enable_for_admin>
+            </config>
+            <aitpagecache_config_aitloadmon>
+                <block_email_template>aitpagecache_aitpagecache_config_aitloadmon_block_email_template</block_email_template>
+                <block_email_template_discount>aitpagecache_aitpagecache_config_aitloadmon_block_email_template_discount</block_email_template_discount>
+				<block_text><![CDATA[Sorry, our shop is not available temporary. Please enter your email address if you'd like to be notified when the site is working. Otherwise you can play a quick game above while waiting the site is available to continue shopping.]]></block_text>
+            </aitpagecache_config_aitloadmon>
+        </aitpagecache>
+    </default>
+
+</config>
+<!--
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+-->

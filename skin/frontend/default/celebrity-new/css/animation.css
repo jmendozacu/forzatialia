@@ -1,0 +1,89 @@
+a,
+#zoom-prev,
+#zoom-next,
+.opc .step-title,
+.block .block-content li.item,
+.block-layered-nav dd li,
+.product-tabs a, .product-tabs-container h2.tab-heading,
+footer .footer-subscribe button.button span, .view-mode a, .view-mode a span,
+#nav>li>a,
+#nav ul li a,
+p.back-link a, .prev-next a
+{
+	transition:         all 600ms ease-in-out;
+	-webkit-transition: all 600ms ease-in-out;
+	-moz-transition: 	all 600ms ease-in-out;
+	-o-transition: 		all 600ms ease-in-out;
+}
+
+a:hover,
+#zoom-prev:hover,
+#zoom-next:hover,
+.opc .step-title:hover,
+.block .block-content li.item:hover,
+.block-layered-nav dd li:hover,
+.product-tabs a:hover, .product-tabs-container h2.tab-heading:hover,
+footer .footer-subscribe button.button:hover span, .view-mode a:hover, .view-mode a:hover span,
+#nav>li>a:hover,
+#nav ul li a:hover,
+p.back-link a:hover, .prev-next a:hover
+{
+	transition:         all 10ms ease-in-out;
+	-webkit-transition: all 10ms ease-in-out;
+	-moz-transition:	all 10ms ease-in-out;
+	-o-transition: 		all 10ms ease-in-out;
+}
+
+.product-image span,
+.product-image em,
+.products-grid .btn-cart,
+.products-list .btn-cart,
+button.button span,
+.slider-container .owl-carousel .btn-cart,
+.banners a span,
+.banners a em,
+.banner a span,
+.banner a em
+{
+	transition:         all 400ms ease-in-out;
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: 	all 400ms ease-in-out;
+	-o-transition: 		all 400ms ease-in-out;
+}
+
+.add-to-cart button.button span,
+button.btn-proceed-checkout span {
+transition: all 400ms ease-in-out;
+-webkit-transition: all 400ms ease-in-out;
+-moz-transition: all 400ms ease-in-out;
+-o-transition: all 400ms ease-in-out;
+}
+
+.slide-nav a,
+.slideshow ul li a.details {
+transition: background-color 200ms ease-in-out;
+-webkit-transition: background-color 200ms ease-in-out;
+-moz-transition: background-color 200ms ease-in-out;
+-o-transition: background-color 200ms ease-in-out;
+}
+.jcarousel-next-horizontal, .jcarousel-prev-horizontal,
+.pager .pages li a.next, .pager .pages li a.previous {
+transition: background-color 200ms ease-in-out;
+-webkit-transition: background-color 200ms ease-in-out;
+-moz-transition: background-color 200ms ease-in-out;
+-o-transition: background-color 200ms ease-in-out;
+}
+
+#search_mini_form .form-search button {
+transition: background-color 200ms ease-in-out;
+-webkit-transition: background-color 200ms ease-in-out;
+-moz-transition: background-color 200ms ease-in-out;
+-o-transition: background-color 200ms ease-in-out;
+}
+
+.cart-top a.summary, .cart-top a.summary:hover {
+	transition: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+}

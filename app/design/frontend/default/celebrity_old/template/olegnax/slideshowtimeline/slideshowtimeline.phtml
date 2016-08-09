@@ -1,0 +1,131 @@
+<?php
+$config = Mage::getStoreConfig('slideshowtimeline/slideshowtimeline_config');
+
+?>
+<?php if($config['enabled']) { ?>
+<!-- SLIDESHOW BOF -->
+<div class="slideshow">
+	<ul id="slideshow">
+    <?php
+    $slides = $this->getSlides();
+    foreach($slides as $s)
+    {
+	if ( empty($s['image']) ) continue;
+    ?>
+        <li>
+	        <?php if( $s['link'] && !$s['details'] ) { ?>
+	        <a href="<?php echo $s['link']?>" title="">
+	        <?php } ?>
+            <img src="<?php echo Mage::getBaseUrl('media') . $s['image'];?>" alt="" />
+	        <?php if( $s['link'] && !$s['details'] ) { ?>
+            </a>
+            <?php } ?>
+
+            <?php if( $s['link'] && $s['details'] ) { ?>
+            <a class="details" href="<?php echo $s['link']?>" title=""><?php echo $this->__($config['details']); ?></a>
+            <?php } ?>
+            <?php if( $s['title'] ) { ?>
+            <strong><span><?php echo $s['title']?></span></strong>
+            <?php } ?>
+        </li>
+    <?php
+    } // end foreach
+    ?>
+    </ul>
+    <div id="slide-timeline"></div>
+    <div class="slide-nav">
+        <a id="prev" href="#"></a>
+        <a id="next" href="#"></a>
+    </div>
+</div>
+<script>
+jQuery(window).load(function(){
+    var $ = jQuery;
+	var slideshowPause = false;
+	var config = {
+		width: $('#slideshow').width(),
+		height: $('#slideshow').height(),
+        show_timeline: <?php echo $config["show_timeline"];?>,
+		interval: <?php echo $config["interval"];?>,
+		speed: <?php echo $config["speed"];?>,
+		fadeSpeed: <?php echo $config["fade_speed"];?>,
+		effect: '<?php echo $config["effect"];?>'
+	};
+
+	$('#slide-timeline').hide();
+	$('#slideshow a.details').css({opacity: 0}).show();
+	$('#slideshow strong').css({opacity: 0}).show();
+	$('div.slideshow div.slide-nav').css({opacity: 0}).show();
+
+	runTimeline = function( interval ) {
+		if ( slideshowPause || interval == 0 ) return;
+        if (config.show_timeline) $('#slide-timeline').show();
+		$('#slide-timeline')
+	        .animate(
+		        {width: config.width + 'px'},
+				interval,
+		        'linear',
+		        function(){
+			        $(this).hide().width(0);
+			        $('#slideshow').cycle('next');
+		        }
+	        );
+	}
+
+    var animateSpeed = config.fadeSpeed;
+    $('#slideshow').cycle({
+	    prev: '#prev',
+        next: '#next',
+        timeout : 0,
+        speed: config.speed,
+        fx: config.effect,
+		onPrevNextEvent: function(){
+            $('#slide-timeline').hide().width(0);
+        },
+	    before: function(currSlideElement, nextSlideElement){
+			$('a.details',currSlideElement).animate({opacity: 0}, animateSpeed);
+            $('strong',currSlideElement).animate({opacity: 0}, animateSpeed);
+            $('div.slideshow div.slide-nav').animate({opacity: 0}, animateSpeed);
+	    },
+	    after: function(currSlideElement, nextSlideElement){
+		    var link = $('a.details',nextSlideElement);
+		    var title = $('strong',nextSlideElement);
+		    var nav = $('div.slideshow div.slide-nav');
+
+		    if ( link.length ) {
+			    link.css({ bottom:'85px', opacity:0 })
+					.show()
+			        .animate({opacity: 1}, animateSpeed)
+		    }
+		    if ( title.length ) {
+			    var left = '115px';
+			    if ( !link.length ) left = 0;
+			    title.css({ left:left, opacity:0 })
+					.show()
+			        .animate({opacity: 1}, animateSpeed)
+		    }
+		    var nav_left = 0;
+		    if ( link.length && title.length ) {
+			    nav_left = '115px';
+		    }
+		    nav.css({left:nav_left, opacity:0 })
+				.show()
+				.animate({opacity:1}, animateSpeed, function(){ runTimeline(config.interval); });
+	    }
+    });
+
+	$("div.slideshow").hover(
+		function(){
+			slideshowPause = true;
+			$('#slide-timeline').stop(true);
+		},
+		function(){
+			slideshowPause = false;
+			var interval = (config.width - $('#slide-timeline').width() ) / ( config.width / config.interval );
+			runTimeline(interval);
+		}
+	);
+});
+</script>
+<!-- SLIDESHOW EOF -->
+<?php } ?>

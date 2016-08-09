@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Olegnax_Celebrityslider>
+            <version>0.0.1</version>
+        </Olegnax_Celebrityslider>
+    </modules>
+	<frontend>
+        <layout>
+            <updates>
+                <celebrityslider>
+                    <file>olegnax_celebrityslider.xml</file>
+                </celebrityslider>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <helpers>
+            <celebrityslider>
+                <class>Olegnax_Celebrityslider_Helper</class>
+            </celebrityslider>
+        </helpers>
+        <blocks>
+             <celebrityslider>
+                <class>Olegnax_Celebrityslider_Block</class>
+             </celebrityslider>
+        </blocks>
+        <models>
+             <celebrityslider>
+                <class>Olegnax_Celebrityslider_Model</class>
+             </celebrityslider>
+        </models>
+    </global>
+</config>

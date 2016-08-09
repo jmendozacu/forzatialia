@@ -1,0 +1,173 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+$config = Mage::getStoreConfig('celebritysettings/celebritysettings_appearance');
+?>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>">
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>">
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>">
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon">
+<link href='//fonts.googleapis.com/css?family=<?php echo str_replace(' ', '+', $config['font']); ?>:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<style>
+/********** v2.0 */
+/********** update google Font */
+.std h2, .std h4,
+.page-title h1, .page-title h2, .page-head-alt h3,
+.block .block-title strong,
+.slideshow ul li a, .slideshow ul li strong, .slider-container h2,
+.cart .crosssell h2, .opc .step-title,
+.banners a span, .banner a span,
+.products-list .product-name,
+#shopping-cart-totals-table strong,
+.cart .cart-collaterals .col2-set h2,
+button.button span,
+p.back-link a,
+footer .footer-subscribe .title,
+.product-view h1, .product-view h2,
+.product-tabs a, .product-tabs-content h3, .product-tabs-content h4,
+#product-customer-reviews .review-title, .add-review h3.title, 
+#customer-reviews .form-add h2, #customer-reviews .form-add h3, #customer-reviews .form-add h4, #customer-reviews dt a,
+.product-view .box-tags .form-add label,
+#nav>li>a,.nav-top-title, #nav li.menu-category-description strong, #nav li.menu-category-description a { font-family: '<?php echo $config['font']; ?>', sans-serif; font-weight: 400;}
+
+.menu-container li.parent em {font-family: '<?php echo $config['font']; ?>', sans-serif; font-weight: 700;}
+
+.page-title h1,
+.content h2,
+.fieldset .legend,
+.form-list label { color: #000;}
+
+/********** update theme color */
+#slide-timeline,
+#prev,
+.slider-container .owl-carousel .btn-cart:hover,
+.products-grid .btn-cart:hover,
+.products-list .btn-cart:hover,
+.slideshow ul li a:hover,
+.banners a:hover span,
+.banner a:hover span,
+#addTagForm button.button span,
+.add-review  button.button span,
+.jcarousel-next-horizontal:hover, .jcarousel-prev-horizontal:hover,
+button.btn-checkout span,
+button.button:hover span,
+p.back-link a,
+button.btn-proceed-checkout span span,
+.product-view button.btn-cart span,
+.product-view button.btn-cart span span,
+.cart .cart-collaterals .col2-set button.button span,
+.block .block-content button.button span,
+.opc .active .step-title:hover,
+.product-image em,
+#zoom-prev:hover,
+#zoom-next:hover,
+header .cart-top,
+header .cart-top .summary,
+footer .footer-subscribe button.button span,
+.search-autocomplete ul li:hover,
+.light .search-autocomplete ul li:hover,
+#search_mini_form .form-search button:hover,
+.light #search_mini_form .form-search button:hover,
+.pager .pages li a.next:hover, .pager .pages li a.previous:hover,
+#nav>li>a:hover,
+#nav>li.over>a, .nav-top-title:hover, .nav-top-title.over,
+#nav>li.active>a,
+#nav li.menu-category-description a,
+#nav li.menu-category-description button.button span,
+#nav li.menu-category-description a:hover, .view-mode a:hover, .view-mode strong,.prev-next a:hover, .qty-container .qty-math:hover { background-color:<?php echo $config['color']; ?>; }
+
+.top-border,
+#nav ul,
+#nav div.sub-wrapper { border-top-color: <?php echo $config['color']; ?>; }
+
+#nav ul div, #nav ul ul,
+.light #nav ul div, .light #nav ul ul, #nav div.sub-wrapper ul div.sub-wrapper{ border-left-color: <?php echo $config['color']; ?>;}
+#nav ul ul:before { border-right-color: <?php echo $config['color']; ?>; }
+.opc .active .step-title:hover { border-color: <?php echo $config['color']; ?>; }
+.products-list .price,
+#shopping-cart-table a{ color: <?php echo $config['color']; ?>; }
+
+<?php if ( !empty($config['header_bg_color']) ) : ?>
+.header-container, .light .header-container {background-color:<?php echo $config['header_bg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['header_fg_color']) ) : ?>
+.header-container, .header-container a, header .header-switch a, header .links li a, header .links li.separator,
+.light .header-container, .light .header-container a, .light header .header-switch a, .light header .header-switch span,
+.light header .links li a, .light header .links li.separator {color:<?php echo $config['header_fg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_bg_color']) ) : ?>
+.footer-container, .light .footer-container {background-color:<?php echo $config['footer_bg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_fg_color']) ) : ?>
+.footer-container, .footer-container a, .light footer a, .informative footer .footer-subscribe .description,
+.light .informative footer .footer-subscribe .description, footer ul.links li.separator,
+.light .footer-links li span, .light footer .footer-subscribe .title {color:<?php echo $config['footer_fg_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_title_color']) ) : ?>
+.footer-links li span, footer .footer-subscribe .title,
+.light .footer-links li span, .light footer .footer-subscribe .title {color:<?php echo $config['footer_title_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_link_color']) ) : ?>
+.footer-container a, .light footer a {color:<?php echo $config['footer_link_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['footer_link_hover_color']) ) : ?>
+.footer-container a:hover, .light footer a:hover {color:<?php echo $config['footer_link_hover_color']; ?>}
+<?php endif; ?>
+<?php if ( !empty($config['content_bg_color']) ) : ?>
+.main-container, .fixed, .fixed .wrapper {background-color:<?php echo $config['content_bg_color']; ?>}
+<?php endif; ?>
+
+
+@media only screen and (max-width: 767px) {
+	#search_mini_form .form-search button,
+	.light #search_mini_form .form-search button {background-color:<?php echo $config['color']; ?>;}
+}
+
+@media only screen and (max-width: 1050px) {
+	#nav {border-color:<?php echo $config['color']; ?>;}
+}
+
+
+
+
+</style>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+	<adminhtml_retailexpress_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/retailexpress.css</stylesheet></action>
+        </reference>
+		<reference name="content">
+			<block type="retailexpress/adminhtml_history" name="history" />
+		</reference>
+	</adminhtml_retailexpress_index>
+
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+            <action method="addTab">
+                <name>customer_edit_tab_rexorders</name>
+                <block>retailexpress/adminhtml_customer_orders</block>
+            </action>
+        </reference>
+    </adminhtml_customer_edit>
+
+	<adminhtml_retailexpress_retailexpress_customerorders1>
+		<reference name="content">
+			<block type="retailexpress/adminhtml_customer_orders_grid" name="orders" />
+		</reference>
+	</adminhtml_retailexpress_retailexpress_customerorders1>
+
+	<adminhtml_system_config_edit>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/retailexpress.css</stylesheet></action>
+		</reference>
+	</adminhtml_system_config_edit>
+
+</layout>

@@ -1,0 +1,25 @@
+From 4e67a31dcbde7c4fac3c9f8056bf88e81d307150 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 30 Jul 2012 22:45:26 +0300
+Subject: [PATCH 07/10] update copyright text
+
+---
+ .../Celebritysettings/controllers/Adminhtml/ActivateController.php   |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php b/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php
+index 9bf0083..0fe144c 100644
+--- a/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php
++++ b/app/code/local/Olegnax/Celebritysettings/controllers/Adminhtml/ActivateController.php
+@@ -74,7 +74,7 @@ class Olegnax_Celebritysettings_Adminhtml_ActivateController extends Mage_Adminh
+                 //design > header
+                 Mage::getConfig()->saveConfig('design/header/logo_src', 'images/logo.png', $scope, $store);
+                 //design > footer
+-                Mage::getConfig()->saveConfig('design/footer/copyright', '&copy; 2012 Celebrity Theme. Made by <a href="//olegnax.com">olegnax.com</a>', $scope, $store);
++                Mage::getConfig()->saveConfig('design/footer/copyright', 'Celebrity Theme &copy; 2012 <a href="//olegnax.com/products/magento/" >Premium Magento Themes</a> by Olegnax', $scope, $store);
+                 //Currency Setup > Currency Options
+                 if ($update_currency) {
+                     Mage::getConfig()->saveConfig('currency/options/allow', 'GBP,EUR,USD', $scope, $store);
+-- 
+1.7.10.msysgit.1
+

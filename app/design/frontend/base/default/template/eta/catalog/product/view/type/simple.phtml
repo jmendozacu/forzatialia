@@ -1,0 +1,50 @@
+<?php
+/**
+ */
+?>
+<?php /* @var $this Mage_Catalog_Block_Product_View_Abstract */?>
+<?php $_product = $this->getProduct() ?>
+<?php echo $this->getPriceHtml($_product) ?>
+<?php /* call isSalable to fire catalogProductIsSalableAfter event */ ?>
+<?php $_product->isSalable(); ?>
+    <?php if ($_product->isAvailable()): ?>
+        <?php if (Mage::registry('allow_check_stock_status')) : ?>
+
+            <?php if ($this->helper('eta')->checkAvailabilityInStockStatus($_product->getId()) == 'instock') : ?>
+            
+                <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
+
+            <?php elseif ($this->helper('eta')->checkAvailabilityInStockStatus($_product->getId()) == 'checkavailability') : ?>
+
+                <p class="availability allow-check-availability">
+                    <?php echo $this->__('Availability: ') ?>
+                    <span id="eta-check-availability">
+                        <a href="#" onclick="pos_eta.getEta(); return false;">
+                            <?php echo $this->__('Check Availability'); ?>
+                        </a>
+                    </span>
+                    <span class="" id="eta-result" style="display:none;">
+                    </span>
+                    <span class="loader" id="eta-please-wait" style="display:none;">
+                        <img src="<?php echo $this->getSkinUrl(); ?>images/opc-ajax-loader.gif" alt="<?php echo $this->__('Loading ETA ...'); ?>" title="<?php echo $this->__('Loading ETA ...'); ?>" class="v-middle"/>
+                    </span>
+                </p>
+                <p id="disclaimer-message" class="disclaimer-message" style="display:none">
+                    <?php echo $this->getEtaMessage(); ?>
+                </p>
+                <script>
+                    var pos_eta = new Pos_Eta('<?php echo $this->getEtaUrl(); ?>', <?php echo $_product->getId(); ?>);
+                </script>
+            
+            <?php else: ?>
+                <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
+            <?php endif; ?>
+        <?php else : ?>
+            <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
+        <?php endif; ?>
+    <?php else: ?>
+        <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
+    <?php endif; ?>
+    
+<?php echo $this->getChildHtml('product_type_data_extra') ?>
+<div class="clear_b">&nbsp;</div>

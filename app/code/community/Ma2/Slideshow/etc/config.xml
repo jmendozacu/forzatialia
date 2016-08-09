@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ma2_Slideshow>
+            <version>0.1.0</version>
+        </Ma2_Slideshow>
+    </modules>
+    
+    <frontend>
+        <routers>
+            <slideshow>
+                <use>standard</use>
+                <args>
+                    <module>Ma2_Slideshow</module>
+                    <frontName>slideshow</frontName>
+                </args>
+            </slideshow>
+        </routers>
+        <layout>
+            <updates>
+                <slideshow>
+                    <file>ma2_slideshow.xml</file>
+                </slideshow>
+            </updates>
+        </layout>
+    </frontend>
+    
+    <admin>
+      <routers>
+        <slideshow>
+          <use>admin</use>
+          <args>
+            <module>Ma2_Slideshow</module>
+            <frontName>slideshow</frontName>
+          </args>
+        </slideshow>
+        
+        <adminhtml>
+            <args>
+                <slideshow>
+                    <slideshow_options before="Mage_Adminhtml">Ma2_Slideshow_Adminhtml</slideshow_options>
+                </slideshow>
+            </args>
+         </adminhtml>
+      </routers>
+    </admin>
+     
+    <adminhtml>
+      <menu>
+        <ma2 translate="title" module="ma2all">
+          <title>MA2</title>
+          <sort_order>89</sort_order>
+          <children>
+            <slideshow_manager translate="title" module="slideshow">
+              <title>Ma2 Slideshow free</title>
+              <sort_order>2</sort_order>
+              <children>
+                <items translate="title" module="slideshow">
+                  <title>Manage Items</title>
+                  <sort_order>1</sort_order>
+                  <action>slideshow/adminhtml_slideshow</action>
+                </items>
+                <config translate="title" module="slideshow">
+                  <title>Slideshow Configuration</title>
+                  <sort_order>2</sort_order>
+                  <action>adminhtml/system_config/edit/section/slideshow_options</action>
+                </config>
+              </children>
+            </slideshow_manager>
+          </children>
+        </ma2>
+      </menu>
+      
+      <acl>
+        <resources>
+          <all>
+            <title>Allow Everything</title>
+          </all>
+          <admin>
+            <children>
+              <ma2>
+                <title>MA2</title>
+                <sort_order>89</sort_order>
+                <children>
+                  <slideshow_manager>
+                    <title>Ma2 Slideshow Module free</title>
+                    <sort_order>2</sort_order>
+                    <children>
+                      <items>
+                        <title>Manage Items</title>
+                        <sort_order>1</sort_order>
+                      </items>
+                      <config>
+                        <title>Slideshow Configuration</title>
+                        <sort_order>2</sort_order>
+                      </config>                    
+                    </children>
+                  </slideshow_manager>
+                </children>
+              </ma2>
+              <system>
+                <children>
+                  <config>
+                    <children>
+                      <slideshow_options translate="title" module="slideshow">
+                        <title>Ma2 Slideshow free</title>
+                      </slideshow_options>
+                    </children>
+                  </config>
+                </children>
+              </system>
+            </children>
+          </admin>
+        </resources>
+      </acl>
+      
+      <layout>
+        <updates>
+          <slideshow>
+            <file>ma2_slideshow.xml</file>
+          </slideshow>
+        </updates>
+      </layout>
+    </adminhtml>
+    
+    <global>
+        <models>
+            <slideshow>
+                <class>Ma2_Slideshow_Model</class>
+                <resourceModel>slideshow_mysql4</resourceModel>
+            </slideshow>
+            <slideshow_mysql4>
+                <class>Ma2_Slideshow_Model_Mysql4</class>
+                <entities>
+                    <slideshow>
+                        <table>ma2_slideshow</table>
+                    </slideshow>
+                </entities>
+            </slideshow_mysql4>
+        </models>
+        <resources>
+            <slideshow_setup>
+                <setup>
+                    <module>Ma2_Slideshow</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </slideshow_setup>
+            <slideshow_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </slideshow_write>
+            <slideshow_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </slideshow_read>
+        </resources>
+        <blocks>
+            <slideshow>
+                <class>Ma2_Slideshow_Block</class>
+            </slideshow>
+        </blocks>
+        <helpers>
+            <slideshow>
+                <class>Ma2_Slideshow_Helper</class>
+            </slideshow>
+        </helpers>
+    </global>
+	<default>
+		<slideshow_options>
+			<general>
+				<slide_height>300</slide_height>
+				<display_title>1</display_title>
+				<display_content>1</display_content>
+				<interval>3000</interval>
+				<transitionType>slide</transitionType>
+				<transitionTime>1.5</transitionTime>
+				<manTransitionTime>0.5</manTransitionTime>
+				<navigation>1</navigation>
+				<controls>1</controls>
+				<pauseOnHover>0</pauseOnHover>
+			</general>
+ 		</slideshow_options>
+	</default>
+</config>

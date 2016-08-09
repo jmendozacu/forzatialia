@@ -1,0 +1,24 @@
+<?php
+
+?>
+<?php if (Mage::helper('eta')->getEtaCalculationEnabled()) : ?>
+    <?php $this->prepareCartEtaData(); ?>
+    <?php if (Mage::registry('etaData')) : ?>
+        <?php $orderEta = $this->getOrderEta(); ?>
+        <?php if ($orderEta) : ?>
+            <div class="f-left pos-eta-order-review">
+                <label><?php echo $this->__('Order ETA: '); ?></label><value><?php echo $this->getOrderEta(); ?></value>
+                <div class="message">
+                    <?php echo Mage::helper('eta')->getEtaMessage(); ?>
+                </div>
+            </div>
+        <?php else : ?>
+            <div class="f-left pos-eta-order-review">
+                <label><?php echo $this->__('Order ETA: '); ?></label><value><?php echo $this->getOrderEta(); ?></value>
+                <div class="message">
+                    <?php echo Mage::helper('eta')->getUnavailableMessage(); ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>
+<?php endif; ?>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @copyright  Copyright (c) 2010 AITOC, Inc. 
+*/
+-->
+<config>	
+	<acl>
+        <resources>
+            <admin>
+                <children>
+                    <service>
+                        <children>
+                            <aitpagecache translate="title" module="aitpagecache">
+                                <title>Magento Booster</title>
+                                <sort_order>50</sort_order>
+                            </aitpagecache>
+                        </children>
+                    </service>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <aitpagecache translate="title" module="aitpagecache">
+                                        <title>Magento Booster</title>
+                                        <sort_order>70</sort_order>
+                                    </aitpagecache>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <newsletter>
+            <children>
+                <aitpagecache module="aitpagecache">
+                    <title>Magento Booster</title>
+                    <sort_order>100</sort_order>
+                    <action>adminhtml/aitloadmon</action>
+                    <children>
+                        <pending translate="title" module="aitpagecache">
+                            <title>Pending Emails</title>
+                            <action>adminhtml/aitpagecache/pending</action>
+                            <sort_order>10</sort_order>
+                        </pending>
+                        <sent translate="title" module="aitpagecache">
+                            <title>Sent Emails</title>
+                            <action>adminhtml/aitpagecache/sent</action>
+                            <sort_order>20</sort_order>
+                        </sent>
+                    </children>
+                </aitpagecache>
+            </children>
+        </newsletter>
+    </menu>
+</config>
+
+<!--
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+-->

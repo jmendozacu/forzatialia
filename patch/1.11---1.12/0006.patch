@@ -1,0 +1,101 @@
+From 2318e3b5eacbbb385e76922d0ed900948eecf8b5 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 12:46:30 +0200
+Subject: [PATCH 6/8] add sorting order for slides
+
+---
+ .../Adminhtml/Slideshowtimeline/Edit/Tab/Form.php      |    6 ++++++
+ .../Block/Adminhtml/Slideshowtimeline/Grid.php         |    6 ++++++
+ .../Slideshowtimeline/Block/Slideshowtimeline.php      |    3 ++-
+ .../local/Olegnax/Slideshowtimeline/etc/config.xml     |    2 +-
+ .../mysql4-upgrade-0.1.1-0.1.2.php                     |   16 ++++++++++++++++
+ 5 files changed, 31 insertions(+), 2 deletions(-)
+ create mode 100644 app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-upgrade-0.1.1-0.1.2.php
+
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php
+index 0471e06..3c3afb7 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php
+@@ -98,6 +98,12 @@ class Olegnax_Slideshowtimeline_Block_Adminhtml_Slideshowtimeline_Edit_Tab_Form
+           ),
+       ));
+ 
++      $fieldset->addField('sort_order', 'text', array(
++            'label'     => Mage::helper('slideshowtimeline')->__('Sort Order'),
++            'required'  => false,
++            'name'      => 'sort_order',
++        ));
++
+       if ( Mage::getSingleton('adminhtml/session')->getSlideshowtimelineData() )
+       {
+           $form->setValues(Mage::getSingleton('adminhtml/session')->getSlideshowtimelineData());
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid.php b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid.php
+index 4779ebd..8998769 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid.php
+@@ -75,6 +75,12 @@ class Olegnax_Slideshowtimeline_Block_Adminhtml_Slideshowtimeline_Grid extends M
+               2 => 'Disabled',
+           ),
+       ));
++
++      $this->addColumn('sort_order', array(
++            'header'    => Mage::helper('slideshowtimeline')->__('Sort Order'),
++            'align'     =>'left',
++            'index'     => 'sort_order',
++        ));
+ 	  
+         $this->addColumn('action',
+             array(
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/Block/Slideshowtimeline.php b/app/code/local/Olegnax/Slideshowtimeline/Block/Slideshowtimeline.php
+index 2f909ca..c717316 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/Block/Slideshowtimeline.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/Block/Slideshowtimeline.php
+@@ -26,7 +26,8 @@ class Olegnax_Slideshowtimeline_Block_Slideshowtimeline extends Mage_Core_Block_
+         $slides  = Mage::getModel('slideshowtimeline/slideshowtimeline')->getCollection()
+             ->addStoreFilter(Mage::app()->getStore())
+         	->addFieldToSelect('*')
+-        	->addFieldToFilter('status', 1);
++        	->addFieldToFilter('status', 1)
++            ->setOrder('sort_order', 'asc');
+         return $slides;
+     }
+ 
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml b/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml
+index 3e868e8..a2230a3 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml
++++ b/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml
+@@ -2,7 +2,7 @@
+ <config>
+     <modules>
+         <Olegnax_Slideshowtimeline>
+-            <version>0.1.1</version>
++            <version>0.1.2</version>
+         </Olegnax_Slideshowtimeline>
+     </modules>
+     <frontend>
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-upgrade-0.1.1-0.1.2.php b/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-upgrade-0.1.1-0.1.2.php
+new file mode 100644
+index 0000000..2159015
+--- /dev/null
++++ b/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-upgrade-0.1.1-0.1.2.php
+@@ -0,0 +1,16 @@
++<?php
++/**
++ * @version   1.0 12.0.2012
++ * @author    Olegnax http://www.olegnax.com <mail@olegnax.com>
++ * @copyright Copyright (C) 2010 - 2012 Olegnax
++ */
++
++$installer = $this;
++/* @var $installer Mage_Core_Model_Resource_Setup */
++$installer->startSetup();
++
++$pageTable = $installer->getTable('slideshowtimeline/slideshowtimeline');
++$installer->getConnection()->addColumn($pageTable, 'sort_order',
++    "SMALLINT(6) NOT NULL DEFAULT '0' AFTER `status`");
++
++$installer->endSetup();
+\ No newline at end of file
+-- 
+1.7.10.msysgit.1
+

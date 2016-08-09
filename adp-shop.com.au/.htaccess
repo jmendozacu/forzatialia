@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^adp\-shop\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.adp\-shop\.com\.au$
+RewriteRule ^/?$ "http\:\/\/www\.forzaitalia\.com\.au\/sport\/football\/adp\-del\-piero\/" [R=301,L]
+

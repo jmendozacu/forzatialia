@@ -1,0 +1,86 @@
+
+<!-- SLIDER BOF -->
+<?php if (($_products = $this->getLatestCollection()) && $_products->getSize()): ?>
+<div class="slider-container">
+<div class="clearfix">
+	<h2 class="subtitle"><?php echo $this->__('Latest Arrivals') ?></h2>
+	<a href="#" class="jcarousel-prev-horizontal" id="celebrity_carousel_prev"></a>
+	<a href="#" class="jcarousel-next-horizontal" id="celebrity_carousel_next"></a>
+</div>
+<ul id="celebrity_carousel" class="jcarousel-skin-tango clearfix">
+<?php foreach ($_products->getItems() as $_product): ?>
+    <li class="clearfix">
+	    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image">
+		    <?php echo $this->helper('celebritysettings')->getLabel($_product);  ?>
+		    <img data-srcX2="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(234*2, 282*2) ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(234, 282) ?>" width="234" height="282" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" /><em><?php echo $this->__('Details'); ?></em><span></span></a>
+        <div class="actions">
+            <?php if($_product->isSaleable()): ?>
+                <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+            <?php else: ?>
+                <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+            <?php endif; ?>
+        </div>
+	    <div class="info">
+		    <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h3>
+		    <?php echo $this->getPriceHtml($_product, true, '-slider') ?>
+	    </div>
+    </li>
+<?php endforeach; ?>
+</ul>
+</div>
+<script type="text/javascript">
+
+jQuery(document).ready(function($) {
+
+	var carouselId = '#celebrity_carousel',
+		carouselPrev = '#celebrity_carousel_prev',
+		carouselNext = '#celebrity_carousel_next';
+	var owl = $(carouselId);
+
+	owl.owlCarousel({
+
+		itemsCustom: [ [0, 1], [480, 2], [768, 3], [1051, 4] ],
+
+		responsiveRefreshRate: 50,
+		slideSpeed: 400,
+		stopOnHover: true,
+		pagination: false,
+		itemsScaleUp: false,
+		rewindNav: false,
+
+		afterAction: function(){
+			if ( this.itemsAmount > this.visibleItems.length ) {
+				$(carouselNext).show();
+				$(carouselPrev).show();
+
+				$(carouselNext).removeClass('disabled');
+				$(carouselPrev).removeClass('disabled');
+				if ( this.currentItem == 0 ) {
+					$(carouselPrev).addClass('disabled');
+				}
+				if ( this.currentItem == this.maximumItem ) {
+					$(carouselNext).addClass('disabled');
+				}
+
+			} else {
+				$(carouselNext).hide();
+				$(carouselPrev).hide();
+			}
+		}
+
+	});
+
+	$(carouselNext).click(function(){
+		owl.trigger('owl.next');
+		return false;
+	})
+	$(carouselPrev).click(function(){
+		owl.trigger('owl.prev');
+		return false;
+	})
+
+});
+
+</script>
+<?php endif; ?>
+<!-- SLIDER EOF -->

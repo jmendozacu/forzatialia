@@ -1,0 +1,8 @@
+[26-Mar-2016 08:56:21 Australia/Sydney] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/DB.php on line 52
+[26-Mar-2016 08:56:22 Australia/Sydney] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/File.php on line 52
+[26-Mar-2016 08:56:23 Australia/Sydney] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/Memcache.php on line 59
+[26-Mar-2016 08:56:25 Australia/Sydney] PHP Fatal error:  Class 'SimplePie_Cache_DB' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/MySQL.php on line 58
+[26-Mar-2016 08:58:48 Australia/Sydney] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/DB.php on line 52
+[26-Mar-2016 08:58:49 Australia/Sydney] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/File.php on line 52
+[26-Mar-2016 08:58:49 Australia/Sydney] PHP Fatal error:  Class 'SimplePie_Cache_DB' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/MySQL.php on line 58
+[26-Mar-2016 08:58:50 Australia/Sydney] PHP Fatal error:  Interface 'SimplePie_Cache_Base' not found in /home/forzaita/public_html/blog/wp-includes/SimplePie/Cache/Memcache.php on line 59

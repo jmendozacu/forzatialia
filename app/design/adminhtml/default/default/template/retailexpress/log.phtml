@@ -1,0 +1,28 @@
+<?php /* @var $this POS_System_Block_Adminhtml_log */ ?>
+<?php if(($this->isLogEnabled()) < 1) : ?>
+<div id="messages">
+    <ul class="messages">
+        <li class="error-msg">
+            <ul>
+                <li>
+
+                    <span><?php echo $this->__('Deep Logging is not enabled. This is a diagnostic tool that should be used only by a qualified Magento Developer or support person'); ?></span>
+
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</div>
+<?php endif;  ?>
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="<?php echo $this->getHeaderWidth() ?>"><?php echo $this->getHeaderHtml() ?></td>
+            <td class="form-buttons"><?php echo $this->getButtonsHtml() ?></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <?php echo $this->getGridHtml() ?>
+</div>

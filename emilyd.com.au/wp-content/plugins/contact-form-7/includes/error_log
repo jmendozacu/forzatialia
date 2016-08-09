@@ -1,0 +1,15 @@
+[17-May-2016 22:46:38 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[17-May-2016 22:46:39 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/mail.php on line 289
+[17-May-2016 22:46:41 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[17-May-2016 22:53:39 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[17-May-2016 22:54:05 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/mail.php on line 289
+[18-Jun-2016 22:00:28 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[18-Jun-2016 22:00:30 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/mail.php on line 289
+[18-Jun-2016 22:00:32 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[18-Jun-2016 22:08:12 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[18-Jun-2016 22:08:13 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[18-Jun-2016 22:11:15 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[30-Jul-2016 21:29:55 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[30-Jul-2016 21:29:57 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/mail.php on line 289
+[30-Jul-2016 21:30:00 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[30-Jul-2016 21:33:30 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/includes/mail.php on line 289

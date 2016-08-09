@@ -1,0 +1,23 @@
+li.shipping_method_clickandcollect {
+
+}
+li.shipping_method_clickandcollect .carrier-details {
+	margin-top:10px;
+}
+li.shipping_method_clickandcollect .store-details {
+	float:right;
+	border:1px solid #bbafa0;
+    width:384px;
+    height:300px;
+	padding:8px;
+}
+li.shipping_method_clickandcollect select {
+	border:1px solid #bbafa0;
+	padding:10px;
+    width:200px;
+    height:300px;
+}
+.pos-config-section {
+	display:none;
+}
+

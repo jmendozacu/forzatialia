@@ -1,0 +1,2 @@
+[26-Mar-2016 08:56:58 Australia/Sydney] PHP Fatal error:  Call to undefined function _e() in /home/forzaita/public_html/blog/wp-content/plugins/slideshow-jquery-image-gallery/views/SlideshowPlugin/slideshow.php on line 23
+[26-Mar-2016 08:59:00 Australia/Sydney] PHP Fatal error:  Call to undefined function _e() in /home/forzaita/public_html/blog/wp-content/plugins/slideshow-jquery-image-gallery/views/SlideshowPlugin/slideshow.php on line 23

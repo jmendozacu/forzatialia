@@ -1,0 +1,55 @@
+<?php /* @var $this POS_System_Block_Adminhtml_History */ ?>
+<?php if ($this->showProductWait() || $this->showProductSchedule() || $this->showProductInProgress() || $this->showCustomerWait() || $this->showCustomerSchedule() || $this->showCustomerInProgress()): ?>
+<div id="messages">
+    <ul class="messages">
+        <li class="notice-msg">
+            <ul>
+                <li>
+                    <span><?php echo $this->__('Please be advised that the bulk import you have requested will be completed in the background. This may affect the performance of your web site whilst information is being processed by Magento. The Import Method you have selected is: "%s".', $this->getImportType()); ?></span>
+                </li>
+                <?php if ($this->showProductWait()): ?>
+                <li>
+                    <span><?php echo $this->__('Product Synchronisation has been scheduled and will begin within the next '.$this->getProductWait().'.'); ?></span>
+                </li>
+                <?php endif; ?>
+                <?php if ($this->showProductSchedule()): ?>
+                <li>
+                    <span><?php echo $this->__('Product Synchronisation has been scheduled and will begin within the next few minutes.'); ?></span>
+                </li>
+                <?php endif; ?>
+                <?php if ($this->showProductInProgress()): ?>
+                <li>
+                    <span><?php echo $this->__('Product Synchronisation is in progress.'); ?><?php echo $this->getProductsImportStatus()?></span>
+                </li>
+                <?php endif; ?>
+                <?php if ($this->showCustomerWait()): ?>
+                <li>
+                    <span><?php echo $this->__('Customer Synchronisation has been scheduled and will begin within the next '.$this->getCustomerWait().'.'); ?></span>
+                </li>
+                <?php endif; ?>
+                <?php if ($this->showCustomerSchedule()): ?>
+                <li>
+                    <span><?php echo $this->__('Customer Synchronisation has been scheduled and will begin within the next few minutes.'); ?></span>
+                </li>
+                <?php endif; ?>
+                <?php if ($this->showCustomerInProgress()): ?>
+                <li>
+                    <span><?php echo $this->__('Customer Synchronisation is in progress.'); ?><?php echo $this->getCustomersImportStatus()?></span>
+                </li>
+                <?php endif; ?>
+            </ul>
+        </li>
+    </ul>
+</div>
+<?php endif; ?>
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="<?php echo $this->getHeaderWidth() ?>"><?php echo $this->getHeaderHtml() ?></td>
+            <td class="form-buttons"><?php echo $this->getButtonsHtml() ?></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <?php echo $this->getGridHtml() ?>
+</div>

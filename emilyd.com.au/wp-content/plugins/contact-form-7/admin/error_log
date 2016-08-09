@@ -1,0 +1,2 @@
+[17-May-2016 22:56:07 Australia/Sydney] PHP Warning:  require_once(WPCF7_PLUGIN_DIR/admin/admin-functions.php): failed to open stream: No such file or directory in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/admin/admin.php on line 3
+[17-May-2016 22:56:07 Australia/Sydney] PHP Fatal error:  require_once(): Failed opening required 'WPCF7_PLUGIN_DIR/admin/admin-functions.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/forzaita/public_html/emilyd.com.au/wp-content/plugins/contact-form-7/admin/admin.php on line 3

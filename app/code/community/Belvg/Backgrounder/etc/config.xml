@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * BelVG LLC.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+ *
+ /***************************************
+ *         MAGENTO EDITION USAGE NOTICE *
+ *****************************************/
+ /* This package designed for Magento COMMUNITY edition
+ * BelVG does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * BelVG does not provide extension support in case of
+ * incorrect edition usage.
+ /***************************************
+ *         DISCLAIMER   *
+ *****************************************/
+ /* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *****************************************************
+ * @category   Belvg
+ * @package    Belvg_Backgrounder
+ * @copyright  Copyright (c) 2010 - 2011 BelVG LLC. (http://www.belvg.com)
+ * @license    http://store.belvg.com/BelVG-LICENSE-COMMUNITY.txt
+   */-->
+<config>
+	<modules>
+		<Belvg_Backgrounder>
+			<version>1.1.0</version>
+		</Belvg_Backgrounder>
+	</modules>	
+	<blocks>
+            <backgrounder><class>Belvg_Backgrounder_Block</class></backgrounder>
+        </blocks>
+	<frontend>
+		<layout>
+                        <updates>
+                                <backgrounder>
+                                        <file>backgrounder.xml</file>
+                                </backgrounder>
+                        </updates>
+                </layout>
+	</frontend>
+     <adminhtml>	    
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<backgrounder>
+							<title>Belvg Backgrounder</title>
+							<sort_order>200</sort_order>
+						</backgrounder>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		
+	
+    </adminhtml>
+    <global>	
+		 <blocks>
+		
+            <backgrounder><class>Belvg_Backgrounder_Block</class></backgrounder>
+        
+		    <adminhtml>
+		      <rewrite>
+					<cms_page_edit_tab_design>Belvg_Backgrounder_Block_Rewrite_Cmspageedittabdesign</cms_page_edit_tab_design>
+		      </rewrite>
+			  <rewrite>
+					<cms_page_edit_form>Belvg_Backgrounder_Block_Rewrite_Cmspageeditform</cms_page_edit_form>
+					
+			  </rewrite>
+			  <rewrite><catalog_product_edit_tabs>Belvg_Backgrounder_Block_Rewrite_Productedittabs</catalog_product_edit_tabs></rewrite>
+			  <rewrite>
+					<catalog_category_tabs>Belvg_Backgrounder_Block_Rewrite_Categorytabs</catalog_category_tabs>
+			  </rewrite>
+			  
+		    </adminhtml>
+	    </blocks>         
+	    <models>
+		    <backgrounder>
+			    <class>Belvg_Backgrounder_Model</class>
+			    <resourceModel>backgrounder_mysql4</resourceModel>
+		    </backgrounder> 
+                    <backgrounder_mysql4>
+			    <class>Belvg_Backgrounder_Model_Mysql4</class>
+                                <entities>
+                                    <backgrounds>
+                                        <table>belvg_backgrounder_backgrounds</table>
+                                    </backgrounds>                                                                                                          
+                                </entities>
+		    </backgrounder_mysql4>                    
+            </models>
+            <resources>
+                <backgrounder_setup>
+                    <setup>
+                            <module>Belvg_Backgrounder</module>
+                    </setup>
+                    <connection>
+                            <use>core_setup</use>
+                    </connection>
+                </backgrounder_setup>
+                <backgrounder_write>
+                    <connection><use>core_write</use></connection>
+                </backgrounder_write>
+                <backgrounder_read>
+                    <connection><use>core_read</use></connection>
+                </backgrounder_read>
+            </resources>
+	    <helpers>
+		    <backgrounder>
+			    <class>Belvg_Backgrounder_Helper</class>
+		    </backgrounder>
+	    </helpers>   
+		<events>
+			<cms_page_prepare_save>
+                <observers>
+                    <bgone>
+                        <class>backgrounder/observer</class>
+                        <method>cmsPagePrepareSave</method>
+                    </bgone>
+                </observers>
+            </cms_page_prepare_save>
+			<cms_page_render>
+				<observers>
+                    <bgcms>
+                        <class>backgrounder/observer</class>
+                        <method>cmsPageRender</method>
+                    </bgcms>
+                </observers>
+			</cms_page_render>
+			<catalog_product_prepare_save>
+				<observers> 
+                    <bgcp>
+                        <class>backgrounder/observer</class>
+                        <method>catProductRender</method>
+                    </bgcp>
+                </observers>
+			</catalog_product_prepare_save>
+			<catalog_category_prepare_save>
+				<observers> 
+                    <bgcat>
+                        <class>backgrounder/observer</class>
+                        <method>catRender</method>
+                    </bgcat>
+                </observers>
+			</catalog_category_prepare_save>
+        </events>	
+    </global>
+	
+</config>
+

@@ -1,0 +1,61 @@
+<?php
+/**
+ * Open Biz Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file OPEN-BIZ-LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mageconsult.net/terms-and-conditions
+ *
+ * @category   Magecon
+ * @package    Magecon_ProductVideo
+ * @version    1.0.0
+ * @copyright  Copyright (c) 2012 Open Biz Ltd (http://www.mageconsult.net)
+ * @license    http://mageconsult.net/terms-and-conditions
+ */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $videos = $this->getVideosSorted($_product->getId(), 'ASC'); ?>
+
+<?php if ($videos->getSize()): ?>
+
+    <div class="more-views">
+        <h2><?php echo $this->__('Videos') ?></h2>
+        <ul>
+            <?php
+            $_autohide = Mage::getStoreConfig('productvideo/video_settings/autohide');
+            $_autoplay = Mage::getStoreConfig('productvideo/video_settings/autoplay');
+            $_controls = Mage::getStoreConfig('productvideo/video_settings/controls');
+            /* $_loop = Mage::getStoreConfig('productvideo/video_settings/loop'); */
+            $_modestbranding = Mage::getStoreConfig('productvideo/video_settings/modestbranding');
+            $_rel = Mage::getStoreConfig('productvideo/video_settings/rel');
+            $_showinfo = Mage::getStoreConfig('productvideo/video_settings/showinfo');
+            $_showtitle = Mage::getStoreConfig('productvideo/video_settings/showtitle');
+            $_theme = Mage::getStoreConfig('productvideo/video_settings/theme');
+            $_width = Mage::getStoreConfig('productvideo/video_settings/width');
+            $_height = Mage::getStoreConfig('productvideo/video_settings/height');
+            ?>
+
+            <script type="text/javascript">
+                var videoProductWidth = <?php echo $_width ?>;
+                var videoProductHeight = <?php echo $_height ?>;
+            </script>
+
+            <?php foreach ($videos as $_video): ?>
+                <?php $thumbnail = "http://img.youtube.com/vi/" . $_video->getYoutubeKey() . "/" . Mage::getStoreConfig('productvideo/video_settings/thumbnail'); ?>
+                <?php
+                if ($_showtitle == 1) {
+                    $content = file_get_contents("http://youtube.com/get_video_info?video_id=" . $_video->getYoutubeKey());
+                    parse_str($content, $ytarr);
+                    $title = $ytarr['title'];
+                }
+                ?>	
+                <li>
+                    <a class="pvideo" <?php if ($_showtitle == 1): ?>title="<?php echo $title; ?>"<?php endif; ?> href="http://www.youtube.com/v/<?php echo $_video->getYoutubeKey() ?>?fs=1&amp;autoplay=<?php echo $_autoplay ?>&amp;autohide=<?php echo $_autohide ?>&amp;controls=<?php echo $_controls ?>&amp;modestbranding=<?php echo $_modestbranding ?>&amp;rel=<?php echo $_rel ?>&amp;showinfo=<?php echo $_showinfo ?>&amp;theme=<?php echo $_theme ?>"><img src="<?php echo $thumbnail; ?>" alt="" width="56" height="56"/></a>
+                </li>
+    <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>

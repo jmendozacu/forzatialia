@@ -1,0 +1,2 @@
+[26-Mar-2016 08:53:27 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/blog/wp-content/plugins/slideshow-jquery-image-gallery/slideshow.php on line 38
+[26-Mar-2016 08:58:01 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/blog/wp-content/plugins/slideshow-jquery-image-gallery/slideshow.php on line 38

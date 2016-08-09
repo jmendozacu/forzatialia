@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/clickandcollect.css</stylesheet></action>
+        </reference>
+    </default>
+
+    <checkout_onepage_index translate="label">
+        <remove name="checkout.onepage.shipping_method.available" />
+        <reference name="checkout.onepage.shipping_method">
+            <block type="clickandcollect/checkout_onepage_shipping_method_available" name="clickandcollect" as="available" template="clickandcollect/checkout/onepage/shipping_method/available.phtml"/>
+        </reference>
+    </checkout_onepage_index>
+
+    <checkout_onepage_shippingmethod>
+        <!-- Mage_Checkout -->
+        <remove name="root"/>
+        <block type="clickandcollect/checkout_onepage_shipping_method_available" name="clickandcollect" output="toHtml" template="clickandcollect/checkout/onepage/shipping_method/available.phtml"/>
+    </checkout_onepage_shippingmethod>
+	
+	<checkout_cart_index>
+        <!-- Mage_Checkout -->
+		<reference name="checkout.cart">
+			<block type="clickandcollect/checkout_cart_shipping" name="clickandcollect.cart.shipping" as="shipping" template="clickandcollect/checkout/cart/shipping.phtml"/>
+		</reference>
+    </checkout_cart_index>
+	
+	<!--
+    <checkout_onepage_review translate="label">
+        <reference name="checkout.onepage.agreements">
+            <action method="setTemplate"><template>clickandcollect/checkout/onepage/agreements.phtml</template></action>
+        </reference>
+    </checkout_onepage_review>
+	-->
+	
+    <checkout_multishipping_overview translate="label">
+        <reference name="checkout.multishipping.agreements">
+            <action method="setTemplate"><template>clickandcollect/checkout/multishipping/agreements.phtml</template></action>
+        </reference>
+    </checkout_multishipping_overview>
+	
+	
+</layout>

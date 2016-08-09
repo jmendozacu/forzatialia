@@ -1,0 +1,38 @@
+From 17e1fbb931d4018f66fc9e9983741f492ca11e34 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 14 May 2012 15:12:35 +0300
+Subject: [PATCH 2/5] fix notice in Navigation.php
+
+---
+ app/code/local/Olegnax/Navigation/Block/Navigation.php |    9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/app/code/local/Olegnax/Navigation/Block/Navigation.php b/app/code/local/Olegnax/Navigation/Block/Navigation.php
+index 6d91c5c..7e2f373 100644
+--- a/app/code/local/Olegnax/Navigation/Block/Navigation.php
++++ b/app/code/local/Olegnax/Navigation/Block/Navigation.php
+@@ -122,14 +122,19 @@ class Olegnax_Navigation_Block_Navigation extends Mage_Catalog_Block_Navigation
+         $htmlChildren = '';
+         $j = 0; //child index
+ 	    $i = 0; //column index
+-	    $itemsCount = $columnItemsNum[$i];
++	    $itemsCount = $activeChildrenCount;
++        if (isset($columnItemsNum[$i])){
++            $itemsCount = $columnItemsNum[$i];
++        }
+         foreach ($activeChildren as $child) {
+ 
+ 	        if ( $level == 0 ) {
+ 	            $isLast = (($j+1) == $itemsCount || $j == $activeChildrenCount - 1);
+ 		        if ( $isLast ) {
+ 			        $i++;
+-			        $itemsCount += $columnItemsNum[$i];
++                    if (isset($columnItemsNum[$i])){
++                        $itemsCount += $columnItemsNum[$i];
++                    }
+ 		        }
+ 	        } else {
+ 		        $isLast = ($j == $activeChildrenCount - 1);
+-- 
+1.7.10.msysgit.1
+

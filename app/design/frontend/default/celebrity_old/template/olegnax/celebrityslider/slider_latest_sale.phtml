@@ -1,0 +1,83 @@
+
+<!-- SLIDER BOF -->
+<div class="slider-container clearfix">
+<?php if (($_products = $this->getLatestCollection()) && $_products->getSize()): ?>
+<div class="latest left">
+	<div class="clearfix">
+		<h2 class="subtitle"><?php echo $this->__('Latest Arrivals') ?></h2>
+		<a href="#" class="jcarousel-prev-horizontal" id="celebrity_latest_prev"></a>
+		<a href="#" class="jcarousel-next-horizontal" id="celebrity_latest_next"></a>
+	</div>
+	<ul id="celebrity_latest" class="jcarousel-skin-tango clearfix">
+	<?php foreach ($_products->getItems() as $_product): ?>
+	    <li>
+		    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image">
+			    <?php echo $this->helper('celebritysettings')->getLabel($_product);  ?>
+			    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(112, 135) ?>" width="112" height="135" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" /><em><?php echo $this->__('Details'); ?></em><span></span>
+		    </a>
+	    </li>
+	<?php endforeach; ?>
+	</ul>
+</div>
+<?php endif; ?>
+
+<?php if (($_products = $this->getSaleCollection()) && $_products->getSize()): ?>
+<div class="sale right">
+	<div class="clearfix">
+		<h2 class="subtitle"><?php echo $this->__('On Sale') ?></h2>
+		<a href="#" class="jcarousel-prev-horizontal" id="celebrity_sale_prev"></a>
+		<a href="#" class="jcarousel-next-horizontal" id="celebrity_sale_next"></a>
+	</div>
+	<ul id="celebrity_sale" class="jcarousel-skin-tango clearfix">
+	<?php foreach ($_products->getItems() as $_product): ?>
+	    <li>
+		    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image">
+				<?php echo $this->helper('celebritysettings')->getLabel($_product);  ?>
+			    <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(112, 135) ?>" width="112" height="135" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" /><em><?php echo $this->__('Details'); ?></em><span></span>
+		    </a>
+	    </li>
+	<?php endforeach; ?>
+	</ul>
+</div>
+<?php endif; ?>
+
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+
+	function latest_initCallback(carousel) {
+	    jQuery('#celebrity_latest_next').bind('click', function() {
+	        carousel.next();
+	        return false;
+	    });
+	    jQuery('#celebrity_latest_prev').bind('click', function() {
+	        carousel.prev();
+	        return false;
+	    });
+	};
+	function sale_initCallback(carousel) {
+	    jQuery('#celebrity_sale_next').bind('click', function() {
+	        carousel.next();
+	        return false;
+	    });
+	    jQuery('#celebrity_sale_prev').bind('click', function() {
+	        carousel.prev();
+	        return false;
+	    });
+	};
+
+    $('#celebrity_latest').jcarousel({
+	    scroll: 1,
+    	initCallback: latest_initCallback,
+	    buttonNextHTML: null,
+	    buttonPrevHTML: null
+    });
+	$('#celebrity_sale').jcarousel({
+	    scroll: 1,
+    	initCallback: sale_initCallback,
+	    buttonNextHTML: null,
+	    buttonPrevHTML: null
+    });
+});
+</script>
+<!-- SLIDER EOF -->

@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    POS
+ * @package     POS_ClickAndCollect
+ *
+ */
+-->
+<config>
+    <modules>
+        <POS_ClickAndCollect>
+            <version>1.0.0</version>
+            <depends>
+                <Mage_Shipping />
+                <POS_System />
+            </depends>
+        </POS_ClickAndCollect>
+    </modules>
+    <global>
+        <helpers>
+            <clickandcollect>
+                <class>POS_ClickAndCollect_Helper</class>
+            </clickandcollect>
+        </helpers>
+        <models>
+            <clickandcollect>
+                <class>POS_ClickAndCollect_Model</class>
+            </clickandcollect>
+            <catalog_resource_eav_mysql4>
+                <rewrite>
+                    <product_collection>POS_ClickAndCollect_Model_Catalog_Resource_Eav_Mysql4_Product_Collection</product_collection>
+                </rewrite>
+            </catalog_resource_eav_mysql4>
+        </models>
+        <blocks>
+            <clickandcollect>
+                <class>POS_ClickAndCollect_Block</class>
+            </clickandcollect>
+            <adminhtml>
+                <rewrite>
+                	<catalog_product_edit_tab_inventory>POS_ClickAndCollect_Block_Adminhtml_Catalog_Product_Edit_Tab_Inventory</catalog_product_edit_tab_inventory>
+                	<catalog_product_grid>POS_ClickAndCollect_Block_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <resources>
+            <clickandcollect_setup>
+                <setup>
+                    <module>POS_ClickAndCollect</module>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+                <clickandcollect_write>
+                    <connection>
+                        <use>core_write</use>
+                    </connection>
+                </clickandcollect_write>
+                <clickandcollect_read>
+                    <connection>
+                        <use>core_read</use>
+                    </connection>
+                </clickandcollect_read>
+            </clickandcollect_setup>
+        </resources>
+        <events>
+            <!--<checkout_type_onepage_save_order>
+                <observers>
+                    <clickandcollect_checkout_type_onepage_save_order>
+                        <type>model</type>
+                        <class>clickandcollect/observer</class>
+                        <method>setCustomerOrderData</method>
+                    </clickandcollect_checkout_type_onepage_save_order>
+                </observers>
+            </checkout_type_onepage_save_order>
+			-->
+            <checkout_type_multishipping_create_orders_single>
+                <observers>
+                    <clickandcollect_checkout_type_multishipping_create_orders_single>
+                        <type>model</type>
+                        <class>clickandcollect/observer</class>
+                        <method>setCustomerOrderData</method>
+                    </clickandcollect_checkout_type_multishipping_create_orders_single>
+                </observers>
+            </checkout_type_multishipping_create_orders_single>
+			<sales_order_shipment_track_save_after>
+				<observers>
+                    <clickandcollect_sales_order_shipment_track_save_after>
+                        <type>model</type>
+                        <class>clickandcollect/observer</class>
+                        <method>sendTrackingCode</method>
+                    </clickandcollect_sales_order_shipment_track_save_after>
+                </observers>
+			</sales_order_shipment_track_save_after>
+        </events>
+    	<shipping>
+    	    <carriers>
+    			<clickandcollect>
+    				<class>POC_ClickAndCollect_Model_Carrier_Clickandcollect</class>
+    			</clickandcollect>
+    	    </carriers>
+    	    <clickandcollect>
+    	        <attribute>
+                    <pickuprule>
+                        <option1 translate="label">
+                            <value>3</value>
+                            <label>No Pickup</label>
+                        </option1>
+                        <option2 translate="label">
+                            <value>1</value>
+                            <label>Pickup Group 1</label>
+                        </option2>
+                        <option3 translate="label">
+                            <value>2</value>
+                            <label>Pickup Group 1 or 2</label>
+                        </option3>
+                    </pickuprule>
+                    <deliveryrule>
+                        <option1 translate="label">
+                            <value>1</value>
+                            <label>Allow Delivery</label>
+                        </option1>
+                        <option2 translate="label">
+                            <value>0</value>
+                            <label>No Delivery</label>
+                        </option2>
+                    </deliveryrule>
+    	        </attribute>
+    	    </clickandcollect>
+    	</shipping>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <clickandcollect module="POS_ClickAndCollect">
+                    <file>clickandcollect.xml</file>
+                </clickandcollect>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+				<args>
+					<modules>
+						<clickandcollect before="Mage_Adminhtml">POS_ClickAndCollect_Adminhtml</clickandcollect>
+					</modules>
+				</args>
+			</adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <carriers>
+            <clickandcollect>
+                <active>0</active>
+                <title>Pickup</title>
+                <name>Pickup</name>
+                <handling_type>F</handling_type>
+                <handling_fee></handling_fee>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <displayed_cms_block></displayed_cms_block>
+                <sallowspecific>0</sallowspecific>
+                <specificcountry></specificcountry>
+                <pickup_group_1></pickup_group_1>
+                <pickup_group_2></pickup_group_2>
+                <sort_order></sort_order>
+                <model>clickandcollect/carrier_clickandcollect</model>
+            </clickandcollect>
+        </carriers>
+    </default>
+</config>

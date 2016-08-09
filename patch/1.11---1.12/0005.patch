@@ -1,0 +1,28 @@
+From 8524aa562d9721fe1c5105393f012de4298111dc Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 12:30:32 +0200
+Subject: [PATCH 5/8] css for links in navigation custom block
+
+---
+ skin/frontend/default/celebrity/css/local.css |    5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/skin/frontend/default/celebrity/css/local.css b/skin/frontend/default/celebrity/css/local.css
+index 872ecdd..fd3b9f9 100644
+--- a/skin/frontend/default/celebrity/css/local.css
++++ b/skin/frontend/default/celebrity/css/local.css
+@@ -420,6 +420,11 @@ nav {float:left;}
+ #nav li.menu-category-description button.button span { font-size:14px; text-transform: lowercase; }
+ #nav li.menu-category-description button.button:hover span { background-color:#e9e9e9 !important; color:#111; }
+ 
++#nav li.custom-block div.sub-wrapper a { display:inline; color:#888888; float:none; font-weight:300; padding:0px; text-decoration:underline;}
++#nav li.custom-block div.sub-wrapper a:hover { text-decoration:none;}
++#nav li.custom-block div.sub-wrapper>ul {}
++#nav li.custom-block div.sub-wrapper>ul>li { float:none; background: url("../images/arrow_item.gif") no-repeat scroll 10px 8px #111; line-height: 22px; padding: 0 10px 0 20px;}
++
+ /* 3rd+ leven */
+ /*#nav ul ul,*/
+ #nav div.sub-wrapper ul div.sub-wrapper { top:-1px; margin:6px 0 0 100px; padding:0; width:auto; border:0; border-left:5px solid #9a1212;
+-- 
+1.7.10.msysgit.1
+

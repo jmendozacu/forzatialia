@@ -1,0 +1,3 @@
+[21-Jul-2015 21:59:09 Australia/Sydney] PHP Fatal error:  Call to undefined function get_header() in /home/forzaita/public_html/emilyd.com.au/wp-content/themes/twentythirteen/404.php on line 10
+[27-Apr-2016 11:27:25 Australia/Sydney] PHP Fatal error:  Call to undefined function get_header() in /home/forzaita/public_html/emilyd.com.au/wp-content/themes/twentythirteen/404.php on line 10
+[29-Jun-2016 18:28:51 Australia/Sydney] PHP Fatal error:  Call to undefined function get_header() in /home/forzaita/public_html/emilyd.com.au/wp-content/themes/twentythirteen/404.php on line 10

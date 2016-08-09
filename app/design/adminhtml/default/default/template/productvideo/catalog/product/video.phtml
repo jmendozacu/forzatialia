@@ -1,0 +1,75 @@
+<?php
+/**
+ * Open Biz Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file OPEN-BIZ-LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mageconsult.net/terms-and-conditions
+ *
+ * @category   Magecon
+ * @package    Magecon_ProductVideo
+ * @version    1.0.0
+ * @copyright  Copyright (c) 2012 Open Biz Ltd (http://www.mageconsult.net)
+ * @license    http://mageconsult.net/terms-and-conditions
+ */
+?>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('productvideo')->__('Videos') ?></h4>
+        <div class="right"><?php echo $this->getAddButtonHtml() ?></div>
+    </div>
+    <div class="fieldset fieldset-wide">
+        <div class="grid">
+            <table id="video_table" cellspacing="0" class="data border" width="100%">
+                <thead>
+                    <tr class="headings">
+                        <th><?php echo Mage::helper('productvideo')->__('Video Thumbnail') ?></th>
+                        <th><?php echo Mage::helper('productvideo')->__('YouTube Key') ?></th>
+                        <th><?php echo Mage::helper('productvideo')->__('Sort Order') ?></th>
+                        <th><?php echo Mage::helper('productvideo')->__('Exclude') ?></th>
+                        <th class="last"><?php echo Mage::helper('productvideo')->__('Remove') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $_autohide = Mage::getStoreConfig('productvideo/video_settings/autohide');
+                    $_autoplay = Mage::getStoreConfig('productvideo/video_settings/autoplay');
+                    $_controls = Mage::getStoreConfig('productvideo/video_settings/controls');
+                    /* $_loop = Mage::getStoreConfig('productvideo/video_settings/loop');
+                      $_modestbranding = Mage::getStoreConfig('productvideo/video_settings/modestbranding'); */
+                    $_rel = Mage::getStoreConfig('productvideo/video_settings/rel');
+                    $_showinfo = Mage::getStoreConfig('productvideo/video_settings/showinfo');
+                    $_theme = Mage::getStoreConfig('productvideo/video_settings/theme');
+                    $_width = Mage::getStoreConfig('productvideo/video_settings/width');
+                    $_height = Mage::getStoreConfig('productvideo/video_settings/height');
+                    if ($this->getVideosSorted($this->getProduct()->getId(), 'ASC')->getSize()):
+                        foreach ($this->getVideosSorted($this->getProduct()->getId(), 'ASC') as $video):
+                            ?>
+
+                            <tr>	
+                                <td><a href="#" onclick="popWin('http://www.youtube.com/v/<?php echo $video->getYoutubeKey(); ?>?autohide=<?php echo $_autohide; ?>&autoplay=<?php echo $_autoplay ?>&controls=<?php echo $_controls; ?>&rel=<?php echo $_rel; ?>&showinfo=<?php echo $_showinfo; ?>&theme=<?php echo $_theme; ?>', 'gallery', 'width=<?php echo $_width; ?>,height=<?php echo $_height; ?>,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes'); return false;"><img src="http://img.youtube.com/vi/<?php echo $video->getYoutubeKey() . '/' . Mage::getStoreConfig('productvideo/video_settings/thumbnail'); ?>" /></a></td>
+                                <td><input type="text" name="key[]" value="<?php echo $video->getYoutubeKey(); ?>" readonly="readonly"/></td>
+                                <td><input type="text" name="sort[]" value="<?php echo $video->getSortOrder(); ?>" /></td>
+                                <td><input type="checkbox" name="excluded[]" <?php echo ( ($video->getExcluded()) ? 'checked="yes"' : '' ); ?> value="<?php echo $video->getYoutubeKey(); ?>"/></td>
+                                <td class="last"><input type="checkbox" name="removed[]" value="<?php echo $video->getYoutubeKey(); ?>"/></td>
+                        <input type="hidden" name="id[]" value="<?php echo $video->getId(); ?>">
+
+                        </tr>
+                    <?php
+                    endforeach;
+                else:
+                    ?>
+
+                    <tr id="no_videos_available"> 
+                        <td align="center "colspan="5">There are no available videos.</td>
+                    </tr>
+
+<?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

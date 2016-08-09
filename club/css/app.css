@@ -1,0 +1,77 @@
+.header-new{background: url("../img/I-love-forza-italia.jpg") no-repeat scroll center center / 100% 100% transparent;
+border-bottom: 1px solid #FFF; min-height:230px; padding-top:10px;}
+.new-top {background: url("../img/opacity-logomenu.png") repeat-x scroll left bottom transparent;
+border-top: 1px solid #383838;
+border-bottom: 1px solid #050505; min-height:85px;}
+
+.logo-light {
+    position: absolute;
+    height: 85px;
+    max-width: 600px;
+    width: 100%;
+    left: -250px;}
+	
+	
+.logo{padding-top:4px;}
+
+.main-title{color: #FFF;
+text-shadow: 4px 4px 4px #000; margin-top:30px;}
+
+.pagetile{font-family: "Oswald",sans-serif,arial;
+font-weight: 400;
+font-size: 42px;
+margin-bottom: 0px;
+text-transform: uppercase;
+word-spacing: 2px;
+color:#FFFFFF;}
+
+.outermain {
+    background: url("../img/shadow-content-top.png") repeat-x scroll left top transparent; padding-top:35px;}
+	
+.widget-title{background:url("../img/line.png") repeat-x scroll left bottom transparent; padding-bottom:5px;}
+
+.full-width {
+  max-width: 1400px;
+}
+
+.footer {
+  padding: 1.2rem 4rem;
+  text-align: center;
+  color: #fff;
+  background: url("../img/I-love-forza-italia.jpg") repeat scroll 0% 0% transparent;
+ border-top: 1px solid #FFF;
+ color: #888;
+}
+.footer i {
+  font-size: 100px;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 10px;
+}
+.footer p, .footer a {
+  font-weight: 300;
+  font-size: .8em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .footer .columns:nth-child(n+2) {
+    border-left: 1px solid #b3b3b3;
+    min-height:20px;
+  }
+}
+.footer-links {
+  list-style-type: none;
+}
+.footer-links li {
+  margin-top: .5em;
+}
+
+.sub-footer{background: url("../img/opacity-footer.png") repeat-x scroll left top transparent;
+border-top: 1px solid #1F1F1F;}

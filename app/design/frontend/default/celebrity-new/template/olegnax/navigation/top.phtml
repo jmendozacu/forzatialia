@@ -1,0 +1,44 @@
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Olegnax_Navigation_Block_Navigation
+ */
+?>
+<?php
+/**
+ * $this->renderCategoriesMenuHtml() supports optional arguments:
+ * int Level number for list item class to start from
+ * string Extra class of outermost list items
+ * string If specified wraps children list in div with this class
+
+ */
+?>
+<!-- navigation BOF -->
+<?php $_menu = $this->renderCategoriesMenuHtml(0, 'level-top', 'sub-wrapper') ?>
+<?php if ($_menu): ?>
+	<nav class="olegnax">
+		<div class="nav-top-title"><div class="icon"><span></span><span></span><span></span></div><a href="#"><?php echo $this->__('Navigation'); ?></a></div>
+		<ul id="nav">
+			<?php if (Mage::getStoreConfig('celebritysettings/celebritysettings_header/navigation_home')): ?>
+				<li class="level0 level-top homenav">
+					<a class="home-new" href="<?php echo $this->getBaseUrl(); ?>"><span><?php echo $this->__(''); ?></span></a>
+				</li>
+           	<?php endif; ?>
+			<?php
+			echo $_menu;
+			$custom_tab = Mage::getModel('cms/block')->load('celebrity_navigation_block');
+			if ($custom_tab->getIsActive()) {
+				echo '
+            <li class="level0 level-top parent custom-block">
+                <a href="#" class="level-top">
+                    <span>' . $custom_tab->getTitle() . '</span>
+                </a>
+                <div class="sub-wrapper">' . $this->getLayout()->createBlock('cms/block')->setBlockId('celebrity_navigation_block')->toHtml() . '</div>
+            </li>';
+			}
+			?>
+		</ul>
+	</nav>
+<?php endif ?>
+<!-- navigation EOF -->

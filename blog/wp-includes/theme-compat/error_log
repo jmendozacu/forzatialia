@@ -1,0 +1,10 @@
+[26-Mar-2016 08:54:26 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/comments-popup.php on line 10
+[26-Mar-2016 08:54:26 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/comments.php on line 10
+[26-Mar-2016 08:54:26 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/footer.php on line 10
+[26-Mar-2016 08:54:27 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/header.php on line 10
+[26-Mar-2016 08:54:27 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/sidebar.php on line 10
+[26-Mar-2016 08:58:14 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/comments-popup.php on line 10
+[26-Mar-2016 08:58:14 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/comments.php on line 10
+[26-Mar-2016 08:58:14 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/footer.php on line 10
+[26-Mar-2016 08:58:14 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/header.php on line 10
+[26-Mar-2016 08:58:14 Australia/Sydney] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/forzaita/public_html/blog/wp-includes/theme-compat/sidebar.php on line 10

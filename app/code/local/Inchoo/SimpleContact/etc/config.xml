@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Inchoo_SimpleContact>
+            <version>0.1.0</version>
+        </Inchoo_SimpleContact>
+    </modules>
+    <frontend>
+        <routers>
+            <JustSomeFreeRouterNameHereNo1>
+                <use>standard</use>
+                <args>
+                    <module>Inchoo_SimpleContact</module>
+                    <frontName>inchoo-simplecontact</frontName>
+                </args>
+            </JustSomeFreeRouterNameHereNo1>
+        </routers>
+    </frontend>
+</config>

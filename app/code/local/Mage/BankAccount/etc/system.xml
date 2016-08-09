@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Elias Interactive
+*
+* @title      Magento -> Custom Payment Module for Cash On Delivery
+* @category   Mage
+* @package    Mage_Local
+* @author     Lee Taylor / Elias Interactive -> lee [at] eliasinteractive [dot] com
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+ 
+-->
+ 
+<config>
+<sections>
+<!-- payment tab -->
+<payment>
+<groups>
+<!-- newmodule fieldset -->
+<newmodule translate="label" module="paygate">
+<!-- will have title 'Cash On Delivery' -->
+<label>Pay by Phone</label>
+<!-- position between other payment methods -->
+<sort_order>670</sort_order>
+<!-- do not show this configuration options in store scope -->
+<show_in_default>1</show_in_default>
+<show_in_website>1</show_in_website>
+<show_in_store>0</show_in_store>
+<fields>
+<!-- is this payment method active for the website? -->
+			<active translate="label">
+				<!-- label for the field -->
+				<label>Enabled</label>
+				<!-- input type for configuration value -->
+				<frontend_type>select</frontend_type>
+				<!-- model to take the option values from -->
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+				<!-- field position -->
+				<sort_order>1</sort_order>
+				<!-- do not show this field in store scope -->
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>0</show_in_store>
+			</active>
+			<title translate="label">
+			<label>Title</label>
+				<frontend_type>text</frontend_type>
+				<sort_order>2</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>0</show_in_store>
+			</title>
+			  <mailing_address translate="label">
+                            <label>Phone us on</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>62</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </mailing_address>
+			
+</fields>
+</newmodule>
+</groups>
+</payment>
+</sections>
+</config>

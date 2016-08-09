@@ -1,0 +1,43 @@
+From 0841f8facba4fe19c6eee019431c33796633c188 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 12:06:45 +0200
+Subject: [PATCH 3/8] fix htpps bug with logo static block
+
+---
+ app/design/frontend/default/celebrity/layout/local.xml             |    3 +++
+ .../frontend/default/celebrity/template/page/html/header.phtml     |    4 ++--
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/app/design/frontend/default/celebrity/layout/local.xml b/app/design/frontend/default/celebrity/layout/local.xml
+index 83e2a87..091ffd1 100644
+--- a/app/design/frontend/default/celebrity/layout/local.xml
++++ b/app/design/frontend/default/celebrity/layout/local.xml
+@@ -38,6 +38,9 @@
+ 
+ 		<!-- add currency and cart block in header -->
+ 		<reference name="header">
++            <block type="cms/block" name="celebrity_logo" as="celebrityLogo">
++                <action method="setBlockId"><block_id>celebrity_logo</block_id></action>
++            </block>
+ 			<block type="directory/currency" name="currency_top" as="currencyTop"
+ 			       template="directory/currency-top.phtml"/>
+ 			<block type="checkout/cart_sidebar" name="cart_top" as="cartTop" template="checkout/cart/cart-top.phtml">
+diff --git a/app/design/frontend/default/celebrity/template/page/html/header.phtml b/app/design/frontend/default/celebrity/template/page/html/header.phtml
+index 7d7513a..4ad791b 100644
+--- a/app/design/frontend/default/celebrity/template/page/html/header.phtml
++++ b/app/design/frontend/default/celebrity/template/page/html/header.phtml
+@@ -38,9 +38,9 @@
+ 	    </div>
+ 	    <div class="clearfix logo-container">
+ 		    <?php if ($this->getIsHomePage()):?>
+-            <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('celebrity_logo')->toHtml(); ?></a></h1>
++            <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><?php echo $this->getChildHtml('celebrityLogo', false) ?></a></h1>
+             <?php else:?>
+-            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('celebrity_logo')->toHtml(); ?></a>
++            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><?php echo $this->getChildHtml('celebrityLogo', false) ?></a>
+             <?php endif?>
+ 		    <?php echo $this->getChildHtml('topLinks') ?>
+ 		</div>
+-- 
+1.7.10.msysgit.1
+

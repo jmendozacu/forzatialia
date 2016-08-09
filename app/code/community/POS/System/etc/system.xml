@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <retailexpress translate="label" module="retailexpress">
+            <label>POS System</label>
+            <sort_order>350</sort_order>
+            <class>pos-config-section</class>
+        </retailexpress>
+    </tabs>
+	<sections>
+		<retailexpress translate="label" module="retailexpress">
+			<label>POS System (v1.7)</label>
+			<tab>retailexpress</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>1</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>0</show_in_website>
+			<show_in_store>0</show_in_store>
+			<groups>
+				<main>
+					<label>Login &amp; General Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<enabled translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+							<value>Empty</value>
+						</enabled>
+                        <url translate="label">
+                            <backend_model>retailexpress/configvalidation</backend_model>
+                            <label>URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </url>
+                        <client_id translate="label">
+                            <label>Client ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </client_id>
+						<username translate="label">
+							<label>Username</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+						</username>
+						<password translate="label">
+							<label>Password</label>
+							<frontend_type>password</frontend_type>
+							<sort_order>16</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+						</password>
+						<sales_channel_id translate="label">
+							<label>Sales Channel ID</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+							<comment>
+    							<model>POS_System_Model_System_Config_Backend_Comment</model>
+							</comment>
+						</sales_channel_id>
+						<email_log translate="label">
+							<label>E-mail address for logs send</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+						</email_log>
+                        <server_type translate="label">
+                            <label>Server type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>retailexpress/system_server_type</source_model>
+                            <sort_order>31</sort_order>
+                            <comment><![CDATA[Choose performance schema.]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>0</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </server_type>
+						<sync_type translate="label">
+							<label>Bulk Import Method</label>
+							<frontend_type>select</frontend_type>
+							<source_model>retailexpress/system_method</source_model>
+							<sort_order>35</sort_order>
+                            <comment><![CDATA["Fast Mode" Import has been approved for use with Magento Community Edition version
+1.5.1. If you are using a later version of Magento and are having trouble with the
+bulk import features (products, attributes and customers), please try "Compatibility
+Mode". Please be aware that the compatibility mode may take an extended period of
+time to complete. For example, bulk product import may take up to 2 seconds per
+product to import, so if your import contains 10,000 products it may take up to 5.5
+hours to complete.]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+						</sync_type>
+						<sync_new translate="label">
+							<label>Synchronize only updated items (for Bulk methods)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+						</sync_new>
+						<cron translate="label">
+							<label>Cron Schedule</label>
+							<frontend_type>select</frontend_type>
+							<source_model>retailexpress/system_config_source_cron</source_model>
+							<backend_model>retailexpress/system_config_backend_cron</backend_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment>Cache should be cleared after change this settings</comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+						</cron>
+					</fields>
+				</main>
+				<attr>
+					<label>Product</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<rex_sizes translate="label">
+							<label>Match POS Attribute Size to </label>
+							<source_model>retailexpress/product_attribute</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_sizes>
+						<rex_colours translate="label">
+							<label>Match POS Attribute Colour to</label>
+							<source_model>retailexpress/product_attribute</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_colours>
+						<rex_seasons translate="label">
+							<label>Match POS Attribute Season to</label>
+							<source_model>retailexpress/product_attribute</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_seasons>
+						<rex_product_types translate="label">
+							<label>Match POS Attribute Product Type to</label>
+							<source_model>retailexpress/product_attribute</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_product_types>
+						<rex_brands translate="label">
+							<label>Match POS Attribute Brand to</label>
+							<source_model>retailexpress/product_attribute</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_brands>
+						<rex_custom1 translate="label">
+							<label>Match POS Custom 1 Attribute to</label>
+							<source_model>retailexpress/product_attr</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_custom1>
+						<rex_custom2 translate="label">
+							<label>Match POS Custom 2 Attribute to</label>
+							<source_model>retailexpress/product_attr</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_custom2>
+						<rex_custom3 translate="label">
+							<label>Match POS Custom 3 Attribute to</label>
+							<source_model>retailexpress/product_attr</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</rex_custom3>
+                    </fields>
+                </attr>
+				<price>
+					<label>Pricing</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>50</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<regular translate="label">
+							<label>Magento "Regular Price" map to</label>
+							<source_model>retailexpress/system_price</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</regular>
+						<special translate="label">
+							<label>Magento "Special Price" map to</label>
+							<source_model>retailexpress/system_specialprice</source_model>
+							<frontend_type>select</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</special>
+					</fields>
+                </price>
+				<payments>
+					<label>Payment Methods</label>
+					<frontend_model>retailexpress/adminhtml_payment</frontend_model>
+					<sort_order>60</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<payf translate="label">
+							<label>Match %s payment to POS payment</label>
+							<frontend_type>select</frontend_type>
+							<source_model>retailexpress/payment</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+						</payf>
+					</fields>
+                </payments>
+				<log_main>
+					<label>Enable Deep Logging</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>150</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+
+					<fields>
+						<logging_enabled translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+							<value>Empty</value>
+							<comment>
+								<![CDATA[Warning: deep logging very quickly consumes a lot of drive space. Please only enable for a short period of time and delete the logs once you no longer need them.]]>
+							</comment>
+						</logging_enabled>
+						<logging_bulk_request translate="label comment">
+							<label>Include bulk requests</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+							<value>Empty</value>
+							<comment>
+								<![CDATA[Warning: Bulk requests can be very large and can consume a lot of disk space. This is disabled by default and excludes logging the below service calls:
+								-PRODUCTSGETBULKDETAILS
+								-PRODUCTSGETBULKDETAILSEXTENDED
+								-WEBORDERGETBULKFULFILMENT
+								-CUSTOMERGETBULKDETAILS]]>
+							</comment>
+						</logging_bulk_request>
+					</fields>
+                </log_main>
+				<coupon_support>
+					<label>Coupon Support</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>200</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<apply_shopping_cart_price_rules_to_product_with_special_price translate="label">
+							<label>Apply Shopping Cart Price Rules to Products with Special Price</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+							<value>Empty</value>
+						</apply_shopping_cart_price_rules_to_product_with_special_price>
+						<apply_catalog_price_rules_to_product_with_special_price translate="label">
+							<label>Apply Catalog Price Rules to Products with Special Price</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<backend_model>retailexpress/CatalogRule_Rule_Applyrule</backend_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<can_be_empty>0</can_be_empty>
+							<value>Empty</value>
+						</apply_catalog_price_rules_to_product_with_special_price>
+					</fields>
+                </coupon_support>
+			</groups>
+		</retailexpress>
+	</sections>
+</config>

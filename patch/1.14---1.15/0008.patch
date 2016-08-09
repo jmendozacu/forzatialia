@@ -1,0 +1,38 @@
+From 0a48e196021683db02c564306109c09936b9d551 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 30 Jul 2012 23:00:54 +0300
+Subject: [PATCH 08/10] fix prevnext bug
+
+---
+ app/code/community/Inchoo/Prevnext/Helper/Data.php |    8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/app/code/community/Inchoo/Prevnext/Helper/Data.php b/app/code/community/Inchoo/Prevnext/Helper/Data.php
+index 5e9cbf4..a0c358f 100644
+--- a/app/code/community/Inchoo/Prevnext/Helper/Data.php
++++ b/app/code/community/Inchoo/Prevnext/Helper/Data.php
+@@ -42,6 +42,9 @@ class Inchoo_Prevnext_Helper_Data extends Mage_Core_Helper_Abstract
+             if (!$positions && Mage::registry('current_category')) {
+                 $positions = array_reverse(array_keys(Mage::registry('current_category')->getProductsPosition()));
+             }
++            if (!$positions) {
++                $positions = array();
++            }
+             
+             $cpk = @array_search($prodId, $positions);
+ 
+@@ -70,7 +73,10 @@ class Inchoo_Prevnext_Helper_Data extends Mage_Core_Helper_Abstract
+             
+             if (!$positions && Mage::registry('current_category')) {
+                 $positions = array_reverse(array_keys(Mage::registry('current_category')->getProductsPosition()));
+-            }            
++            }
++            if (!$positions) {
++                $positions = array();
++            }
+             
+             $cpk = @array_search($prodId, $positions);
+             
+-- 
+1.7.10.msysgit.1
+

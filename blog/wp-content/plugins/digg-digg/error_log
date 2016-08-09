@@ -1,0 +1,3 @@
+[26-Mar-2016 08:53:30 Australia/Sydney] PHP Fatal error:  Call to undefined function plugins_url() in /home/forzaita/public_html/blog/wp-content/plugins/digg-digg/digg-digg.php on line 13
+[26-Mar-2016 08:53:41 Australia/Sydney] PHP Fatal error:  Call to undefined function plugins_url() in /home/forzaita/public_html/blog/wp-content/plugins/digg-digg/digg-digg.php on line 13
+[26-Mar-2016 08:58:02 Australia/Sydney] PHP Fatal error:  Call to undefined function plugins_url() in /home/forzaita/public_html/blog/wp-content/plugins/digg-digg/digg-digg.php on line 13

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+     <url>
+	  <loc>http://emilyd.com.au/news/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/fourth-testimonial/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/third-testimonial/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/another-testimonial/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/contact/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/newsol/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/biography/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/gallery/</loc></url>
+
+     <url>
+	  <loc>http://emilyd.com.au/</loc></url>
+
+				   <url>
+					<loc>http://emilyd.com.au/category/news/</loc>
+					<lastmod>2014-05-20</lastmod></url>
+
+				   <url>
+					<loc>http://emilyd.com.au/category/testimonial/</loc>
+					<lastmod>2014-05-20</lastmod></url>
+</urlset>

@@ -1,0 +1,41 @@
+.header {
+    background: none repeat scroll 0 0 #EEE;
+    margin: 0;
+    opacity: 0.9;
+	-moz-opacity: 0.9;
+	-o-opacity: 0.9;
+	-webkit-opacity: 0.9;
+    padding: 10px;
+}
+
+.main-container {
+ background: none !important;
+}
+.backgrounder-images img {
+ display:none;
+}
+.header-container {
+ background: none !important;
+ border: none !important;
+}
+.nav-container {
+ background: none !important;
+}
+html {
+ overflow-y:auto !important;
+}
+.imgH {
+ height:100%;
+}
+.imgW {
+ width:100%;
+}
+.main-container {
+ background: none !important;
+}
+.backgrounder-images img {
+ position: fixed;
+ z-index:-1;
+ left:0;
+ top:50%;
+}

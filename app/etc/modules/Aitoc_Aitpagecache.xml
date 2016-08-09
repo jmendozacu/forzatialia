@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aitoc_Aitpagecache>
+            <active>false</active>
+            <codePool>local</codePool>
+            <self_name>Magento Booster</self_name>
+        </Aitoc_Aitpagecache>
+    </modules>
+</config>
+<!--
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+-->

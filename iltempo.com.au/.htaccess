@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^iltempo\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.iltempo\.com\.au$
+RewriteRule ^/?$ "http\:\/\/iltempo\.com\.au\/index\.html" [R=301,L]
+

@@ -1,0 +1,29 @@
+From e4aa756a2f7e06d649ab0e2a0d5fabac8ece2288 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 30 Jul 2012 18:27:32 +0300
+Subject: [PATCH 03/10] remove one instance of Compare. In the My Account
+ section, there are 2 instances of Compare widget
+
+---
+ app/design/frontend/default/celebrity/layout/local.xml |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/app/design/frontend/default/celebrity/layout/local.xml b/app/design/frontend/default/celebrity/layout/local.xml
+index 091ffd1..138295e 100644
+--- a/app/design/frontend/default/celebrity/layout/local.xml
++++ b/app/design/frontend/default/celebrity/layout/local.xml
+@@ -207,4 +207,10 @@
+         </reference>
+ 	</review_product_list>
+ 
++    <customer_account>
++        <reference name="left">
++            <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
++        </reference>
++    </customer_account>
++
+ </layout>
+\ No newline at end of file
+-- 
+1.7.10.msysgit.1
+

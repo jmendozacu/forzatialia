@@ -1,0 +1,235 @@
+<?php
+/**
+ *
+ *
+ *
+ */
+?>
+<?php /** @var $this Mage_Checkout_Block_Onepage_Shipping_Method_Available */ ?>
+<?php $_shippingRateGroups = $this->getShippingRates(); ?>
+<?php if (!$_shippingRateGroups): ?>
+    <p><?php echo $this->__('Sorry, no quotes are available for this order at this time.') ?></p>
+<?php else: ?>
+    <dl class="sp-methods">
+    <?php $shippingCodePrice = array(); ?>
+    <?php $_sole = count($_shippingRateGroups) == 1; ?>
+    <?php foreach ($_shippingRateGroups as $code => $_rates) : ?>
+        <?php if ($this->isMethodAllowed($code)) : ?>
+        <dt><?php echo $this->getCarrierName($code) ?></dt>
+        <dd>
+            <ul>
+            <?php if (!$this->isClickAndCollectMethod($code)) : ?>
+                <?php $_sole = $_sole && count($_rates) == 1; ?>
+                <?php foreach ($_rates as $_rate) : ?>
+                    <?php $shippingCodePrice[] = "'".$_rate->getCode()."':".(float)$_rate->getPrice(); ?>
+                    <li>
+                    <?php if ($_rate->getErrorMessage()): ?>
+                        <ul class="messages"><li class="error-msg"><ul><li><?php echo $_rate->getErrorMessage() ?></li></ul></li></ul>
+                    <?php else: ?>
+                        <?php if ($_sole) : ?>
+                        <span class="no-display"><input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>" checked="checked" /></span>
+                        <?php else: ?>
+                        <input name="shipping_method" type="radio" value="<?php echo $_rate->getCode() ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio"/>
+                            <?php if ($_rate->getCode() === $this->getAddressShippingMethod()): ?>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                    var lastPrice = <?php echo (float)$_rate->getPrice(); ?>;
+                                //]]>
+                            </script>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                        <label for="s_method_<?php echo $_rate->getCode() ?>"><?php echo $_rate->getMethodTitle() ?>
+                            <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
+                            <?php $_incl = $this->getShippingPrice($_rate->getPrice(), true); ?>
+                            <?php echo $_excl; ?>
+                            <?php if ($this->helper('tax')->displayShippingBothPrices() && $_incl != $_excl): ?>
+                                (<?php echo $this->__('Incl. Tax'); ?> <?php echo $_incl; ?>)
+                            <?php endif; ?>
+                        </label>
+                    <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <?php
+
+                $shippingData = $this->getShippingData();
+
+                // Sort rates alphabetically
+                usort($_rates, function ($_firstRate, $_secondRate) {
+                    return strnatcmp($_firstRate->getMethodTitle(), $_secondRate->getMethodTitle());
+                });
+                ?>
+                <li class="shipping_method_<?php echo $shippingData['code']; ?>">
+                <?php if (count($_rates) == 1 && isset($_rates[0]) && $_rates[0]->getErrorMessage()): ?>
+                    <ul class="messages"><li class="error-msg"><ul><li><?php echo $_rates[0]->getErrorMessage() ?></li></ul></li></ul>
+                <?php else: ?>
+                    <?php $_sole = $_sole && count($_rates) == 1; ?>
+                    <?php if ($_sole) : ?>
+                    <span class="no-display"><input name="clickandcollect_group" type="radio" value="<?php echo $shippingData['code'] ?>" id="s_method_<?php echo $shippingData['code'] ?>" checked="checked" /></span>
+                    <?php else: ?>
+                    <input name="clickandcollect_group" type="radio" value="<?php echo $shippingData['code'] ?>" id="s_method_<?php echo $shippingData['code'] ?>" <?php if ($this->isClickAndCollectMethod($this->getAddressShippingMethod())) {echo 'checked="checked" ';}; ?>class="radio" />
+                    <?php endif; ?>
+                    <label for="s_method_<?php echo $shippingData['code'] ?>"><?php echo $shippingData['title'] ?>
+                    <?php $_excl = $this->getShippingPrice($shippingData['price'], $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
+                    <?php $_incl = $this->getShippingPrice($shippingData['price'], true); ?>
+                    <?php echo $_excl; ?>
+                    <?php if ($this->helper('tax')->displayShippingBothPrices() && $_incl != $_excl): ?>
+                        (<?php echo $this->__('Incl. Tax'); ?> <?php echo $_incl; ?>)
+                    <?php endif; ?>
+                    </label>
+                    <div class="carrier-details" id="">
+                        <div class="store-details" id="clickandcollect-method-description">
+                        <?php foreach ($_rates as $_rate) : ?>
+                            <?php if ($_rate->getCode() == $this->getAddressShippingMethod()) : ?>
+                                <?php echo $_rate->getMethodDescription(); ?>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                        </div>
+                        <select id="clickandcollect_methods" name="clickandcollect_methods" class="select multiselect" size="8"<?php if (!$this->isClickAndCollectMethod($this->getAddressShippingMethod())) {echo ' disabled';}; ?>>
+                        <?php foreach ($_rates as $_rate): ?>
+                            <?php $shippingCodePrice[] = "'".$_rate->getCode()."':".(float)$_rate->getPrice(); ?>
+                            <?php $shippingDescription[] = "'".$_rate->getCode()."':'".$_rate->getMethodDescription()."'"; ?>
+                            <option value="<?php echo $_rate->getCode(); ?>"<?php if ($_rate->getCode() == $this->getAddressShippingMethod()) {echo ' selected';}; ?>><?php echo $_rate->getMethodTitle(); ?></option>
+                        <?php endforeach; ?>
+                        </select>
+                        <?php foreach ($_rates as $_rate): ?>
+                            <?php if ($_rate->getCode() === $this->getAddressShippingMethod()): ?>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                    var lastPrice = <?php echo (float)$_rate->getPrice(); ?>;
+                                //]]>
+                            </script>
+                            <?php endif; ?>
+                            <input style="display:none;" name="shipping_method" type="radio" value="<?php echo $_rate->getCode(); ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> id="s_method_<?php echo $_rate->getCode() ?>" class="radio" />
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+                </li>
+            <?php endif; ?>
+            </ul>
+        </dd>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    </dl>
+<script type="text/javascript">
+//<![CDATA[
+    var lastPrice;
+
+    <?php if (!empty($shippingCodePrice)): ?>
+        var shippingCodePrice = {<?php echo implode(',',$shippingCodePrice); ?>};
+    <?php endif; ?>
+    <?php if (!empty($shippingDescription)): ?>
+        var shippingDescription = {<?php echo implode(',',$shippingDescription); ?>};
+    <?php endif; ?>
+
+    var clickandcollectmethod_code = '<?php echo $this->getAddressShippingMethod(); ?>';
+
+    $$('input[type="radio"][name="shipping_method"]').each(function(el){
+        Event.observe(el, 'change', function(){
+
+            details = document.getElementById('clickandcollect_methods');
+            if (!details) {
+                return;
+            }
+            details.disabled = true;
+            clickAndCollectGroup = document.getElementsByName('clickandcollect_group');
+            if (clickAndCollectGroup.length > 0) {
+                for (var i=0; i<clickAndCollectGroup.length; i++) {
+                    clickAndCollectGroup[i].checked = false;
+                }
+            }
+
+            if (el.checked == true) {
+                var getShippingCode = el.getValue();
+                <?php if (!empty($shippingCodePrice)): ?>
+                    var newPrice = shippingCodePrice[getShippingCode];
+                    if (!lastPrice) {
+                        lastPrice = newPrice;
+                        quoteBaseGrandTotal += newPrice;
+                    }
+                    if (newPrice != lastPrice) {
+                        quoteBaseGrandTotal += (newPrice-lastPrice);
+                        lastPrice = newPrice;
+                    }
+                <?php endif; ?>
+                checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
+                return false;
+            }
+       });
+    });
+
+    $$('select#clickandcollect_methods').each(function(el) {
+        Event.observe(el, 'change', function(){
+            var shippingCode = el.value;
+            clickandcollectmethod_code = shippingCode;
+            methods = document.getElementsByName('shipping_method');
+            for (var i=0; i<methods.length; i++) {
+                if (methods[i].value == shippingCode) {
+                    methods[i].checked = true;
+                }
+            }
+            description = document.getElementById('clickandcollect-method-description');
+            description.innerHTML = shippingDescription[shippingCode];
+
+            <?php if (!empty($shippingCodePrice)): ?>
+                var newPrice = shippingCodePrice[shippingCode];
+                if (!lastPrice) {
+                    lastPrice = newPrice;
+                    quoteBaseGrandTotal += newPrice;
+                }
+                if (newPrice != lastPrice) {
+                    quoteBaseGrandTotal += (newPrice-lastPrice);
+                    lastPrice = newPrice;
+                }
+            <?php endif; ?>
+            checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
+        });
+    });
+
+    $$('input[type="radio"][name="clickandcollect_group"]').each(function(el){
+        Event.observe(el, 'change', function(){
+            details = document.getElementById('clickandcollect_methods');
+            details.disabled = false;
+            group = document.getElementsByName('shipping_method');
+            for (var i=0; i<group.length; i++) {
+                group[i].checked = false;
+            }
+            selectClickAndCollectShippingMethod(clickandcollectmethod_code);
+        });
+    });
+
+    function selectClickAndCollectShippingMethod(shippingCode)
+    {
+        if (shippingCode == '') {
+            shippingCode = $$('select#clickandcollect_methods option')[0].value;
+        }
+        $$('select#clickandcollect_methods option').each(function(el){
+            if (el.value == shippingCode) {
+                el.selected = true;
+            }
+        });
+        clickandcollectmethod_code = shippingCode;
+        methods = document.getElementsByName('shipping_method');
+        for (var i=0; i<methods.length; i++) {
+            if (methods[i].value == shippingCode) {
+                methods[i].checked = true;
+            }
+        }
+        description = document.getElementById('clickandcollect-method-description');
+        description.innerHTML = shippingDescription[shippingCode];
+        <?php if (!empty($shippingCodePrice)): ?>
+            var newPrice = shippingCodePrice[shippingCode];
+            if (!lastPrice) {
+                lastPrice = newPrice;
+                quoteBaseGrandTotal += newPrice;
+            }
+            if (newPrice != lastPrice) {
+                quoteBaseGrandTotal += (newPrice-lastPrice);
+                lastPrice = newPrice;
+            }
+        <?php endif; ?>
+        checkQuoteBaseGrandTotal = quoteBaseGrandTotal;
+    }
+//]]>
+</script>
+<?php endif; ?>

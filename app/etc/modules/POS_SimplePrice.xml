@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <POS_SimplePrice>
+      <active>true</active>
+      <codePool>community</codePool>
+    </POS_SimplePrice>
+  </modules>
+</config>

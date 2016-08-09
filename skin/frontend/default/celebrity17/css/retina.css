@@ -1,0 +1,220 @@
+	.jcarousel-next-horizontal,
+	.jcarousel-prev-horizontal 								{ background-size: 22px 44px;}
+
+	#prev, #next 											{ background-size: 36px 72px;}
+
+	.main-shadow, .white-container 							{ background-size: 1018px 1px;}
+
+	.product-image .new-label,
+	.product-image .sale-label 								{ background-size: 224px 112px;}
+
+	
+	.product-view button.btn-cart span span 				{ background-size: 39px 120px;}
+
+	
+	.error-msg, .success-msg, .note-msg, .notice-msg 		{ background-size: 35px 35px;}
+
+	
+	.slider-container .owl-carousel .btn-cart,
+	.slider-container .jcarousel-list .btn-cart,
+	.products-grid .btn-cart, .products-list .btn-cart		{ background-size: 29px 52px;}
+
+	#search_mini_form .form-search button,
+	.light #search_mini_form .form-search button,
+	.light #search_mini_form .form-search button:hover 		{ background-size: 26px 21px;}
+
+	.button.btn-proceed-checkout span span 					{ background-size: 23px 70px;}
+
+	.footer .footer-subscribe .subscribe-input .validation-advice 	{ background-size: 23px 21px;}
+	.pager .pages li a.next, .pager .pages li a.previous 	{ background-size: 22px 44px;}
+
+	#zoom-prev, #zoom-next 									{ background-size: 14px 28px;}
+
+	#nav li.custom-block div.sub-wrapper>ul>li,
+	.block .block-content li.item, .block .block-content li.item:hover,
+	.block-layered-nav dd li, .block-layered-nav dd li:hover,
+	.std ul.disc li											{ background-size: 3px 6px;}
+
+	.informative address  									{ background-size: 1px 1px;}
+
+
+	.footer-links ul.footer-social a.twitter 				{ background-size: 21px 15px;}
+	.footer-links ul.footer-social a.facebook 				{ background-size: 21px 18px;}
+	.footer-links ul.footer-social a.email 					{ background-size: 21px 13px;}
+	.footer-links ul.footer-social a.google 				{ background-size: 21px 12px;}
+
+	.light .footer-links ul.footer-social a.twitter 		{ background-size: 21px 15px;}
+	.light .footer-links ul.footer-social a.facebook 		{ background-size: 21px 18px;}
+	.light .footer-links ul.footer-social a.email			{ background-size: 21px 13px;}
+	.light .footer-links ul.footer-social a.google			{ background-size: 21px 12px;}
+
+	
+	.btn-remove 											{ background-size: 14px 14px;}
+	.btn-remove2 											{ background-size: 12px 12px;}
+	.btn-edit 												{ background-size: 14px 14px;}
+
+	.rating-box, 
+	.rating-box .rating 									{ background-size: 14px 213px;}
+
+	.i_availability_only_arrow 								{ background-size: 9px 30px;}
+
+	.product-view .product-img-box .zoom #handle 			{ background-size: 9px 22px;}
+
+	.tool-tip .btn-close a 									{ background-size: 15px 15px;}
+
+
+	.light footer .footer-subscribe .description 			{ background-size: 20px 35px;}
+	.simple .footer-subscribe .description					{ background-size: 20px 35px;}
+
+	.product-view .add-to-links li.compare					{ background-size: 19px 14px;}
+	.product-view .add-to-links li.email-friend 			{ background-size: 19px 11px;}
+	.product-view .add-to-links li.wishlist 				{ background-size: 18px 12px;}
+
+	header .cart-top .summary 								{ background-size: 18px 16px;}
+
+	.product-image em 										{ background-size: 5px 10px;}
+	.breadcrumbs span 										{ background-size: 3px 5px;}
+
+	.slider-container, .crosssell-container,
+	.slider-container:before, .slider-container:after,
+	.crosssell-container:before, .crosssell-container:after	{ background-size: 1px 6px;}
+
+	.additional_width,
+	.additional_width:before, .additional_width:after		{ background-size: 1px 5px;}
+
+	.prev-next a:before 									{ background-size: 8px 16px;}
+
+	a.v-desc { background-size: 21px 21px;}
+	a.v-asc  { background-size: 21px 21px;}
+
+	.qty-container .qty-math { background-size: 13px 26px;}
+
+@media only screen and (max-width: 1050px) {
+	#nav ul li a span 										{ background-size: 3px 6px;}
+}
+@media only screen and ( max-width: 767px) {
+	#search_mini_form .form-search button,
+	.light #search_mini_form .form-search button,
+	.light #search_mini_form .form-search button:hover,	
+	header .cart-top .summary 								{ background-size: 35px 35px;}
+}
+
+
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 3/2), only screen and ( min-device-pixel-ratio: 1.5) {
+/* local.css */
+	.jcarousel-next-horizontal,	.jcarousel-prev-horizontal 	{ background-image: url(../images/retina/arrow_next@2x.png);}
+	.jcarousel-prev-horizontal 								{ background-image: url(../images/retina/arrow_back@2x.png);}
+	
+	#prev 													{ background-image: url(../images/retina/arrow_back_big@2x.png);}
+	#next 													{ background-image: url(../images/retina/arrow_next_big@2x.png);}
+	
+	.main-shadow, .white-container 							{ background-image: url(../images/retina/content_shadow@2x.png);}
+	.product-image .new-label, .product-image .sale-label 	{ background-image: url(../images/retina/labels@2x.png);}
+	
+	.product-view button.btn-cart span span 				{ background-image: url(../images/retina/icon_add_cart_product_view@2x.png);}
+	
+	.error-msg 												{ background-image: url(../images/retina/i_msg-error@2x.png);}
+	.success-msg 											{ background-image: url(../images/retina/i_msg-success@2x.png);}
+	.note-msg 												{ background-image: url(../images/retina/i_msg-note@2x.png);}
+	.notice-msg 											{ background-image: url(../images/retina/i_msg-notice@2x.png);}
+
+	.slider-container .owl-carousel .btn-cart,
+	.slider-container .jcarousel-list .btn-cart,
+	.products-grid .btn-cart, .products-list .btn-cart		{ background-image: url(../images/retina/icon_buy@2x.png);}
+
+	#search_mini_form .form-search button,
+	.light #search_mini_form .form-search button:hover 		{ background-image: url(../images/retina/icon_search@2x.png);}
+
+	.light #search_mini_form .form-search button 			{ background-image: url(../images/retina/icon_search_light@2x.png);}
+
+	.button.btn-proceed-checkout span span 					{ background-image: url(../images/retina/arrow_button@2x.png);}
+
+	.footer .footer-subscribe .subscribe-input .validation-advice 		{ background-image: url(../images/retina/error@2x.png);}
+	
+	.pager .pages li a.previous 							{ background-image: url(../images/retina/pager_arrow_left@2x.png);}
+	.pager .pages li a.next 								{ background-image: url(../images/retina/pager_arrow_right@2x.png);}
+
+	#zoom-prev 												{ background-image: url(../images/retina/arrow_img_left@2x.png);}
+	#zoom-next 												{ background-image: url(../images/retina/arrow_img_right@2x.png);}
+
+	#nav li.custom-block div.sub-wrapper>ul>li,
+	.block .block-content li.item,
+	.block .block-content li.item:hover,
+	.block-layered-nav dd li,
+	.block-layered-nav dd li:hover,	.std ul.disc li			{ background-image: url(../images/retina/arrow_item@2x.png);}
+
+	.informative address 									{ background-image: url(../images/retina/f_border@2x.png);}
+
+	.footer-links ul.footer-social a.twitter 				{ background-image: url(../images/retina/icon_f_twitter@2x.png);}
+	.footer-links ul.footer-social a.facebook 				{ background-image: url(../images/retina/icon_f_facebook@2x.png);}
+	.footer-links ul.footer-social a.email 					{ background-image: url(../images/retina/icon_f_maile@2x.png);}
+	.footer-links ul.footer-social a.google 				{ background-image: url(../images/retina/icon_f_google@2x.png);}
+
+	.light .footer-links ul.footer-social a.twitter 		{ background-image: url(../images/retina/icon_f_twitter_light@2x.png);}
+	.light .footer-links ul.footer-social a.facebook 		{ background-image: url(../images/retina/icon_f_facebook_light@2x.png);}
+	.light .footer-links ul.footer-social a.email			{ background-image: url(../images/retina/icon_f_mail_light@2x.png);}
+	.light .footer-links ul.footer-social a.google			{ background-image: url(../images/retina/icon_f_google_light@2x.png);}
+	
+
+	.light footer .footer-subscribe .description 			{ background-image: url(../images/retina/newsletter_arrow_light@2x.png);} 
+	.simple .footer-subscribe .description					{ background-image: url(../images/retina/newsletter_arrow@2x.png);} 	
+
+	.product-view .add-to-links li.compare					{ background-image: url(../images/retina/icon_compare@2x.png);} 		
+	.product-view .add-to-links li.email-friend 			{ background-image: url(../images/retina/icon_email@2x.png);} 			
+	.product-view .add-to-links li.wishlist 				{ background-image: url(../images/retina/icon_wishlist@2x.png);} 		
+
+	header .cart-top .summary 								{ background-image: url(../images/retina/icon_cart@2x.png);} 			
+	
+	.product-image em 										{ background-image: url(../images/retina/arrow_details@2x.png);} 		
+	.breadcrumbs span 										{ background-image: url(../images/retina/icon_breadcrumb@2x.png);} 		
+
+	.slider-container, .crosssell-container,
+	.slider-container:before, .slider-container:after,
+	.crosssell-container:before, .crosssell-container:after	{ background-image: url(../images/retina/shadow_bottom@2x.png);}
+
+	.additional_width,
+	.additional_width:before, .additional_width:after		{ background-image: url(../images/retina/shadow_top@2x.png);}		 
+
+
+
+	.btn-remove 									{ background-image: url(../images/retina/btn_remove@2x.png);}
+	.btn-remove2 									{ background-image: url(../images/retina/btn_trash@2x.png);}
+	.btn-edit 										{ background-image: url(../images/retina/btn_edit@2x.png);}
+
+	.rating-box, 
+	.rating-box .rating 							{ background-image: url(../images/retina/bkg_rating@2x.png);}
+
+	.product-view .product-img-box .zoom #handle 	{ background-image: url(../images/retina/magnifier_handle@2x.png);}
+
+	.prev-next a:before 							{ background-image: url(../images/retina/product-arrow@2x.png);}
+
+	#nav ul li a span 								{ background-image: url(../images/retina/menu-icon@2x.png);}
+
+	a.v-desc { background-image: url(../images/retina/arrow_down@2x.png);}
+	a.v-asc  { background-image: url(../images/retina/arrow_up@2x.png);}
+
+	.qty-container .qty-math { background-image: url(../images/retina/qty_math@2x.png);}
+
+}
+
+/* @media only screen and ( max-width: 767px) { */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 767px), only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 767px), only screen and (        min-device-pixel-ratio: 2) and (max-width: 767px) { 
+	#search_mini_form .form-search button,
+	.light #search_mini_form .form-search button,
+	.light #search_mini_form .form-search button:hover 	{ background-image: url(../images/retina/responsive/icon_search_responsive@2x.png);}
+	
+	header .cart-top .summary 							{ background-image: url(../images/retina/responsive/icon_cart_responsive@2x.png);}
+
+}
+
+
+@media only screen and (min-width: 1051px) {
+	#nav ul li a span 	{ background-image: none;}
+}
+
+@media only screen and (max-width: 1050px) {
+	.simple .footer-subscribe .description, .light .simple .footer-subscribe .description {
+		background-image: none;
+	}
+}

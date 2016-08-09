@@ -1,0 +1,28 @@
+From d3cb8808268f1c8c2f59944c0960783b1dd1e2b2 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 1 May 2012 12:52:45 +0200
+Subject: [PATCH 7/8] fix nav block links for light version
+
+---
+ skin/frontend/default/celebrity/css/local.css |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/skin/frontend/default/celebrity/css/local.css b/skin/frontend/default/celebrity/css/local.css
+index fd3b9f9..584ea76 100644
+--- a/skin/frontend/default/celebrity/css/local.css
++++ b/skin/frontend/default/celebrity/css/local.css
+@@ -421,9 +421,9 @@ nav {float:left;}
+ #nav li.menu-category-description button.button:hover span { background-color:#e9e9e9 !important; color:#111; }
+ 
+ #nav li.custom-block div.sub-wrapper a { display:inline; color:#888888; float:none; font-weight:300; padding:0px; text-decoration:underline;}
+-#nav li.custom-block div.sub-wrapper a:hover { text-decoration:none;}
++#nav li.custom-block div.sub-wrapper a:hover { text-decoration:none; background:transparent}
+ #nav li.custom-block div.sub-wrapper>ul {}
+-#nav li.custom-block div.sub-wrapper>ul>li { float:none; background: url("../images/arrow_item.gif") no-repeat scroll 10px 8px #111; line-height: 22px; padding: 0 10px 0 20px;}
++#nav li.custom-block div.sub-wrapper>ul>li { float:none; background:transparent url("../images/arrow_item.gif") no-repeat 10px 8px; line-height: 22px; padding: 0 10px 0 20px;}
+ 
+ /* 3rd+ leven */
+ /*#nav ul ul,*/
+-- 
+1.7.10.msysgit.1
+

@@ -1,0 +1,2 @@
+[26-Mar-2016 08:56:08 Australia/Sydney] PHP Fatal error:  Call to undefined function get_option() in /home/forzaita/public_html/blog/wp-content/plugins/digg-digg/include/dd-helper.php on line 396
+[26-Mar-2016 08:58:44 Australia/Sydney] PHP Fatal error:  Call to undefined function get_option() in /home/forzaita/public_html/blog/wp-content/plugins/digg-digg/include/dd-helper.php on line 396

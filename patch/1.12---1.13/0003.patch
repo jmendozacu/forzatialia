@@ -1,0 +1,42 @@
+From 2b95a9c233a8a58a7ebed627a0d74b7d5e6bb0dd Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 14 May 2012 15:21:59 +0300
+Subject: [PATCH 3/5] use hoverintent with the top drop down menu
+
+---
+ skin/frontend/default/celebrity/js/script.js |   19 ++++++++++---------
+ 1 file changed, 10 insertions(+), 9 deletions(-)
+
+diff --git a/skin/frontend/default/celebrity/js/script.js b/skin/frontend/default/celebrity/js/script.js
+index 8d3d71f..31e6c02 100644
+--- a/skin/frontend/default/celebrity/js/script.js
++++ b/skin/frontend/default/celebrity/js/script.js
+@@ -11,15 +11,16 @@ jQuery(function($){
+ 	};
+ 	$("div.cart-top").hoverIntent( config );
+ 
+-	//fix menu behavior
+-	$('#nav li').hover(
+-		function(){
+-			$(this).children('div').addClass('shown-sub');
+-		},
+-		function(){
+-			$(this).children('div').removeClass('shown-sub');
+-		}
+-	);
++    var config_menu = {
++        over: function(){
++            $(this).children('div').addClass('shown-sub');
++        },
++        timeout: 400, // number = milliseconds delay before onMouseOut
++        out: function(){
++            $(this).children('div').removeClass('shown-sub');
++        }
++    };
++    $('#nav li').hoverIntent( config_menu );
+ 
+ 	//fix description height
+ 	$('#nav li.menu-category-description').each(function(){
+-- 
+1.7.10.msysgit.1
+

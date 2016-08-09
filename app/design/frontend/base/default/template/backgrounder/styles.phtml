@@ -1,0 +1,103 @@
+
+<script type="text/javascript">
+function slideBg(){
+	if (jQuery('.backgrounder-images img').length <= 1)
+		return false;
+	
+	var current = jQuery('.backgrounder-images img.active');
+	if (typeof(current.next().attr('src')) != "undefined"){
+		current.removeClass("active");
+		current.fadeOut("slow");
+		var active = current.next();
+		active.addClass("active");
+		active.fadeIn("slow");
+	   
+	}
+	else{
+		current.removeClass("active");
+		current.fadeOut("slow");
+		var active = jQuery('.backgrounder-images img:first');
+		active.addClass("active");
+		active.fadeIn("slow");
+	  
+	}
+	
+	var imgWidth = jQuery('.backgrounder-images img').width() ;
+	  var imgHeight = jQuery('.backgrounder-images img').height() ;
+	   
+	  var WindowWidth = jQuery(window).width() ;
+	  var WindowHeight = jQuery(document).height();
+	  
+	  if(imgWidth > imgHeight){
+		jQuery('.backgrounder-images img').addClass('imgW') 
+	  }   
+	  else{
+		jQuery('.backgrounder-images img').addClass('imgH')
+	  }
+	  var imgNewHeight =  jQuery('img.imgW').height();
+	  var imgNew2Height = imgNewHeight/2 
+
+	  jQuery('.backgrounder-images img').css('margin-top',- imgNew2Height)
+	  var imgNewHeight =  jQuery('img.imgW').height();
+	  var imgNew2Height = imgNewHeight/2 
+	  jQuery('.backgrounder-images img').css('margin-top',- imgNew2Height)
+
+}
+jQuery(function(){
+	
+	setInterval(function() {
+		slideBg();
+	}, 5000);
+
+	
+	jQuery(window).resize(function(){
+		var imgWidth = jQuery('.backgrounder-images img').width() ;
+		var imgHeight = jQuery('.backgrounder-images img').height() ;
+		var WindowWidth = jQuery(window).width() ;
+		var WindowHeight = jQuery(document).height();
+		if(imgWidth > imgHeight){  
+			jQuery('.backgrounder-images img').addClass('imgW')
+		}  
+		else{  
+			jQuery('.backgrounder-images img').addClass('imgH')
+		}
+		var imgNewHeight =  jQuery('img.imgW').height();
+		var imgNew2Height = imgNewHeight/2 
+		  
+		jQuery('.backgrounder-images img').css('margin-top',- imgNew2Height)
+	 
+	 
+		var imgNewHeight =  jQuery('img.imgW').height();
+		var imgNew2Height = imgNewHeight/2 
+		  
+		jQuery('.backgrounder-images img').css('margin-top',- imgNew2Height)
+	 
+	  
+
+	});
+
+	  var imgWidth = jQuery('.backgrounder-images img').width() ;
+	  var imgHeight = jQuery('.backgrounder-images img').height() ;
+	   
+	  var WindowWidth = jQuery(window).width() ;
+	  var WindowHeight = jQuery(document).height();
+	  
+	  if(imgWidth > imgHeight){
+		jQuery('.backgrounder-images img').addClass('imgW') 
+	  }   
+	  else{
+		jQuery('.backgrounder-images img').addClass('imgH')
+	  }
+	  var imgNewHeight =  jQuery('img.imgW').height();
+	  var imgNew2Height = imgNewHeight/2 
+
+	  jQuery('.backgrounder-images img').css('margin-top',- imgNew2Height)
+	  var imgNewHeight =  jQuery('img.imgW').height();
+	  var imgNew2Height = imgNewHeight/2 
+	  jQuery('.backgrounder-images img').css('margin-top',- imgNew2Height)
+
+})
+
+
+
+</script>

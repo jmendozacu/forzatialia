@@ -1,0 +1,61 @@
+.slider-container .jcarousel-list .btn-cart,
+.banners a span,
+.banners a em,
+.banner a span,
+.banner a em,
+.products-grid .btn-cart,
+.products-list .btn-cart,
+.product-image span,
+.product-image em,
+#zoom-prev,
+#zoom-next,
+.opc .step-title,
+.block .block-content li.item,
+.block-layered-nav dd li,
+.product-tabs a,
+footer .footer-subscribe button.button span{
+transition: all 400ms ease-in-out;
+-webkit-transition: all 400ms ease-in-out;
+-moz-transition: all 400ms ease-in-out;
+-o-transition: all 400ms ease-in-out;
+}
+
+#nav>li>a,
+#nav ul li a,
+button.button span{
+transition: background 200ms ease-in-out;
+-webkit-transition: background 200ms ease-in-out;
+-moz-transition: background 200ms ease-in-out;
+-o-transition: background 200ms ease-in-out;
+}
+
+.add-to-cart button.button span,
+button.btn-proceed-checkout span{
+transition: all 400ms ease-in-out;
+-webkit-transition: all 400ms ease-in-out;
+-moz-transition: all 400ms ease-in-out;
+-o-transition: all 400ms ease-in-out;
+}
+
+.slide-nav a,
+.slideshow ul li a.details {
+transition: background-color 200ms ease-in-out;
+-webkit-transition: background-color 200ms ease-in-out;
+-moz-transition: background-color 200ms ease-in-out;
+-o-transition: background-color 200ms ease-in-out;
+}
+.jcarousel-next-horizontal, .jcarousel-prev-horizontal,
+.pager .pages li a.next, .pager .pages li a.previous
+{
+transition: background-color 200ms ease-in-out;
+-webkit-transition: background-color 200ms ease-in-out;
+-moz-transition: background-color 200ms ease-in-out;
+-o-transition: background-color 200ms ease-in-out;
+}
+
+#search_mini_form .form-search button{
+transition: background-color 200ms ease-in-out;
+-webkit-transition: background-color 200ms ease-in-out;
+-moz-transition: background-color 200ms ease-in-out;
+-o-transition: background-color 200ms ease-in-out;
+}

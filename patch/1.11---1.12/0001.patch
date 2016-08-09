@@ -1,0 +1,101 @@
+From a0906f86fd9063569eb98114ded2d4084d252e8c Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Wed, 18 Apr 2012 17:48:43 +0300
+Subject: [PATCH 1/8] slideshow fixes - fix single store error - add image
+ preview on edit page - add image upload error check
+
+---
+ .../Adminhtml/Slideshowtimeline/Edit/Tab/Form.php   |   19 ++++++++++++++++++-
+ .../Slideshowtimeline/Grid/Renderer/Image.php       |    2 +-
+ .../Adminhtml/SlideshowtimelineController.php       |    5 ++++-
+ .../mysql4-install-0.1.0.php                        |    4 ++--
+ 4 files changed, 25 insertions(+), 5 deletions(-)
+
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php
+index 925871b..0471e06 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Edit/Tab/Form.php
+@@ -30,7 +30,7 @@ class Olegnax_Slideshowtimeline_Block_Adminhtml_Slideshowtimeline_Edit_Tab_Form
+               'name'      => 'stores[]',
+               'value'     => Mage::app()->getStore(true)->getId()
+           ));
+-          $model->setStoreId(Mage::app()->getStore(true)->getId());
++          //$model->setStoreId(Mage::app()->getStore(true)->getId());
+       }
+ 
+ 	  $fieldset->addField('title', 'text', array(
+@@ -60,10 +60,27 @@ class Olegnax_Slideshowtimeline_Block_Adminhtml_Slideshowtimeline_Edit_Tab_Form
+ 	        ),
+ 	    ));
+ 
++	  $data = array();
++	  $out = '';
++	  if ( Mage::getSingleton('adminhtml/session')->getSlideshowtimelineData() )
++		{
++			$data = Mage::getSingleton('adminhtml/session')->getSlideshowtimelineData();
++		} elseif ( Mage::registry('slideshowtimeline_data') ) {
++			$data = Mage::registry('slideshowtimeline_data')->getData();
++		}
++
++	  if ( !empty($data['image']) ) {
++		  $url = Mage::getBaseUrl('media') . $data['image'];
++		  $out = '<br/><center><a href="' . $url . '" target="_blank" id="imageurl">';
++		  $out .= "<img src=" . $url . " width='150px' />";
++		  $out .= '</a></center>';
++	  }
++
+       $fieldset->addField('image', 'file', array(
+           'label'     => Mage::helper('slideshowtimeline')->__('Image'),
+           'required'  => false,
+           'name'      => 'image',
++	      'note' => $out,
+ 	  ));
+ 		
+       $fieldset->addField('status', 'select', array(
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid/Renderer/Image.php b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid/Renderer/Image.php
+index 12bcc4d..d382029 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid/Renderer/Image.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/Block/Adminhtml/Slideshowtimeline/Grid/Renderer/Image.php
+@@ -22,7 +22,7 @@ class Olegnax_Slideshowtimeline_Block_Adminhtml_Slideshowtimeline_Grid_Renderer_
+ 	    if ( !empty($val) ) {
+ 	        $url = Mage::getBaseUrl('media') . $val;
+ 	        $out = '<center><a href="'.$url.'" target="_blank" id="imageurl">';
+-	        $out .= "<img src=". $url ." width='150px' height='100px' />";
++	        $out .= "<img src=". $url ." width='150px' />";
+ 	        $out .= '</a></center>';
+ 	    }
+ 
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/controllers/Adminhtml/SlideshowtimelineController.php b/app/code/local/Olegnax/Slideshowtimeline/controllers/Adminhtml/SlideshowtimelineController.php
+index bac8e66..66f9162 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/controllers/Adminhtml/SlideshowtimelineController.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/controllers/Adminhtml/SlideshowtimelineController.php
+@@ -76,7 +76,10 @@ class Olegnax_Slideshowtimeline_Adminhtml_SlideshowtimelineController extends Ma
+ 					$uploader->save($path, $_FILES['image']['name'] );
+ 					
+ 				} catch (Exception $e) {
+-		      
++					Mage::getSingleton('adminhtml/session')->addError($e->getMessage() . '  '. $path);
++	                Mage::getSingleton('adminhtml/session')->setFormData($data);
++	                $this->_redirect('*/*/edit', array('id' => $this->getRequest()->getParam('id')));
++	                return;
+ 		        }
+ 	        
+ 		        $data['image'] = 'olegnax/slideshowtimeline/'.$_FILES['image']['name'];
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-install-0.1.0.php b/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-install-0.1.0.php
+index d786233..425db40 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-install-0.1.0.php
++++ b/app/code/local/Olegnax/Slideshowtimeline/sql/slideshowtimeline_setup/mysql4-install-0.1.0.php
+@@ -23,8 +23,8 @@ CREATE TABLE `{$this->getTable('slideshowtimeline')}` (
+   PRIMARY KEY (`slide_id`)
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+-INSERT INTO `{$this->getTable('slideshowtimeline')}` (`slide_id`, `store_id`, `title`, `link`, `details`, `image`, `status`, `created_time`, `update_time`) VALUES (1, 0, 'Leonardo di Caprio', 'http://www.m.com/index.php/test6.html', 1, 'olegnax/slideshowtimeline/slide1.jpg', 1, '2012-02-28 14:13:05', '2012-02-28 14:13:05');
+-INSERT INTO `{$this->getTable('slideshowtimeline')}` (`slide_id`, `store_id`, `title`, `link`, `details`, `image`, `status`, `created_time`, `update_time`) VALUES (2, 0, 'Second', 'http://google.com', 1, 'olegnax/slideshowtimeline/slide2.jpg', 1, '2012-02-27 15:59:34', '2012-02-27 15:59:34');
++INSERT INTO `{$this->getTable('slideshowtimeline')}` (`slide_id`, `store_id`, `title`, `link`, `details`, `image`, `status`, `created_time`, `update_time`) VALUES (1, 0, 'Leonardo di Caprio', 'http://olegnax.com', 1, 'olegnax/slideshowtimeline/slide1.jpg', 1, '2012-02-28 14:13:05', '2012-02-28 14:13:05');
++INSERT INTO `{$this->getTable('slideshowtimeline')}` (`slide_id`, `store_id`, `title`, `link`, `details`, `image`, `status`, `created_time`, `update_time`) VALUES (2, 0, 'Second', 'http://olegnax.com/products/magento', 1, 'olegnax/slideshowtimeline/slide2.jpg', 1, '2012-02-27 15:59:34', '2012-02-27 15:59:34');
+ INSERT INTO `{$this->getTable('slideshowtimeline')}` (`slide_id`, `store_id`, `title`, `link`, `details`, `image`, `status`, `created_time`, `update_time`) VALUES (3, 0, '', '', 0, 'olegnax/slideshowtimeline/slide3.jpg', 1, '2012-02-27 15:59:50', '2012-02-27 15:59:50');
+ 
+ ");
+-- 
+1.7.10.msysgit.1
+

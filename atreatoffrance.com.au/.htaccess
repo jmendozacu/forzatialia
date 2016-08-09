@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^atreatoffrance\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.atreatoffrance\.com\.au$
+RewriteRule ^/?$ "http\:\/\/atreatoffrance\.com\.au\/index\.html" [R=301,L]
+

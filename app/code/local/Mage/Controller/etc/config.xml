@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Mage_Controller>
+      <version>0.1.0</version>
+    </Mage_Controller>
+  </modules>
+  <global>
+    <helpers>
+      <controller>
+        <class>Mage_Controller_Helper</class>
+      </controller>
+    </helpers>
+	<models>
+	  <controller>
+		<class>Mage_Controller_Model</class>
+		<resourceModel>controller_mysql4</resourceModel>
+	  </controller>
+	</models>
+    <events>
+	  <checkout_submit_all_after> <!-- identifier of the event we want to catch -->
+        <observers>
+          <checkout_submit_all_after_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>controller/observer</class> <!-- observers class alias -->
+            <method>saleCreated</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </checkout_submit_all_after_handler>
+        </observers>
+      </checkout_submit_all_after>
+    </events>
+  </global>
+</config> 

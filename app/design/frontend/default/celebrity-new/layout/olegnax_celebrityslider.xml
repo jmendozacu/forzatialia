@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+	    <reference name="head">
+            <!--<action method="addCss"><stylesheet>css/slider.css</stylesheet></action>-->
+            <action method="addCss"><stylesheet>owl-carousel/owl.carousel.css</stylesheet></action>
+            <action method="addCss"><stylesheet>owl-carousel/owl.theme.css</stylesheet></action>
+		    <action method="addCss"><stylesheet>owl-carousel/owl.transitions.css</stylesheet></action>
+            <action method="addJs"><script>olegnax/jquery-1.8.2.min.js</script></action>
+            <action method="addJs"><script>olegnax/jquery.jcarousel.min.js</script></action>
+		    <action method="addItem"><type>skin_js</type><script>owl-carousel/owl.carousel.min.js</script></action>
+        </reference>
+    </default>
+</layout>

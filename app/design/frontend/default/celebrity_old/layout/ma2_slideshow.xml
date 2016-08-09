@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		<reference name="head">
+        <action method="addItem"><type>skin_css</type><stylesheet>css/ma2slideshow/protoshow.css</stylesheet></action>
+        <action method="addItem"><type>skin_css</type><stylesheet>css/ma2slideshow/styles.css</stylesheet></action>
+        <action method="addJs"><script>scriptaculous/scriptaculous.js</script></action>                  
+        <action method="addItem"><type>skin_js</type><name>js/ma2slideshow/protoshow.js</name></action>                   
+    </reference>
+    </default>
+</layout> 

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <core>
+                <rewrite>
+                    <cache>Aitoc_Aitpagecache_Model_Rewrite_CoreCache</cache>
+                </rewrite>
+            </core>
+        </models>
+    </global>
+</config>
+
+<!--
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+-->

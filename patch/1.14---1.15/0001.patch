@@ -1,0 +1,30 @@
+From be8152ff9142ab823878db145e509f05774eb6d6 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 30 Jul 2012 17:54:54 +0300
+Subject: [PATCH 01/10] - fix wislist page
+
+---
+ skin/frontend/default/celebrity/css/local.css |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/skin/frontend/default/celebrity/css/local.css b/skin/frontend/default/celebrity/css/local.css
+index 629047e..b68439c 100644
+--- a/skin/frontend/default/celebrity/css/local.css
++++ b/skin/frontend/default/celebrity/css/local.css
+@@ -1138,11 +1138,12 @@ text-align:center;
+ .my-wishlist .data-table td { padding:10px; }
+ .my-wishlist .product-image { display:block; width:113px; height:113px; margin:0 0 5px; }
+ .my-wishlist textarea { display:block; width:97%; height:109px; }
+-.my-wishlist .buttons-set { border:0; padding:0; margin:0 0 -3em; }
++.my-wishlist .buttons-set { border:0; padding:0; margin:10px 0; }
+ .my-wishlist .buttons-set button.button { float:none; }
+ .my-wishlist .buttons-set .btn-add span,
+ .my-wishlist .buttons-set .btn-share span {}
+ #wishlist-table .add-to-links { white-space:nowrap; }
++#wishlist-table .qty { width:84px; margin:10px 0; display:block }
+ 
+ /* My Tags */
+ .my-tag-edit { float:left; margin:0 0 10px; }
+-- 
+1.7.10.msysgit.1
+

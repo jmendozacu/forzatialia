@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+ 
+<config>
+<global>
+<!-- declare model group for new module -->
+<models>
+<!-- model group alias to be used in Mage::getModel('newmodule/...') -->
+<newmodule>
+<!-- base class name for the model group -->
+<class>Mage_BankAccount_Model</class>
+</newmodule>
+</models>
+ 
+<!-- declare resource setup for new module -->
+<resources>
+<!-- resource identifier -->
+<newmodule_setup>
+<!-- specify that this resource is a setup resource and used for upgrades -->
+<setup>
+<!-- which module to look for install/upgrade files in -->
+<module>Mage_BankAccount</module>
+</setup>
+<!-- specify database connection for this resource -->
+<connection>
+<!-- do not create new connection, use predefined core setup connection -->
+<use>core_setup</use>
+</connection>
+</newmodule_setup>
+<newmodule_write>
+<use>core_write</use>
+</newmodule_write>
+<newmodule_read>
+<use>core_read</use>
+</newmodule_read>
+</resources>
+</global>
+ 
+<!-- declare default configuration values for this module -->
+<default>
+<!-- 'payment' configuration section (tab) -->
+<payment>
+<!-- 'newmodule' configuration group (fieldset) -->
+<newmodule>
+<!-- by default this payment method is inactive -->
+<active>1</active>
+<!-- model to handle logic for this payment method -->
+<model>newmodule/paymentMethod</model>
+<!-- order status for new orders paid by this payment method -->
+<order_status>1</order_status>
+<!-- default title for payment checkout page and order view page -->
+<title>Bank Payment</title>
+</newmodule>
+</payment>
+</default>
+</config>

@@ -1,0 +1,26 @@
+From a450abac766f09fe676843d71c374be8f74b530d Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Tue, 31 Jul 2012 16:57:08 +0300
+Subject: [PATCH 10/10] fix - celebrity settings take focus every time the
+ merchant accesses the System / Configuration
+
+---
+ app/code/local/Olegnax/Celebritysettings/etc/system.xml |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/code/local/Olegnax/Celebritysettings/etc/system.xml b/app/code/local/Olegnax/Celebritysettings/etc/system.xml
+index ca2d68f..39d5884 100644
+--- a/app/code/local/Olegnax/Celebritysettings/etc/system.xml
++++ b/app/code/local/Olegnax/Celebritysettings/etc/system.xml
+@@ -10,7 +10,7 @@
+ 		<celebritysettings translate="label" module="celebritysettings">
+ 			<label>Celebrity Theme Settings</label>
+ 			<tab>olegnax</tab>
+-			<sort_order>10</sort_order>
++			<sort_order>100</sort_order>
+ 			<show_in_default>1</show_in_default>
+ 			<show_in_website>1</show_in_website>
+ 			<show_in_store>1</show_in_store>
+-- 
+1.7.10.msysgit.1
+

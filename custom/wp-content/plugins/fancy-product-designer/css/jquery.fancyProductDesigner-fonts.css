@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Arial";
+  src: local("#"), url(../fonts/Arial.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Carme";
+  src: local("#"), url(../fonts/Carme.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Copperplate Bold";
+  src: local("#"), url(../fonts/Copperplate_Bold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Custom Script";
+  src: local("#"), url(../fonts/Custom_Script.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("#"), url(../fonts/OpenSans.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "PEPSI";
+  src: local("#"), url(../fonts/PEPSI.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "SansationBold";
+  src: local("#"), url(../fonts/SansationBold.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Tequilla Sunrise";
+  src: local("#"), url(../fonts/Tequilla_Sunrise.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Yearbook";
+  src: local("#"), url(../fonts/Yearbook.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "destroy";
+  src: local("#"), url(../fonts/destroy.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "fearless";
+  src: local("#"), url(../fonts/fearless.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "karmen";
+  src: local("#"), url(../fonts/karmen.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "karmen regular-webfont";
+  src: local("#"), url(../fonts/karmen_regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+

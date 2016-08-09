@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^italianmusic\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.italianmusic\.com\.au$
+RewriteRule ^/?$ "http\:\/\/www\.forzaitalia\.com\.au\/entertainment\/music\/" [R=301,L]
+

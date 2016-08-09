@@ -1,0 +1,700 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-SimpelViewer 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-06 20:13+0100\n"
+"PO-Revision-Date: 2009-05-06 20:17+0100\n"
+"Last-Translator: fuggi <wp-simpleviewer@fuggi82.de>\n"
+"Language-Team: fuggi <wp-simpleviewer@fuggi82.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: D:\\Internet\\Dreamweaver_Filebase\\all_inkl_all\\fuggi82_de_beta\\wordpress\\wp-content\\plugins\\wp-simpleviewer\\\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wp-simpleviewer-admin.php:14
+#: wp-simpleviewer-admin.php:334
+#: wp-simpleviewer-admin.php:427
+#: wp-simpleviewer-admin.php:433
+msgid "Create gallery files for this folder"
+msgstr "Galleriedateien für diesen Bilderordner erstellen"
+
+#: wp-simpleviewer-admin.php:16
+#: wp-simpleviewer-admin.php:187
+#: wp-simpleviewer-admin.php:228
+#: wp-simpleviewer-admin.php:240
+msgid "Edit captions and settings for this gallery"
+msgstr "Bildbeschreibungen und Einstellungen des Bilderordners ändern"
+
+#: wp-simpleviewer-admin.php:18
+#: wp-simpleviewer-admin.php:188
+#: wp-simpleviewer-admin.php:229
+msgid "Back to the gallery list without editing the captions"
+msgstr "Zurück zur Liste der Bilderordner ohne die Bildbeschreibungen zu bearbeiten"
+
+#: wp-simpleviewer-admin.php:20
+#: wp-simpleviewer-admin.php:478
+msgid "Save Changes"
+msgstr "Einstellungen speichern"
+
+#: wp-simpleviewer-admin.php:22
+#: wp-simpleviewer-admin.php:493
+#: wp-simpleviewer-admin.php:500
+msgid "Reset WP-SimpleViewer plugin"
+msgstr "WP-SimpleViewer Plugin zurücksetzen"
+
+#: wp-simpleviewer-admin.php:36
+msgid "The WP-SimpleViewer plugin has not been configured yet. Click here to configure it on the plugin's option page."
+msgstr "Das WP-SimpleViewer Plugin ist noch nicht eingerichtet worden. Klicke hier um es zu konfigurieren."
+
+#: wp-simpleviewer-admin.php:45
+msgid "You have not selected a folder that you want to use as a gallery!"
+msgstr "Du musst einen Bilderordner auswählen, den du als Gallerie verwenden willst!"
+
+#: wp-simpleviewer-admin.php:70
+msgid "GD library version 2 or later is required. You are running version:"
+msgstr "GD library Version 2 oder aktueller wird benötigt. Bei dir läuft Version:"
+
+#: wp-simpleviewer-admin.php:73
+msgid "Safe_mode is enabled in PHP. You will most probably run into problems with the gallery creation."
+msgstr "PHP läuft mit aktiviertem safe_mode. Sehr wahrscheinlich wirst du Probleme bei der Erstellung der Gallerie haben."
+
+#: wp-simpleviewer-admin.php:76
+msgid "Now the images and XML file for the selected folder will be created:"
+msgstr "Jetzt werden die Bilder und die XML Datei für den Bilderordner erstellt:"
+
+#: wp-simpleviewer-admin.php:88
+msgid "This file will not be included in the gallery - it is no jpg, png or gif file"
+msgstr "Dies ist keine jpg, png oder gif Datei - Sie wird nicht in die Gallerie aufgenommen"
+
+#: wp-simpleviewer-admin.php:95
+msgid "The directory you selected does not contain any jpg, png or gif files. Please upload them first (and ignore the rest of the page)!"
+msgstr "Der ausgewählte Bilderordner enthält keine jpg, png oder gif Dateien. Bitte lade die Dateien hoch (und ignoriere den Rest der Seite)!"
+
+#: wp-simpleviewer-admin.php:106
+msgid "Now I am working on file"
+msgstr "Jetzt bearbeite ich die Datei"
+
+#: wp-simpleviewer-admin.php:116
+msgid "I have created the regular image"
+msgstr "Ich habe das Bild mit normaler Größe"
+
+#: wp-simpleviewer-admin.php:120
+msgid "and the thumbnail"
+msgstr "und die Vorschau erstellt"
+
+#: wp-simpleviewer-admin.php:127
+#: wp-simpleviewer-admin.php:673
+#: wp-simpleviewer-admin.php:698
+#: wp-simpleviewer.php:122
+msgid "Filenames should be used for the captions"
+msgstr "Dateinamen sollen als Bildbeschreibung verwenden werden"
+
+#: wp-simpleviewer-admin.php:132
+msgid "and now it has been added to the XML file!"
+msgstr "und nun habe ich das Bild zur XML Datei hinzugefügt!"
+
+#: wp-simpleviewer-admin.php:146
+msgid "Sorry, but I could not create the subfolders for the thumbnails."
+msgstr "Sorry, aber ich konnte den Unterordner für die Vorschaubilder nicht erstellen."
+
+#: wp-simpleviewer-admin.php:164
+msgid "Edit captions for gallery:"
+msgstr "Du bearbeitest die Bildbeschreibungen der Gallerie:"
+
+#: wp-simpleviewer-admin.php:170
+msgid "I cannot find the gallery's xml file, please check that the gallery's files have been created on the admin pages:"
+msgstr "Ich kann die XML Datei der Gallerie nicht finden, bitte überprüfe, ob die benötigten Dateien auf den Administrationsseiten erstellt worden sind: "
+
+#: wp-simpleviewer-admin.php:179
+msgid "No images found in the xml file. Please check that there are image files in the directory!"
+msgstr "In der XML Datei sind keine Bildinformationen. Bitte überprüfe, ob Bilder im Gallerieordner sind!"
+
+#: wp-simpleviewer-admin.php:198
+msgid "Name"
+msgstr "Name"
+
+#: wp-simpleviewer-admin.php:199
+#: wp-simpleviewer-admin.php:349
+msgid "Date"
+msgstr "Datum"
+
+#: wp-simpleviewer-admin.php:200
+msgid "Caption"
+msgstr "Bildbeschreibung"
+
+#: wp-simpleviewer-admin.php:201
+msgid "Order"
+msgstr "Reihenfolge"
+
+#: wp-simpleviewer-admin.php:219
+#: wp-simpleviewer-admin.php:367
+msgid "Y/m/d"
+msgstr "Y/m/d"
+
+#: wp-simpleviewer-admin.php:267
+msgid "Now the XML file will be recreated..."
+msgstr "Jetzt wird die XML Datei neu erstellt..."
+
+#: wp-simpleviewer-admin.php:272
+msgid "This function is not implemented yet!"
+msgstr "Diese Funktion existiert noch nicht!"
+
+#: wp-simpleviewer-admin.php:281
+msgid "How to use the WP-SimpleViewer plugin"
+msgstr "So verwendest du das WP-SimpleViewer Plugin"
+
+#: wp-simpleviewer-admin.php:284
+msgid "Use an FTP tool to upload your images to a subdirectory to:"
+msgstr "Lade deine Bilder mit einem FTP Programm in ein Unterverzeichnis zu dem Ordner:"
+
+#: wp-simpleviewer-admin.php:286
+msgid "Make the folder writeable for everyone (chmod 777) and then select it in the list below to generate the thumbnails and the XML file. More information about this is available on the plugin's homepage:"
+msgstr "Mache den Unterordner für alle beschreibbar (chmod 777) und wähle ihn aus der Liste unten aus um die XML und Bilddateien zu erstellen. Mehr Informationen dazu findest du auch auf der Homepage des Plugins (eng.):"
+
+#: wp-simpleviewer-admin.php:288
+msgid "Click here"
+msgstr "Hier klicken"
+
+#: wp-simpleviewer-admin.php:290
+msgid "To show the SimpleViewer gallery on a post or a page just include the foldername in its content like this, you can also use the quicktag button in the code view of the editor for that:"
+msgstr "Um eine SimpleViewer Gallerie in einem Beitrag oder auf einer Seite anzuzeigen musst du nur den Ordnername wie hier beschrieben in den Text einfügen, dafür kannst du auch den Quicktagbutton 'WP-Simpleviewer' in der Codeansicht des Editors verwenden:"
+
+#: wp-simpleviewer-admin.php:292
+msgid "your_foldername"
+msgstr "dein_ordnername"
+
+#: wp-simpleviewer-admin.php:297
+msgid "Manage WP-SimpleViewer galleries"
+msgstr "WP-SimpleViewer Bilderordner verwalten"
+
+#: wp-simpleviewer-admin.php:301
+msgid "The following directory does not exist - please create it and upload your images to subdirectories of it:"
+msgstr "Der folgende Ordner existiert noch nicht - bitte erstelle ihn und lade deine Bilder in Unterordner davon hoch:"
+
+#: wp-simpleviewer-admin.php:314
+#: wp-simpleviewer-mediatab.php:48
+msgid "There are no directories I can use as a gallery. Please create some!"
+msgstr "Es gibt keine Bilderordner die ich als Gallerie verwenden kann. Bitte erstelle welche!"
+
+#: wp-simpleviewer-admin.php:344
+msgid "Directory"
+msgstr "Bilderordner"
+
+#: wp-simpleviewer-admin.php:352
+msgid "Status"
+msgstr "Status"
+
+#: wp-simpleviewer-admin.php:353
+msgid "Action"
+msgstr "Du kannst jetzt..."
+
+#: wp-simpleviewer-admin.php:388
+msgid "This directory is not writable. You have to make it writable (chmod 777) if you want to use it for a gallery."
+msgstr "Dieser Bilderordner ist nicht beschreibbar. Du musst ihn für alle beschreibbar machen (chmod 777) um ihn als Gallerie zu verwenden."
+
+#: wp-simpleviewer-admin.php:394
+msgid "XML file found, you can recreate or edit the gallery if you like"
+msgstr "XML Datei existiert, du kannst sie neu erstellen oder bearbeiten"
+
+#: wp-simpleviewer-admin.php:397
+msgid "Edit captions and settings"
+msgstr "Bildbeschreibungen und Einstellungen bearbeiten"
+
+#: wp-simpleviewer-admin.php:401
+msgid "XML file found but you do not have the permission to recreate or edit existing galleries"
+msgstr "XML Datei existiert, aber du hast nicht die Berechtigungen, sie zu bearbeiten oder neu zu erstellen"
+
+#: wp-simpleviewer-admin.php:407
+msgid "XML file found, however it is not writable. You have to make it writable (chmod 777) if you want to recreate or edit the gallery"
+msgstr "XML Datei existiert, aber leider ist sie nicht beschreibbar. Du musst sie für alle beschreibbar machen (chmod 777) um sie zu bearbeiten oder neu zu erstellen"
+
+#: wp-simpleviewer-admin.php:412
+msgid "You can create gallery files for this folder if you like"
+msgstr "Du kannst die Dateien für den Bilderordner jetzt erstellen"
+
+#: wp-simpleviewer-admin.php:471
+msgid "WP-SimpleViewer Settings"
+msgstr "WP-SimpleViewer Einstellungen"
+
+#: wp-simpleviewer-admin.php:495
+msgid "Pressing the uninstall button does not delete any files. It just removes all settings from the database and asks you if you want to deactivate the plugin or start from scratch."
+msgstr "Wenn du das Plugin zurücksetzt werden keine Dateien gelöscht. Die Einstellungen werden aus der Datenbank gelöscht und im Anschluß daran kannst du wählen, ob du das Plugin deaktivieren oder von neuem beginnen willst."
+
+#: wp-simpleviewer-admin.php:511
+msgid "Size and colors"
+msgstr "Größe und Farben"
+
+#: wp-simpleviewer-admin.php:514
+msgid "Width:"
+msgstr "Breite:"
+
+#: wp-simpleviewer-admin.php:516
+msgid "Default width of the SimpleViewer gallery as it should be shown on the page, e.g. 500 for 500 pixels or 90%."
+msgstr "Standard Breite der SimpleViewer Gallerie mit der sie angezeigt werden soll, z.B. 500 für 500 Pixel oder 90%."
+
+#: wp-simpleviewer-admin.php:522
+msgid "Height:"
+msgstr "Höhe:"
+
+#: wp-simpleviewer-admin.php:524
+msgid "Default height of the SimpleViewer gallery as it should be shown on the page, e.g. 500 for 500 pixels or 90%."
+msgstr "Standard Höhe der SimpleViewer Gallerie mit der sie angezeigt werden soll, z.B. 500 für 500 Pixel oder 90%."
+
+#: wp-simpleviewer-admin.php:530
+msgid "Textcolor:"
+msgstr "Schriftfarbe:"
+
+#: wp-simpleviewer-admin.php:532
+msgid "Color of title and caption text (hexidecimal color value)"
+msgstr "Textfarbe des Gallerienamens und der Bildbeschreibung (Hexadezimaler Farbwert)"
+
+#: wp-simpleviewer-admin.php:539
+msgid "Framecolor:"
+msgstr "Rahmenfarbe:"
+
+#: wp-simpleviewer-admin.php:541
+msgid "Color of image frame, navigation buttons and thumbnail frame (hexidecimal color value)"
+msgstr "Farbe der Bild-, Navigations- und Thumbnailrahmen (Hexadezimaler Farbwert)"
+
+#: wp-simpleviewer-admin.php:548
+msgid "Backgroundcolor:"
+msgstr "Hintergrundfarbe:"
+
+#: wp-simpleviewer-admin.php:550
+msgid "Color of gallery background (hexidecimal color value)"
+msgstr "Hintergrundfarbe des Gallerie (Hexadezimaler Farbwert)"
+
+#: wp-simpleviewer-admin.php:558
+msgid "Gallery creation and appearance"
+msgstr "Gallerieerstellung und Aussehen"
+
+#: wp-simpleviewer-admin.php:561
+msgid "Framewidth:"
+msgstr "Rahmenbreite:"
+
+#: wp-simpleviewer-admin.php:563
+msgid "Width of image frame"
+msgstr "Breite des Bilderrahmens"
+
+#: wp-simpleviewer-admin.php:564
+#: wp-simpleviewer-admin.php:572
+#: wp-simpleviewer-admin.php:580
+#: wp-simpleviewer-admin.php:638
+msgid "pixels"
+msgstr "Pixel"
+
+#: wp-simpleviewer-admin.php:569
+msgid "Stagepadding:"
+msgstr "Bühnenabstand:"
+
+#: wp-simpleviewer-admin.php:571
+msgid "Width of padding around gallery edge. To have the image flush to the edge of the swf, set this to 0."
+msgstr "Breite des Abstandes rund um die Gallerie. Auf 0 setzen um das Bild ganz am Rand der Gallerie anzeigen zu lassen."
+
+#: wp-simpleviewer-admin.php:577
+msgid "Navigationpadding:"
+msgstr "Navigationsabstand:"
+
+#: wp-simpleviewer-admin.php:579
+msgid "Distance between image and thumbnails"
+msgstr "Abstand zwischen Bild und Thumbnails"
+
+#: wp-simpleviewer-admin.php:585
+msgid "Number of thumbnails in one row:"
+msgstr "Anzahl der Vorschaubilder in einer Reihe:"
+
+#: wp-simpleviewer-admin.php:587
+msgid "Number of thumbnail columns. To disable thumbnails completely set this value to 0"
+msgstr "Spaltenanzahl der Thumbnails. Setzt den Wert auf 0 um Thumbnails komplett zu deaktivieren."
+
+#: wp-simpleviewer-admin.php:593
+msgid "Number of thumbnail rows:"
+msgstr "Anzahl der Reihen:"
+
+#: wp-simpleviewer-admin.php:595
+msgid "Number of thumbnail rows. To disable thumbnails completely set this value to 0."
+msgstr "Zeilenanzahl der Thumbnails. Setzt den Wert auf 0 um Thumbnails komplett zu deaktivieren."
+
+#: wp-simpleviewer-admin.php:601
+msgid "Position of navigation:"
+msgstr "Platzierung der Navigation:"
+
+#: wp-simpleviewer-admin.php:603
+msgid "Position of thumbnails relative to image"
+msgstr "Platzierung der Navigation gegenüber dem Bild"
+
+#: wp-simpleviewer-admin.php:604
+#: wp-simpleviewer-admin.php:615
+msgid "top"
+msgstr "oben"
+
+#: wp-simpleviewer-admin.php:605
+#: wp-simpleviewer-admin.php:617
+msgid "bottom"
+msgstr "unten"
+
+#: wp-simpleviewer-admin.php:606
+#: wp-simpleviewer-admin.php:625
+msgid "left"
+msgstr "links"
+
+#: wp-simpleviewer-admin.php:607
+#: wp-simpleviewer-admin.php:627
+msgid "right"
+msgstr "rechts"
+
+#: wp-simpleviewer-admin.php:612
+msgid "Vertical placement of the image and thumbnails:"
+msgstr "Vertikale Ausrichtung des Bildes und der Thumbnails:"
+
+#: wp-simpleviewer-admin.php:614
+msgid "In most cases this is best set to center. For small format galleries setting this to top or bottom can help get the image flush to the edge of the swf."
+msgstr "In den meißten Fällen ist mittig die beste Wahl. Bei kleinen Gallerien können auch andere Werte Sinn machen, um das Bild näher am Rand anzeigen zu lassen."
+
+#: wp-simpleviewer-admin.php:616
+#: wp-simpleviewer-admin.php:626
+msgid "center"
+msgstr "mittig"
+
+#: wp-simpleviewer-admin.php:622
+msgid "Horizontal placement of the image and thumbnails:"
+msgstr "Horizontale Ausrichtung des Bildes und der Thumbnails:"
+
+#: wp-simpleviewer-admin.php:624
+msgid "In most cases this is best set to center. For small format galleries setting this to left or right can help get the image flush to the edge of the swf."
+msgstr "In den meißten Fällen ist mittig die beste Wahl. Bei kleinen Gallerien können auch andere Werte Sinn machen, um das Bild näher am Rand anzeigen zu lassen."
+
+#: wp-simpleviewer-admin.php:635
+msgid "Max. image dimension:"
+msgstr "Max. Bildergröße:"
+
+#: wp-simpleviewer-admin.php:637
+msgid "All images in the gallery will be resized to this dimension"
+msgstr "Alle Bilder in der Gallerie werden auf diese Bildgröße verkleinert. "
+
+#: wp-simpleviewer-admin.php:643
+msgid "Image resize quality:"
+msgstr "Bildqualität bei Neuerstellung:"
+
+#: wp-simpleviewer-admin.php:645
+msgid "Resampling quality used when creating thumbnails and resizing images."
+msgstr "Die verkleinerten Bilder und die Thumbnails werden mit dieser Qualität neu erstellt. "
+
+#: wp-simpleviewer-admin.php:654
+msgid "Show download link or caption:"
+msgstr "Download Link oder Bildbeschreibung anzeigen:"
+
+#: wp-simpleviewer-admin.php:656
+msgid "Should the caption link to the original image, open it in a Thichbox or should it be text only? You can also hide captions completely. "
+msgstr "Soll die Bildbeschreibung zum Originalbild oder einer Thickbox verlinken oder soll nur der Text angezeigt werden? Die Beschreibungen können auch komplett unterdrückt werden."
+
+#: wp-simpleviewer-admin.php:658
+msgid "Show link to Thickbox"
+msgstr "Als Thickbox Link anzeigen"
+
+#: wp-simpleviewer-admin.php:660
+msgid "Show download link"
+msgstr "Download Link anzeigen"
+
+#: wp-simpleviewer-admin.php:661
+msgid "Show caption only"
+msgstr "Nur Bildbeschreibung anzeigen"
+
+#: wp-simpleviewer-admin.php:662
+msgid "Hide caption"
+msgstr "Bildbeschreibung nicht anzeigen"
+
+#: wp-simpleviewer-admin.php:670
+msgid "Standard download link text/caption:"
+msgstr "Standard Download Link/Bildbeschreibung:"
+
+#: wp-simpleviewer-admin.php:672
+msgid "This text will be proposed as caption text when creating a new gallery."
+msgstr "Mit diesem Text wird die Bildbeschreibung bei der Gallerieerstellung vorbelegt. "
+
+#: wp-simpleviewer-admin.php:674
+#: wp-simpleviewer-admin.php:677
+#: wp-simpleviewer-admin.php:699
+#: wp-simpleviewer-admin.php:702
+msgid "Use filename as caption"
+msgstr "Dateinamen als Bildbeschreibung verwenden"
+
+#: wp-simpleviewer-admin.php:684
+msgid "Standard gallery title:"
+msgstr "Standard Titel einer Gallerie:"
+
+#: wp-simpleviewer-admin.php:686
+msgid "This text will be proposed as gallery title when creating a new gallery. If you do not want to have a default title leave it empty."
+msgstr "Dieser Text wird bei der Gallerieerstellung als Gallerietitel vorgeschlagen. Wenn du keine Gallerietitel möchtest, kannst du das Feld auch leer lassen."
+
+#: wp-simpleviewer-admin.php:695
+msgid "Download link text/caption:"
+msgstr "Download Link/Bildbeschreibung:"
+
+#: wp-simpleviewer-admin.php:697
+msgid "This text will be used as caption text for the images in this gallery."
+msgstr "Mit diesem Text wird die Bildbeschreibung vorbelegt. "
+
+#: wp-simpleviewer-admin.php:713
+msgid "Gallery title:"
+msgstr "Titel der Gallerie:"
+
+#: wp-simpleviewer-admin.php:715
+msgid "If the gallery should have a title write it down here, otherwise just leave it empty."
+msgstr "Wenn du der Gallerie einen Titel geben willst, gib ihn hier ein. Wenn nicht lässt du das Feld einfach leer."
+
+#: wp-simpleviewer-admin.php:725
+msgid "Sort images by:"
+msgstr "Bilder sortieren nach:"
+
+#: wp-simpleviewer-admin.php:727
+msgid "Select how the images in the gallery should be sorted during gallerycreation."
+msgstr "Wähle aus wie die Bilder bei der Gallerieerstellung sortiert werden sollen."
+
+#: wp-simpleviewer-admin.php:728
+#: wp-simpleviewer-admin.php:774
+msgid "Name, ascending"
+msgstr "Name, ansteigend"
+
+#: wp-simpleviewer-admin.php:729
+#: wp-simpleviewer-admin.php:775
+msgid "Name, descending"
+msgstr "Name, absteigend"
+
+#: wp-simpleviewer-admin.php:730
+#: wp-simpleviewer-admin.php:776
+msgid "Date, ascending"
+msgstr "Datum, ansteigend"
+
+#: wp-simpleviewer-admin.php:731
+#: wp-simpleviewer-admin.php:777
+msgid "Date, descending"
+msgstr "Datum, absteigend"
+
+#: wp-simpleviewer-admin.php:743
+msgid "Other settings"
+msgstr "Weitere Einstellungen"
+
+#: wp-simpleviewer-admin.php:746
+msgid "Enable Thickbox:"
+msgstr "Thickbox aktivieren:"
+
+#: wp-simpleviewer-admin.php:748
+msgid "You can show your full size images in a Thickbox, a fancy javascript tool."
+msgstr "Du kannst deine Originalbilder in einer Thickbox, einem schicken Javascript Programm, anzeigen lassen."
+
+#: wp-simpleviewer-admin.php:749
+msgid "Yes, enable Thickbox"
+msgstr "Ja, Thickbox aktivieren"
+
+#: wp-simpleviewer-admin.php:750
+msgid "No, I only want to link to the image files"
+msgstr "Nein, ich will nur die Bilddateien verlinken"
+
+#: wp-simpleviewer-admin.php:755
+msgid "Text to be displayed in feeds:"
+msgstr "Text, der in Feeds angezeigt werden soll:"
+
+#: wp-simpleviewer-admin.php:757
+msgid "Most feed readers cannot display the Flash gallery. In your Feeds this text will be shown where the gallery is supposed to be."
+msgstr "Die meisten Feedreader können die Flash nicht anzeigen. Statt der Gallerie wird daher dieser Text in deinen Feeds angezeigt"
+
+#: wp-simpleviewer-admin.php:763
+msgid "Show howto text?"
+msgstr "Nutzungshinweise anzeigen? "
+
+#: wp-simpleviewer-admin.php:765
+msgid "Uncheck this box if you want to hide the howto text on the manage page."
+msgstr "Deaktiviere diese Box wenn die Nutzungshinweise nicht angezeigt werden sollen."
+
+#: wp-simpleviewer-admin.php:771
+msgid "Sort list of galleries by:"
+msgstr "Sortiere die Liste der Bilderordner nach:"
+
+#: wp-simpleviewer-admin.php:773
+msgid "Select how the list of galleries on the manage page should be sorted."
+msgstr "Wähle aus wie die Liste der Bilderordner sortiert werden soll."
+
+#: wp-simpleviewer-admin.php:783
+msgid "Directory settings"
+msgstr "Ordnereinstellungen"
+
+#: wp-simpleviewer-admin.php:786
+msgid "URL to images directory:"
+msgstr "URL zum Bilderverzeichnis:"
+
+#: wp-simpleviewer-admin.php:788
+msgid "The directory where your images are located has to be accessible under this URL"
+msgstr "Das Verzeichnis, in das du deine Bilder hochlädst, muss unter dieser URL erreichbar sein"
+
+#: wp-simpleviewer-admin.php:794
+msgid "Path to images directory:"
+msgstr "Pfad zum Bilderverzeichnis:"
+
+#: wp-simpleviewer-admin.php:796
+msgid "The full path to your directory where your images are located on your server"
+msgstr "Der komplette Pfad zu dem Verzeichnis, in dem deine Bilder auf dem Server liegen"
+
+#: wp-simpleviewer-admin.php:802
+msgid "Regular images subdirectory:"
+msgstr "Unterverzeichnis für normale Bilder:"
+
+#: wp-simpleviewer-admin.php:804
+msgid "When you create a new gallery the resized images will be put into a subfolder with this name"
+msgstr "Wenn du eine neue Gallerie erstellst werden die verkleinerten Bilder in ein Unterverzeichnis mit diesem Namen abgelegt"
+
+#: wp-simpleviewer-admin.php:810
+msgid "Thumbnails subdirectory:"
+msgstr "Unterverzeichnis für Thumbnails:"
+
+#: wp-simpleviewer-admin.php:812
+msgid "When you create a new gallery the thumbnails will be put into a subfolder with this name"
+msgstr "Wenn du eine neue Gallerie erstellst werden die Thumbnails in ein Unterverzeichnis mit diesem Namen abgelegt"
+
+#: wp-simpleviewer-admin.php:874
+msgid "Skipping thumb creation for this file, file type is invalid:"
+msgstr "Dieses Bild wird nicht bearbeitet, der Dateityp ist falsch:"
+
+#: wp-simpleviewer-admin.php:880
+msgid "This image file does not have a correct image format so I am skipping thumb creation for this file - please upload it again:"
+msgstr "Dieses Bild hat ein ungültiges Format, daher überspringe ich die Bearbeitung - Bitte lade es erneut hoch:"
+
+#: wp-simpleviewer-admin.php:938
+#: wp-simpleviewer-admin.php:946
+#: wp-simpleviewer-admin.php:953
+msgid "The new image could not be created - skipping thumb creation for this file:"
+msgstr "Das neue Bild konnte nicht erstellt werden, daher überspringe ich die Bearbeitung:"
+
+#: wp-simpleviewer-admin.php:1011
+msgid "I cannot open the XML file, please check that write permissions of the folder are correct. Filename is:"
+msgstr "Ich kann die XML Datei nicht öffnen, bitte überprüfe, dass die Schreibberechtigungen für den Bilderordner richtig sind! Der Dateiname ist:"
+
+#: wp-simpleviewer-admin.php:1014
+msgid "I have opened the XML file, but I was not able to write into it. Please check that write permissions of the folder are correct! Filename is:"
+msgstr "Ich konnte die XML Datei öffnen aber nicht überschreiben. Bitte überprüfe, dass die Schreibberechtigungen für den Bilderordner richtig sind! Der Dateiname ist:"
+
+#: wp-simpleviewer-admin.php:1018
+msgid "Yeah, we are done!"
+msgstr "Yeah, fertig!"
+
+#: wp-simpleviewer-admin.php:1198
+#: wp-simpleviewer-admin.php:1554
+msgid "Here a SimpleViewer Flash gallery should be displayed. Click here to open the post in your browser to see the gallery."
+msgstr "An dieser Stelle soll eigentlich eine SimpleViewer Flash Gallerie angezeigt werden. Kliche hier um den Beitrag in deinem Browser zu öffnen, wo du die Gallerie sehen kannst. "
+
+#: wp-simpleviewer-admin.php:1225
+#: wp-simpleviewer.php:121
+msgid "Show image in full size"
+msgstr "Bild in voller Größe anzeigen"
+
+#: wp-simpleviewer-admin.php:1240
+msgid "Plugin has been configured!"
+msgstr "Das Plugin wurde eingerichtet!"
+
+#: wp-simpleviewer-admin.php:1275
+msgid "Settings saved."
+msgstr "Die Einstellungen wurden gesichert."
+
+#: wp-simpleviewer-admin.php:1285
+msgid "Plugin has been reset!"
+msgstr "Das Plugin wurde zurückgesetzt!"
+
+#: wp-simpleviewer-admin.php:1288
+msgid "Now you can..."
+msgstr "Jetzt kannst du..."
+
+#: wp-simpleviewer-admin.php:1297
+msgid "deactivate the plugin"
+msgstr "Das Plugin deaktivieren"
+
+#: wp-simpleviewer-admin.php:1299
+msgid "or start from scratch."
+msgstr "oder nochmal von neuem beginnen."
+
+#: wp-simpleviewer-admin.php:1402
+msgid "You can only use Thickbox links if Thickbox is enabled."
+msgstr "Du kannst Thickbox links nur verwenden wenn die Thickbox aktiviert ist."
+
+#: wp-simpleviewer-admin.php:1565
+msgid "Database has been updated for the new plugin version!"
+msgstr "Die Datenbank wurde für die neue Version des Plugins aktualisiert!"
+
+#: wp-simpleviewer-mediatab.php:6
+#, php-format
+msgid "Add media: %s"
+msgstr "Media hinzufügen: %s"
+
+#: wp-simpleviewer-mediatab.php:8
+msgid "Add a WP-SimpleViewer gallery"
+msgstr "WP-SimpleViewer Gallerie hinzufügen"
+
+#: wp-simpleviewer-mediatab.php:14
+#: wp-simpleviewer.php:67
+msgid "WP-SimpleViewer"
+msgstr "WP-SimpleViewer"
+
+#: wp-simpleviewer-mediatab.php:31
+msgid "The following directory does not exist - please create it and upload your photos to subdirectories of it:"
+msgstr "Der folgende Ordner existiert noch nicht - bitte erstelle ihn und lade deine Bilder in Unterordner davon hoch:"
+
+#: wp-simpleviewer-mediatab.php:36
+msgid "Select the gallery you want to add to your post:"
+msgstr "Wähle die Gallerie aus, die du in deinem Beitrag anzeigen willst:"
+
+#: wp-simpleviewer-mediatab.php:69
+msgid "Show selected gallery"
+msgstr "Ausgewählte Gallerie anzeigen"
+
+#: wp-simpleviewer-mediatab.php:70
+msgid "Show only a link to the selected gallery with this linktext:"
+msgstr "Zeige nur einen Link zu der ausgewählten Gallerie mit diesem Text an:"
+
+#: wp-simpleviewer-mediatab.php:77
+msgid "Insert into post"
+msgstr "In den Beitrag einfügen"
+
+#: wp-simpleviewer.php:68
+msgid "WP-SimpleViewer Galleries"
+msgstr "WP-SimpleViewer Bilderordner"
+
+#: wp-simpleviewer.php:68
+#: wp-simpleviewer.php:97
+msgid "WP-SV Galleries"
+msgstr "WP-SV Bildordner"
+
+#: wp-simpleviewer.php:200
+msgid "The svgallery shortcode has an invalid format. It has to look like this:"
+msgstr "Der svgallery Shortcode hat ein ungültiges Format. Er muss so aussehen:"
+
+#: wp-simpleviewer.php:218
+msgid "I cannot read the gallery's xml file: "
+msgstr "Ich kann die XML Datei der Gallerie nicht lesen:"
+
+#: wp-simpleviewer.php:218
+msgid "Please check that the gallery's files have been created on the admin pages!"
+msgstr "Überprüfe bitte, dass die Gallerie auf den Adminseiten erstellt wurde!"
+
+#~ msgid ""
+#~ "I cannot open the xml file to read, please check that the file "
+#~ "permissions are ok:"
+#~ msgstr ""
+#~ "Ich konnte die XML Datei nicht lesen, bitte überprüfe, dass die "
+#~ "Berechtigungen richtig sind:"
+#~ msgid "Base directory for images:"
+#~ msgstr "Ausgangsverzeichnis für Bilder:"
+#~ msgid "Foldername for regular pictures:"
+#~ msgstr "Ordnername für große Bilder:"
+#~ msgid "Foldername for thumbnails:"
+#~ msgstr "Ordnername für kleine Bilder:"
+#~ msgid "Update options"
+#~ msgstr "Einstellungen aktualisieren"
+#~ msgid "I cannot read from the existing xml: "
+#~ msgstr "Ich kann die existierende xml Datei nicht lesen: "
+#~ msgid "Please check the file permissions!"
+#~ msgstr "Überprüfe bitte die Dateiberechtigungen!"
+

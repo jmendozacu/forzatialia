@@ -1,0 +1,48 @@
+/* Green #69b01a * */
+
+a, a:visited, .intro-text span , .intro-text span { 
+    color: #FFF;
+}
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active { 
+  border: 1px solid #519607; 
+  background: #69b01a; 
+}
+  .button:hover,
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover {    
+    background: #5c9b16; /* Old browsers */
+    background: #5c9b16 -moz-linear-gradient(top, rgba(0,0,0,.15), rgba(0,0,0,.15) 0% 100%); /* FF3.6+ */
+    background: #5c9b16 -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,.15)), color-stop(100%,rgba(0,0,0,.15))); /* Chrome,Safari4+ */
+    background: #5c9b16 -webkit-linear-gradient(top, rgba(0,0,0,.15) 0%,rgba(0,0,0,.15) 100%); /* Chrome10+,Safari5.1+ */
+    background: #5c9b16 -o-linear-gradient(top, rgba(0,0,0,.15) 0%,rgba(0,0,0,.15) 100%); /* Opera11.10+ */
+    background: #5c9b16 -ms-linear-gradient(top, rgba(0,0,0,.15) 0%,rgba(0,0,0,.15) 100%); /* IE10+ */
+    background: #5c9b16 linear-gradient(top, rgba(0,0,0,.15) 0%,rgba(0,0,0,.15) 100%); /* W3C */
+    border: 1px solid #3f7405;      
+  }
+.button.solid,
+button.solid,
+input[type="submit"].solid,
+input[type="reset"].solid,
+input[type="button"].solid,
+.percentage span.overlay {
+  background: #69b01a; 
+}
+  .button.solid:hover,
+  button.solid:hover,
+  input[type="submit"].solid:hover,
+  input[type="reset"].solid:hover,
+  input[type="button"].solid:hover{
+    background: #5c9b16;   
+  }
+  

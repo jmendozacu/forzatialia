@@ -1,0 +1,8 @@
+[26-Mar-2016 08:53:17 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[26-Mar-2016 08:53:18 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[26-Mar-2016 08:53:22 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/mail.php on line 287
+[26-Mar-2016 08:53:23 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[26-Mar-2016 08:58:00 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/capabilities.php on line 3
+[26-Mar-2016 08:58:01 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/controller.php on line 3
+[26-Mar-2016 08:58:01 Australia/Sydney] PHP Fatal error:  Call to undefined function add_filter() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/mail.php on line 287
+[26-Mar-2016 08:58:01 Australia/Sydney] PHP Fatal error:  Call to undefined function add_action() in /home/forzaita/public_html/blog/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3

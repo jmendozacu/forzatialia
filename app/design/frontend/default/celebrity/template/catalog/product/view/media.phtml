@@ -1,0 +1,66 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<div class="main-view">
+<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>" class="product-image cloud-zoom" id="main-img"><img data-srcX2="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(360*2, 434*2); ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(360, 434); ?>" width="360" height="434" alt="<?php echo $this->htmlEscape($this->getImageLabel()) ?>" /></a>
+</div>
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views">
+    <ul>
+    <?php $i = 0; foreach ($this->getGalleryImages() as $_image): $i++; ?>
+        <li <?php echo ($i % 4 > 0 ? '' : 'class="last"' ) ?> >           
+            <a data-srcX2="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail', $_image->getFile())->resize(360*2, 434*2); ?>" href="<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image->getFile()); ?>" class="zoom-thumbnail cloud-zoom-gallery" title="<?php echo $this->htmlEscape($_image->getImageLabel()) ?>" rel="useZoom: 'main-img', smallImage: '<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail', $_image->getFile())->resize(360, 434); ?>' "><img data-srcX2="<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image->getFile())->resize(86*2, 104*2); ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'image', $_image->getFile())->resize(86, 104); ?>" width="86" height="104" alt="<?php echo $this->htmlEscape($_image->getImageLabel()) ?>" /></a>
+        </li>
+    <?php endforeach; ?>
+
+    </ul>
+</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+	jQuery(function($){
+
+		var pixelRatio = !!window.devicePixelRatio ? window.devicePixelRatio : 1;
+		$('.cloud-zoom-gallery').click(function(){
+			if (pixelRatio <= 1) return false;
+			var $this = this;
+			setTimeout(function(){
+				$('#main-img img').attr('src', $($this).attr('data-srcX2'));
+			}, 100);
+		});
+
+	});
+</script>

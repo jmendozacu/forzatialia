@@ -1,0 +1,46 @@
+<?php
+$_orders = $this->getOrders();
+$_coreHelper = $this->helper('core');
+?>
+<div class="page-title">
+    <h1><?php echo $this->__('In Store Orders') ?></h1>
+</div>
+<?php if($_orders->getSize()): ?>
+<table class="data-table" id="my-orders-table">
+    <col width="1" />
+    <col width="1" />
+    <col />
+    <col width="1" />
+    <col width="1" />
+    <col width="1" />
+    <thead>
+        <tr>
+            <th><?php echo $this->__('Order #') ?></th>
+            <th><?php echo $this->__('Date') ?></th>
+            <th><?php echo $this->__('Ship To') ?></th>
+            <th><span class="nobr"><?php echo $this->__('Order Total') ?></span></th>
+            <th><span class="nobr"><?php echo $this->__('Order Status') ?></span></th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php $_odd = ''; ?>
+        <?php foreach ($_orders as $_order): /*echo "<pre>"; print_r($_order->getData()); exit;*/ ?>
+        <tr>
+            <td><?php echo $_order->getOrderId() ?></td>
+            <td><span class="nobr"><?php echo $this->formatDate($_order->getCreatedAt()) ?></span></td>
+            <td><?php echo $_order->getShippingName() ? $this->htmlEscape($_order->getShippingName()) : '&nbsp;' ?></td>
+            <td><?php echo $_coreHelper->currency($_order->getGrandTotal(),true,false) ?></td>
+            <td><em><?php echo $_order->getOrderStatus() ?></em></td>
+            <td class="a-center">
+                <span class="nobr"><a href="<?php echo $this->getViewUrl($_order) ?>"><?php echo $this->__('View Order') ?></a>
+                </span>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+<script type="text/javascript">decorateTable('my-orders-table');</script>
+<?php else: ?>
+    <p><?php echo $this->__('You have no orders.'); ?></p>
+<?php endif ?>

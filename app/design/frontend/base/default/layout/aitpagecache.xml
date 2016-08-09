@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">	
+	<default>
+    	<reference name="right">
+            <block type="aitpagecache/js" name="aitpagecache_js"></block>
+        </reference>        
+		 <reference name="head">
+            <action method="addJs"><script>aitoc/aitpagecache/aitloader.js</script></action>
+            <action method="addCss"><name>css/aitpagecache.css</name></action>
+        </reference>
+    </default>
+</layout>
+<!--
+/**
+ * Magento Booster 1.4+
+ *
+ * @category:    Aitoc
+ * @package:     Aitoc_Aitpagecache
+ * @version      4.0.5
+ * @license:     AACcewAJ3nZYMUsItZcwugZ3g4HsbQPMHWb0Pv6oyc
+ * @copyright:   Copyright (c) 2013 AITOC, Inc. (http://www.aitoc.com)
+ */
+-->

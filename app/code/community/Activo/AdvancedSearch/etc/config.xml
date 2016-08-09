@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Activo Extensions
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Activo Commercial License
+ * that is available through the world-wide-web at this URL:
+ * http://extensions.activo.com/license_professional
+ *
+ * @copyright   Copyright (c) 2012 Activo Extensions (http://extensions.activo.com)
+ * @license     Commercial
+ */
+-->
+<config>
+    <modules>
+        <Activo_AdvancedSearch>
+            <version>1.0.0</version>
+        </Activo_AdvancedSearch>
+    </modules>
+    
+    <admin>
+        <routers>
+             <adminhtml>
+                 <args>
+                     <modules>
+                         <activo_advancedsearch before="Mage_Adminhtml">Activo_AdvancedSearch_Adminhtml</activo_advancedsearch>
+                     </modules>
+                 </args>
+             </adminhtml>
+        </routers>
+    </admin>
+
+    
+    <global>
+        <blocks>
+            <advancedsearch>
+                <class>Activo_AdvancedSearch_Block</class>
+            </advancedsearch>
+            <catalogsearch>
+                <rewrite>
+                    <autocomplete>Activo_AdvancedSearch_Block_Autocomplete</autocomplete>
+                    <!--<result>Activo_AdvancedSearch_Block_Result</result>-->
+                </rewrite>
+            </catalogsearch>
+        </blocks>
+        <helpers>
+            <advancedsearch>
+                <class>Activo_AdvancedSearch_Helper</class>
+            </advancedsearch>
+            <catalogsearch>
+                <rewrite>
+                    <data>Activo_AdvancedSearch_Helper_Data</data>
+                </rewrite>
+            </catalogsearch>
+        </helpers>
+        <models>
+            <advancedsearch>
+                <class>Activo_AdvancedSearch_Model</class>
+                <resourceModel>advancedsearch_resource</resourceModel>
+            </advancedsearch>
+            <advancedsearch_resource>
+                <class>Activo_AdvancedSearch_Model_Resource</class>
+                <entities>
+                    <word><table>activo_advancedsearch_word</table></word>
+                    <word_product><table>activo_advancedsearch_word_product</table></word_product>
+                    <dictionary><table>activo_advancedsearch_dictionary</table></dictionary>
+                </entities>
+            </advancedsearch_resource>
+        </models>
+        <resources>
+            <advancedsearch_setup>
+                <setup>
+                    <module>Activo_AdvancedSearch</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </advancedsearch_setup>
+            <advancedsearch_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </advancedsearch_write>
+            <advancedsearch_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </advancedsearch_read>
+        </resources>
+    </global>
+    
+    <crontab>
+        <jobs>
+            <activo_advancedsearch_dictionary>
+                <schedule>
+                    <config_path>activo_advancedsearch/global/cron_daily</config_path>
+                </schedule>
+                <run>
+                    <model>advancedsearch/cron::index</model>
+                </run>
+            </activo_advancedsearch_dictionary>
+        </jobs>
+    </crontab>
+    
+    <default>
+        <activo_advancedsearch>
+            <global>
+                <correctmax>3</correctmax>
+                <stopwords>all,and,any,for,from,how,i'm,i.e.,isn't,it's,its,that,that's,the,this,was,wasn't,what,what's,when,where,who,who's,will,with</stopwords>
+                <cron_enabled>1</cron_enabled>
+                <cron_daily></cron_daily>
+            </global>
+            <serp>
+                <usecorrected>1</usecorrected>
+                <searchinstead>1</searchinstead>
+            </serp>
+        </activo_advancedsearch>
+    </default>
+</config>

@@ -1,0 +1,966 @@
+/*
+ * The main style sheets for the Fancy Product Designer
+ *
+ */
+
+
+/* RESET */
+
+.fpd-container h3,
+.fpd-container h5,
+.fpd-container label,
+.fpd-container section,
+.fpd-container div,
+.fpd-container select,
+.fpd-container picture,
+.fpd-container input,
+.fpd-container img,
+.fpd-container button,
+.fpd-container span {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	max-width: 100%;
+	list-style-type: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-shadow: none !important;
+}
+
+.fpd-product *, .fpd-design * {
+	display: none;
+}
+
+.fpd-initiliazing {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 60px 0;
+	text-align: center;
+}
+
+.fpd-initiliazing img {
+	margin-top: 10px;
+}
+
+.fpd-container {
+	display: none;
+	max-width: 100%;
+}
+
+.fpd-container .button:hover {
+	border-color: inherit;
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.fpd-container .ui.button {
+	font-size: 11px;
+}
+
+.fpd-container .ui.big.buttons .button {
+	font-size: 12px;
+}
+
+.ui.button svg {
+	opacity: 0.9;
+}
+
+.ui.button svg * {
+	fill: gray !important;
+}
+
+
+/* SIDEBAR */
+
+.fpd-container .fpd-sidebar {
+	margin-bottom: 30px;
+}
+
+.fpd-sidebar > .ui.menu .item {
+	font-size: 14px;
+	display: none;
+}
+
+.fpd-sidebar > .fpd-content {
+	margin-top: 30px;
+}
+
+.fpd-sidebar > .fpd-content p {
+	font-size: 13px;
+}
+
+.fpd-sidebar > .fpd-content > div {
+	display: none;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.fpd-content .fpd-items-wrapper {
+	height: 160px;
+	overflow: hidden;
+	position: relative;
+}
+
+.fpd-content h5 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 14px;
+}
+
+.fpd-content > div label {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.fpd-content > div .chosen-container {
+	width: 250px !important;
+}
+
+
+/* IMAGE ITEMS */
+
+.fpd-items-wrapper > picture {
+	width: 190px;
+	min-width: 40px;
+	height: 100%;
+	padding: 30px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+}
+
+.fpd-items-wrapper > picture > img,
+.fpd-views-selection div img {
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+
+.fpd-items-wrapper > picture:hover > img,
+.fpd-views-selection div:hover img {
+	-moz-transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.fpd-items-wrapper > picture > img,
+.fpd-items-wrapper > picture:hover > img,
+.fpd-views-selection div img,
+.fpd-views-selection div:hover img {
+	-webkit-transition: -moz-transform 200ms ease-out;
+	-moz-transition: -webkit-transform 200ms ease-out;
+	-ms-transition: -o-transform 200ms ease-out;
+	-o-transition: -ms-transform 200ms ease-out;
+	transition: transform 200ms ease-out;
+}
+
+
+/* DESIGNS */
+
+.fpd-designs .fpd-items-wrapper > picture {
+	width: 80px;
+	height: 100px;
+	padding: 15px;
+}
+
+
+/* EDIT ELEMENTS */
+
+.fpd-sidebar > .fpd-content > .fpd-edit-elements {
+	overflow: inherit;
+}
+
+
+/* FACEBOOK & INSTAGRAM */
+
+.fpd-content > .fpd-fb-user-photos {
+	overflow: inherit !important;
+}
+
+.fpd-fb-user-photos > div:first-child > * {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.fpd-fb-user-photos > div:first-child > *:last-child {
+	margin: 0;
+}
+
+.fpd-content > .fpd-fb-user-photos .chosen-container,
+.fpd-content > .fpd-fb-user-photos select {
+	display: none;
+}
+
+.fpd-fb-user-photos .fpd-items-wrapper > picture,
+.fpd-instagram-photos .fpd-items-wrapper > picture {
+	width: auto;
+	height: 73px;
+	padding: 1px;
+	margin-bottom: 2px;
+}
+
+.fpd-instagram-photos .ui.button {
+	margin-top: 5px;
+}
+
+.fpd-fb-user-photos .fpd-fb-loader {
+	width: 100px;
+}
+
+.fpd-fb-user-photos .fpd-fb-loader > * {
+	float: left;
+}
+
+.fpd-fb-user-photos .fpd-fb-loader > .fpd-loading {
+	position: inherit;
+	margin: 0 0 0 10px;
+	display: none;
+}
+
+
+/* TOOLBAR IN EDIT ELEMENTS */
+
+.fpd-toolbar {
+	min-height: 160px;
+}
+
+.fpd-toolbar > div {
+	float: left;
+	width: 25%;
+	min-width: 120px;
+	min-height: 120px;
+	padding-right: 40px;
+	margin-bottom: 20px;
+}
+
+.fpd-toolbar > div:last-child {
+	padding: 0;
+	margin: 0;
+}
+
+.fpd-toolbar .button {
+	margin-bottom: 5px;
+}
+
+.fpd-toolbar .fpd-patterns-wrapper {
+	margin-top: 10px;
+	margin-left: 1px;
+	padding: 10px;
+	display: none;
+}
+
+.fpd-patterns-wrapper .fpd-pattern-items {
+	position: relative;
+	overflow: hidden;
+	height: 37px;
+}
+
+.fpd-pattern-items > div {
+	width: 19px;
+	height: 19px;
+	float: left;
+	padding: 0 2px 2px 0;
+	cursor: pointer;
+}
+
+.fpd-pattern-items > div img {
+	width: 100%;
+	height: 100%;
+}
+
+/* TEXT FORMAT SECTION */
+
+.fpd-toolbar .fpd-text-format-section > div {
+	margin-bottom: 10px;
+}
+
+.fpd-toolbar .fpd-text-format-section > div:last-child {
+	margin-bottom: 0;
+}
+
+/* TEXTAREA */
+
+.fpd-toolbar .fpd-text-format-section textarea {
+	resize: none;
+	width: 100%;
+	height: 65px;
+	min-height: inherit;
+	font-size: 10px;
+	padding: 5px;
+}
+
+.fpd-toolbar .fpd-input-group {
+	margin-top: 3px;
+}
+
+.fpd-toolbar .fpd-input-group > * {
+	float: left;
+}
+
+.fpd-toolbar .fpd-input-group > label {
+	width: 60px;
+}
+
+.fpd-toolbar .fpd-input-group > input {
+	width: auto;
+	margin: -2px 0 0 4px;
+}
+
+
+/* PRODUCT CONTAINER */
+.fpd-product-container {
+	position: relative;
+}
+
+
+/* MENU BAR */
+.fpd-menu-bar.fpd-outside {
+	margin: 0 0 10px;
+	float: right;
+}
+
+.fpd-menu-bar.fpd-inside {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+}
+
+.fpd-menu-bar .ui.button {
+	padding: 10px;
+	display: none;
+}
+
+.fpd-menu-bar .ui.button a,
+.fpd-menu-bar .ui.button a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.fpd-menu-bar .dropdown .menu {
+	max-width: none;
+}
+
+.fpd-menu-bar .dropdown .menu .item {
+	font-size: 12px;
+}
+
+.fpd-menu-bar .fpd-saved-products img {
+	height: 20px;
+}
+
+.fpd-menu-bar .fpd-save-product,
+.fpd-menu-bar .fpd-saved-products {
+	display: none;
+}
+
+
+/* PRODUCT STAGE */
+.fpd-product-container > .fpd-product-loader {
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.fpd-product-container > .fpd-product-stage {
+	background-image: url("../images/fpd/grid.png");
+	background-repeat: repeat;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	clear: both;
+	position: relative;
+}
+
+.fpd-product-stage .fpd-element-tooltip {
+	top: 0;
+	right: 0;
+	font-size: 12px !important;
+	margin: 0 !important;
+	display: none;
+}
+
+
+/* VIEW SELECTION */
+
+.fpd-views-selection {
+	position: absolute;
+}
+
+.fpd-views-selection > div {
+	width: 50px;
+	height: 60px;
+	cursor: pointer;
+	padding: 9px !important;
+	margin-bottom: 10px;
+	margin-top: 0 !important;
+}
+
+.fpd-views-selection.fpd-float-items.fpd-tl > div,
+.fpd-views-selection.fpd-float-items.fpd-bl > div {
+	margin-right: 10px;
+	margin-bottom: 0;
+}
+
+.fpd-views-selection.fpd-float-items.fpd-tr > div,
+.fpd-views-selection.fpd-float-items.fpd-br > div {
+	margin-left: 10px !important;
+	margin-bottom: 0;
+}
+
+.fpd-views-selection > div:last-child {
+	margin: 0 !important;
+}
+
+.fpd-views-selection.fpd-outside {
+	position: inherit;
+	margin-top: 15px;
+}
+
+.fpd-views-selection.fpd-outside > div {
+	width: 100px;
+	height: 120px;
+}
+
+.fpd-views-selection.fpd-outside.fpd-float-items > div {
+	margin-right: 10px;
+}
+
+.fpd-views-selection.fpd-tl {
+	top: 10px;
+	left: 10px;
+}
+
+.fpd-views-selection.fpd-tr {
+	top: 10px;
+	right: 10px;
+}
+
+.fpd-views-selection.fpd-br {
+	bottom: 10px;
+	right: 10px;
+}
+
+.fpd-views-selection.fpd-bl {
+	bottom: 10px;
+	left: 10px;
+}
+
+.fpd-views-selection.fpd-float-items div {
+	float: left;
+}
+
+.fpd-views-selection img {
+	max-height: 100%;
+}
+
+.fpd-views-selection .fpd-view-active img {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/* PPOPUP */
+.ui.popup {
+	font-size: 10px;
+}
+
+
+/* COLORPICKER */
+
+.fpd-color-picker {
+	padding: 0 !important;
+}
+
+.fpd-colorpicker-group {
+	background: none !important;
+}
+
+.fpd-color-picker .sp-replacer {
+  padding: 2px;
+  border: none;
+}
+
+.fpd-color-picker > .sp-replacer {
+	width: 100%;
+	background: none !important;
+}
+
+.fpd-color-picker .sp-preview {
+	border: none;
+	height: 16px;
+	width: 100%;
+}
+
+.fpd-color-picker .sp-dd {
+	display: none !important;
+}
+
+.sp-input {
+	border-width: 1px !important;
+	background: #fff !important;
+}
+
+.sp-container {
+	border-color: #D3D3D3 !important;
+}
+
+.fpd-color-picker.fpd-colorpicker-group .sp-replacer {
+	width: 21px;
+	margin: 0 2px 2px 0;
+}
+
+
+/* SCROLLBAR */
+
+.ps-container .ps-scrollbar-y-rail {
+	width: 6px !important;
+	z-index: 100;
+}
+
+.ps-container .ps-scrollbar-x-rail {
+	height: 6px !important;
+	z-index: 100;
+}
+
+.ps-container .ps-scrollbar-y,
+.ps-container .ps-scrollbar-x {
+	cursor: all-scroll;
+}
+
+.ps-container .ps-scrollbar-y {
+	width: inherit !important;
+}
+
+.ps-container .ps-scrollbar-x {
+	height: inherit !important;
+}
+
+/* BROWSER ALERT */
+.fpd-browser-alert {
+	border: 1px solid #E74C3C;
+	background: #E74C3C;
+	color: #fff;
+}
+
+.fpd-browser-alert {
+	padding: 10px !important;
+}
+
+.fpd-browser-alert > p {
+	font-size: 14px;
+}
+
+.fpd-browser-alert a {
+	margin-right: 20px;
+	text-decoration: underline;
+	color: white !important;
+}
+
+
+/* HELPERS */
+
+.fpd-clearfix:before, .fpd-clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.fpd-clearfix:after { clear: both; }
+.fpd-clearfix { zoom: 1; }
+.fpd-clear {clear: both;}
+.fpd-hidden {display: none;}
+.fpd-fullwidth {width: 100%;}
+.fpd-float-items > div {float: left;}
+.fpd-help-icon {cursor: help;}
+.fpd-container .fa { font-family: FontAwesome !important; }
+.fpd-loading {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJibGFjayI+CiAgPGNpcmNsZSB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4IDApIiBjeD0iMCIgY3k9IjE2IiByPSIwIj4KICAgIDxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9InIiIHZhbHVlcz0iMDsgNDsgMDsgMCIgZHVyPSIxLjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjAiCiAgICAgIGtleXRpbWVzPSIwOzAuMjswLjc7MSIga2V5U3BsaW5lcz0iMC4yIDAuMiAwLjQgMC44OzAuMiAwLjYgMC40IDAuODswLjIgMC42IDAuNCAwLjgiIGNhbGNNb2RlPSJzcGxpbmUiIC8+CiAgPC9jaXJjbGU+CiAgPGNpcmNsZSB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNiAwKSIgY3g9IjAiIGN5PSIxNiIgcj0iMCI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJyIiB2YWx1ZXM9IjA7IDQ7IDA7IDAiIGR1cj0iMS4ycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGJlZ2luPSIwLjMiCiAgICAgIGtleXRpbWVzPSIwOzAuMjswLjc7MSIga2V5U3BsaW5lcz0iMC4yIDAuMiAwLjQgMC44OzAuMiAwLjYgMC40IDAuODswLjIgMC42IDAuNCAwLjgiIGNhbGNNb2RlPSJzcGxpbmUiIC8+CiAgPC9jaXJjbGU+CiAgPGNpcmNsZSB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNCAwKSIgY3g9IjAiIGN5PSIxNiIgcj0iMCI+CiAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJyIiB2YWx1ZXM9IjA7IDQ7IDA7IDAiIGR1cj0iMS4ycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGJlZ2luPSIwLjYiCiAgICAgIGtleXRpbWVzPSIwOzAuMjswLjc7MSIga2V5U3BsaW5lcz0iMC4yIDAuMiAwLjQgMC44OzAuMiAwLjYgMC40IDAuODswLjIgMC42IDAuNCAwLjgiIGNhbGNNb2RlPSJzcGxpbmUiIC8+CiAgPC9jaXJjbGU+Cjwvc3ZnPg==);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -16px 0 0 -16px;
+	display: block;
+}
+
+
+/*_______________________*/
+/*___RESPONSIVE STYLES___*/
+/*_______________________*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+
+	.fpd-nav-item {
+		width: 100%;
+	}
+
+	.fpd-items-wrapper > picture {
+		width: 100%;
+		max-height: 33%;
+		padding: 15px;
+	}
+
+	.fpd-toolbar > div {
+		width: 100%;
+	}
+
+	.fpd-sidebar select {
+		width: 100%;
+	}
+
+	.fpd-products .fpd-items-wrapper > picture {
+		margin-bottom: 40px;
+	}
+
+	.fpd-container .ui.big.buttons .button {
+		font-size: 9px;
+	}
+
+	.fpd-menu-bar.fpd-inside {
+		right: 0;
+		top: 10px;
+	}
+
+	.fpd-views-selection > div {
+		width: 30px;
+		height: 40px;
+		padding: 5px !important;
+	}
+
+	.fpd-views-selection.fpd-outside > div {
+		width: 60px;
+		height: 80px;
+	}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-width : 480px)
+and (max-width : 979px) {
+
+	.fpd-nav-item {
+		width: 100%;
+	}
+
+	.fpd-toolbar > div {
+		width: 50%;
+	}
+
+
+}
+
+
+
+
+/* TOOLTIPSTER */
+
+.fpd-tooltip-theme {
+	background: #fff;
+	color: rgba(0, 0, 0, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Use this next selector to style things like font-size and line-height: */
+.fpd-tooltip-theme .tooltipster-content {
+	font-size: 11px;
+	line-height: 12px;
+	padding: 8px 7px;
+	white-space: nowrap;
+}
+
+
+html {
+	 -webkit-font-smoothing: antialiased;
+}
+
+/* This is the default Tooltipster theme (feel free to modify or duplicate and create multiple themes!): */
+.tooltipster-default {
+	border-radius: 5px;
+	border: 2px solid #000;
+	background: #4c4c4c;
+	color: #fff;
+}
+
+/* Use this next selector to style things like font-size and line-height: */
+.tooltipster-default .tooltipster-content {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 10px;
+	overflow: hidden;
+}
+
+/* This next selector defines the color of the border on the outside of the arrow. This will automatically match the color and size of the border set on the main tooltip styles. Set display: none; if you would like a border around the tooltip but no border around the arrow */
+.tooltipster-default .tooltipster-arrow .tooltipster-arrow-border {
+	/* border-color: ... !important; */
+}
+
+
+/* If you're using the icon option, use this next selector to style them */
+.tooltipster-icon {
+	cursor: help;
+	margin-left: 4px;
+}
+
+
+/* This is the base styling required to make all Tooltipsters work */
+.tooltipster-base {
+	padding: 0;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	z-index: 9999999;
+	pointer-events: none;
+	width: auto;
+	overflow: visible;
+}
+.tooltipster-base .tooltipster-content {
+	overflow: hidden;
+}
+
+
+/* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
+.tooltipster-arrow {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.tooltipster-arrow span, .tooltipster-arrow-border {
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+.tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span {
+	border-left: 8px solid transparent !important;
+	border-right: 8px solid transparent !important;
+	border-top: 8px solid;
+	bottom: -8px;
+}
+.tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-top-left .tooltipster-arrow-border {
+	border-left: 9px solid transparent !important;
+	border-right: 9px solid transparent !important;
+	border-top: 9px solid;
+	bottom: -8px;
+}
+
+.tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span {
+	border-left: 8px solid transparent !important;
+	border-right: 8px solid transparent !important;
+	border-bottom: 8px solid;
+	top: -8px;
+}
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+	border-left: 9px solid transparent !important;
+	border-right: 9px solid transparent !important;
+	border-bottom: 9px solid;
+	top: -8px;
+}
+.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span {
+	left: 6px;
+}
+.tooltipster-arrow-top-left .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+	left: 5px;
+}
+.tooltipster-arrow-top-right span,  .tooltipster-arrow-bottom-right span {
+	right: 6px;
+}
+.tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border {
+	right: 5px;
+}
+.tooltipster-arrow-left span, .tooltipster-arrow-left .tooltipster-arrow-border {
+	border-top: 8px solid transparent !important;
+	border-bottom: 8px solid transparent !important;
+	border-left: 8px solid;
+	top: 50%;
+	margin-top: -7px;
+	right: -8px;
+}
+.tooltipster-arrow-left .tooltipster-arrow-border {
+	border-top: 9px solid transparent !important;
+	border-bottom: 9px solid transparent !important;
+	border-left: 9px solid;
+	margin-top: -8px;
+}
+.tooltipster-arrow-right span, .tooltipster-arrow-right .tooltipster-arrow-border {
+	border-top: 8px solid transparent !important;
+	border-bottom: 8px solid transparent !important;
+	border-right: 8px solid;
+	top: 50%;
+	margin-top: -7px;
+	left: -8px;
+}
+.tooltipster-arrow-right .tooltipster-arrow-border {
+	border-top: 9px solid transparent !important;
+	border-bottom: 9px solid transparent !important;
+	border-right: 9px solid;
+	margin-top: -8px;
+}
+
+
+/* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
+
+.tooltipster-fade {
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-ms-transition-property: opacity;
+	transition-property: opacity;
+}
+.tooltipster-fade-show {
+	opacity: 1;
+}
+
+.tooltipster-grow {
+	-webkit-transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	-o-transform: scale(0,0);
+	-ms-transform: scale(0,0);
+	transform: scale(0,0);
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-ms-transition-property: -ms-transform;
+	transition-property: transform;
+	-webkit-backface-visibility: hidden;
+}
+.tooltipster-grow-show {
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	transform: scale(1,1);
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+}
+
+.tooltipster-swing {
+	opacity: 0;
+	-webkit-transform: rotateZ(4deg);
+	-moz-transform: rotateZ(4deg);
+	-o-transform: rotateZ(4deg);
+	-ms-transform: rotateZ(4deg);
+	transform: rotateZ(4deg);
+	-webkit-transition-property: -webkit-transform, opacity;
+	-moz-transition-property: -moz-transform;
+	-o-transition-property: -o-transform;
+	-ms-transition-property: -ms-transform;
+	transition-property: transform;
+}
+.tooltipster-swing-show {
+	opacity: 1;
+	-webkit-transform: rotateZ(0deg);
+	-moz-transform: rotateZ(0deg);
+	-o-transform: rotateZ(0deg);
+	-ms-transform: rotateZ(0deg);
+	transform: rotateZ(0deg);
+	-webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+	-moz-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+	-ms-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+	-o-transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+	transition-timing-function: cubic-bezier(0.230, 0.635, 0.495, 2.4);
+}
+
+.tooltipster-fall {
+	top: 0;
+	-webkit-transition-property: top;
+	-moz-transition-property: top;
+	-o-transition-property: top;
+	-ms-transition-property: top;
+	transition-property: top;
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+}
+.tooltipster-fall-show {
+}
+.tooltipster-fall.tooltipster-dying {
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	-ms-transition-property: all;
+	transition-property: all;
+	top: 0px !important;
+	opacity: 0;
+}
+
+.tooltipster-slide {
+	left: -40px;
+	-webkit-transition-property: left;
+	-moz-transition-property: left;
+	-o-transition-property: left;
+	-ms-transition-property: left;
+	transition-property: left;
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-ms-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	-o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.15);
+}
+.tooltipster-slide.tooltipster-slide-show {
+}
+.tooltipster-slide.tooltipster-dying {
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	-ms-transition-property: all;
+	transition-property: all;
+	left: 0px !important;
+	opacity: 0;
+}
+
+
+/* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */
+.tooltipster-content-changing {
+	opacity: 0.5;
+	-webkit-transform: scale(1.1, 1.1);
+	-moz-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
+}

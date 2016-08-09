@@ -1,0 +1,76 @@
+From 748bf732416ff7206e6ddfa833d961cdaa6631ef Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 30 Jul 2012 22:41:42 +0300
+Subject: [PATCH 06/10] add option to show/hide slideshow timeline
+
+---
+ app/code/local/Olegnax/Slideshowtimeline/etc/config.xml     |    1 +
+ app/code/local/Olegnax/Slideshowtimeline/etc/system.xml     |   11 ++++++++++-
+ .../olegnax/slideshowtimeline/slideshowtimeline.phtml       |    4 +++-
+ 3 files changed, 14 insertions(+), 2 deletions(-)
+
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml b/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml
+index a2230a3..6a3a0be 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml
++++ b/app/code/local/Olegnax/Slideshowtimeline/etc/config.xml
+@@ -119,6 +119,7 @@
+ 		<slideshowtimeline>
+ 			<slideshowtimeline_config>
+ 				<enabled>1</enabled>
++				<show_timeline>1</show_timeline>
+ 				<interval>6000</interval>
+ 				<speed>1000</speed>
+ 				<fade_speed>400</fade_speed>
+diff --git a/app/code/local/Olegnax/Slideshowtimeline/etc/system.xml b/app/code/local/Olegnax/Slideshowtimeline/etc/system.xml
+index 61e38b1..07b7f89 100644
+--- a/app/code/local/Olegnax/Slideshowtimeline/etc/system.xml
++++ b/app/code/local/Olegnax/Slideshowtimeline/etc/system.xml
+@@ -31,7 +31,16 @@
+ 							<show_in_default>1</show_in_default>
+ 							<show_in_website>1</show_in_website>
+ 							<show_in_store>1</show_in_store>							
+-						</enabled>						
++						</enabled>
++                        <show_timeline translate="label comment">
++							<label>Show timeline</label>
++							<frontend_type>select</frontend_type>
++							<source_model>adminhtml/system_config_source_yesno</source_model>
++							<sort_order>20</sort_order>
++							<show_in_default>1</show_in_default>
++							<show_in_website>1</show_in_website>
++							<show_in_store>1</show_in_store>
++						</show_timeline>
+                         <!--<width translate="label">
+                             <label>Width: </label>
+                             <frontend_type>text</frontend_type>
+diff --git a/app/design/frontend/default/celebrity/template/olegnax/slideshowtimeline/slideshowtimeline.phtml b/app/design/frontend/default/celebrity/template/olegnax/slideshowtimeline/slideshowtimeline.phtml
+index 4819ab9..b600aba 100644
+--- a/app/design/frontend/default/celebrity/template/olegnax/slideshowtimeline/slideshowtimeline.phtml
++++ b/app/design/frontend/default/celebrity/template/olegnax/slideshowtimeline/slideshowtimeline.phtml
+@@ -45,20 +45,22 @@ jQuery(window).load(function(){
+ 	var config = {
+ 		width: $('#slideshow').width(),
+ 		height: $('#slideshow').height(),
++        show_timeline: <?php echo $config["show_timeline"];?>,
+ 		interval: <?php echo $config["interval"];?>,
+ 		speed: <?php echo $config["speed"];?>,
+ 		fadeSpeed: <?php echo $config["fade_speed"];?>,
+ 		effect: '<?php echo $config["effect"];?>'
+ 	};
+ 
++	$('#slide-timeline').hide();
+ 	$('#slideshow a.details').css({opacity: 0}).show();
+ 	$('#slideshow strong').css({opacity: 0}).show();
+ 	$('div.slideshow div.slide-nav').css({opacity: 0}).show();
+ 
+ 	runTimeline = function( interval ) {
+ 		if ( slideshowPause || interval == 0 ) return;
++        if (config.show_timeline) $('#slide-timeline').show();
+ 		$('#slide-timeline')
+-	        .show()
+ 	        .animate(
+ 		        {width: config.width + 'px'},
+ 				interval,
+-- 
+1.7.10.msysgit.1
+

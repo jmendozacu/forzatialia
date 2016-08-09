@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<olegnax translate="label" module="slideshowtimeline">
+			<label>Olegnax</label>
+			<sort_order>205</sort_order>
+		</olegnax>
+	</tabs>
+	<sections>
+		<slideshowtimeline translate="label" module="slideshowtimeline">
+			<label>Slideshow with Timeline</label>
+			<tab>olegnax</tab>
+			<sort_order>130</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<slideshowtimeline_config translate="label">
+					<label>Slideshow Config</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</enabled>
+                        <show_timeline translate="label comment">
+							<label>Show timeline</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</show_timeline>
+                        <!--<width translate="label">
+                            <label>Width: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Width (px)</comment>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width>  
+                        <height translate="label">
+                            <label>Height: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Height (px)</comment>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height>-->
+                        <interval>
+							<label>Interval: </label>
+							<frontend_type>text</frontend_type>
+							<comment>milliseconds between slide transitions (0 to disable auto advance)</comment>
+							<sort_order>32</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</interval>
+                        <effect>
+                            <label>Transition Effect: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>slideshowtimeline/config_effect</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </effect>
+                        <speed>
+							<label>Transition Speed: </label>
+							<frontend_type>text</frontend_type>
+							<comment>speed of the slide transition (ms)</comment>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</speed>
+                        <fade_speed>
+							<label>Fade Speed: </label>
+							<frontend_type>text</frontend_type>
+							<comment>speed of the controls fade (ms)</comment>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</fade_speed>
+						<details>
+							<label>Link text: </label>
+							<frontend_type>text</frontend_type>
+							<comment>text of slide link</comment>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</details>
+					</fields>
+				</slideshowtimeline_config>
+			</groups>
+		</slideshowtimeline>
+	</sections>
+</config>
+
+

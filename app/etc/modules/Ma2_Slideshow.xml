@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ma2_Slideshow>
+            <active>False</active>
+            <codePool>community</codePool>
+        </Ma2_Slideshow>
+    </modules>
+</config> 

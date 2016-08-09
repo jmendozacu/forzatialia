@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<celebrity>
+    <cms>
+        <pages>
+            <item>
+                <title>Celebrity Home page</title>
+                <identifier>celebrity_home</identifier>
+	            <content><![CDATA[<div class="white-container clearfix">{{block type="slideshowtimeline/slideshowtimeline" name="slideshowtimeline" template="olegnax/slideshowtimeline/slideshowtimeline.phtml" }}<div class="banners"><a href="#"><img src="{{media url="olegnax/celebrity/banner1.jpg"}}" alt="" /></a><a class="text-right" href="#"><img src="{{media url="olegnax/celebrity/banner2.jpg"}}" alt="" /><span>SEASONAL<br />DISCOUNTS</span></a><a href="#"><img src="{{media url="olegnax/celebrity/banner3.jpg"}}" alt="" /></a></div><div class="clear">&nbsp;</div></div>{{block type="celebrityslider/slider" template="olegnax/celebrityslider/slider.phtml"}}]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+            <item>
+                <title>Celebrity 404 No Route page</title>
+                <identifier>celebrity_no_route</identifier>
+                <content><![CDATA[<div class="col-main-left">
+                    <div class="page-head-alt">
+                    <h3>Whoops, our bad...</h3>
+                    </div>
+                    <dl> <dt>The page you requested was not found, and we have a fine guess why.</dt> <dd>
+                    <ul class="disc">
+                    <li>If you typed the URL directly, please make sure the spelling is correct.</li>
+                    <li>If you clicked on a link to get here, the link is outdated.</li>
+                    </ul>
+                    </dd> </dl>
+                    <p>&nbsp;</p>
+                    <dl> <dt>What can you do?</dt> <dd>Have no fear, help is near! There are many ways you can get back on track with Magento Demo Store.</dd> <dd>
+                    <ul class="buttons">
+                    <li><button class="button" onclick="history.go(-1);"><span><span>Go back</span></span></button></li>
+                    <li><button class="button" onclick="location.href='{{store url=''}}'"><span><span>Store Home</span></span></button></li>
+                    <li><button class="button" onclick="location.href='{{store url='customer/account'}}'"><span><span>My Account</span></span></button></li>
+                    </ul>
+                    </dd></dl></div>
+                    <div class="col-right">
+                    <div class="banner"><a href="#"><img src="{{media url="olegnax/celebrity/right_banner1.jpg" }}" alt="" /></a></div>
+                    <div class="banner"><a class="text-right" href="#"><img src="{{media url="olegnax/celebrity/right_banner2.jpg" }}" alt="" /><span>SEASON<br />DISCOUNTS</span></a></div>
+                    </div>]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+        </pages>
+        <blocks>
+            <item>
+                <title>Celebrity Newsletter block text</title>
+                <identifier>celebrity_newsletter_text</identifier>
+                <content><![CDATA[There are many variations of passages of Lorem Ipsum  available, but the majority have suffered alteration in some]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Celebrity Additional links</title>
+                <identifier>celebrity_additional_links</identifier>
+                <content><![CDATA[<p><a href="//olegnax.com/products/magento">Customer Assistance</a> <a href="#">Email Us</a> <a href="#">Payment Methods</a> <span>Tel 888-475-7674</span></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Celebrity Footer brands</title>
+                <identifier>celebrity_footer_brands</identifier>
+                <content><![CDATA[<p><a href="#"><img src="{{media url="olegnax/celebrity/brand1.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand2.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand3.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand4.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand5.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand6.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand7.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand8.gif"}}" alt="" /></a> <a href="#"><img src="{{media url="olegnax/celebrity/brand9.gif"}}" alt="" /></a></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Celebrity Footer links</title>
+                <identifier>celebrity_footer_links</identifier>
+                <content><![CDATA[<ul class="footer-links">
+                <li><span>Company</span>
+	                <ul>
+		                <li><a href="{{store url='terms'}}">About us</a></li>
+		                <li><a href="{{store url='contacts'}}">Careers</a></li>
+		                <li><a href="{{store url='technologie'}}">Technologie</a></li>
+		                <li><a href="{{store url='terms'}}">FAQ</a></li>
+		                <li><a href="{{store url='giftcards'}}">E-Gift Cards</a></li>
+	                </ul>
+                </li>
+                <li><span>Information</span>
+	                <ul>
+		                <li><a href="{{store url='shipping'}}">Shipping costs</a></li>
+		                <li><a href="{{store url='terms'}}">Terms and conditions</a></li>
+		                <li><a href="{{store url='imprint'}}">Imprint</a></li>
+		                <li><a href="{{store url='security'}}">Security</a></li>
+	                </ul>
+                </li>
+                <li><span>Customer Service</span>
+	                <ul>
+		                <li><a href="{{store url='contacts'}}">Contact us</a></li>
+		                <li><a href="{{store url='contacts'}}">Feedback</a></li>
+		                <li><a href="{{store url='terms'}}">Return Policy</a></li>
+		                <li><a href="{{store url='shipping'}}">Shipping & Tax</a></li>
+		                <li><a href="{{store url='contacts'}}">International</a></li>
+	                </ul>
+                </li>
+                <li><span>Connect with Us</span>
+	                <ul class="footer-social">
+	                    <li><a class="twitter" target="social" href="http://twitter.com/olegnax">Twitter</a></li>
+	                    <li><a class="facebook" target="social" href="http://facebook.com/olegnax">Facebook</a></li>
+	                    <li><a class="email" href="mailto:mail@olegnax.com">Email</a></li>
+	                    <li><a class="google" target="social" href="http://plus.google.com/u/0/111109476451145065018">Google</a></li>
+	                </ul>
+                </li>
+                </ul>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Custom Tab</title>
+                <identifier>celebrity_custom_tab</identifier>
+                <content><![CDATA[<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Custom Block</title>
+                <identifier>celebrity_navigation_block</identifier>
+                <content><![CDATA[<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Empty Category</title>
+                <identifier>celebrity_empty_category</identifier>
+                <content><![CDATA[<p>There are no products matching the selection.<br/> This is a static CMS block displayed if category is empty. You can put your own content here.</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Informational block under product tabs</title>
+                <identifier>celebrity_after_tabs</identifier>
+                <content><![CDATA[<p class="dotted-border"> This is a static CMS block displayed after product tabs. You can put your own content here or disable block to hide it</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Celebrity Bottom Support block</title>
+                <identifier>celebrity_bottom_support</identifier>
+                <content><![CDATA[<div class="site-block bottom"><a href="http://olegnax.com/products/magento/"><img src="{{media url="olegnax/celebrity/live_support.png"}}" alt="" /></a></div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Celebrity Contacts Google map</title>
+                <identifier>celebrity_gmap</identifier>
+                <content><![CDATA[<div class="google-map" style="background-color: #7f7f7f; height: 179px; ">&nbsp;</div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, id, ipsam consequuntur earum illo officiis unde rerum a<br> aspernatur sit saepe nesciunt facilis provident quisquam distinctio eaque odio repudiandae ab.</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+			<item>
+                <title>Celebrity Store Logo</title>
+                <identifier>celebrity_logo</identifier>
+                <content><![CDATA[<img class="retina" width="164" height="25" src="{{media url="olegnax/celebrity/logo.png"}}" alt="Celebrity Store" />]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+        </blocks>
+    </cms>
+</celebrity>

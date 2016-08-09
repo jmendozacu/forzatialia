@@ -1,0 +1,2 @@
+[26-Mar-2016 08:55:59 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/slideshow-jquery-image-gallery/classes/SlideshowPluginWidget.php on line 9
+[26-Mar-2016 08:58:37 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/slideshow-jquery-image-gallery/classes/SlideshowPluginWidget.php on line 9

@@ -1,0 +1,37 @@
+From a7df85886a5eb11dfe1974572c92232396c26353 Mon Sep 17 00:00:00 2001
+From: Serge <mail@olegnax.com>
+Date: Mon, 14 May 2012 15:26:14 +0300
+Subject: [PATCH 4/5] move custom options on product page
+
+---
+ .../default/celebrity/template/catalog/product/view.phtml       |    7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/app/design/frontend/default/celebrity/template/catalog/product/view.phtml b/app/design/frontend/default/celebrity/template/catalog/product/view.phtml
+index 1bf407c..bb17826 100644
+--- a/app/design/frontend/default/celebrity/template/catalog/product/view.phtml
++++ b/app/design/frontend/default/celebrity/template/catalog/product/view.phtml
+@@ -89,6 +89,10 @@
+                 <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+             <?php endif;?>
+ 
++            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
++                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
++            <?php endif;?>
++
+             <?php echo $this->getChildHtml('addto') ?>
+             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+ 
+@@ -111,9 +115,6 @@
+         </div>
+ 
+         <div class="clearer"></div>
+-        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+-        <?php endif;?>
+     </form>
+     <script type="text/javascript">
+     //<![CDATA[
+-- 
+1.7.10.msysgit.1
+

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/pos_eta.css</stylesheet></action>
+        </reference>
+    </default>
+
+    <PRODUCT_TYPE_simple translate="label" module="catalog">
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pos_eta_simple.js</name></action>
+        </reference>
+        <reference name="product.info.simple">
+            <action method="setTemplate"><template>eta/catalog/product/view/type/simple.phtml</template></action>
+        </reference>
+    </PRODUCT_TYPE_simple>
+
+    <PRODUCT_TYPE_configurable translate="label" module="catalog">
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/pos_eta.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/pos_eta_configurable.js</name></action>
+        </reference>
+        <reference name="product.info.configurable">
+            <action method="setTemplate"><template>eta/catalog/product/view/type/configurable.phtml</template></action>
+        </reference>
+        <reference name="product.info.options.wrapper">
+            <block type="catalog/product_view_type_configurable" name="pos.eta.configurable" as="pos_eta_configurable" after="-" template="eta/catalog/product/view/type/options/configurable.phtml"/>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+
+	<sales_order_view>
+        <reference name="order_totals">
+            <action method="setTemplate"><template>eta/sales/order/totals.phtml</template></action>
+            <action method="setEtaProperties"><value>align="left" style="padding:3px 9px;"</value></action>
+            <action method="setLabelProperties"><value>colspan="3" style="padding:3px 9px; text-align:right !important"</value></action>
+			<action method="setValueProperties"><value>class="last a-right asdfasdfasdf"</value></action>
+        </reference>
+    </sales_order_view>
+	
+    <sales_email_order_items>
+        <reference name="order_totals">
+            <action method="setTemplate"><template>eta/sales/order/totals.phtml</template></action>
+            <action method="setLabelProperties"><value>colspan="1" align="right" style="padding:3px 9px;"</value></action>
+            <action method="setEtaProperties"><value>colspan="2" align="left" style="padding:3px 9px;"</value></action>
+        </reference>
+    </sales_email_order_items>
+
+    <sales_email_order_invoice_items>
+        <reference name="order_totals">
+            <action method="setTemplate"><template>eta/sales/order/totals.phtml</template></action>
+            <action method="setLabelProperties"><value>colspan="1" align="right" style="padding:3px 9px;"</value></action>
+            <action method="setEtaProperties"><value>colspan="2" align="left" style="padding:3px 9px;"</value></action>
+        </reference>
+    </sales_email_order_invoice_items>
+
+    <sales_email_order_creditmemo_items>
+        <reference name="order_totals">
+            <action method="setTemplate"><template>eta/sales/order/totals.phtml</template></action>
+            <action method="setLabelProperties"><value>colspan="1" align="right" style="padding:3px 9px;"</value></action>
+            <action method="setEtaProperties"><value>colspan="2" align="left" style="padding:3px 9px;"</value></action>
+        </reference>
+    </sales_email_order_creditmemo_items>
+
+    <checkout_onepage_review translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>eta/checkout/onepage/review/info.phtml</template></action>
+            <block type="eta/checkout_cart_eta" name="checkout.onepage.review.info.eta" as="eta" template="eta/checkout/onepage/review/eta.phtml"/>
+        </reference>
+    </checkout_onepage_review>
+
+    <checkout_cart_index translate="label">
+        <reference name="checkout.cart">
+            <action method="setCartTemplate"><template>eta/checkout/cart.phtml</template></action>
+            <action method="setEmptyTemplate"><value>checkout/cart/noItems.phtml</value></action>
+            <action method="chooseTemplate"/>
+            <action method="addItemRender">
+                <type>simple</type><block>checkout/cart_item_renderer</block><template>eta/checkout/cart/item/default.phtml</template>
+            </action>
+            <action method="addItemRender">
+                <type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>eta/checkout/cart/item/default.phtml</template>
+            </action>
+        </reference>
+    </checkout_cart_index>
+
+</layout>

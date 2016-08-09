@@ -1,0 +1,74 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+$footer_type = Mage::getStoreConfig('celebritysettings/celebritysettings_appearance/footer');
+?>
+<!-- footer BOF -->
+<div class="footer-container <?php echo $footer_type;?>">
+    <footer>
+        <?php switch ($footer_type) {
+            case 'informative' :
+                ?>
+               <!-- <div class="footer-brands">
+                    <?php // echo $this->getLayout()->createBlock('cms/block')->setBlockId('celebrity_footer_brands')->toHtml() ?>
+                </div> -->
+                <?php echo $this->getChildHtml('footerNewsletter') ?>
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('celebrity_footer_links')->toHtml() ?>
+                
+                <div class="clearfix"></div>
+					
+                <?php
+                break;
+            case 'simple' :
+            default:
+                echo $this->getChildHtml('footerNewsletter');?>
+				
+				
+				
+              <?php  echo $this->getChildHtml('footer_links');
+					
+				
+        }
+        ?>
+		
+
+<div class="footer-border">
+		<address><?php echo $this->getCopyright() ?></address>
+		<div class="copyscape">
+		<a href="https://www.forzaitalia.com.au/copyscape"><img src="<?php echo $this->getSkinUrl('images/copyscape.jpg') ?>"></a></div>
+		<div class="payment-icons">
+<ul>
+<li class="visa"><a href="#"><img src="<?php echo $this->getSkinUrl('images/spacer-img.png') ?>" border="0" alt="" width="32" height="23" /></a></li>
+<li class="mastercard"><a href="#"><img src="<?php echo $this->getSkinUrl('images/spacer-img.png') ?>" border="0" alt="" width="32" height="23" /></a></li>
+<li class="discover"><a href="#"><img src="<?php echo $this->getSkinUrl('images/spacer-img.png') ?>" border="0" alt="" width="32" height="23" /></a></li>
+<li class="paypal"><a href="#"><img src="<?php echo $this->getSkinUrl('images/spacer-img.png') ?>" border="0" alt="" width="32" height="23" /></a></li>
+<li class="icon"><a href="#"><img src="<?php echo $this->getSkinUrl('images/spacer-img.png') ?>" border="0" alt="" width="77" height="23" /></a></li>
+<li class="secure"><a href="#"><img src="<?php echo $this->getSkinUrl('images/spacer-img.png') ?>" border="0" alt="" width="77" height="23" /></a></li>
+</ul>
+</div>
+</div>
+    </footer>
+</div>
+<!-- footer EOF -->

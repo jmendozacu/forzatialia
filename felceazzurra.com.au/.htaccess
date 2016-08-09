@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^felceazzurra\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.felceazzurra\.com\.au$
+RewriteRule ^/?$ "http\:\/\/www\.forzaitalia\.com\.au\/accessories\/beauty\-fragrance\/felce\-azzurra\/" [R=301,L]
+

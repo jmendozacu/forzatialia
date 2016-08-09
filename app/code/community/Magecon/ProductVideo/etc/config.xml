@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Open Biz Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file OPEN-BIZ-LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mageconsult.net/terms-and-conditions
+ *
+ * @category   Magecon
+ * @package    Magecon_ProductVideo
+ * @version    1.0.0
+ * @copyright  Copyright (c) 2012 Open Biz Ltd (http://www.mageconsult.net)
+ * @license    http://mageconsult.net/terms-and-conditions
+ */
+-->
+<config>
+    <modules>
+        <Magecon_ProductVideo>
+            <version>0.0.1</version>
+        </Magecon_ProductVideo>
+    </modules>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <productvideo translate="title" module="productvideo">
+                                            <title>ProductVideo</title>
+                                        </productvideo>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <productvideo>
+                    <file>productvideo.xml</file>
+                </productvideo>
+            </updates>
+        </layout>
+        <events>
+            <catalog_product_save_after>
+                <observers>
+                    <magecon_save_product_data>
+                        <type>singleton</type>
+                        <class>productvideo/observer</class>
+                        <method>saveProductTabData</method>
+                    </magecon_save_product_data>
+                </observers>
+            </catalog_product_save_after>
+        </events>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <productvideo>
+                    <file>productvideo.xml</file>
+                </productvideo>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <productvideo>
+                <class>Magecon_ProductVideo_Model</class>
+                <resourceModel>productvideo_mysql4</resourceModel>
+            </productvideo>
+            <productvideo_mysql4>
+                <class>Magecon_ProductVideo_Model_Mysql4</class>
+                <entities>
+                    <video>
+                        <table>magecon_product_video</table>
+                    </video>
+                </entities>
+            </productvideo_mysql4>
+        </models>
+        <resources>  
+            <productvideo_setup>
+                <setup>
+                    <module>Magecon_ProductVideo</module>
+                    <class>Magecon_ProductVideo_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </productvideo_setup>	
+            <productvideo_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </productvideo_write>
+            <productvideo_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </productvideo_read>
+        </resources>
+        <helpers>
+            <productvideo>
+                <class>Magecon_ProductVideo_Helper</class>
+            </productvideo>
+        </helpers>
+        <blocks>
+            <productvideo>
+                <class>Magecon_ProductVideo_Block</class>
+            </productvideo>
+            <catalog>
+                <rewrite>
+                    <product_view_media>Magecon_ProductVideo_Block_Catalog_Product_View_Media</product_view_media>
+                </rewrite>
+            </catalog>
+        </blocks>
+    </global>
+    <default>
+        <productvideo>
+            <general_settings>
+                <enabled>1</enabled>
+            </general_settings>
+            <video_settings>
+                <autohide>1</autohide>
+                <autoplay>1</autoplay>
+                <controls>1</controls>
+				<!--<loop>0</loop>-->
+                <modestbranding>1</modestbranding>
+                <showtitle>1</showtitle>
+                <rel>0</rel>
+                <showinfo>1</showinfo>
+                <theme>dark</theme>
+                <thumbnail>mqdefault.jpg</thumbnail>
+                <width>480</width>
+                <height>360</height>
+            </video_settings>
+        </productvideo>
+    </default>
+</config>

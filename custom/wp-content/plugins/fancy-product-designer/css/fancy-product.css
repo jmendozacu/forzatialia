@@ -1,0 +1,226 @@
+/*
+ * Styling for Single Fancy Products
+ *
+*/
+
+/*.fancy-product .fpd-container,
+.fancy-product .fpd-container > *,
+.fpd-product *, .fpd-design * {
+	display: block !important;
+}*/
+
+.fancy-product .fpd-not-supported-device-info {
+	display: none;
+}
+
+/* Styling for the custom template */
+
+.fancy-product-wrapper .fpd-container {
+	float: none;
+}
+
+.fancy-product-wrapper .summary {
+	float: none !important;
+	width: auto !important;
+}
+
+/* Styling for the custom template */
+
+.fpd-start-customizing-button {
+	padding: 10px 15px;
+}
+
+.fpd-start-customizing-button:hover {
+	opacity: 0.9;
+}
+
+
+.fancy-product.fpd-customize-button-active .summary {
+	float: inherit !important;
+	width: inherit !important;
+}
+
+/* Custom PHP Uploader */
+
+.fpd-php-uploader-info {
+	position: fixed;
+	left: 50%;
+	bottom: -100px;
+	padding: 10px;
+	width: 300px;
+	min-height: 60px;
+	max-width: 100%;
+	margin-left: -150px;
+	opacity: 0;
+	z-index: 1000000;
+	background: rgba(255,255,255,0.9);
+	-webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 0 2px 0 rgba(0,0,0,0.2);
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+
+
+.fpd-php-uploader-info > p {
+	font-size: 12px;
+	margin: 0;
+}
+
+.fpd-php-uploader-info > .fpd-upload-progess-bar {
+	position: relative;
+	margin-top: 10px;
+
+}
+
+.fpd-upload-progess-bar > div {
+	position: absolute;
+	height: 5px;
+	width: 0;
+	top: 0;
+	left: 0;
+	background: #000;
+}
+
+.fpd-upload-progess-bar > .fpd-progress-bar-bg {
+	opacity: 0.5;
+	width: 100% !important;
+}
+
+
+/* Theme Check */
+
+.fpd-theme-check-wrapper {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 10000;
+}
+
+.fpd-theme-check-wrapper > .fpd-theme-check-content {
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	margin-left: -400px;
+	width: 800px;
+	min-height: 300px;
+	background: #fff;
+	padding: 20px;
+}
+
+.fpd-theme-check-content h4 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+.fpd-theme-check-content h4 span {
+	float: right;
+	cursor: pointer;
+}
+
+.fpd-theme-check-content p {
+	font-size: 12px;
+	margin-bottom: 15px;
+	padding: 10px;
+	clear: both;
+}
+
+.fpd-theme-check-content p a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.fpd-theme-check-content p.fpd-success {
+	background-color: #DFF0D8;
+	color:#3c763d;
+}
+
+.fpd-theme-check-content p.fpd-warning {
+	background-color: #FCF8E3;
+	color:#8a6d3b;
+}
+
+.fpd-theme-check-content p.fpd-error {
+	background-color: #F2DEDE;
+	color: #a94442;
+}
+
+/* MODAL */
+
+.fpd-hide-container {
+	display: none !important;
+}
+
+.fpd-modal-overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 10000;
+	overflow: auto;
+}
+
+.fpd-modal-wrapper {
+	background: #fff;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	padding: 20px;
+	z-index: 10020;
+	max-width: 100%;
+}
+
+.fpd-modal-wrapper > .fpd-container {
+	margin: 0 !important;
+}
+
+.fpd-modal-buttons {
+	text-align: right;
+}
+
+.fpd-modal-buttons > a {
+	margin-right: 10px;
+	padding: 8px 10px;
+}
+
+.fpd-modal-open {
+	overflow: hidden;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media (max-width : 480px) {
+
+	.fpd-hidden-mobile .fpd-container,
+	.fpd-hidden-mobile form.cart {
+		display: none !important;
+	}
+
+	.fancy-product.fpd-hidden-mobile .fpd-not-supported-device-info {
+		display: block;
+	}
+
+}
+
+/* iPads (portrait) ----------- */
+@media (max-width : 767px) {
+
+	.fpd-hidden-tablets .fpd-container,
+	.fpd-hidden-tablets form.cart {
+		display: none !important;
+	}
+
+	.fancy-product.fpd-hidden-tablets .fpd-not-supported-device-info {
+		display: block;
+	}
+
+}

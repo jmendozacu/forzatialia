@@ -1,0 +1,6 @@
+[26-Mar-2016 08:56:38 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/admin/controllers/BWGControllerWidget.php on line 3
+[26-Mar-2016 08:56:38 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/admin/controllers/BWGControllerWidgetSlideshow.php on line 3
+[26-Mar-2016 08:56:38 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/admin/controllers/BWGControllerWidgetTags.php on line 3
+[26-Mar-2016 08:58:54 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/admin/controllers/BWGControllerWidget.php on line 3
+[26-Mar-2016 08:58:54 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/admin/controllers/BWGControllerWidgetSlideshow.php on line 3
+[26-Mar-2016 08:58:54 Australia/Sydney] PHP Fatal error:  Class 'WP_Widget' not found in /home/forzaita/public_html/blog/wp-content/plugins/photo-gallery/admin/controllers/BWGControllerWidgetTags.php on line 3

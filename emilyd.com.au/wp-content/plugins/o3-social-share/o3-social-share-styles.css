@@ -1,0 +1,6 @@
+#o3-social-share { position: relative; margin: 30px 0; }
+#o3-social-share .facebook { display: inline-block; vertical-align: 3px; zoom:1; *display: inline; _height: 20px; margin-right: 40px; }
+#o3-social-share .twitter { display: inline-block; zoom:1; *display: inline; _height: 20px; }
+#o3-social-share .googleplus { display: inline-block; zoom:1; *display: inline; _height: 20px; }
+#o3-social-share .linkedin { display: inline-block; zoom:1; *display: inline; _height: 20px; }
+#LikePluginPagelet .connect_confirmation_cell { display: none !important; }
