@@ -764,10 +764,6 @@ a.tooltip-close {
     background-color: #095aa5;
 }
 
-.header-container.type3 .main-nav {
-    background-color: #043057;
-}
-
 .header-container.type3 .header .form-search {
     background-color: #095aa5;
 }
@@ -776,6 +772,9 @@ a.tooltip-close {
     max-width: 290px;
 }
 
-.footer-middle {
+.header-container.type3 .main-nav,
+.footer-middle,
+.footer-bottom,
+.homepage-bar {
     background-color: #043057;
 }
