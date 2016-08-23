@@ -754,3 +754,28 @@ a.tooltip-close {
         font-size: 14px;
     }
 }
+
+.header-container.type3 {
+    background-color: #ffffff;
+}
+
+.header-container.type3 .top-links-container,
+.header-container.type3.sticky-header .header-wrapper {
+    background-color: #095aa5;
+}
+
+.header-container.type3 .main-nav {
+    background-color: #043057;
+}
+
+.header-container.type3 .header .form-search {
+    background-color: #095aa5;
+}
+
+.header>.logo {
+    max-width: 290px;
+}
+
+.footer-middle {
+    background-color: #043057;
+}
