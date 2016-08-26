@@ -778,3 +778,21 @@ a.tooltip-close {
 .homepage-bar {
     background-color: #043057;
 }
+
+.header-container.type3 .header .form-search {
+    background: none;
+    
+}
+
+.header-container.type3 .header .form-search #search,
+.header-container.type3 .header .form-search #cat,
+.header-container.type3 .header .form-search button.button {
+    color: #000000;
+    border: 1px solid #777777;
+}
+
+@media (max-width: 991px) {
+    .header-container.type3 .header {
+        color: #000000;
+    }
+}
