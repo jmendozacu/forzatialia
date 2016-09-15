@@ -803,3 +803,9 @@ a.tooltip-close {
         color: #000000;
     }
 }
+
+@media (max-width: 375px) {
+    .header>.logo {
+        margin: 30px 5px;
+    }
+}
