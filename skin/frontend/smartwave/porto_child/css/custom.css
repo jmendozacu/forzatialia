@@ -683,9 +683,16 @@ a.tooltip-close {
     .onepage-category .category-detail .title-menu > a {
         margin-top: 46px;
     }
+    .header-container.type3 .header #search_mini_form {
+        max-width: 280px;
+        background-color: #ffffff;
+    }
 }
 
 @media(max-width:767px) {
+    .header-container.type3 .header {
+        color: #000000;
+    }
     .onepage-category {
         display: block;
     }
@@ -780,7 +787,7 @@ a.tooltip-close {
 }
 
 .header-container.type3 .header .form-search {
-    background: none;
+    background: #ffffff;
     
 }
 
