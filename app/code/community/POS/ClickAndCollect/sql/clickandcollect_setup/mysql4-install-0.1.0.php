@@ -26,7 +26,7 @@ $installer->addAttribute(Mage_Catalog_Model_Product::ENTITY, 'store_pickup_rule'
     'unique' => false,
     'apply_to' => 'simple,configurable,virtual,bundle,downloadable',
     'is_configurable' => false,
-);
+));
 
 //attribute is still visible in General Tab by some reason, so will hide it with direct sql query
 $id = $installer->getAttributeId('catalog_product', 'store_pickup_rule');
