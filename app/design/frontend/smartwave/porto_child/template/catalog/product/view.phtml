@@ -155,6 +155,7 @@ if($enable_addtocart_sticky){
             ?>
                 <div class="product-name">
                     <h1 <?php if($enabled_richsnippets): ?>itemprop="name"<?php endif; ?>><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                    <h3><?php echo $this->__('SKU:') . $this->htmlEscape($_product->getData('sku'));?></h3>
                 </div>
                 <?php if($enabled_richsnippets): ?>
                 <?php

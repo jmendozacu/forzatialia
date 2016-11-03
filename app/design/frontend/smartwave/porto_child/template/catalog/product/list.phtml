@@ -142,6 +142,7 @@ var i = 0;
                 </div>
                 <div class="details-area">
                     <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                    <h3><?php echo $this->__('SKU:') . $this->htmlEscape($_product->getData('sku'));?></h3>
                     <?php if(Mage::getStoreConfig("porto_settings/category/rating_star", $code)):?>
                     <?php 
                     if (Mage::helper('catalog')->isModuleEnabled('Mage_Review')):
@@ -376,6 +377,7 @@ var i = 0;
                 </div>
                 <div class="details-area">
                     <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                    <h3><?php echo $this->__('SKU:') . $this->htmlEscape($_product->getData('sku'));?></h3>
                     <?php if(Mage::getStoreConfig("porto_settings/category/rating_star", $code)):?>
 					<?php
                     if (Mage::helper('catalog')->isModuleEnabled('Mage_Review')):
