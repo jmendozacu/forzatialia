@@ -642,12 +642,12 @@ a.tooltip-close {
 }
 
 .header-container.type3 {
-    background-color: #ffffff;
+    background-color: #043057;
 }
 
 .header-container.type3 .top-links-container,
 .header-container.type3.sticky-header .header-wrapper {
-    background-color: #095aa5;
+    background-color: #095AA5;
 }
 
 .header-container.type3 .header .form-search {
@@ -675,6 +675,16 @@ a.tooltip-close {
 .header-container.type3 .header .form-search button.button {
     color: #000000;
     border: 1px solid #777777;
+}
+
+.fixed-header .menu >li.menu-full-width .nav-sublist-dropdown, 
+.main-nav .menu >li.menu-full-width .nav-sublist-dropdown {
+    border-top: 5px solid #095AA5;
+}
+
+.header-container.type3 .main-nav ul.menu>li.act>a, 
+.header-container.type3 .main-nav ul.menu>li:hover>a {
+    color: #095AA5;
 }
 
 @media(max-width:1199px) {
