@@ -395,7 +395,7 @@ class POS_System_Helper_Data extends Mage_Core_Helper_Abstract
                             Mage::log('Exception: POS_System_Helper_Data:: Product Stock Status Error Update. Error: '.$e->getMessage(), null, 'possystem.log');
                         }
                     }
-
+                    $updateTaxClass = true;
                     if ($updateTaxClass) {
                         try {
                             $attributeId = $this->_getAttibuteIdByCode('tax_class_id');
@@ -485,9 +485,13 @@ class POS_System_Helper_Data extends Mage_Core_Helper_Abstract
             }
 		
 		// m2e change//
+            $updateStockData = true;
 			if($updateStockData) { $m2eModel->markProductChanged($product->getId()); $m2eModel->markQtyWasChanged($product->getId());  }
+            $updatePrice = true;
 			if($updatePrice) { $m2eModel->markProductChanged($product->getId()); $m2eModel->markPriceWasChanged($product->getId()); }
+            $updateWeight = true;
 			if($updateWeight) {  $m2eModel->markProductChanged($product->getId()); }
+            $updateSpecialPrice = true;
 			if($updateSpecialPrice) { $m2eModel->markProductChanged($product->getId()); }
 			
 		
