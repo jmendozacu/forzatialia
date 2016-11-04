@@ -47,7 +47,8 @@ var i = 0;
     <?php $_iterator = 0; ?>
     <ol class="products-list" id="products-list">
     <?php foreach ($_productCollection as $_product): ?>
-	<?php $product = $_product;//Mage::getModel('catalog/product')->load($_product->getId()); ?>
+        <?php $productSku = Mage::getModel('catalog/product')->load($_product->getId())->getSku(); ?>
+        <?php $product = $_product; ?>
         <li class="item"><div class="item-area">
                 <div class="product-image-area">
                     <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
@@ -142,7 +143,8 @@ var i = 0;
                 </div>
                 <div class="details-area">
                     <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
-                    <h3><?php echo $this->__('SKU:') . $this->htmlEscape($_product->getData('sku'));?></h3>
+                    <h5><?php echo $this->__('SKU: ') . $productSku; ?></h5>
+                    <?php print_r($_product->getData()); ?>
                     <?php if(Mage::getStoreConfig("porto_settings/category/rating_star", $code)):?>
                     <?php 
                     if (Mage::helper('catalog')->isModuleEnabled('Mage_Review')):
@@ -257,6 +259,7 @@ var i = 0;
     <?php $_columnCount = Mage::getStoreConfig("porto_settings/category_grid/columns",$code); ?>
     <ul class="products-grid <?php if(Mage::getStoreConfig("porto_settings/category_grid/flex_grid",$code)):?>flex-grid<?php endif; ?> columns<?php echo $_columnCount; ?><?php if(!Mage::getStoreConfig("porto_settings/category_grid/show_addtolinks", $code)):?> hide-addtolinks<?php endif; ?><?php if(!Mage::getStoreConfig("porto_settings/category_grid/show_addtocart", $code)):?> hide-addtocart<?php endif; ?><?php if(Mage::getStoreConfig("porto_settings/category_grid/move_actions", $code)):?> move-action<?php endif; ?>">
     <?php $i=0; foreach ($_productCollection as $_product): ?>
+        <?php $productSku = Mage::getModel('catalog/product')->load($_product->getId())->getSku(); ?>
 	<?php $product = $_product;//Mage::getModel('catalog/product')->load($_product->getId()); ?>
             <li class="item"><div class="item-area">
             <div class="product-image-area">
@@ -377,7 +380,7 @@ var i = 0;
                 </div>
                 <div class="details-area">
                     <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
-                    <h3><?php echo $this->__('SKU:') . $this->htmlEscape($_product->getData('sku'));?></h3>
+                    <h5><?php echo $this->__('SKU: ') . $productSku; ?></h5>
                     <?php if(Mage::getStoreConfig("porto_settings/category/rating_star", $code)):?>
 					<?php
                     if (Mage::helper('catalog')->isModuleEnabled('Mage_Review')):
