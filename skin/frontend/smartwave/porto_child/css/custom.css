@@ -687,6 +687,10 @@ a.tooltip-close {
     color: #095AA5;
 }
 
+button.button span {
+    background: #095AA5;
+}
+
 @media(max-width:1199px) {
     #banner-slider-demo-19 .slide-content h2 {
         font-size: 40px;
